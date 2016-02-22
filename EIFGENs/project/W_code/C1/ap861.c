@@ -38,22 +38,22 @@ void F861_6968 (EIF_REFERENCE Current)
 	GTCX
 	char *l_feature_name = "make";
 	RTEX;
-	EIF_TYPED_VALUE ur1x = {{0}, SK_REF};
-#define ur1 ur1x.it_r
+	EIF_REFERENCE loc1 = (EIF_REFERENCE) 0;
 	EIF_REFERENCE tr1 = NULL;
 	RTSN;
 	RTDA;
 	RTLD;
 	
 	RTLI(3);
-	RTLR(0,tr1);
-	RTLR(1,ur1);
+	RTLR(0,loc1);
+	RTLR(1,tr1);
 	RTLR(2,Current);
 	RTLIU(3);
 	RTLU (SK_VOID, NULL);
 	RTLU (SK_REF, &Current);
+	RTLU(SK_REF, &loc1);
 	
-	RTEAA(l_feature_name, 860, Current, 0, 0, 12649);
+	RTEAA(l_feature_name, 860, Current, 1, 0, 12649);
 	RTSA(Dtype(Current));
 	RTSC;
 	RTME(Dtype(Current), 0);
@@ -61,18 +61,19 @@ void F861_6968 (EIF_REFERENCE Current)
 	RTDBGEAA(860, Current, 12649);
 	RTIV(Current, RTAL);
 	RTHOOK(1);
-	tr1 = RTMS_EX_H("Hello Eiffel World!\012",20,1206243338);
-	ur1 = tr1;
-	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(30, Dtype(Current)))(Current, ur1x);
+	RTDBGAL(Current, 1, 0xF8000387, 0, 0); /* loc1 */
+	tr1 = RTLN(eif_new_type(903, 0x01).id);
+	(FUNCTION_CAST(void, (EIF_REFERENCE)) RTWC(7305, Dtype(tr1)))(tr1);
+	RTNHOOK(1,1);
+	loc1 = (EIF_REFERENCE) RTCCL(tr1);
 	RTVI(Current, RTAL);
 	RTRS;
 	RTHOOK(2);
 	RTDBGLE;
 	RTMD(0);
 	RTLE;
-	RTLO(2);
+	RTLO(3);
 	RTEE;
-#undef ur1
 }
 
 void EIF_Minit861 (void)

@@ -39,7 +39,7 @@ SYSTEM_IN_DYNAMIC_LIB = project.dll
 .cpp.obj:
 	$(CPP) $(CPPFLAGS) -c $<
 
-SUBDIRS = C1 E1
+SUBDIRS = C1 C2 C3 E1
 
 EXTERNALS =  \
 	"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\game_core\spec\msc\windows\lib\sdl_additions.lib" \
@@ -58,6 +58,16 @@ all:: project.exe
 C1\Cobj1.lib: Makefile E1\estructure.h
 	cd C1
 	$(START_TEST) $(MAKE) Cobj1.lib $(END_TEST)
+	cd ..
+
+C2\Cobj2.lib: Makefile E1\estructure.h
+	cd C2
+	$(START_TEST) $(MAKE) Cobj2.lib $(END_TEST)
+	cd ..
+
+C3\Cobj3.lib: Makefile E1\estructure.h
+	cd C3
+	$(START_TEST) $(MAKE) Cobj3.lib $(END_TEST)
 	cd ..
 
 E1\emain.obj:  Makefile E1\Makefile
@@ -121,9 +131,9 @@ E1\eparents.obj : Makefile E1\Makefile E1\estructure.h
 	$(START_TEST) $(MAKE) eparents.obj  $(END_TEST)
 	cd ..
 
-OBJECTS = E1\eparents.obj  E1\einit.obj  E1\ececil.obj  E1\evisib.obj  E1\enames.obj  E1\eskelet.obj  E1\eplug.obj  E1\ecall.obj  E1\efrozen.obj  E1\epattern.obj  E1\eoption.obj  C1\Cobj1.lib 
+OBJECTS = E1\eparents.obj  E1\einit.obj  E1\ececil.obj  E1\evisib.obj  E1\enames.obj  E1\eskelet.obj  E1\eplug.obj  E1\ecall.obj  E1\efrozen.obj  E1\epattern.obj  E1\eoption.obj  C3\Cobj3.lib C2\Cobj2.lib C1\Cobj1.lib 
 
-C_OBJECTS = C1\Cobj1.lib 
+C_OBJECTS = C3\Cobj3.lib C2\Cobj2.lib C1\Cobj1.lib 
 
 EOBJECTS = E1\eparents.obj  E1\einit.obj  E1\ececil.obj  E1\evisib.obj  E1\enames.obj  E1\eskelet.obj  E1\eplug.obj  E1\ecall.obj  E1\efrozen.obj  E1\epattern.obj  E1\eoption.obj  
 
@@ -150,7 +160,7 @@ project.lnk: $(OBJECTS) e1\emain.obj project.res Makefile
 	@echo project.res >> $@
 	echo E1\eparents.obj  E1\einit.obj  E1\ececil.obj  E1\evisib.obj  E1\enames.obj   >> $@ 
 	echo E1\eskelet.obj  E1\eplug.obj  E1\ecall.obj  E1\efrozen.obj  E1\epattern.obj   >> $@ 
-	echo E1\eoption.obj  C1\Cobj1.lib  >> $@ 
+	echo E1\eoption.obj  C3\Cobj3.lib C2\Cobj2.lib C1\Cobj1.lib  >> $@ 
 
 
 RCECIL = wmalloc.obj wgarcol.obj wlocal.obj wexcept.obj wstore.obj wretrieve.obj whash.obj \
