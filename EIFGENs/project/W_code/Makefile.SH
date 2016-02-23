@@ -11,7 +11,7 @@ case "$O" in
 esac
 echo "Preparing C compilation"
 $spitshell >Makefile <<!GROK!THIS!
-INCLUDE_PATH =  -I"\$(EIFFEL_LIBRARY)/contrib/library/game2/game_core/spec/include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\SDL2\include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\cpf\spec\include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\SDL2_image\include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\SDL2_ttf\include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\OpenAL\include" -I"\$(EIFFEL_LIBRARY)/contrib/library/game2/audio_sound_file/spec/include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\libsndfile\include"
+INCLUDE_PATH =  -I"\$(EIFFEL_LIBRARY)/contrib/library/game2/game_core/spec/include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\SDL2\include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\cpf\spec\include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\SDL2_image\include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\SDL2_gfx\include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\SDL2_ttf\include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\OpenAL\include" -I"\$(EIFFEL_LIBRARY)/contrib/library/game2/audio_sound_file/spec/include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\libsndfile\include"
 SHELL = /bin/sh
 CC = $cc
 CPP = $cpp
@@ -61,6 +61,7 @@ EXTERNALS =  \
 	"$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\SDL2\lib\$(ISE_PLATFORM)\$(ISE_C_COMPILER)\SDL2main.lib" \
 	"$(EIFFEL_LIBRARY)\contrib\library\game2\cpf\spec\$(ISE_C_COMPILER)\$(ISE_PLATFORM)\lib\cpf_additions.lib" \
 	"$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\SDL2_image\lib\$(ISE_PLATFORM)\$(ISE_C_COMPILER)\SDL2_image.lib" \
+	"$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\SDL2_gfx\lib\$(ISE_PLATFORM)\$(ISE_C_COMPILER)\SDL2_gfx.lib" \
 	"$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\SDL2_ttf\lib\$(ISE_PLATFORM)\$(ISE_C_COMPILER)\SDL2_ttf.lib" \
 	"$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\OpenAL\lib\$(ISE_PLATFORM)\$(ISE_C_COMPILER)\OpenAL32.lib" \
 	"$(EIFFEL_LIBRARY)\contrib\library\game2\audio_sound_file\spec\$(ISE_C_COMPILER)\$(ISE_PLATFORM)\lib\sndfile_additions.lib" \

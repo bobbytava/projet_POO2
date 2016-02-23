@@ -1,4 +1,4 @@
-INCLUDE_PATH =  -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\game_core\spec\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\SDL2\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\cpf\spec\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\SDL2_image\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\SDL2_ttf\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\OpenAL\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\audio_sound_file\spec\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\libsndfile\include"
+INCLUDE_PATH =  -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\game_core\spec\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\SDL2\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\cpf\spec\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\SDL2_image\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\SDL2_gfx\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\SDL2_ttf\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\OpenAL\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\audio_sound_file\spec\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\libsndfile\include"
 SHELL = \bin\sh
 CC = cl
 CPP = cl
@@ -41,14 +41,14 @@ SYSTEM_IN_DYNAMIC_LIB = project.dll
 
 OBJECTS = big_file_C1_c.obj 
 
-OLDOBJECTS =  ap861.obj ap861d.obj im890.obj im890d.obj ga889.obj ga889d.obj im881.obj im881d.obj \
-	ga864.obj ga864d.obj ga874.obj ga874d.obj ga888.obj ga888d.obj ga882.obj ga882d.obj \
-	im863.obj im863d.obj im880.obj im880d.obj ga887.obj ga887d.obj ga862.obj ga862d.obj \
-	ga886.obj ga886d.obj ga878.obj ga878d.obj ga885.obj ga885d.obj ga873.obj ga873d.obj \
-	ga884.obj ga884d.obj ga875.obj ga875d.obj ga872.obj ga872d.obj ga871.obj ga871d.obj \
-	ga883.obj ga883d.obj ga870.obj ga870d.obj ga877.obj ga877d.obj ga867.obj ga867d.obj \
-	ga868.obj ga868d.obj ga866.obj ga866d.obj ga869.obj ga869d.obj ga879.obj ga879d.obj \
-	ga892.obj ga892d.obj ga876.obj ga876d.obj ga865.obj ga865d.obj ga891.obj ga891d.obj 
+OLDOBJECTS =  ga888.obj ga888d.obj im889.obj im889d.obj ga863.obj ga863d.obj ga887.obj ga887d.obj \
+	ga879.obj ga879d.obj ga885.obj ga885d.obj im878.obj im878d.obj ga886.obj ga886d.obj \
+	ga870.obj ga870d.obj ga884.obj ga884d.obj im862.obj im862d.obj im877.obj im877d.obj \
+	ga883.obj ga883d.obj ga876.obj ga876d.obj ga869.obj ga869d.obj ga867.obj ga867d.obj \
+	ga873.obj ga873d.obj ga865.obj ga865d.obj ga868.obj ga868d.obj ga866.obj ga866d.obj \
+	ga880.obj ga880d.obj ga861.obj ga861d.obj ga882.obj ga882d.obj ga874.obj ga874d.obj \
+	ga881.obj ga881d.obj ga872.obj ga872d.obj ga864.obj ga864d.obj ga871.obj ga871d.obj \
+	ga892.obj ga892d.obj ga891.obj ga891d.obj ga875.obj ga875d.obj ga890.obj ga890d.obj 
 
 all::  Cobj1.lib
 

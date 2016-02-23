@@ -10,9 +10,9 @@
 extern "C" {
 #endif
 
-extern void F892_9336(EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE);
-extern EIF_TYPED_VALUE F892_9337(EIF_REFERENCE);
-extern EIF_TYPED_VALUE F892_9338(EIF_REFERENCE);
+extern void F892_9338(EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE);
+extern EIF_TYPED_VALUE F892_9339(EIF_REFERENCE);
+extern EIF_TYPED_VALUE F892_9340(EIF_REFERENCE);
 extern void EIF_Minit892(void);
 
 #ifdef __cplusplus
@@ -35,7 +35,7 @@ extern "C" {
 #endif
 
 /* {GAME_FINGERS_GESTURE}.make */
-void F892_9336 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg2x, EIF_TYPED_VALUE arg3x, EIF_TYPED_VALUE arg4x, EIF_TYPED_VALUE arg5x)
+void F892_9338 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg2x, EIF_TYPED_VALUE arg3x, EIF_TYPED_VALUE arg4x, EIF_TYPED_VALUE arg5x)
 {
 	GTCX
 	char *l_feature_name = "make";
@@ -73,24 +73,24 @@ void F892_9336 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE ar
 	RTLU(SK_UINT32,&arg5);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 891, Current, 0, 5, 15035);
+	RTEAA(l_feature_name, 891, Current, 0, 5, 15037);
 	RTSA(dtype);
 	RTSC;
 	RTME(dtype, 0);
 	RTGC;
-	RTDBGEAA(891, Current, 15035);
+	RTDBGEAA(891, Current, 15037);
 	RTIV(Current, RTAL);
 	RTHOOK(1);
 	ur4_1 = arg1;
 	ur4_2 = arg2;
 	uu4_1 = arg5;
-	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(7216, dtype))(Current, ur4_1x, ur4_2x, uu4_1x);
+	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(7215, dtype))(Current, ur4_1x, ur4_2x, uu4_1x);
 	RTHOOK(2);
-	RTDBGAA(Current, dtype, 7221, 0x18000000, 1); /* distance */
-	*(EIF_REAL_32 *)(Current + RTWA(7221, dtype)) = (EIF_REAL_32) arg3;
+	RTDBGAA(Current, dtype, 7223, 0x18000000, 1); /* distance */
+	*(EIF_REAL_32 *)(Current + RTWA(7223, dtype)) = (EIF_REAL_32) arg3;
 	RTHOOK(3);
-	RTDBGAA(Current, dtype, 7222, 0x18000000, 1); /* angle */
-	*(EIF_REAL_32 *)(Current + RTWA(7222, dtype)) = (EIF_REAL_32) arg4;
+	RTDBGAA(Current, dtype, 7224, 0x18000000, 1); /* angle */
+	*(EIF_REAL_32 *)(Current + RTWA(7224, dtype)) = (EIF_REAL_32) arg4;
 	RTVI(Current, RTAL);
 	RTRS;
 	RTHOOK(4);
@@ -110,21 +110,21 @@ void F892_9336 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE ar
 }
 
 /* {GAME_FINGERS_GESTURE}.distance */
-EIF_TYPED_VALUE F892_9337 (EIF_REFERENCE Current)
+EIF_TYPED_VALUE F892_9339 (EIF_REFERENCE Current)
 {
 	EIF_TYPED_VALUE r;
 	r.type = SK_REAL32;
-	r.it_r4 = *(EIF_REAL_32 *)(Current + RTWA(7221,Dtype(Current)));
+	r.it_r4 = *(EIF_REAL_32 *)(Current + RTWA(7223,Dtype(Current)));
 	return r;
 }
 
 
 /* {GAME_FINGERS_GESTURE}.angle */
-EIF_TYPED_VALUE F892_9338 (EIF_REFERENCE Current)
+EIF_TYPED_VALUE F892_9340 (EIF_REFERENCE Current)
 {
 	EIF_TYPED_VALUE r;
 	r.type = SK_REAL32;
-	r.it_r4 = *(EIF_REAL_32 *)(Current + RTWA(7222,Dtype(Current)));
+	r.it_r4 = *(EIF_REAL_32 *)(Current + RTWA(7224,Dtype(Current)));
 	return r;
 }
 

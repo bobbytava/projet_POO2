@@ -73,12 +73,12 @@ EIF_TYPED_VALUE F900_9377 (EIF_REFERENCE Current)
 	loc1 = RTCCL(tr1);
 	if (EIF_TEST(loc1)) {
 		RTHOOK(2);
-		RTDBGAL(Current, 0, 0xF8000378, 0,0); /* Result */
+		RTDBGAL(Current, 0, 0xF8000374, 0,0); /* Result */
 		Result = (EIF_REFERENCE) RTCCL(loc1);
 	} else {
 		RTHOOK(3);
-		RTDBGAL(Current, 0, 0xF8000378, 0,0); /* Result */
-		tr1 = RTLN(eif_new_type(888, 0x01).id);
+		RTDBGAL(Current, 0, 0xF8000374, 0,0); /* Result */
+		tr1 = RTLN(eif_new_type(884, 0x01).id);
 		(FUNCTION_CAST(void, (EIF_REFERENCE)) RTWC(32, Dtype(tr1)))(tr1);
 		RTNHOOK(3,1);
 		Result = (EIF_REFERENCE) RTCCL(tr1);

@@ -22,7 +22,7 @@ static const EIF_TYPE_INDEX egt_9_900 [] = {0xFF01,220,0xFFFF};
 static const EIF_TYPE_INDEX egt_10_900 [] = {0xFF01,220,0xFFFF};
 static const EIF_TYPE_INDEX egt_11_900 [] = {0xFF01,15,0xFFFF};
 static const EIF_TYPE_INDEX egt_12_900 [] = {0xFF01,899,0xFFFF};
-static const EIF_TYPE_INDEX egt_13_900 [] = {0xFF01,888,0xFFFF};
+static const EIF_TYPE_INDEX egt_13_900 [] = {0xFF01,884,0xFFFF};
 
 
 static const struct desc_info desc_900[] = {
@@ -59,13 +59,13 @@ static const struct desc_info desc_900[] = {
 	{EIF_NON_GENERIC(0x01AF /*215*/), 29, 0xFFFFFFFF},
 	{EIF_GENERIC(egt_12_900), 30, 0xFFFFFFFF},
 	{EIF_GENERIC(egt_13_900), 15079, 0xFFFFFFFF},
-	{EIF_NON_GENERIC(0x06F1 /*888*/), 15080, 0},
+	{EIF_NON_GENERIC(0x06E9 /*884*/), 15080, 0},
 };
 void Init900(void)
 {
 	IDSC(desc_900, 0, 899);
 	IDSC(desc_900 + 1, 1, 899);
-	IDSC(desc_900 + 32, 344, 899);
+	IDSC(desc_900 + 32, 349, 899);
 }
 
 

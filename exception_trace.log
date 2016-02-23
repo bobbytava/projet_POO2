@@ -1,0 +1,25 @@
+
+project: system execution failed.
+Following is the set of recorded exceptions:
+
+-------------------------------------------------------------------------------
+Class / Object      Routine                Nature of exception           Effect
+-------------------------------------------------------------------------------
+IMG_IMAGE_FILE      open @1                ressource_is_openable:       
+<0000000004A8F63C>                         Precondition violated.        Fail
+-------------------------------------------------------------------------------
+BACKGROUND          make @2                                             
+<0000000004A8F5D0>                         Routine failure.              Fail
+-------------------------------------------------------------------------------
+ENGINE              run_game @1                                         
+<0000000004A8E448>                         Routine failure.              Fail
+-------------------------------------------------------------------------------
+ENGINE              make @3                                             
+<0000000004A8E448>                         Routine failure.              Fail
+-------------------------------------------------------------------------------
+APPLICATION         make @1                                             
+<0000000004A8E418>                         Routine failure.              Fail
+-------------------------------------------------------------------------------
+APPLICATION         root's creation                                     
+<0000000004A8E418>                         Routine failure.              Exit
+-------------------------------------------------------------------------------
