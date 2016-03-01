@@ -5944,6 +5944,116 @@ char *names938 [] =
 "internal_name",
 };
 
+char *names944 [] =
+{
+"launch_mutex",
+"terminated",
+"thread_id",
+};
+
+char *names946 [] =
+{
+"message",
+"has_error",
+"is_open",
+"has_ressource_error",
+"last_buffer_size",
+};
+
+char *names948 [] =
+{
+"manual_error",
+"has_error",
+"is_manual_error",
+"last_al_error_code",
+"last_alc_error_code",
+};
+
+char *names949 [] =
+{
+"manual_error",
+"launch_mutex",
+"internal_listener",
+"internal_sources",
+"has_error",
+"terminated",
+"is_manual_error",
+"is_thread_executing",
+"must_stop_thread",
+"is_thread_init",
+"last_al_error_code",
+"last_alc_error_code",
+"sound_buffer_size",
+"thread_id",
+"device",
+"context",
+"null",
+};
+
+char *names950 [] =
+{
+"manual_error",
+"has_error",
+"is_manual_error",
+"last_al_error_code",
+"last_alc_error_code",
+};
+
+char *names951 [] =
+{
+"manual_error",
+"has_error",
+"is_manual_error",
+"last_al_error_code",
+"last_alc_error_code",
+};
+
+char *names952 [] =
+{
+"owner",
+"mutex_pointer",
+};
+
+char *names953 [] =
+{
+"manual_error",
+"sound_al_buffer",
+"sound_queued",
+"g_mutex",
+"has_error",
+"is_manual_error",
+"is_open",
+"is_thread_safe",
+"index",
+"last_al_error_code",
+"last_alc_error_code",
+"buffer_size",
+"buffer_tail",
+"buffer_head",
+"temp_buffer",
+};
+
+char *names955 [] =
+{
+"managed_pointer",
+"shared",
+"internal_item",
+};
+
+char *names957 [] =
+{
+"message",
+"filename",
+"has_error",
+"is_open",
+"has_ressource_error",
+"is_signed_internal",
+"last_buffer_size",
+"bits_per_sample_internal",
+"snd_file_ptr",
+"file_info",
+};
+
 
 
 #ifdef __cplusplus

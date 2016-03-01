@@ -23764,6 +23764,446 @@ static const int32 cn_attr938 [] =
 3563,
 };
 
+extern const char *names944[];
+static const uint32 types944 [] =
+{
+SK_REF,
+SK_BOOL,
+SK_POINTER,
+};
+
+static const uint16 attr_flags944 [] =
+{0,0,0,};
+
+static const EIF_TYPE_INDEX g_atype944_0 [] = {0xFF01,951,0xFFFF};
+static const EIF_TYPE_INDEX g_atype944_1 [] = {191,0xFFFF};
+static const EIF_TYPE_INDEX g_atype944_2 [] = {215,0xFFFF};
+
+static const EIF_TYPE_INDEX *gtypes944 [] = {
+g_atype944_0,
+g_atype944_1,
+g_atype944_2,
+};
+
+static const int32 cn_attr944 [] =
+{
+8135,
+8123,
+8122,
+};
+
+extern const char *names946[];
+static const uint32 types946 [] =
+{
+SK_REF,
+SK_BOOL,
+SK_BOOL,
+SK_BOOL,
+SK_INT32,
+};
+
+static const uint16 attr_flags946 [] =
+{0,0,0,0,0,};
+
+static const EIF_TYPE_INDEX g_atype946_0 [] = {217,0xFFFF};
+static const EIF_TYPE_INDEX g_atype946_1 [] = {191,0xFFFF};
+static const EIF_TYPE_INDEX g_atype946_2 [] = {191,0xFFFF};
+static const EIF_TYPE_INDEX g_atype946_3 [] = {191,0xFFFF};
+static const EIF_TYPE_INDEX g_atype946_4 [] = {206,0xFFFF};
+
+static const EIF_TYPE_INDEX *gtypes946 [] = {
+g_atype946_0,
+g_atype946_1,
+g_atype946_2,
+g_atype946_3,
+g_atype946_4,
+};
+
+static const int32 cn_attr946 [] =
+{
+6409,
+6415,
+7191,
+7192,
+8143,
+};
+
+extern const char *names948[];
+static const uint32 types948 [] =
+{
+SK_REF,
+SK_BOOL,
+SK_BOOL,
+SK_INT32,
+SK_INT32,
+};
+
+static const uint16 attr_flags948 [] =
+{0,0,0,0,0,};
+
+static const EIF_TYPE_INDEX g_atype948_0 [] = {217,0xFFFF};
+static const EIF_TYPE_INDEX g_atype948_1 [] = {191,0xFFFF};
+static const EIF_TYPE_INDEX g_atype948_2 [] = {191,0xFFFF};
+static const EIF_TYPE_INDEX g_atype948_3 [] = {206,0xFFFF};
+static const EIF_TYPE_INDEX g_atype948_4 [] = {206,0xFFFF};
+
+static const EIF_TYPE_INDEX *gtypes948 [] = {
+g_atype948_0,
+g_atype948_1,
+g_atype948_2,
+g_atype948_3,
+g_atype948_4,
+};
+
+static const int32 cn_attr948 [] =
+{
+6409,
+6415,
+8166,
+8167,
+8168,
+};
+
+extern const char *names949[];
+static const uint32 types949 [] =
+{
+SK_REF,
+SK_REF,
+SK_REF,
+SK_REF,
+SK_BOOL,
+SK_BOOL,
+SK_BOOL,
+SK_BOOL,
+SK_BOOL,
+SK_BOOL,
+SK_INT32,
+SK_INT32,
+SK_INT32,
+SK_POINTER,
+SK_POINTER,
+SK_POINTER,
+SK_POINTER,
+};
+
+static const uint16 attr_flags949 [] =
+{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,};
+
+static const EIF_TYPE_INDEX g_atype949_0 [] = {217,0xFFFF};
+static const EIF_TYPE_INDEX g_atype949_1 [] = {0xFF01,951,0xFFFF};
+static const EIF_TYPE_INDEX g_atype949_2 [] = {0xFF01,950,0xFFFF};
+static const EIF_TYPE_INDEX g_atype949_3 [] = {0xFF01,311,0xFF01,952,0xFFFF};
+static const EIF_TYPE_INDEX g_atype949_4 [] = {191,0xFFFF};
+static const EIF_TYPE_INDEX g_atype949_5 [] = {191,0xFFFF};
+static const EIF_TYPE_INDEX g_atype949_6 [] = {191,0xFFFF};
+static const EIF_TYPE_INDEX g_atype949_7 [] = {191,0xFFFF};
+static const EIF_TYPE_INDEX g_atype949_8 [] = {191,0xFFFF};
+static const EIF_TYPE_INDEX g_atype949_9 [] = {191,0xFFFF};
+static const EIF_TYPE_INDEX g_atype949_10 [] = {206,0xFFFF};
+static const EIF_TYPE_INDEX g_atype949_11 [] = {206,0xFFFF};
+static const EIF_TYPE_INDEX g_atype949_12 [] = {206,0xFFFF};
+static const EIF_TYPE_INDEX g_atype949_13 [] = {215,0xFFFF};
+static const EIF_TYPE_INDEX g_atype949_14 [] = {215,0xFFFF};
+static const EIF_TYPE_INDEX g_atype949_15 [] = {215,0xFFFF};
+static const EIF_TYPE_INDEX g_atype949_16 [] = {215,0xFFFF};
+
+static const EIF_TYPE_INDEX *gtypes949 [] = {
+g_atype949_0,
+g_atype949_1,
+g_atype949_2,
+g_atype949_3,
+g_atype949_4,
+g_atype949_5,
+g_atype949_6,
+g_atype949_7,
+g_atype949_8,
+g_atype949_9,
+g_atype949_10,
+g_atype949_11,
+g_atype949_12,
+g_atype949_13,
+g_atype949_14,
+g_atype949_15,
+g_atype949_16,
+};
+
+static const int32 cn_attr949 [] =
+{
+6409,
+8135,
+8195,
+8196,
+6415,
+8123,
+8166,
+8180,
+8197,
+8198,
+8167,
+8168,
+8176,
+8122,
+8193,
+8194,
+8199,
+};
+
+extern const char *names950[];
+static const uint32 types950 [] =
+{
+SK_REF,
+SK_BOOL,
+SK_BOOL,
+SK_INT32,
+SK_INT32,
+};
+
+static const uint16 attr_flags950 [] =
+{0,0,0,0,0,};
+
+static const EIF_TYPE_INDEX g_atype950_0 [] = {217,0xFFFF};
+static const EIF_TYPE_INDEX g_atype950_1 [] = {191,0xFFFF};
+static const EIF_TYPE_INDEX g_atype950_2 [] = {191,0xFFFF};
+static const EIF_TYPE_INDEX g_atype950_3 [] = {206,0xFFFF};
+static const EIF_TYPE_INDEX g_atype950_4 [] = {206,0xFFFF};
+
+static const EIF_TYPE_INDEX *gtypes950 [] = {
+g_atype950_0,
+g_atype950_1,
+g_atype950_2,
+g_atype950_3,
+g_atype950_4,
+};
+
+static const int32 cn_attr950 [] =
+{
+6409,
+6415,
+8166,
+8167,
+8168,
+};
+
+extern const char *names951[];
+static const uint32 types951 [] =
+{
+SK_REF,
+SK_BOOL,
+SK_BOOL,
+SK_INT32,
+SK_INT32,
+};
+
+static const uint16 attr_flags951 [] =
+{0,0,0,0,0,};
+
+static const EIF_TYPE_INDEX g_atype951_0 [] = {217,0xFFFF};
+static const EIF_TYPE_INDEX g_atype951_1 [] = {191,0xFFFF};
+static const EIF_TYPE_INDEX g_atype951_2 [] = {191,0xFFFF};
+static const EIF_TYPE_INDEX g_atype951_3 [] = {206,0xFFFF};
+static const EIF_TYPE_INDEX g_atype951_4 [] = {206,0xFFFF};
+
+static const EIF_TYPE_INDEX *gtypes951 [] = {
+g_atype951_0,
+g_atype951_1,
+g_atype951_2,
+g_atype951_3,
+g_atype951_4,
+};
+
+static const int32 cn_attr951 [] =
+{
+6409,
+6415,
+8166,
+8167,
+8168,
+};
+
+extern const char *names952[];
+static const uint32 types952 [] =
+{
+SK_POINTER,
+SK_POINTER,
+};
+
+static const uint16 attr_flags952 [] =
+{0,0,};
+
+static const EIF_TYPE_INDEX g_atype952_0 [] = {215,0xFFFF};
+static const EIF_TYPE_INDEX g_atype952_1 [] = {215,0xFFFF};
+
+static const EIF_TYPE_INDEX *gtypes952 [] = {
+g_atype952_0,
+g_atype952_1,
+};
+
+static const int32 cn_attr952 [] =
+{
+8212,
+8220,
+};
+
+extern const char *names953[];
+static const uint32 types953 [] =
+{
+SK_REF,
+SK_REF,
+SK_REF,
+SK_REF,
+SK_BOOL,
+SK_BOOL,
+SK_BOOL,
+SK_BOOL,
+SK_UINT32,
+SK_INT32,
+SK_INT32,
+SK_INT32,
+SK_INT32,
+SK_INT32,
+SK_POINTER,
+};
+
+static const uint16 attr_flags953 [] =
+{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,};
+
+static const EIF_TYPE_INDEX g_atype953_0 [] = {217,0xFFFF};
+static const EIF_TYPE_INDEX g_atype953_1 [] = {0xFF01,271,200,0xFFFF};
+static const EIF_TYPE_INDEX g_atype953_2 [] = {0xFF01,424,0xFF01,0xFFF9,2,174,0xFF01,945,206,0xFFFF};
+static const EIF_TYPE_INDEX g_atype953_3 [] = {0xFF01,951,0xFFFF};
+static const EIF_TYPE_INDEX g_atype953_4 [] = {191,0xFFFF};
+static const EIF_TYPE_INDEX g_atype953_5 [] = {191,0xFFFF};
+static const EIF_TYPE_INDEX g_atype953_6 [] = {191,0xFFFF};
+static const EIF_TYPE_INDEX g_atype953_7 [] = {191,0xFFFF};
+static const EIF_TYPE_INDEX g_atype953_8 [] = {200,0xFFFF};
+static const EIF_TYPE_INDEX g_atype953_9 [] = {206,0xFFFF};
+static const EIF_TYPE_INDEX g_atype953_10 [] = {206,0xFFFF};
+static const EIF_TYPE_INDEX g_atype953_11 [] = {206,0xFFFF};
+static const EIF_TYPE_INDEX g_atype953_12 [] = {206,0xFFFF};
+static const EIF_TYPE_INDEX g_atype953_13 [] = {206,0xFFFF};
+static const EIF_TYPE_INDEX g_atype953_14 [] = {215,0xFFFF};
+
+static const EIF_TYPE_INDEX *gtypes953 [] = {
+g_atype953_0,
+g_atype953_1,
+g_atype953_2,
+g_atype953_3,
+g_atype953_4,
+g_atype953_5,
+g_atype953_6,
+g_atype953_7,
+g_atype953_8,
+g_atype953_9,
+g_atype953_10,
+g_atype953_11,
+g_atype953_12,
+g_atype953_13,
+g_atype953_14,
+};
+
+static const int32 cn_attr953 [] =
+{
+6409,
+8254,
+8259,
+8262,
+6415,
+8166,
+8245,
+8261,
+8257,
+8167,
+8168,
+8228,
+8255,
+8256,
+8258,
+};
+
+extern const char *names955[];
+static const uint32 types955 [] =
+{
+SK_REF,
+SK_BOOL,
+SK_POINTER,
+};
+
+static const uint16 attr_flags955 [] =
+{0,0,0,};
+
+static const EIF_TYPE_INDEX g_atype955_0 [] = {151,0xFFFF};
+static const EIF_TYPE_INDEX g_atype955_1 [] = {191,0xFFFF};
+static const EIF_TYPE_INDEX g_atype955_2 [] = {215,0xFFFF};
+
+static const EIF_TYPE_INDEX *gtypes955 [] = {
+g_atype955_0,
+g_atype955_1,
+g_atype955_2,
+};
+
+static const int32 cn_attr955 [] =
+{
+1064,
+1059,
+1063,
+};
+
+extern const char *names957[];
+static const uint32 types957 [] =
+{
+SK_REF,
+SK_REF,
+SK_BOOL,
+SK_BOOL,
+SK_BOOL,
+SK_BOOL,
+SK_INT32,
+SK_INT32,
+SK_POINTER,
+SK_POINTER,
+};
+
+static const uint16 attr_flags957 [] =
+{0,0,0,0,0,0,0,0,0,0,};
+
+static const EIF_TYPE_INDEX g_atype957_0 [] = {217,0xFFFF};
+static const EIF_TYPE_INDEX g_atype957_1 [] = {0xFF01,217,0xFFFF};
+static const EIF_TYPE_INDEX g_atype957_2 [] = {191,0xFFFF};
+static const EIF_TYPE_INDEX g_atype957_3 [] = {191,0xFFFF};
+static const EIF_TYPE_INDEX g_atype957_4 [] = {191,0xFFFF};
+static const EIF_TYPE_INDEX g_atype957_5 [] = {191,0xFFFF};
+static const EIF_TYPE_INDEX g_atype957_6 [] = {206,0xFFFF};
+static const EIF_TYPE_INDEX g_atype957_7 [] = {206,0xFFFF};
+static const EIF_TYPE_INDEX g_atype957_8 [] = {215,0xFFFF};
+static const EIF_TYPE_INDEX g_atype957_9 [] = {215,0xFFFF};
+
+static const EIF_TYPE_INDEX *gtypes957 [] = {
+g_atype957_0,
+g_atype957_1,
+g_atype957_2,
+g_atype957_3,
+g_atype957_4,
+g_atype957_5,
+g_atype957_6,
+g_atype957_7,
+g_atype957_8,
+g_atype957_9,
+};
+
+static const int32 cn_attr957 [] =
+{
+6409,
+8376,
+6415,
+7191,
+7192,
+8375,
+8143,
+8374,
+8372,
+8373,
+};
+
 const struct cnode egc_fsystem_init[] = {
 {
 	(long) 0,
@@ -39706,6 +40146,320 @@ const struct cnode egc_fsystem_init[] = {
 	cn_attr938,
 	4,
 	1L,
+	(int32) 0,
+	{(int32) 0, (int) 0, (char **) 0, (char *) 0}
+	,
+	NULL
+},
+{
+0L,
+0L,
+"INVALID_TYPE",
+NULL,
+NULL,
+NULL,
+NULL,
+(uint16) 0L,
+NULL,
+0L,
+0L,
+(int32) 0L,
+{(int32) 0, (int) 0, NULL, NULL}, NULL},
+{
+	(long) 0,
+	(long) 0,
+	"AUDIO_EXTERNAL",
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	(uint16) 0,
+	(int32 *) 0,
+	0,
+	0L,
+	(int32) 32,
+	{(int32) 0, (int) 0, (char **) 0, (char *) 0}
+	,
+	NULL
+},
+{
+	(long) 0,
+	(long) 0,
+	"GAME_3D_OBJECT",
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	(uint16) 4096,
+	(int32 *) 0,
+	0,
+	0L,
+	(int32) 0,
+	{(int32) 0, (int) 0, (char **) 0, (char *) 0}
+	,
+	NULL
+},
+{
+	(long) 0,
+	(long) 0,
+	"THREAD_ENVIRONMENT",
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	(uint16) 0,
+	(int32 *) 0,
+	0,
+	0L,
+	(int32) 32,
+	{(int32) 0, (int) 0, (char **) 0, (char *) 0}
+	,
+	NULL
+},
+{
+	(long) 0,
+	(long) 0,
+	"THREAD_CONTROL",
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	(uint16) 0,
+	(int32 *) 0,
+	0,
+	0L,
+	(int32) 32,
+	{(int32) 0, (int) 0, (char **) 0, (char *) 0}
+	,
+	NULL
+},
+{
+	(long) 3,
+	(long) 3,
+	"THREAD",
+	names944,
+	types944,
+	attr_flags944,
+	gtypes944,
+	(uint16) 4096,
+	cn_attr944,
+	12,
+	1L,
+	(int32) 0,
+	{(int32) 0, (int) 0, (char **) 0, (char *) 0}
+	,
+	NULL
+},
+{
+	(long) 0,
+	(long) 0,
+	"AUDIO_LIBRARY_SHARED",
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	(uint16) 4096,
+	(int32 *) 0,
+	0,
+	0L,
+	(int32) 0,
+	{(int32) 0, (int) 0, (char **) 0, (char *) 0}
+	,
+	NULL
+},
+{
+	(long) 5,
+	(long) 5,
+	"AUDIO_SOUND",
+	names946,
+	types946,
+	attr_flags946,
+	gtypes946,
+	(uint16) 4096,
+	cn_attr946,
+	12,
+	1L,
+	(int32) 0,
+	{(int32) 0, (int) 0, (char **) 0, (char *) 0}
+	,
+	NULL
+},
+{
+0L,
+0L,
+"INVALID_TYPE",
+NULL,
+NULL,
+NULL,
+NULL,
+(uint16) 0L,
+NULL,
+0L,
+0L,
+(int32) 0L,
+{(int32) 0, (int) 0, NULL, NULL}, NULL},
+{
+	(long) 5,
+	(long) 5,
+	"AUDIO_OPENAL_ERROR_MANAGER",
+	names948,
+	types948,
+	attr_flags948,
+	gtypes948,
+	(uint16) 4096,
+	cn_attr948,
+	16,
+	1L,
+	(int32) 0,
+	{(int32) 0, (int) 0, (char **) 0, (char *) 0}
+	,
+	NULL
+},
+{
+	(long) 17,
+	(long) 17,
+	"AUDIO_LIBRARY_CONTROLLER",
+	names949,
+	types949,
+	attr_flags949,
+	gtypes949,
+	(uint16) 0,
+	cn_attr949,
+	52,
+	4L,
+	(int32) 0,
+	{(int32) 0, (int) 0, (char **) 0, (char *) 0}
+	,
+	NULL
+},
+{
+	(long) 5,
+	(long) 5,
+	"AUDIO_3D_OBJECT",
+	names950,
+	types950,
+	attr_flags950,
+	gtypes950,
+	(uint16) 4096,
+	cn_attr950,
+	16,
+	1L,
+	(int32) 0,
+	{(int32) 0, (int) 0, (char **) 0, (char *) 0}
+	,
+	NULL
+},
+{
+	(long) 5,
+	(long) 5,
+	"AUDIO_LISTENER",
+	names951,
+	types951,
+	attr_flags951,
+	gtypes951,
+	(uint16) 0,
+	cn_attr951,
+	16,
+	1L,
+	(int32) 32,
+	{(int32) 0, (int) 0, (char **) 0, (char *) 0}
+	,
+	NULL
+},
+{
+	(long) 2,
+	(long) 2,
+	"MUTEX",
+	names952,
+	types952,
+	attr_flags952,
+	gtypes952,
+	(uint16) 1024,
+	cn_attr952,
+	8,
+	0L,
+	(int32) 0,
+	{(int32) 0, (int) 0, (char **) 0, (char *) 0}
+	,
+	NULL
+},
+{
+	(long) 15,
+	(long) 15,
+	"AUDIO_SOURCE",
+	names953,
+	types953,
+	attr_flags953,
+	gtypes953,
+	(uint16) 1024,
+	cn_attr953,
+	48,
+	4L,
+	(int32) 0,
+	{(int32) 0, (int) 0, (char **) 0, (char *) 0}
+	,
+	NULL
+},
+{
+0L,
+0L,
+"INVALID_TYPE",
+NULL,
+NULL,
+NULL,
+NULL,
+(uint16) 0L,
+NULL,
+0L,
+0L,
+(int32) 0L,
+{(int32) 0, (int) 0, NULL, NULL}, NULL},
+{
+	(long) 3,
+	(long) 3,
+	"THREAD_ATTRIBUTES",
+	names955,
+	types955,
+	attr_flags955,
+	gtypes955,
+	(uint16) 0,
+	cn_attr955,
+	12,
+	1L,
+	(int32) 0,
+	{(int32) 0, (int) 0, (char **) 0, (char *) 0}
+	,
+	NULL
+},
+{
+	(long) 0,
+	(long) 0,
+	"AUDIO_SND_FILES_EXTERNAL",
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	(uint16) 0,
+	(int32 *) 0,
+	0,
+	0L,
+	(int32) 32,
+	{(int32) 0, (int) 0, (char **) 0, (char *) 0}
+	,
+	NULL
+},
+{
+	(long) 10,
+	(long) 10,
+	"AUDIO_SOUND_FILE",
+	names957,
+	types957,
+	attr_flags957,
+	gtypes957,
+	(uint16) 1024,
+	cn_attr957,
+	28,
+	2L,
 	(int32) 0,
 	{(int32) 0, (int) 0, (char **) 0, (char *) 0}
 	,

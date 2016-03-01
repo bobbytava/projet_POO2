@@ -9,16 +9,16 @@ class
 
 inherit
 	DRAWABLE
-	
+
 create
 	make
 
 feature
-	make(a_path:STRING)
+	make
 		local
 			l_image:IMG_IMAGE_FILE
 		do
-			create l_image.make(a_path)
+			create l_image.make("desert.png")
 			l_image.open
 			make_from_image (l_image)
 		end
