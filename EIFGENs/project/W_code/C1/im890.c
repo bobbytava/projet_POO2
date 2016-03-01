@@ -63,8 +63,8 @@ EIF_TYPED_VALUE F890_9331 (EIF_REFERENCE Current)
 	RTIV(Current, RTAL);
 	RTOTP;
 	RTHOOK(1);
-	RTDBGAL(Current, 0, 0xF8000370, 0,0); /* Result */
-	tr1 = RTLN(eif_new_type(880, 0x01).id);
+	RTDBGAL(Current, 0, 0xF800036E, 0,0); /* Result */
+	tr1 = RTLN(eif_new_type(878, 0x01).id);
 	(FUNCTION_CAST(void, (EIF_REFERENCE)) RTWC(32, Dtype(tr1)))(tr1);
 	RTNHOOK(1,1);
 	Result = (EIF_REFERENCE) RTCCL(tr1);

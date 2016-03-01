@@ -30,27 +30,60 @@ feature {NONE}  -- Initialization
 			l_background:BACKGROUND
 			l_window_builder:GAME_WINDOW_SURFACED_BUILDER
 			l_window:GAME_WINDOW_SURFACED
+			l_character:BOB
 		do
 			create l_background.make("desert.png")
+			create l_character.make
+			l_character.x := 400
+			l_character.y := 350
 			create l_window_builder
 			l_window_builder.set_dimension (l_background.width, l_background.height)
 			l_window_builder.set_title ("Example Animation")
 			l_window := l_window_builder.generate_window
 			game_library.quit_signal_actions.extend (agent on_quit)
-			game_library.iteration_actions.extend (agent on_iteration(?, l_background, l_window))
+			l_window.key_pressed_actions.extend (agent on_key_pressed(?, ?, l_character))
+			l_window.key_released_actions.extend (agent on_key_released(?,?,  l_character))
+			game_library.iteration_actions.extend (agent on_iteration(?, l_background,l_character, l_window))
 			game_library.launch
 		end
 
 feature
-	on_iteration(a_timestamp:NATURAL_32; A_background:GAME_SURFACE; l_window:GAME_WINDOW_SURFACED)
+	on_iteration(a_timestamp:NATURAL_32; a_background:BACKGROUND; a_character:BOB; l_window:GAME_WINDOW_SURFACED)
 			-- Event that is launch at each iteration.
 		do
 			-- Draw the scene
 			l_window.surface.draw_rectangle (create {GAME_COLOR}.make_rgb (0, 128, 255), 0, 0, a_background.width, a_background.height)
 			l_window.surface.draw_surface (a_background, 0, 0)
+			l_window.surface.draw_sub_surface (a_character.surface, a_character.animation_x, a_character.animation_y, a_character.width // 3, a_character.height, a_character.x, a_character.y)
+			a_character.animate(a_background)
 
 			-- Update modification in the screen
 			l_window.update
+		end
+
+	on_key_pressed(a_timestamp: NATURAL_32; a_key_state: GAME_KEY_STATE; a_character:BOB)
+			-- Action when a keyboard key has been pushed
+		do
+			if not a_key_state.is_repeat then		-- Be sure that the event is not only an automatic repetition of the key
+				if a_key_state.is_right then
+					a_character.go_right
+				elseif a_key_state.is_left then
+					a_character.go_left
+				end
+			end
+
+		end
+
+	on_key_released(a_timestamp: NATURAL_32; a_key_state: GAME_KEY_STATE; a_character:BOB)
+			-- Action when a keyboard key has been released
+		do
+			if not a_key_state.is_repeat then		-- I don't know if a key release can repeat, but you never know...
+				if a_key_state.is_right then
+					a_character.stop_right
+				elseif a_key_state.is_left then
+					a_character.stop_left
+				end
+			end
 		end
 
 	on_quit(a_timestamp: NATURAL_32)

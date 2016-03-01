@@ -36,8 +36,8 @@ extern void EIF_Minit863(void);
 }
 #endif
 
-#include <SDL_image.h>
 #include "SDL_image.h"
+#include <SDL_image.h>
 
 #ifdef __cplusplus
 extern "C" {

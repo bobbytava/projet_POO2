@@ -1,5 +1,5 @@
 /*
- * Code for class GAME_MOUSE_MOTION_STATE
+ * Code for class GAME_MOUSE_EVENTS_STATE
  */
 
 #include "eif_eiffel.h"
@@ -10,7 +10,9 @@
 extern "C" {
 #endif
 
-extern void F866_8477(EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE);
+extern void F866_8475(EIF_REFERENCE, EIF_TYPED_VALUE);
+extern EIF_TYPED_VALUE F866_8476(EIF_REFERENCE);
+extern EIF_TYPED_VALUE F866_8477(EIF_REFERENCE);
 extern void EIF_Minit866(void);
 
 #ifdef __cplusplus
@@ -32,26 +34,17 @@ extern "C" {
 extern "C" {
 #endif
 
-/* {GAME_MOUSE_MOTION_STATE}.make */
-void F866_8477 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg2x, EIF_TYPED_VALUE arg3x, EIF_TYPED_VALUE arg4x)
+/* {GAME_MOUSE_EVENTS_STATE}.make */
+void F866_8475 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
 {
 	GTCX
 	char *l_feature_name = "make";
 	RTEX;
 #define arg1 arg1x.it_n4
-#define arg2 arg2x.it_n4
-#define arg3 arg3x.it_i4
-#define arg4 arg4x.it_i4
-	EIF_TYPED_VALUE uu4_1x = {{0}, SK_UINT32};
-#define uu4_1 uu4_1x.it_n4
-	RTCDT;
 	RTSN;
 	RTDA;
 	RTLD;
 	
-	if ((arg4x.type & SK_HEAD) == SK_REF) arg4x.it_i4 = * (EIF_INTEGER_32 *) arg4x.it_r;
-	if ((arg3x.type & SK_HEAD) == SK_REF) arg3x.it_i4 = * (EIF_INTEGER_32 *) arg3x.it_r;
-	if ((arg2x.type & SK_HEAD) == SK_REF) arg2x.it_n4 = * (EIF_NATURAL_32 *) arg2x.it_r;
 	if ((arg1x.type & SK_HEAD) == SK_REF) arg1x.it_n4 = * (EIF_NATURAL_32 *) arg1x.it_r;
 	
 	RTLI(1);
@@ -59,43 +52,80 @@ void F866_8477 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE ar
 	RTLIU(1);
 	RTLU (SK_VOID, NULL);
 	RTLU(SK_UINT32,&arg1);
-	RTLU(SK_UINT32,&arg2);
-	RTLU(SK_INT32,&arg3);
-	RTLU(SK_INT32,&arg4);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 865, Current, 0, 4, 14158);
-	RTSA(dtype);
+	RTEAA(l_feature_name, 865, Current, 0, 1, 14156);
+	RTSA(Dtype(Current));
 	RTSC;
-	RTME(dtype, 0);
+	RTME(Dtype(Current), 0);
+	RTGC;
+	RTDBGEAA(865, Current, 14156);
+	RTIV(Current, RTAL);
+	RTHOOK(1);
+	RTDBGAA(Current, Dtype(Current), 6404, 0x38000000, 1); /* id */
+	*(EIF_NATURAL_32 *)(Current + RTWA(6404, Dtype(Current))) = (EIF_NATURAL_32) arg1;
+	RTVI(Current, RTAL);
+	RTRS;
+	RTHOOK(2);
+	RTDBGLE;
+	RTMD(0);
+	RTLE;
+	RTLO(3);
+	RTEE;
+#undef arg1
+}
+
+/* {GAME_MOUSE_EVENTS_STATE}.id */
+EIF_TYPED_VALUE F866_8476 (EIF_REFERENCE Current)
+{
+	EIF_TYPED_VALUE r;
+	r.type = SK_UINT32;
+	r.it_n4 = *(EIF_NATURAL_32 *)(Current + RTWA(6404,Dtype(Current)));
+	return r;
+}
+
+
+/* {GAME_MOUSE_EVENTS_STATE}.is_touch_device */
+EIF_TYPED_VALUE F866_8477 (EIF_REFERENCE Current)
+{
+	GTCX
+	char *l_feature_name = "is_touch_device";
+	RTEX;
+	EIF_NATURAL_32 tu4_1;
+	EIF_NATURAL_32 tu4_2;
+	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
+	
+	RTSN;
+	RTDA;
+	RTLD;
+	
+	RTLI(1);
+	RTLR(0,Current);
+	RTLIU(1);
+	RTLU (SK_BOOL, &Result);
+	RTLU (SK_REF, &Current);
+	
+	RTEAA(l_feature_name, 865, Current, 0, 0, 14158);
+	RTSA(Dtype(Current));
+	RTSC;
+	RTME(Dtype(Current), 0);
 	RTGC;
 	RTDBGEAA(865, Current, 14158);
 	RTIV(Current, RTAL);
 	RTHOOK(1);
-	uu4_1 = arg1;
-	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(6402, dtype))(Current, uu4_1x);
-	RTHOOK(2);
-	RTDBGAA(Current, dtype, 6401, 0x38000000, 1); /* state */
-	*(EIF_NATURAL_32 *)(Current + RTWA(6401, dtype)) = (EIF_NATURAL_32) arg2;
-	RTHOOK(3);
-	RTDBGAA(Current, dtype, 6394, 0x10000000, 1); /* x */
-	*(EIF_INTEGER_32 *)(Current + RTWA(6394, dtype)) = (EIF_INTEGER_32) arg3;
-	RTHOOK(4);
-	RTDBGAA(Current, dtype, 6395, 0x10000000, 1); /* y */
-	*(EIF_INTEGER_32 *)(Current + RTWA(6395, dtype)) = (EIF_INTEGER_32) arg4;
+	RTDBGAL(Current, 0, 0x04000000, 1,0); /* Result */
+	tu4_1 = *(EIF_NATURAL_32 *)(Current + RTWA(6404, Dtype(Current)));
+	tu4_2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(6268, 863))(Current)).it_n4);
+	Result = (EIF_BOOLEAN) (EIF_BOOLEAN)(tu4_1 == tu4_2);
 	RTVI(Current, RTAL);
 	RTRS;
-	RTHOOK(5);
+	RTHOOK(2);
 	RTDBGLE;
 	RTMD(0);
 	RTLE;
-	RTLO(6);
+	RTLO(2);
 	RTEE;
-#undef uu4_1
-#undef arg4
-#undef arg3
-#undef arg2
-#undef arg1
+	{ EIF_TYPED_VALUE r; r.type = SK_BOOL; r.it_b = Result; return r; }
 }
 
 void EIF_Minit866 (void)

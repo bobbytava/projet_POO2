@@ -11,20 +11,21 @@ inherit
 	DRAWABLE
 
 feature
+	x:INTEGER assign set_x
+			-- Vertical position of `Current'
 
-	pos_x:INTEGER assign set_pos_x
+	y:INTEGER assign set_y
+			-- Horizontal position of `Current'
 
-	pos_y:INTEGER assign set_pos_y
-
-	set_pos_x(a_x:INTEGER)
-			-- Assigne la valeur de `a_x' à `pos_x'
+	set_x(a_x:INTEGER)
+			-- Assign the value of `x' with `a_x'
 		do
-			pos_x := a_x
+			x := a_x
 		end
 
-	set_pos_y(a_y:INTEGER)
-			-- Assigne la valeur de `a_y' à `pos_y'
+	set_y(a_y:INTEGER)
+			-- Assign the value of `y' with `a_y'
 		do
-			pos_y := a_y
+			y := a_y
 		end
 end

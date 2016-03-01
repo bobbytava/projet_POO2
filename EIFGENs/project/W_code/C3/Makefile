@@ -41,9 +41,10 @@ SYSTEM_IN_DYNAMIC_LIB = project.dll
 
 OBJECTS = big_file_C3_c.obj 
 
-OLDOBJECTS =  ty933.obj ty933d.obj ga932.obj ga932d.obj ga929.obj ga929d.obj ga928.obj ga928d.obj \
-	ga927.obj ga927d.obj ga931.obj ga931d.obj ch934.obj ch934d.obj ga926.obj ga926d.obj \
-	ga930.obj ga930d.obj 
+OLDOBJECTS =  ty938.obj ty938d.obj ga936.obj ga936d.obj im927.obj im927d.obj ga926.obj ga926d.obj \
+	ga933.obj ga933d.obj ga928.obj ga928d.obj ga935.obj ga935d.obj ga932.obj ga932d.obj \
+	ch937.obj ch937d.obj ga931.obj ga931d.obj ga930.obj ga930d.obj ga929.obj ga929d.obj \
+	ga934.obj ga934d.obj 
 
 all::  Cobj3.lib
 
