@@ -5470,6 +5470,8 @@ char *names911 [] =
 "internal_game_library",
 "image",
 "internal_pixels",
+"source",
+"sound",
 "has_error",
 "is_manual_error",
 "is_open",
@@ -5481,6 +5483,8 @@ char *names912 [] =
 "internal_game_library",
 "image",
 "internal_pixels",
+"source",
+"sound",
 "has_error",
 "is_manual_error",
 "is_open",
@@ -5498,6 +5502,8 @@ char *names913 [] =
 "surface_left",
 "animation",
 "surface",
+"source",
+"sound",
 "has_error",
 "is_manual_error",
 "is_open",
@@ -6040,7 +6046,13 @@ char *names955 [] =
 "internal_item",
 };
 
-char *names957 [] =
+char *names959 [] =
+{
+"source",
+"sound",
+};
+
+char *names961 [] =
 {
 "message",
 "filename",

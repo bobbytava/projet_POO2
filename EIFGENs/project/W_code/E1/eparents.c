@@ -3617,8 +3617,8 @@ static EIF_TYPE_INDEX ptf902[] = {870,0xFFF7,900,0xFFFF};
 static struct eif_par_types par902 = {902, ptf902, (uint16) 2, (uint16) 0, (char) 0};
 
 /* ENGINE */
-static EIF_TYPE_INDEX ptf903[] = {900,0xFFF7,889,0xFFF7,944,0xFFF7,61,0xFFFF};
-static struct eif_par_types par903 = {903, ptf903, (uint16) 4, (uint16) 0, (char) 0};
+static EIF_TYPE_INDEX ptf903[] = {900,0xFFF7,889,0xFFFF};
+static struct eif_par_types par903 = {903, ptf903, (uint16) 2, (uint16) 0, (char) 0};
 
 /* GAME_WINDOW_BUILDER */
 static EIF_TYPE_INDEX ptf904[] = {900,0xFFFF};
@@ -3645,12 +3645,12 @@ static EIF_TYPE_INDEX ptf909[] = {907,0xFFFF};
 static struct eif_par_types par909 = {909, ptf909, (uint16) 1, (uint16) 0, (char) 0};
 
 /* BACKGROUND */
-static EIF_TYPE_INDEX ptf910[] = {909,0xFFFF};
-static struct eif_par_types par910 = {910, ptf910, (uint16) 1, (uint16) 0, (char) 0};
+static EIF_TYPE_INDEX ptf910[] = {909,0xFFF7,958,0xFFFF};
+static struct eif_par_types par910 = {910, ptf910, (uint16) 2, (uint16) 0, (char) 0};
 
 /* SPRITE */
-static EIF_TYPE_INDEX ptf911[] = {909,0xFFFF};
-static struct eif_par_types par911 = {911, ptf911, (uint16) 1, (uint16) 0, (char) 0};
+static EIF_TYPE_INDEX ptf911[] = {909,0xFFF7,958,0xFFFF};
+static struct eif_par_types par911 = {911, ptf911, (uint16) 2, (uint16) 0, (char) 0};
 
 /* BOB */
 static EIF_TYPE_INDEX ptf912[] = {911,0xFFFF};
@@ -3812,15 +3812,23 @@ static struct eif_par_types par952 = {952, ptf952, (uint16) 3, (uint16) 0, (char
 static EIF_TYPE_INDEX ptf954[] = {0,0xFFF7,46,0xFFFF};
 static struct eif_par_types par954 = {954, ptf954, (uint16) 2, (uint16) 0, (char) 0};
 
+/* SOUND_CONTROLLER */
+static EIF_TYPE_INDEX ptf957[] = {944,0xFFF7,61,0xFFFF};
+static struct eif_par_types par957 = {957, ptf957, (uint16) 2, (uint16) 0, (char) 0};
+
+/* HEARABLE */
+static EIF_TYPE_INDEX ptf958[] = {957,0xFFFF};
+static struct eif_par_types par958 = {958, ptf958, (uint16) 1, (uint16) 0, (char) 0};
+
 /* AUDIO_SND_FILES_EXTERNAL */
-static EIF_TYPE_INDEX ptf955[] = {0,0xFFFF};
-static struct eif_par_types par955 = {955, ptf955, (uint16) 1, (uint16) 0, (char) 0};
+static EIF_TYPE_INDEX ptf959[] = {0,0xFFFF};
+static struct eif_par_types par959 = {959, ptf959, (uint16) 1, (uint16) 0, (char) 0};
 
 /* AUDIO_SOUND_FILE */
-static EIF_TYPE_INDEX ptf956[] = {945,0xFFF7,150,0xFFFF};
-static struct eif_par_types par956 = {956, ptf956, (uint16) 2, (uint16) 0, (char) 0};
+static EIF_TYPE_INDEX ptf960[] = {945,0xFFF7,150,0xFFFF};
+static struct eif_par_types par960 = {960, ptf960, (uint16) 2, (uint16) 0, (char) 0};
 
-int egc_partab_size_init = 956;
+int egc_partab_size_init = 960;
 struct eif_par_types *egc_partab_init[] = {
 &par0,
 &par1,
@@ -4777,8 +4785,12 @@ NULL,
 &par952,
 NULL,
 &par954,
-&par955,
-&par956,
+NULL,
+NULL,
+&par957,
+&par958,
+&par959,
+&par960,
 NULL};
 
 #ifdef __cplusplus

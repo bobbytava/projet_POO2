@@ -25,6 +25,7 @@ extern EIF_TYPED_VALUE F913_9543(EIF_REFERENCE);
 extern EIF_TYPED_VALUE F913_9544(EIF_REFERENCE);
 extern EIF_TYPED_VALUE F913_9545(EIF_REFERENCE);
 extern void F913_9546(EIF_REFERENCE, EIF_TYPED_VALUE);
+extern void F913_10706(EIF_REFERENCE);
 extern void EIF_Minit913(void);
 
 #ifdef __cplusplus
@@ -72,6 +73,7 @@ void F913_9532 (EIF_REFERENCE Current)
 	EIF_REAL_64 tr8_1;
 	EIF_REAL_64 tr8_2;
 	EIF_INTEGER_32 ti4_1;
+	EIF_BOOLEAN tb1;
 	RTCDT;
 	RTSN;
 	RTDA;
@@ -196,9 +198,67 @@ void F913_9532 (EIF_REFERENCE Current)
 	ui4_1 = ((EIF_INTEGER_32) 2L);
 	ti4_1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTVF(1742, "at", tr1))(tr1, ui4_1x)).it_i4);
 	*(EIF_INTEGER_32 *)(Current + RTWA(7409, dtype)) = (EIF_INTEGER_32) ti4_1;
+	RTHOOK(17);
+	RTDBGAA(Current, dtype, 8415, 0xF80003C0, 0); /* sound */
+	tr1 = RTLNSMART(RTWCT(8415, dtype, Dftype(Current)).id);
+	tr2 = RTMS_EX_H("sound.aif",9,119877222);
+	ur1 = tr2;
+	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWC(8416, Dtype(tr1)))(tr1, ur1x);
+	RTNHOOK(17,1);
+	RTAR(Current, tr1);
+	*(EIF_REFERENCE *)(Current + RTWA(8415, dtype)) = (EIF_REFERENCE) RTCCL(tr1);
+	RTHOOK(18);
+	tr1 = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(8415, dtype))(Current)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
+	RTNHOOK(18,1);
+	tb1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(7189, "is_openable", tr1))(tr1)).it_b);
+	if (tb1) {
+		RTHOOK(19);
+		tr1 = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(8415, dtype))(Current)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
+		RTNHOOK(19,1);
+		(FUNCTION_CAST(void, (EIF_REFERENCE)) RTVF(7190, "open", tr1))(tr1);
+		RTHOOK(20);
+		tr1 = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(8415, dtype))(Current)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
+		RTNHOOK(20,1);
+		tb1 = *(EIF_BOOLEAN *)(tr1 + RTVA(7191, "is_open", tr1));
+		if (tb1) {
+			RTHOOK(21);
+			tr1 = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(8141, dtype))(Current)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
+			RTNHOOK(21,1);
+			(FUNCTION_CAST(void, (EIF_REFERENCE)) RTVF(8183, "sources_add", tr1))(tr1);
+			RTHOOK(22);
+			RTDBGAA(Current, dtype, 8389, 0xF80003B8, 0); /* source */
+			tr1 = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(8141, dtype))(Current)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
+			RTNHOOK(22,1);
+			tr2 = ((up2x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(8184, "last_source_added", tr1))(tr1)), (((up2x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up2x.it_r = RTBU(up2x))), (up2x.type = SK_POINTER), up2x.it_r);
+			RTAR(Current, tr2);
+			*(EIF_REFERENCE *)(Current + RTWA(8389, dtype)) = (EIF_REFERENCE) RTCCL(tr2);
+			RTHOOK(23);
+			tr1 = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(8389, dtype))(Current)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
+			RTNHOOK(23,1);
+			tr2 = ((up2x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(8415, dtype))(Current)), (((up2x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up2x.it_r = RTBU(up2x))), (up2x.type = SK_POINTER), up2x.it_r);
+			ur1 = RTCCL(tr2);
+			(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTVF(8240, "queue_sound", tr1))(tr1, ur1x);
+		} else {
+			RTHOOK(24);
+			tr1 = RTMS_EX_H("Cannot open sound files.",24,1305193262);
+			ur1 = tr1;
+			(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(30, dtype))(Current, ur1x);
+			RTHOOK(25);
+			ui4_1 = ((EIF_INTEGER_32) 1L);
+			(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(1251, dtype))(Current, ui4_1x);
+		}
+	} else {
+		RTHOOK(26);
+		tr1 = RTMS_EX_H("Sound files not valid.",22,1321612078);
+		ur1 = tr1;
+		(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(30, dtype))(Current, ur1x);
+		RTHOOK(27);
+		ui4_1 = ((EIF_INTEGER_32) 1L);
+		(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(1251, dtype))(Current, ui4_1x);
+	}
 	RTVI(Current, RTAL);
 	RTRS;
-	RTHOOK(17);
+	RTHOOK(28);
 	RTDBGLE;
 	RTMD(0);
 	RTLE;
@@ -644,6 +704,57 @@ void F913_9546 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
 #undef up1
 #undef ui4_1
 #undef arg1
+}
+
+/* {BOB}.play_sound */
+void F913_10706 (EIF_REFERENCE Current)
+{
+	GTCX
+	char *l_feature_name = "play_sound";
+	RTEX;
+	EIF_TYPED_VALUE up1x = {{0}, SK_POINTER};
+#define up1 up1x.it_p
+	EIF_REFERENCE tr1 = NULL;
+	RTCDT;
+	RTSN;
+	RTDA;
+	RTLD;
+	
+	RTLI(2);
+	RTLR(0,Current);
+	RTLR(1,tr1);
+	RTLIU(2);
+	RTLU (SK_VOID, NULL);
+	RTLU (SK_REF, &Current);
+	
+	RTEAA(l_feature_name, 912, Current, 0, 0, 16313);
+	RTSA(dtype);
+	RTSC;
+	RTME(dtype, 0);
+	RTGC;
+	RTDBGEAA(912, Current, 16313);
+	RTIV(Current, RTAL);
+	RTHOOK(1);
+	tr1 = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(8389, dtype))(Current)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
+	RTNHOOK(1,1);
+	(FUNCTION_CAST(void, (EIF_REFERENCE)) RTVF(8232, "stop", tr1))(tr1);
+	RTHOOK(2);
+	tr1 = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(8415, dtype))(Current)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
+	RTNHOOK(2,1);
+	(FUNCTION_CAST(void, (EIF_REFERENCE)) RTVF(8150, "restart", tr1))(tr1);
+	RTHOOK(3);
+	tr1 = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(8389, dtype))(Current)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
+	RTNHOOK(3,1);
+	(FUNCTION_CAST(void, (EIF_REFERENCE)) RTVF(8230, "play", tr1))(tr1);
+	RTVI(Current, RTAL);
+	RTRS;
+	RTHOOK(4);
+	RTDBGLE;
+	RTMD(0);
+	RTLE;
+	RTLO(2);
+	RTEE;
+#undef up1
 }
 
 void EIF_Minit913 (void)

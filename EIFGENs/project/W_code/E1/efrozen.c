@@ -16183,50 +16183,53 @@ extern EIF_INTEGER_32 F955_10589();
 extern void F955_10593();
 extern void F955_10569();
 extern void F955_10570();
-extern EIF_INTEGER_32 F956_10638();
-extern EIF_POINTER F956_10639();
-extern EIF_POINTER F956_10640();
-extern EIF_INTEGER_32 F956_10641();
-extern EIF_POINTER F956_10642();
-extern EIF_INTEGER_64 F956_10643();
-extern EIF_INTEGER_32 F956_10644();
-extern EIF_INTEGER_64 F956_10645();
-extern EIF_INTEGER_32 F956_10646();
-extern void F956_10647();
-extern EIF_INTEGER_32 F956_10648();
-extern EIF_INTEGER_32 F956_10649();
-extern EIF_INTEGER_64 F956_10650();
-extern EIF_INTEGER_32 F956_10651();
-extern EIF_INTEGER_32 F956_10652();
-extern EIF_INTEGER_32 F956_10653();
-extern EIF_INTEGER_32 F956_10654();
-extern EIF_INTEGER_32 F956_10655();
-extern EIF_INTEGER_32 F956_10656();
-extern EIF_INTEGER_32 F956_10657();
-extern EIF_INTEGER_32 F956_10658();
-extern EIF_INTEGER_32 F956_10659();
-extern EIF_INTEGER_32 F956_10660();
-extern void F904_10661();
-extern void F904_10662();
-extern void F957_10664();
-extern EIF_INTEGER_32 F957_10665();
-extern EIF_BOOLEAN F957_10666();
-extern void F957_10667();
-extern EIF_INTEGER_32 F957_10668();
-extern EIF_INTEGER_32 F957_10669();
-extern EIF_INTEGER_32 F957_10670();
-extern EIF_BOOLEAN F957_10671();
-extern EIF_BOOLEAN F957_10672();
-extern void F957_10673();
-extern void F957_10674();
-extern void F957_10675();
-extern EIF_INTEGER_32 F957_10676();
-extern EIF_POINTER F957_10677();
-extern EIF_POINTER F957_10678();
-extern EIF_INTEGER_32 F957_10679();
-extern EIF_BOOLEAN F957_10680();
-extern EIF_REFERENCE F957_10681();
-extern void F957_10663();
+extern void F959_10701();
+extern EIF_REFERENCE F959_10702();
+extern void F911_10707();
+extern void F913_10706();
+extern EIF_INTEGER_32 F960_10726();
+extern EIF_INTEGER_32 F960_10727();
+extern EIF_INTEGER_32 F960_10728();
+extern EIF_INTEGER_32 F960_10729();
+extern EIF_INTEGER_32 F960_10730();
+extern EIF_INTEGER_32 F960_10731();
+extern EIF_INTEGER_32 F960_10732();
+extern EIF_INTEGER_32 F960_10710();
+extern EIF_POINTER F960_10711();
+extern EIF_POINTER F960_10712();
+extern EIF_INTEGER_32 F960_10713();
+extern EIF_POINTER F960_10714();
+extern EIF_INTEGER_64 F960_10715();
+extern EIF_INTEGER_32 F960_10716();
+extern EIF_INTEGER_64 F960_10717();
+extern EIF_INTEGER_32 F960_10718();
+extern void F960_10719();
+extern EIF_INTEGER_32 F960_10720();
+extern EIF_INTEGER_32 F960_10721();
+extern EIF_INTEGER_64 F960_10722();
+extern EIF_INTEGER_32 F960_10723();
+extern EIF_INTEGER_32 F960_10724();
+extern EIF_INTEGER_32 F960_10725();
+extern EIF_REFERENCE F959_10733();
+extern void F961_10734();
+extern void F961_10735();
+extern EIF_INTEGER_32 F961_10736();
+extern EIF_BOOLEAN F961_10737();
+extern void F961_10738();
+extern EIF_INTEGER_32 F961_10739();
+extern EIF_INTEGER_32 F961_10740();
+extern EIF_INTEGER_32 F961_10741();
+extern EIF_BOOLEAN F961_10742();
+extern EIF_BOOLEAN F961_10743();
+extern void F961_10744();
+extern void F961_10745();
+extern void F961_10746();
+extern EIF_INTEGER_32 F961_10747();
+extern EIF_POINTER F961_10748();
+extern EIF_POINTER F961_10749();
+extern EIF_INTEGER_32 F961_10750();
+extern EIF_BOOLEAN F961_10751();
+extern EIF_REFERENCE F961_10752();
 
 #ifdef __cplusplus
 }
@@ -32504,50 +32507,97 @@ NULL,
 (fnptr) F955_10593,
 (fnptr) F955_10569,
 (fnptr) F955_10570,
-(fnptr) F956_10638,
-(fnptr) F956_10639,
-(fnptr) F956_10640,
-(fnptr) F956_10641,
-(fnptr) F956_10642,
-(fnptr) F956_10643,
-(fnptr) F956_10644,
-(fnptr) F956_10645,
-(fnptr) F956_10646,
-(fnptr) F956_10647,
-(fnptr) F956_10648,
-(fnptr) F956_10649,
-(fnptr) F956_10650,
-(fnptr) F956_10651,
-(fnptr) F956_10652,
-(fnptr) F956_10653,
-(fnptr) F956_10654,
-(fnptr) F956_10655,
-(fnptr) F956_10656,
-(fnptr) F956_10657,
-(fnptr) F956_10658,
-(fnptr) F956_10659,
-(fnptr) F956_10660,
-(fnptr) F904_10661,
-(fnptr) F904_10662,
-(fnptr) F957_10664,
-(fnptr) F957_10665,
-(fnptr) F957_10666,
-(fnptr) F957_10667,
-(fnptr) F957_10668,
-(fnptr) F957_10669,
-(fnptr) F957_10670,
-(fnptr) F957_10671,
-(fnptr) F957_10672,
-(fnptr) F957_10673,
-(fnptr) F957_10674,
-(fnptr) F957_10675,
-(fnptr) F957_10676,
-(fnptr) F957_10677,
-(fnptr) F957_10678,
-(fnptr) F957_10679,
-(fnptr) F957_10680,
-(fnptr) F957_10681,
-(fnptr) F957_10663,
+NULL,
+NULL,
+NULL,
+NULL,
+NULL,
+NULL,
+NULL,
+NULL,
+NULL,
+NULL,
+NULL,
+NULL,
+NULL,
+NULL,
+NULL,
+NULL,
+NULL,
+NULL,
+NULL,
+NULL,
+NULL,
+NULL,
+NULL,
+NULL,
+NULL,
+NULL,
+NULL,
+NULL,
+NULL,
+NULL,
+NULL,
+NULL,
+NULL,
+NULL,
+NULL,
+NULL,
+NULL,
+NULL,
+NULL,
+NULL,
+NULL,
+NULL,
+NULL,
+NULL,
+(fnptr) F959_10701,
+(fnptr) F959_10702,
+(fnptr) F911_10707,
+(fnptr) F913_10706,
+(fnptr) F960_10726,
+(fnptr) F960_10727,
+(fnptr) F960_10728,
+(fnptr) F960_10729,
+(fnptr) F960_10730,
+(fnptr) F960_10731,
+(fnptr) F960_10732,
+(fnptr) F960_10710,
+(fnptr) F960_10711,
+(fnptr) F960_10712,
+(fnptr) F960_10713,
+(fnptr) F960_10714,
+(fnptr) F960_10715,
+(fnptr) F960_10716,
+(fnptr) F960_10717,
+(fnptr) F960_10718,
+(fnptr) F960_10719,
+(fnptr) F960_10720,
+(fnptr) F960_10721,
+(fnptr) F960_10722,
+(fnptr) F960_10723,
+(fnptr) F960_10724,
+(fnptr) F960_10725,
+(fnptr) F959_10733,
+(fnptr) F961_10734,
+(fnptr) F961_10735,
+(fnptr) F961_10736,
+(fnptr) F961_10737,
+(fnptr) F961_10738,
+(fnptr) F961_10739,
+(fnptr) F961_10740,
+(fnptr) F961_10741,
+(fnptr) F961_10742,
+(fnptr) F961_10743,
+(fnptr) F961_10744,
+(fnptr) F961_10745,
+(fnptr) F961_10746,
+(fnptr) F961_10747,
+(fnptr) F961_10748,
+(fnptr) F961_10749,
+(fnptr) F961_10750,
+(fnptr) F961_10751,
+(fnptr) F961_10752,
 };
 
 int egc_fpatidtab_init[] = {
@@ -47653,8 +47703,8 @@ int egc_fpatidtab_init[] = {
 14,
 14,
 5,
-5,
-585,
+3,
+627,
 586,
 586,
 41,
@@ -48817,6 +48867,61 @@ int egc_fpatidtab_init[] = {
 0,
 5,
 25,
+-1,
+-1,
+-1,
+-1,
+-1,
+-1,
+-1,
+-1,
+-1,
+-1,
+-1,
+-1,
+-1,
+-1,
+-1,
+-1,
+-1,
+-1,
+-1,
+-1,
+-1,
+-1,
+-1,
+-1,
+-1,
+-1,
+-1,
+-1,
+-1,
+-1,
+-1,
+-1,
+-1,
+-1,
+-1,
+-1,
+-1,
+-1,
+-1,
+-1,
+-1,
+-1,
+-1,
+-1,
+5,
+0,
+5,
+5,
+14,
+14,
+14,
+14,
+14,
+14,
+14,
 14,
 295,
 623,
@@ -48833,15 +48938,8 @@ int egc_fpatidtab_init[] = {
 53,
 53,
 53,
-14,
-14,
-14,
-14,
-14,
-14,
-14,
+0,
 3,
-585,
 130,
 14,
 19,
@@ -48860,7 +48958,6 @@ int egc_fpatidtab_init[] = {
 14,
 19,
 0,
-3,
 };
 
 #ifdef __cplusplus

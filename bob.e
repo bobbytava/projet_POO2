@@ -9,6 +9,9 @@ class
 
 inherit
 	SPRITE
+		redefine
+			play_sound
+		end
 
 create
 	make
@@ -39,7 +42,23 @@ feature
 			surface := surface_right
 			animation_x := animation.at (1)
 			animation_y := animation.at (2)
-	end
+
+			create sound.make("sound.aif")
+			if sound.is_openable then
+				sound.open
+				if sound.is_open then
+					audio_library.sources_add
+					source:=audio_library.last_source_added	-- The first source will be use for playing the music
+					source.queue_sound(sound)
+				else
+					print("Cannot open sound files.")
+					die(1)
+				end
+			else
+				print("Sound files not valid.")
+				die(1)
+			end
+		end
 
 	go_right
 		do
@@ -119,5 +138,13 @@ feature
 					temps := 1
 				end
 			end
+		end
+
+	play_sound
+		do
+			source.stop					-- Be sure that the queue buffer is empty on the sound_source object (when stop, the source queue is clear)
+			sound.restart						-- Be sure that the sound is at the beginning
+			source.queue_sound (sound)
+			source.play					-- Play the source
 		end
 end

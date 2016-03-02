@@ -1,0 +1,6 @@
+#include "au960.c"
+#include "au960d.c"
+#include "au961.c"
+#include "au961d.c"
+#include "he959.c"
+#include "he959d.c"

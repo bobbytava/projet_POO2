@@ -47,8 +47,7 @@ OLDOBJECTS =  ty938.obj ty938d.obj ga936.obj ga936d.obj im927.obj im927d.obj ga9
 	ga934.obj ga934d.obj au953.obj au953d.obj au945.obj au945d.obj au946.obj au946d.obj \
 	au940.obj au940d.obj mu952.obj mu952d.obj au950.obj au950d.obj au949.obj au949d.obj \
 	th942.obj th942d.obj au948.obj au948d.obj ga941.obj ga941d.obj au951.obj au951d.obj \
-	th944.obj th944d.obj th955.obj th955d.obj th943.obj th943d.obj au957.obj au957d.obj \
-	au956.obj au956d.obj 
+	th944.obj th944d.obj th955.obj th955d.obj th943.obj th943d.obj so958.obj so958d.obj 
 
 all::  Cobj3.lib
 

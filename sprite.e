@@ -9,6 +9,7 @@ deferred class
 
 inherit
 	DRAWABLE
+	HEARABLE
 
 feature
 	x:INTEGER assign set_x

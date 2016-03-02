@@ -61,8 +61,7 @@ OLDOBJECTS =  ty938.o ty938d.o ga936.o ga936d.o im927.o im927d.o ga926.o ga926d.
 	ga934.o ga934d.o au953.o au953d.o au945.o au945d.o au946.o au946d.o \
 	au940.o au940d.o mu952.o mu952d.o au950.o au950d.o au949.o au949d.o \
 	th942.o th942d.o au948.o au948d.o ga941.o ga941d.o au951.o au951d.o \
-	th944.o th944d.o th955.o th955d.o th943.o th943d.o au957.o au957d.o \
-	au956.o au956d.o 
+	th944.o th944d.o th955.o th955d.o th943.o th943d.o so958.o so958d.o 
 
 all: Cobj3.o
 
