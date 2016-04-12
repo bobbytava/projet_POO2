@@ -113,7 +113,7 @@ EIF_TYPED_VALUE F861_6969 (EIF_REFERENCE Current)
 	RTHOOK(1);
 	RTDBGAL(Current, 0, 0x04000000, 1,0); /* Result */
 	tu1_1 = *(EIF_NATURAL_8 *)(Current + RTWA(4907, Dtype(Current)));
-	tu1_2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(5747, 863))(Current)).it_n1);
+	tu1_2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(5829, 865))(Current)).it_n1);
 	Result = (EIF_BOOLEAN) (EIF_BOOLEAN)(tu1_1 == tu1_2);
 	RTVI(Current, RTAL);
 	RTRS;
@@ -156,7 +156,7 @@ EIF_TYPED_VALUE F861_6970 (EIF_REFERENCE Current)
 	RTHOOK(1);
 	RTDBGAL(Current, 0, 0x04000000, 1,0); /* Result */
 	tu1_1 = *(EIF_NATURAL_8 *)(Current + RTWA(4907, Dtype(Current)));
-	tu1_2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(5748, 863))(Current)).it_n1);
+	tu1_2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(5830, 865))(Current)).it_n1);
 	Result = (EIF_BOOLEAN) (EIF_BOOLEAN)(tu1_1 == tu1_2);
 	RTVI(Current, RTAL);
 	RTRS;
@@ -199,7 +199,7 @@ EIF_TYPED_VALUE F861_6971 (EIF_REFERENCE Current)
 	RTHOOK(1);
 	RTDBGAL(Current, 0, 0x04000000, 1,0); /* Result */
 	tu1_1 = *(EIF_NATURAL_8 *)(Current + RTWA(4907, Dtype(Current)));
-	tu1_2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(5749, 863))(Current)).it_n1);
+	tu1_2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(5831, 865))(Current)).it_n1);
 	Result = (EIF_BOOLEAN) (EIF_BOOLEAN)(tu1_1 == tu1_2);
 	RTVI(Current, RTAL);
 	RTRS;
@@ -242,7 +242,7 @@ EIF_TYPED_VALUE F861_6972 (EIF_REFERENCE Current)
 	RTHOOK(1);
 	RTDBGAL(Current, 0, 0x04000000, 1,0); /* Result */
 	tu1_1 = *(EIF_NATURAL_8 *)(Current + RTWA(4907, Dtype(Current)));
-	tu1_2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(5750, 863))(Current)).it_n1);
+	tu1_2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(5832, 865))(Current)).it_n1);
 	Result = (EIF_BOOLEAN) (EIF_BOOLEAN)(tu1_1 == tu1_2);
 	RTVI(Current, RTAL);
 	RTRS;
@@ -285,7 +285,7 @@ EIF_TYPED_VALUE F861_6973 (EIF_REFERENCE Current)
 	RTHOOK(1);
 	RTDBGAL(Current, 0, 0x04000000, 1,0); /* Result */
 	tu1_1 = *(EIF_NATURAL_8 *)(Current + RTWA(4907, Dtype(Current)));
-	tu1_2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(5751, 863))(Current)).it_n1);
+	tu1_2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(5833, 865))(Current)).it_n1);
 	Result = (EIF_BOOLEAN) (EIF_BOOLEAN)(tu1_1 == tu1_2);
 	RTVI(Current, RTAL);
 	RTRS;
@@ -328,7 +328,7 @@ EIF_TYPED_VALUE F861_6974 (EIF_REFERENCE Current)
 	RTHOOK(1);
 	RTDBGAL(Current, 0, 0x04000000, 1,0); /* Result */
 	tu1_1 = *(EIF_NATURAL_8 *)(Current + RTWA(4907, Dtype(Current)));
-	tu1_2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(5752, 863))(Current)).it_n1);
+	tu1_2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(5834, 865))(Current)).it_n1);
 	Result = (EIF_BOOLEAN) (EIF_BOOLEAN)(tu1_1 == tu1_2);
 	RTVI(Current, RTAL);
 	RTRS;
@@ -371,7 +371,7 @@ EIF_TYPED_VALUE F861_6975 (EIF_REFERENCE Current)
 	RTHOOK(1);
 	RTDBGAL(Current, 0, 0x04000000, 1,0); /* Result */
 	tu1_1 = *(EIF_NATURAL_8 *)(Current + RTWA(4907, Dtype(Current)));
-	tu1_2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(5753, 863))(Current)).it_n1);
+	tu1_2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(5835, 865))(Current)).it_n1);
 	Result = (EIF_BOOLEAN) (EIF_BOOLEAN)(tu1_1 == tu1_2);
 	RTVI(Current, RTAL);
 	RTRS;
@@ -414,7 +414,7 @@ EIF_TYPED_VALUE F861_6976 (EIF_REFERENCE Current)
 	RTHOOK(1);
 	RTDBGAL(Current, 0, 0x04000000, 1,0); /* Result */
 	tu1_1 = *(EIF_NATURAL_8 *)(Current + RTWA(4907, Dtype(Current)));
-	tu1_2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(5754, 863))(Current)).it_n1);
+	tu1_2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(5836, 865))(Current)).it_n1);
 	Result = (EIF_BOOLEAN) (EIF_BOOLEAN)(tu1_1 == tu1_2);
 	RTVI(Current, RTAL);
 	RTRS;
@@ -457,7 +457,7 @@ EIF_TYPED_VALUE F861_6977 (EIF_REFERENCE Current)
 	RTHOOK(1);
 	RTDBGAL(Current, 0, 0x04000000, 1,0); /* Result */
 	tu1_1 = *(EIF_NATURAL_8 *)(Current + RTWA(4907, Dtype(Current)));
-	tu1_2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(5755, 863))(Current)).it_n1);
+	tu1_2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(5837, 865))(Current)).it_n1);
 	Result = (EIF_BOOLEAN) (EIF_BOOLEAN)(tu1_1 == tu1_2);
 	RTVI(Current, RTAL);
 	RTRS;

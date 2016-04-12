@@ -1,8 +1,7 @@
 note
-	description: "Summary description for {BACKGROUND}."
-	author: ""
-	date: "$Date$"
-	revision: "$Revision$"
+	description: "Image de fond"
+	author: "Simon Gagné"
+	date: "04/04/2016"
 
 class
 	BACKGROUND

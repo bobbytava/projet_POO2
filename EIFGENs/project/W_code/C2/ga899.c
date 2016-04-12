@@ -1,5 +1,5 @@
 /*
- * Code for class GAME_PIXEL_READER_WRITER
+ * Code for class GAME_DOLLAR_GESTURE_MANAGER
  */
 
 #include "eif_eiffel.h"
@@ -10,9 +10,13 @@
 extern "C" {
 #endif
 
-extern void F899_9355(EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE);
-extern EIF_TYPED_VALUE F899_9356(EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE);
-extern void F899_10257(EIF_REFERENCE, int);
+extern void F899_9259(EIF_REFERENCE, EIF_TYPED_VALUE);
+extern void F899_9260(EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE);
+extern void F899_9261(EIF_REFERENCE, EIF_TYPED_VALUE);
+extern void F899_9262(EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE);
+extern void F899_9263(EIF_REFERENCE, EIF_TYPED_VALUE);
+extern EIF_TYPED_VALUE F899_9264(EIF_REFERENCE);
+extern EIF_TYPED_VALUE F899_9265(EIF_REFERENCE);
 extern void EIF_Minit899(void);
 
 #ifdef __cplusplus
@@ -34,278 +38,950 @@ extern "C" {
 extern "C" {
 #endif
 
-/* {GAME_PIXEL_READER_WRITER}.make */
-void F899_9355 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg2x, EIF_TYPED_VALUE arg3x)
+/* {GAME_DOLLAR_GESTURE_MANAGER}.load_dollar_gesture_template */
+void F899_9259 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
 {
 	GTCX
-	char *l_feature_name = "make";
+	char *l_feature_name = "load_dollar_gesture_template";
 	RTEX;
+	EIF_POINTER loc1 = (EIF_POINTER) 0;
+	EIF_INTEGER_32 loc2 = (EIF_INTEGER_32) 0;
+	EIF_REFERENCE loc3 = (EIF_REFERENCE) 0;
+	EIF_REFERENCE loc4 = (EIF_REFERENCE) 0;
+	struct eif_ex_22 sloc5;
+	EIF_REFERENCE loc5 = (EIF_REFERENCE) sloc5.data;
+	EIF_REFERENCE loc6 = (EIF_REFERENCE) 0;
 #define arg1 arg1x.it_r
-#define arg2 arg2x.it_i4
-#define arg3 arg3x.it_i4
 	EIF_TYPED_VALUE up1x = {{0}, SK_POINTER};
 #define up1 up1x.it_p
+	EIF_TYPED_VALUE up2x = {{0}, SK_POINTER};
+#define up2 up2x.it_p
 	EIF_TYPED_VALUE ur1x = {{0}, SK_REF};
 #define ur1 ur1x.it_r
 	EIF_TYPED_VALUE ur2x = {{0}, SK_REF};
 #define ur2 ur2x.it_r
+	EIF_TYPED_VALUE ui8_1x = {{0}, SK_INT64};
+#define ui8_1 ui8_1x.it_i8
 	EIF_TYPED_VALUE ui4_1x = {{0}, SK_INT32};
 #define ui4_1 ui4_1x.it_i4
 	EIF_POINTER tp1;
+	EIF_POINTER tp2;
 	EIF_REFERENCE tr1 = NULL;
 	EIF_REFERENCE tr2 = NULL;
-	EIF_INTEGER_32 ti4_1;
+	EIF_INTEGER_64 ti8_1;
 	EIF_BOOLEAN tb1;
 	EIF_BOOLEAN tb2;
+	EIF_BOOLEAN tb3;
 	RTCDT;
 	RTSN;
 	RTDA;
 	RTLD;
 	
-	if ((arg3x.type & SK_HEAD) == SK_REF) arg3x.it_i4 = * (EIF_INTEGER_32 *) arg3x.it_r;
-	if ((arg2x.type & SK_HEAD) == SK_REF) arg2x.it_i4 = * (EIF_INTEGER_32 *) arg2x.it_r;
 	
-	RTLI(6);
+	memset (&sloc5.overhead, 0, OVERHEAD + 0);
+	sloc5.overhead.ov_flags = EO_EXP | EO_STACK;
+	RT_DFS(&sloc5.overhead, eif_new_type(22, 0x00).id);
+	RTLI(10);
 	RTLR(0,arg1);
-	RTLR(1,Current);
+	RTLR(1,loc6);
 	RTLR(2,tr1);
 	RTLR(3,ur1);
-	RTLR(4,tr2);
-	RTLR(5,ur2);
-	RTLIU(6);
+	RTLR(4,loc5);
+	RTLR(5,loc3);
+	RTLR(6,tr2);
+	RTLR(7,loc4);
+	RTLR(8,Current);
+	RTLR(9,ur2);
+	RTLIU(10);
 	RTLU (SK_VOID, NULL);
 	RTLU(SK_REF,&arg1);
-	RTLU(SK_INT32,&arg2);
-	RTLU(SK_INT32,&arg3);
 	RTLU (SK_REF, &Current);
+	RTLU(SK_POINTER, &loc1);
+	RTLU(SK_INT32, &loc2);
+	RTLU(SK_REF, &loc3);
+	RTLU(SK_REF, &loc4);
+	RTLU(SK_REF, &loc5);
+	RTLU(SK_REF, &loc6);
 	
-	RTEAA(l_feature_name, 898, Current, 0, 3, 15055);
+	RTEAA(l_feature_name, 898, Current, 6, 1, 14926);
 	RTSA(dtype);
 	RTSC;
 	RTME(dtype, 0);
 	RTGC;
-	RTDBGEAA(898, Current, 15055);
-	RTCC(arg1, 898, l_feature_name, 1, eif_new_type(923, 0x01), 0x01);
+	RTDBGEAA(898, Current, 14926);
+	RTCC(arg1, 898, l_feature_name, 1, eif_new_type(217, 0x01), 0x01);
 	RTIV(Current, RTAL);
 	if ((RTAL & CK_REQUIRE) || RTAC) {
 		RTHOOK(1);
-		RTCT("not_indexed", EX_PRE);
-		tb1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(7556, "is_indexed", arg1))(arg1)).it_b);
-		RTTE((EIF_BOOLEAN) !tb1, label_1);
+		RTCT("file_is_readable", EX_PRE);
+		tb1 = '\01';
+		tr1 = RTLN(eif_new_type(165, 0x01).id);
+		ur1 = RTCCL(arg1);
+		(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWC(3096, Dtype(tr1)))(tr1, ur1x);
+		RTNHOOK(1,1);
+		loc6 = RTCCL(tr1);
+		if ((EIF_TRUE)) {
+			tb2 = '\0';
+			tb3 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(2842, "exists", loc6))(loc6)).it_b);
+			if (tb3) {
+				tb3 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(3133, "is_access_readable", loc6))(loc6)).it_b);
+				tb2 = tb3;
+			}
+			tb1 = tb2;
+		}
+		RTTE(tb1, label_1);
 		RTCK;
 		RTJB;
 label_1:
 		RTCF;
 	}
 body:;
+	wstdinit(loc5,loc5);
+	RTLXI(loc5);
 	RTHOOK(2);
-	RTDBGAA(Current, dtype, 7236, 0x10000000, 1); /* bytes_per_pixel */
-	ti4_1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(7634, "bytes_per_pixel", arg1))(arg1)).it_i4);
-	*(EIF_INTEGER_32 *)(Current + RTWA(7236, dtype)) = (EIF_INTEGER_32) ti4_1;
+	RTDBGAL(Current, 5, 0x80000016, 1, 0); /* loc5 */
+	tr1 = RTLN(eif_new_type(22, 0x00).id);
+	(FUNCTION_CAST(void, (EIF_REFERENCE)) RTWC(32, Dtype(tr1)))(tr1);
+	RTNHOOK(2,1);
+	tr1 = (tr1);
+	RTXA(tr1, loc5);
 	RTHOOK(3);
-	RTDBGAA(Current, dtype, 7232, 0xF800039B, 0); /* pixel_format */
-	RTAR(Current, arg1);
-	*(EIF_REFERENCE *)(Current + RTWA(7232, dtype)) = (EIF_REFERENCE) RTCCL(arg1);
+	RTDBGAL(Current, 3, 0xF800007E, 0, 0); /* loc3 */
+	tr1 = RTLN(eif_new_type(126, 0x01).id);
+	tr2 = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(4402, "to_string_32", arg1))(arg1)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
+	ur1 = RTCCL(tr2);
+	tr2 = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTVF(598, "string_32_to_utf_8_string_8", loc5))(loc5, ur1x)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
+	ur1 = RTCCL(tr2);
+	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWC(1642, Dtype(tr1)))(tr1, ur1x);
+	RTNHOOK(3,1);
+	loc3 = (EIF_REFERENCE) RTCCL(tr1);
 	RTHOOK(4);
-	RTDBGAA(Current, dtype, 7229, 0x10000000, 1); /* width */
-	*(EIF_INTEGER_32 *)(Current + RTWA(7229, dtype)) = (EIF_INTEGER_32) arg2;
+	RTDBGAL(Current, 4, 0xF800007E, 0, 0); /* loc4 */
+	tr1 = RTLN(eif_new_type(126, 0x01).id);
+	tr2 = RTMS_EX_H("rb",2,29282);
+	ur1 = tr2;
+	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWC(1642, Dtype(tr1)))(tr1, ur1x);
+	RTNHOOK(4,1);
+	loc4 = (EIF_REFERENCE) RTCCL(tr1);
 	RTHOOK(5);
-	RTDBGAA(Current, dtype, 7230, 0x10000000, 1); /* height */
-	*(EIF_INTEGER_32 *)(Current + RTWA(7230, dtype)) = (EIF_INTEGER_32) arg3;
+	(FUNCTION_CAST(void, (EIF_REFERENCE)) RTWF(6562, dtype))(Current);
 	RTHOOK(6);
-	RTDBGAA(Current, dtype, 7231, 0x10000000, 1); /* pitch */
-	ti4_1 = *(EIF_INTEGER_32 *)(Current + RTWA(7236, dtype));
-	*(EIF_INTEGER_32 *)(Current + RTWA(7231, dtype)) = (EIF_INTEGER_32) (EIF_INTEGER_32) (arg2 * ti4_1);
+	RTDBGAL(Current, 1, 0x40000000, 1, 0); /* loc1 */
+	tp1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(1661, "item", loc3))(loc3)).it_p);
+	up1 = tp1;
+	tp2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(1661, "item", loc4))(loc4)).it_p);
+	up2 = tp2;
+	loc1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(5107, 865))(Current, up1x, up2x)).it_p);
 	RTHOOK(7);
-	RTDBGAA(Current, dtype, 7235, 0xF8000097, 0); /* internal_item */
-	tr1 = RTLNSMART(RTWCT(7235, dtype, Dftype(Current)).id);
-	ti4_1 = *(EIF_INTEGER_32 *)(Current + RTWA(7236, dtype));
-	ui4_1 = (EIF_INTEGER_32) ((EIF_INTEGER_32) (arg2 * arg3) * ti4_1);
-	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWC(2669, Dtype(tr1)))(tr1, ui4_1x);
-	RTNHOOK(7,1);
-	RTAR(Current, tr1);
-	*(EIF_REFERENCE *)(Current + RTWA(7235, dtype)) = (EIF_REFERENCE) RTCCL(tr1);
-	RTHOOK(8);
-	RTDBGAA(Current, dtype, 7233, 0x04000000, 1); /* is_valid */
-	tr1 = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(7235, dtype))(Current)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
-	RTNHOOK(8,1);
-	tp1 = *(EIF_POINTER *)(tr1 + RTVA(2675, "item", tr1));
-	RTNHOOK(8,2);
-	tb1 = !tp1;
-	*(EIF_BOOLEAN *)(Current + RTWA(7233, dtype)) = (EIF_BOOLEAN) (EIF_BOOLEAN) !tb1;
-	RTHOOK(9);
-	tb1 = *(EIF_BOOLEAN *)(Current + RTWA(7233, dtype));
-	if ((EIF_BOOLEAN) !tb1) {
-		RTHOOK(10);
-		tr1 = RTMS_EX_H("No more memory",14,904766585);
+	tb1 = !loc1;
+	if (tb1) {
+		RTHOOK(8);
+		up1 = loc1;
+		tr1 = RTMS_EX_H("Cannot open the dollar template file.",37,563977518);
 		ur1 = tr1;
-		tr2 = RTMS_EX_H("Cannot allocate a pixel buffer",30,1241552498);
-		ur2 = tr2;
-		(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(6408, dtype))(Current, ur1x, ur2x);
-	}
-	if (RTAL & CK_ENSURE) {
-		RTHOOK(11);
-		RTCT("is_created", EX_POST);
-		tb1 = '\01';
-		tb2 = *(EIF_BOOLEAN *)(Current + RTWA(6415, dtype));
-		if ((EIF_BOOLEAN) !tb2) {
-			tp1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(7228, dtype))(Current)).it_p);
-			RTNHOOK(11,1);
-			tb2 = !tp1;
-			tb1 = (EIF_BOOLEAN) !tb2;
-		}
-		if (tb1) {
-			RTCK;
+		(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(6631, dtype))(Current, up1x, ur1x);
+	} else {
+		RTHOOK(9);
+		RTDBGAL(Current, 2, 0x10000000, 1, 0); /* loc2 */
+		ti8_1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(7155, dtype))(Current)).it_i8);
+		ui8_1 = ti8_1;
+		up1 = loc1;
+		loc2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(5218, 865))(Current, ui8_1x, up1x)).it_i4);
+		RTHOOK(10);
+		if ((EIF_BOOLEAN) (loc2 < ((EIF_INTEGER_32) 0L))) {
+			RTHOOK(11);
+			ui4_1 = loc2;
+			tr1 = RTMS_EX_H("Cannot load the dollar template",31,1134539877);
+			ur1 = tr1;
+			(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(6630, dtype))(Current, ui4_1x, ur1x);
 		} else {
-			RTCF;
+			RTHOOK(12);
+			if ((EIF_BOOLEAN)(loc2 == ((EIF_INTEGER_32) 0L))) {
+				RTHOOK(13);
+				RTDBGAA(Current, dtype, 7161, 0x10000000, 1); /* last_loaded_dollar_gesture_template */
+				*(EIF_INTEGER_32 *)(Current + RTWA(7161, dtype)) = (EIF_INTEGER_32) loc2;
+				RTHOOK(14);
+				tr1 = RTMS_EX_H("The file does not seems to have a dollar template.",50,1787148846);
+				ur1 = tr1;
+				tr2 = RTMS_EX_H("Cannot load the dollar template",31,1134539877);
+				ur2 = tr2;
+				(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(6563, dtype))(Current, ur1x, ur2x);
+			} else {
+				RTHOOK(15);
+				RTDBGAA(Current, dtype, 7161, 0x10000000, 1); /* last_loaded_dollar_gesture_template */
+				*(EIF_INTEGER_32 *)(Current + RTWA(7161, dtype)) = (EIF_INTEGER_32) loc2;
+			}
+		}
+		RTHOOK(16);
+		RTDBGAL(Current, 2, 0x10000000, 1, 0); /* loc2 */
+		up1 = loc1;
+		loc2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(5111, 865))(Current, up1x)).it_i4);
+		RTHOOK(17);
+		tb1 = *(EIF_BOOLEAN *)(Current + RTWA(6570, dtype));
+		if ((EIF_BOOLEAN) ((EIF_BOOLEAN) !tb1 && (EIF_BOOLEAN) (loc2 < ((EIF_INTEGER_32) 0L)))) {
+			RTHOOK(18);
+			ui4_1 = loc2;
+			tr1 = RTMS_EX_H("Cannot close the dollar template file",37,1997691749);
+			ur1 = tr1;
+			(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(6630, dtype))(Current, ui4_1x, ur1x);
 		}
 	}
 	RTVI(Current, RTAL);
 	RTRS;
-	RTHOOK(12);
+	RTHOOK(19);
 	RTDBGLE;
 	RTMD(0);
 	RTLE;
-	RTLO(5);
+	RTLO(9);
 	RTEE;
 #undef up1
+#undef up2
 #undef ur1
 #undef ur2
+#undef ui8_1
 #undef ui4_1
-#undef arg3
-#undef arg2
 #undef arg1
 }
 
-/* {GAME_PIXEL_READER_WRITER}.pixel */
-EIF_TYPED_VALUE F899_9356 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg2x)
+/* {GAME_DOLLAR_GESTURE_MANAGER}.save_dollar_gesture_template */
+void F899_9260 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg2x)
 {
 	GTCX
-	char *l_feature_name = "pixel";
+	char *l_feature_name = "save_dollar_gesture_template";
 	RTEX;
-#define arg1 arg1x.it_i4
-#define arg2 arg2x.it_i4
+	EIF_POINTER loc1 = (EIF_POINTER) 0;
+	EIF_INTEGER_32 loc2 = (EIF_INTEGER_32) 0;
+	EIF_REFERENCE loc3 = (EIF_REFERENCE) 0;
+	EIF_REFERENCE loc4 = (EIF_REFERENCE) 0;
+	struct eif_ex_22 sloc5;
+	EIF_REFERENCE loc5 = (EIF_REFERENCE) sloc5.data;
+#define arg1 arg1x.it_i8
+#define arg2 arg2x.it_r
 	EIF_TYPED_VALUE up1x = {{0}, SK_POINTER};
 #define up1 up1x.it_p
+	EIF_TYPED_VALUE up2x = {{0}, SK_POINTER};
+#define up2 up2x.it_p
+	EIF_TYPED_VALUE ur1x = {{0}, SK_REF};
+#define ur1 ur1x.it_r
+	EIF_TYPED_VALUE ui8_1x = {{0}, SK_INT64};
+#define ui8_1 ui8_1x.it_i8
 	EIF_TYPED_VALUE ui4_1x = {{0}, SK_INT32};
 #define ui4_1 ui4_1x.it_i4
-	EIF_TYPED_VALUE ui4_2x = {{0}, SK_INT32};
-#define ui4_2 ui4_2x.it_i4
-	EIF_INTEGER_32 ti4_1;
+	EIF_POINTER tp1;
+	EIF_POINTER tp2;
+	EIF_REFERENCE tr1 = NULL;
+	EIF_REFERENCE tr2 = NULL;
 	EIF_BOOLEAN tb1;
-	EIF_REFERENCE Result = ((EIF_REFERENCE) 0);
-	
 	RTCDT;
 	RTSN;
 	RTDA;
 	RTLD;
 	
-	if ((arg2x.type & SK_HEAD) == SK_REF) arg2x.it_i4 = * (EIF_INTEGER_32 *) arg2x.it_r;
-	if ((arg1x.type & SK_HEAD) == SK_REF) arg1x.it_i4 = * (EIF_INTEGER_32 *) arg1x.it_r;
+	if ((arg1x.type & SK_HEAD) == SK_REF) arg1x.it_i8 = * (EIF_INTEGER_64 *) arg1x.it_r;
 	
-	RTLI(2);
-	RTLR(0,Current);
-	RTLR(1,Result);
-	RTLIU(2);
-	RTLU (SK_REF, &Result);
-	RTLU(SK_INT32,&arg1);
-	RTLU(SK_INT32,&arg2);
+	memset (&sloc5.overhead, 0, OVERHEAD + 0);
+	sloc5.overhead.ov_flags = EO_EXP | EO_STACK;
+	RT_DFS(&sloc5.overhead, eif_new_type(22, 0x00).id);
+	RTLI(8);
+	RTLR(0,arg2);
+	RTLR(1,tr1);
+	RTLR(2,ur1);
+	RTLR(3,loc5);
+	RTLR(4,loc3);
+	RTLR(5,tr2);
+	RTLR(6,loc4);
+	RTLR(7,Current);
+	RTLIU(8);
+	RTLU (SK_VOID, NULL);
+	RTLU(SK_INT64,&arg1);
+	RTLU(SK_REF,&arg2);
 	RTLU (SK_REF, &Current);
+	RTLU(SK_POINTER, &loc1);
+	RTLU(SK_INT32, &loc2);
+	RTLU(SK_REF, &loc3);
+	RTLU(SK_REF, &loc4);
+	RTLU(SK_REF, &loc5);
 	
-	RTEAA(l_feature_name, 898, Current, 0, 2, 15056);
+	RTEAA(l_feature_name, 898, Current, 5, 2, 14927);
 	RTSA(dtype);
 	RTSC;
 	RTME(dtype, 0);
 	RTGC;
-	RTDBGEAA(898, Current, 15056);
+	RTDBGEAA(898, Current, 14927);
+	RTCC(arg2, 898, l_feature_name, 2, eif_new_type(217, 0x01), 0x01);
 	RTIV(Current, RTAL);
 	if ((RTAL & CK_REQUIRE) || RTAC) {
 		RTHOOK(1);
-		RTCT("is_item_valid", EX_PRE);
-		tb1 = *(EIF_BOOLEAN *)(Current + RTWA(7233, dtype));
+		RTCT("is_file_creatable", EX_PRE);
+		tr1 = RTLN(eif_new_type(165, 0x01).id);
+		ur1 = RTCCL(arg2);
+		(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWC(3096, Dtype(tr1)))(tr1, ur1x);
+		RTNHOOK(1,1);
+		tb1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(3120, "is_creatable", tr1))(tr1)).it_b);
 		RTTE(tb1, label_1);
-		RTCK;
-		RTHOOK(2);
-		RTCT("is_line_valid", EX_PRE);
-		ti4_1 = *(EIF_INTEGER_32 *)(Current + RTWA(7230, dtype));
-		RTTE((EIF_BOOLEAN) ((EIF_BOOLEAN) (arg1 >= ((EIF_INTEGER_32) 1L)) && (EIF_BOOLEAN) (arg1 <= ti4_1)), label_1);
-		RTCK;
-		RTHOOK(3);
-		RTCT("is_column_valid", EX_PRE);
-		ti4_1 = *(EIF_INTEGER_32 *)(Current + RTWA(7229, dtype));
-		RTTE((EIF_BOOLEAN) ((EIF_BOOLEAN) (arg1 >= ((EIF_INTEGER_32) 1L)) && (EIF_BOOLEAN) (arg2 <= ti4_1)), label_1);
 		RTCK;
 		RTJB;
 label_1:
 		RTCF;
 	}
 body:;
+	wstdinit(loc5,loc5);
+	RTLXI(loc5);
+	RTHOOK(2);
+	RTDBGAL(Current, 5, 0x80000016, 1, 0); /* loc5 */
+	tr1 = RTLN(eif_new_type(22, 0x00).id);
+	(FUNCTION_CAST(void, (EIF_REFERENCE)) RTWC(32, Dtype(tr1)))(tr1);
+	RTNHOOK(2,1);
+	tr1 = (tr1);
+	RTXA(tr1, loc5);
+	RTHOOK(3);
+	RTDBGAL(Current, 3, 0xF800007E, 0, 0); /* loc3 */
+	tr1 = RTLN(eif_new_type(126, 0x01).id);
+	tr2 = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(4402, "to_string_32", arg2))(arg2)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
+	ur1 = RTCCL(tr2);
+	tr2 = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTVF(598, "string_32_to_utf_8_string_8", loc5))(loc5, ur1x)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
+	ur1 = RTCCL(tr2);
+	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWC(1642, Dtype(tr1)))(tr1, ur1x);
+	RTNHOOK(3,1);
+	loc3 = (EIF_REFERENCE) RTCCL(tr1);
 	RTHOOK(4);
-	RTDBGAL(Current, 0, 0xF8000377, 0,0); /* Result */
-	ui4_1 = arg1;
-	ui4_2 = arg2;
-	Result = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(7238, 897))(Current, ui4_1x, ui4_2x)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
+	RTDBGAL(Current, 4, 0xF800007E, 0, 0); /* loc4 */
+	tr1 = RTLN(eif_new_type(126, 0x01).id);
+	tr2 = RTMS_EX_H("wb",2,30562);
+	ur1 = tr2;
+	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWC(1642, Dtype(tr1)))(tr1, ur1x);
+	RTNHOOK(4,1);
+	loc4 = (EIF_REFERENCE) RTCCL(tr1);
+	RTHOOK(5);
+	(FUNCTION_CAST(void, (EIF_REFERENCE)) RTWF(6562, dtype))(Current);
+	RTHOOK(6);
+	RTDBGAL(Current, 1, 0x40000000, 1, 0); /* loc1 */
+	tp1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(1661, "item", loc3))(loc3)).it_p);
+	up1 = tp1;
+	tp2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(1661, "item", loc4))(loc4)).it_p);
+	up2 = tp2;
+	loc1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(5107, 865))(Current, up1x, up2x)).it_p);
+	RTHOOK(7);
+	tb1 = !loc1;
+	if (tb1) {
+		RTHOOK(8);
+		up1 = loc1;
+		tr1 = RTMS_EX_H("Cannot create the dollar template file.",39,1938509614);
+		ur1 = tr1;
+		(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(6631, dtype))(Current, up1x, ur1x);
+	} else {
+		RTHOOK(9);
+		RTDBGAL(Current, 2, 0x10000000, 1, 0); /* loc2 */
+		ui8_1 = arg1;
+		up1 = loc1;
+		loc2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(5217, 865))(Current, ui8_1x, up1x)).it_i4);
+		RTHOOK(10);
+		ui4_1 = (EIF_INTEGER_32) (loc2 - ((EIF_INTEGER_32) 1L));
+		tr1 = RTMS_EX_H("Cannot save the dollar template",31,152237925);
+		ur1 = tr1;
+		(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(6630, dtype))(Current, ui4_1x, ur1x);
+		RTHOOK(11);
+		RTDBGAA(Current, dtype, 7162, 0x10000000, 1); /* last_saved_dollar_gesture_template */
+		*(EIF_INTEGER_32 *)(Current + RTWA(7162, dtype)) = (EIF_INTEGER_32) loc2;
+		RTHOOK(12);
+		RTDBGAL(Current, 2, 0x10000000, 1, 0); /* loc2 */
+		up1 = loc1;
+		loc2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(5111, 865))(Current, up1x)).it_i4);
+		RTHOOK(13);
+		tb1 = *(EIF_BOOLEAN *)(Current + RTWA(6570, dtype));
+		if ((EIF_BOOLEAN) ((EIF_BOOLEAN) !tb1 && (EIF_BOOLEAN) (loc2 < ((EIF_INTEGER_32) 0L)))) {
+			RTHOOK(14);
+			ui4_1 = loc2;
+			tr1 = RTMS_EX_H("Cannot close the dollar template file",37,1997691749);
+			ur1 = tr1;
+			(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(6630, dtype))(Current, ui4_1x, ur1x);
+		}
+	}
 	RTVI(Current, RTAL);
 	RTRS;
-	RTHOOK(5);
+	RTHOOK(15);
 	RTDBGLE;
 	RTMD(0);
 	RTLE;
-	RTLO(4);
+	RTLO(9);
 	RTEE;
-	{ EIF_TYPED_VALUE r; r.type = SK_REF; r.it_r = Result; return r; }
 #undef up1
+#undef up2
+#undef ur1
+#undef ui8_1
 #undef ui4_1
-#undef ui4_2
 #undef arg2
 #undef arg1
 }
 
-/* {GAME_PIXEL_READER_WRITER}._invariant */
-void F899_10257 (EIF_REFERENCE Current, int where)
+/* {GAME_DOLLAR_GESTURE_MANAGER}.save_all_dollar_gesture_template */
+void F899_9261 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
 {
 	GTCX
-	char *l_feature_name = "_invariant";
+	char *l_feature_name = "save_all_dollar_gesture_template";
 	RTEX;
+	EIF_POINTER loc1 = (EIF_POINTER) 0;
+	EIF_INTEGER_32 loc2 = (EIF_INTEGER_32) 0;
+	EIF_REFERENCE loc3 = (EIF_REFERENCE) 0;
+	EIF_REFERENCE loc4 = (EIF_REFERENCE) 0;
+	struct eif_ex_22 sloc5;
+	EIF_REFERENCE loc5 = (EIF_REFERENCE) sloc5.data;
+#define arg1 arg1x.it_r
 	EIF_TYPED_VALUE up1x = {{0}, SK_POINTER};
 #define up1 up1x.it_p
+	EIF_TYPED_VALUE up2x = {{0}, SK_POINTER};
+#define up2 up2x.it_p
+	EIF_TYPED_VALUE ur1x = {{0}, SK_REF};
+#define ur1 ur1x.it_r
+	EIF_TYPED_VALUE ui4_1x = {{0}, SK_INT32};
+#define ui4_1 ui4_1x.it_i4
 	EIF_POINTER tp1;
+	EIF_POINTER tp2;
 	EIF_REFERENCE tr1 = NULL;
+	EIF_REFERENCE tr2 = NULL;
 	EIF_BOOLEAN tb1;
-	EIF_BOOLEAN tb2;
 	RTCDT;
-	RTLD;
+	RTSN;
 	RTDA;
+	RTLD;
 	
-	RTLI(2);
-	RTLR(0,Current);
+	
+	memset (&sloc5.overhead, 0, OVERHEAD + 0);
+	sloc5.overhead.ov_flags = EO_EXP | EO_STACK;
+	RT_DFS(&sloc5.overhead, eif_new_type(22, 0x00).id);
+	RTLI(8);
+	RTLR(0,arg1);
 	RTLR(1,tr1);
-	RTLIU(2);
+	RTLR(2,ur1);
+	RTLR(3,loc5);
+	RTLR(4,loc3);
+	RTLR(5,tr2);
+	RTLR(6,loc4);
+	RTLR(7,Current);
+	RTLIU(8);
 	RTLU (SK_VOID, NULL);
+	RTLU(SK_REF,&arg1);
 	RTLU (SK_REF, &Current);
-	RTEAINV(l_feature_name, 898, Current, 0, 10256);
+	RTLU(SK_POINTER, &loc1);
+	RTLU(SK_INT32, &loc2);
+	RTLU(SK_REF, &loc3);
+	RTLU(SK_REF, &loc4);
+	RTLU(SK_REF, &loc5);
+	
+	RTEAA(l_feature_name, 898, Current, 5, 1, 14928);
 	RTSA(dtype);
+	RTSC;
 	RTME(dtype, 0);
-	RTIT("null_means_invalid", Current);
-	tb1 = '\01';
-	tr1 = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(7235, dtype))(Current)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
-	tp1 = *(EIF_POINTER *)(tr1 + RTVA(2675, "item", tr1));
-	tb2 = !tp1;
-	if (tb2) {
-		tb2 = *(EIF_BOOLEAN *)(Current + RTWA(7233, dtype));
-		tb1 = (EIF_BOOLEAN) !tb2;
-	}
-	if (tb1) {
+	RTGC;
+	RTDBGEAA(898, Current, 14928);
+	RTCC(arg1, 898, l_feature_name, 1, eif_new_type(217, 0x01), 0x01);
+	RTIV(Current, RTAL);
+	if ((RTAL & CK_REQUIRE) || RTAC) {
+		RTHOOK(1);
+		RTCT("is_file_creatable", EX_PRE);
+		tr1 = RTLN(eif_new_type(165, 0x01).id);
+		ur1 = RTCCL(arg1);
+		(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWC(3096, Dtype(tr1)))(tr1, ur1x);
+		RTNHOOK(1,1);
+		tb1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(3120, "is_creatable", tr1))(tr1)).it_b);
+		RTTE(tb1, label_1);
 		RTCK;
-	} else {
+		RTJB;
+label_1:
 		RTCF;
 	}
-	RTLO(2);
+body:;
+	wstdinit(loc5,loc5);
+	RTLXI(loc5);
+	RTHOOK(2);
+	RTDBGAL(Current, 5, 0x80000016, 1, 0); /* loc5 */
+	tr1 = RTLN(eif_new_type(22, 0x00).id);
+	(FUNCTION_CAST(void, (EIF_REFERENCE)) RTWC(32, Dtype(tr1)))(tr1);
+	RTNHOOK(2,1);
+	tr1 = (tr1);
+	RTXA(tr1, loc5);
+	RTHOOK(3);
+	RTDBGAL(Current, 3, 0xF800007E, 0, 0); /* loc3 */
+	tr1 = RTLN(eif_new_type(126, 0x01).id);
+	tr2 = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(4402, "to_string_32", arg1))(arg1)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
+	ur1 = RTCCL(tr2);
+	tr2 = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTVF(598, "string_32_to_utf_8_string_8", loc5))(loc5, ur1x)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
+	ur1 = RTCCL(tr2);
+	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWC(1642, Dtype(tr1)))(tr1, ur1x);
+	RTNHOOK(3,1);
+	loc3 = (EIF_REFERENCE) RTCCL(tr1);
+	RTHOOK(4);
+	RTDBGAL(Current, 4, 0xF800007E, 0, 0); /* loc4 */
+	tr1 = RTLN(eif_new_type(126, 0x01).id);
+	tr2 = RTMS_EX_H("wb",2,30562);
+	ur1 = tr2;
+	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWC(1642, Dtype(tr1)))(tr1, ur1x);
+	RTNHOOK(4,1);
+	loc4 = (EIF_REFERENCE) RTCCL(tr1);
+	RTHOOK(5);
+	(FUNCTION_CAST(void, (EIF_REFERENCE)) RTWF(6562, dtype))(Current);
+	RTHOOK(6);
+	RTDBGAL(Current, 1, 0x40000000, 1, 0); /* loc1 */
+	tp1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(1661, "item", loc3))(loc3)).it_p);
+	up1 = tp1;
+	tp2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(1661, "item", loc4))(loc4)).it_p);
+	up2 = tp2;
+	loc1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(5107, 865))(Current, up1x, up2x)).it_p);
+	RTHOOK(7);
+	tb1 = !loc1;
+	if (tb1) {
+		RTHOOK(8);
+		up1 = loc1;
+		tr1 = RTMS_EX_H("Cannot create the dollar template file.",39,1938509614);
+		ur1 = tr1;
+		(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(6631, dtype))(Current, up1x, ur1x);
+	} else {
+		RTHOOK(9);
+		RTDBGAL(Current, 2, 0x10000000, 1, 0); /* loc2 */
+		up1 = loc1;
+		loc2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(5216, 865))(Current, up1x)).it_i4);
+		RTHOOK(10);
+		ui4_1 = (EIF_INTEGER_32) (loc2 - ((EIF_INTEGER_32) 1L));
+		tr1 = RTMS_EX_H("Cannot save the dollar templates",32,318272371);
+		ur1 = tr1;
+		(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(6630, dtype))(Current, ui4_1x, ur1x);
+		RTHOOK(11);
+		RTDBGAA(Current, dtype, 7162, 0x10000000, 1); /* last_saved_dollar_gesture_template */
+		*(EIF_INTEGER_32 *)(Current + RTWA(7162, dtype)) = (EIF_INTEGER_32) loc2;
+		RTHOOK(12);
+		RTDBGAL(Current, 2, 0x10000000, 1, 0); /* loc2 */
+		up1 = loc1;
+		loc2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(5111, 865))(Current, up1x)).it_i4);
+		RTHOOK(13);
+		tb1 = *(EIF_BOOLEAN *)(Current + RTWA(6570, dtype));
+		if ((EIF_BOOLEAN) ((EIF_BOOLEAN) !tb1 && (EIF_BOOLEAN) (loc2 < ((EIF_INTEGER_32) 0L)))) {
+			RTHOOK(14);
+			ui4_1 = loc2;
+			tr1 = RTMS_EX_H("Cannot close the dollar template file",37,1997691749);
+			ur1 = tr1;
+			(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(6630, dtype))(Current, ui4_1x, ur1x);
+		}
+	}
+	RTVI(Current, RTAL);
+	RTRS;
+	RTHOOK(15);
+	RTDBGLE;
 	RTMD(0);
 	RTLE;
+	RTLO(8);
 	RTEE;
 #undef up1
+#undef up2
+#undef ur1
+#undef ui4_1
+#undef arg1
 }
+
+/* {GAME_DOLLAR_GESTURE_MANAGER}.append_dollar_gesture_template */
+void F899_9262 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg2x)
+{
+	GTCX
+	char *l_feature_name = "append_dollar_gesture_template";
+	RTEX;
+	EIF_POINTER loc1 = (EIF_POINTER) 0;
+	EIF_INTEGER_32 loc2 = (EIF_INTEGER_32) 0;
+	EIF_REFERENCE loc3 = (EIF_REFERENCE) 0;
+	EIF_REFERENCE loc4 = (EIF_REFERENCE) 0;
+	struct eif_ex_22 sloc5;
+	EIF_REFERENCE loc5 = (EIF_REFERENCE) sloc5.data;
+	EIF_REFERENCE loc6 = (EIF_REFERENCE) 0;
+#define arg1 arg1x.it_i8
+#define arg2 arg2x.it_r
+	EIF_TYPED_VALUE up1x = {{0}, SK_POINTER};
+#define up1 up1x.it_p
+	EIF_TYPED_VALUE up2x = {{0}, SK_POINTER};
+#define up2 up2x.it_p
+	EIF_TYPED_VALUE ur1x = {{0}, SK_REF};
+#define ur1 ur1x.it_r
+	EIF_TYPED_VALUE ui8_1x = {{0}, SK_INT64};
+#define ui8_1 ui8_1x.it_i8
+	EIF_TYPED_VALUE ui4_1x = {{0}, SK_INT32};
+#define ui4_1 ui4_1x.it_i4
+	EIF_POINTER tp1;
+	EIF_POINTER tp2;
+	EIF_REFERENCE tr1 = NULL;
+	EIF_REFERENCE tr2 = NULL;
+	EIF_BOOLEAN tb1;
+	EIF_BOOLEAN tb2;
+	EIF_BOOLEAN tb3;
+	EIF_BOOLEAN tb4;
+	RTCDT;
+	RTSN;
+	RTDA;
+	RTLD;
+	
+	if ((arg1x.type & SK_HEAD) == SK_REF) arg1x.it_i8 = * (EIF_INTEGER_64 *) arg1x.it_r;
+	
+	memset (&sloc5.overhead, 0, OVERHEAD + 0);
+	sloc5.overhead.ov_flags = EO_EXP | EO_STACK;
+	RT_DFS(&sloc5.overhead, eif_new_type(22, 0x00).id);
+	RTLI(9);
+	RTLR(0,arg2);
+	RTLR(1,loc6);
+	RTLR(2,tr1);
+	RTLR(3,ur1);
+	RTLR(4,loc5);
+	RTLR(5,loc3);
+	RTLR(6,tr2);
+	RTLR(7,loc4);
+	RTLR(8,Current);
+	RTLIU(9);
+	RTLU (SK_VOID, NULL);
+	RTLU(SK_INT64,&arg1);
+	RTLU(SK_REF,&arg2);
+	RTLU (SK_REF, &Current);
+	RTLU(SK_POINTER, &loc1);
+	RTLU(SK_INT32, &loc2);
+	RTLU(SK_REF, &loc3);
+	RTLU(SK_REF, &loc4);
+	RTLU(SK_REF, &loc5);
+	RTLU(SK_REF, &loc6);
+	
+	RTEAA(l_feature_name, 898, Current, 6, 2, 14929);
+	RTSA(dtype);
+	RTSC;
+	RTME(dtype, 0);
+	RTGC;
+	RTDBGEAA(898, Current, 14929);
+	RTCC(arg2, 898, l_feature_name, 2, eif_new_type(217, 0x01), 0x01);
+	RTIV(Current, RTAL);
+	if ((RTAL & CK_REQUIRE) || RTAC) {
+		RTHOOK(1);
+		RTCT("is_file_valid", EX_PRE);
+		tb1 = '\01';
+		tr1 = RTLN(eif_new_type(165, 0x01).id);
+		ur1 = RTCCL(arg2);
+		(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWC(3096, Dtype(tr1)))(tr1, ur1x);
+		RTNHOOK(1,1);
+		loc6 = RTCCL(tr1);
+		if ((EIF_TRUE)) {
+			tb2 = '\0';
+			tb3 = '\01';
+			tb4 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(2842, "exists", loc6))(loc6)).it_b);
+			if (tb4) {
+				tb4 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(3134, "is_access_writable", loc6))(loc6)).it_b);
+				tb3 = tb4;
+			}
+			if (tb3) {
+				tb3 = '\01';
+				tb4 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(2842, "exists", loc6))(loc6)).it_b);
+				if ((EIF_BOOLEAN) !tb4) {
+					tb4 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(3120, "is_creatable", loc6))(loc6)).it_b);
+					tb3 = tb4;
+				}
+				tb2 = tb3;
+			}
+			tb1 = tb2;
+		}
+		RTTE(tb1, label_1);
+		RTCK;
+		RTJB;
+label_1:
+		RTCF;
+	}
+body:;
+	wstdinit(loc5,loc5);
+	RTLXI(loc5);
+	RTHOOK(2);
+	RTDBGAL(Current, 5, 0x80000016, 1, 0); /* loc5 */
+	tr1 = RTLN(eif_new_type(22, 0x00).id);
+	(FUNCTION_CAST(void, (EIF_REFERENCE)) RTWC(32, Dtype(tr1)))(tr1);
+	RTNHOOK(2,1);
+	tr1 = (tr1);
+	RTXA(tr1, loc5);
+	RTHOOK(3);
+	RTDBGAL(Current, 3, 0xF800007E, 0, 0); /* loc3 */
+	tr1 = RTLN(eif_new_type(126, 0x01).id);
+	tr2 = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(4402, "to_string_32", arg2))(arg2)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
+	ur1 = RTCCL(tr2);
+	tr2 = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTVF(598, "string_32_to_utf_8_string_8", loc5))(loc5, ur1x)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
+	ur1 = RTCCL(tr2);
+	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWC(1642, Dtype(tr1)))(tr1, ur1x);
+	RTNHOOK(3,1);
+	loc3 = (EIF_REFERENCE) RTCCL(tr1);
+	RTHOOK(4);
+	RTDBGAL(Current, 4, 0xF800007E, 0, 0); /* loc4 */
+	tr1 = RTLN(eif_new_type(126, 0x01).id);
+	tr2 = RTMS_EX_H("ab",2,24930);
+	ur1 = tr2;
+	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWC(1642, Dtype(tr1)))(tr1, ur1x);
+	RTNHOOK(4,1);
+	loc4 = (EIF_REFERENCE) RTCCL(tr1);
+	RTHOOK(5);
+	(FUNCTION_CAST(void, (EIF_REFERENCE)) RTWF(6562, dtype))(Current);
+	RTHOOK(6);
+	RTDBGAL(Current, 1, 0x40000000, 1, 0); /* loc1 */
+	tp1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(1661, "item", loc3))(loc3)).it_p);
+	up1 = tp1;
+	tp2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(1661, "item", loc4))(loc4)).it_p);
+	up2 = tp2;
+	loc1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(5107, 865))(Current, up1x, up2x)).it_p);
+	RTHOOK(7);
+	tb1 = !loc1;
+	if (tb1) {
+		RTHOOK(8);
+		up1 = loc1;
+		tr1 = RTMS_EX_H("Cannot create the dollar template file.",39,1938509614);
+		ur1 = tr1;
+		(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(6631, dtype))(Current, up1x, ur1x);
+	} else {
+		RTHOOK(9);
+		RTDBGAL(Current, 2, 0x10000000, 1, 0); /* loc2 */
+		ui8_1 = arg1;
+		up1 = loc1;
+		loc2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(5217, 865))(Current, ui8_1x, up1x)).it_i4);
+		RTHOOK(10);
+		ui4_1 = (EIF_INTEGER_32) (loc2 - ((EIF_INTEGER_32) 1L));
+		tr1 = RTMS_EX_H("Cannot save the dollar template",31,152237925);
+		ur1 = tr1;
+		(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(6630, dtype))(Current, ui4_1x, ur1x);
+		RTHOOK(11);
+		RTDBGAA(Current, dtype, 7162, 0x10000000, 1); /* last_saved_dollar_gesture_template */
+		*(EIF_INTEGER_32 *)(Current + RTWA(7162, dtype)) = (EIF_INTEGER_32) loc2;
+		RTHOOK(12);
+		RTDBGAL(Current, 2, 0x10000000, 1, 0); /* loc2 */
+		up1 = loc1;
+		loc2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(5111, 865))(Current, up1x)).it_i4);
+		RTHOOK(13);
+		tb1 = *(EIF_BOOLEAN *)(Current + RTWA(6570, dtype));
+		if ((EIF_BOOLEAN) ((EIF_BOOLEAN) !tb1 && (EIF_BOOLEAN) (loc2 < ((EIF_INTEGER_32) 0L)))) {
+			RTHOOK(14);
+			ui4_1 = loc2;
+			tr1 = RTMS_EX_H("Cannot close the dollar template file",37,1997691749);
+			ur1 = tr1;
+			(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(6630, dtype))(Current, ui4_1x, ur1x);
+		}
+	}
+	RTVI(Current, RTAL);
+	RTRS;
+	RTHOOK(15);
+	RTDBGLE;
+	RTMD(0);
+	RTLE;
+	RTLO(10);
+	RTEE;
+#undef up1
+#undef up2
+#undef ur1
+#undef ui8_1
+#undef ui4_1
+#undef arg2
+#undef arg1
+}
+
+/* {GAME_DOLLAR_GESTURE_MANAGER}.append_all_dollar_gesture_template */
+void F899_9263 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
+{
+	GTCX
+	char *l_feature_name = "append_all_dollar_gesture_template";
+	RTEX;
+	EIF_POINTER loc1 = (EIF_POINTER) 0;
+	EIF_INTEGER_32 loc2 = (EIF_INTEGER_32) 0;
+	EIF_REFERENCE loc3 = (EIF_REFERENCE) 0;
+	EIF_REFERENCE loc4 = (EIF_REFERENCE) 0;
+	struct eif_ex_22 sloc5;
+	EIF_REFERENCE loc5 = (EIF_REFERENCE) sloc5.data;
+	EIF_REFERENCE loc6 = (EIF_REFERENCE) 0;
+#define arg1 arg1x.it_r
+	EIF_TYPED_VALUE up1x = {{0}, SK_POINTER};
+#define up1 up1x.it_p
+	EIF_TYPED_VALUE up2x = {{0}, SK_POINTER};
+#define up2 up2x.it_p
+	EIF_TYPED_VALUE ur1x = {{0}, SK_REF};
+#define ur1 ur1x.it_r
+	EIF_TYPED_VALUE ui4_1x = {{0}, SK_INT32};
+#define ui4_1 ui4_1x.it_i4
+	EIF_POINTER tp1;
+	EIF_POINTER tp2;
+	EIF_REFERENCE tr1 = NULL;
+	EIF_REFERENCE tr2 = NULL;
+	EIF_BOOLEAN tb1;
+	EIF_BOOLEAN tb2;
+	EIF_BOOLEAN tb3;
+	EIF_BOOLEAN tb4;
+	RTCDT;
+	RTSN;
+	RTDA;
+	RTLD;
+	
+	
+	memset (&sloc5.overhead, 0, OVERHEAD + 0);
+	sloc5.overhead.ov_flags = EO_EXP | EO_STACK;
+	RT_DFS(&sloc5.overhead, eif_new_type(22, 0x00).id);
+	RTLI(9);
+	RTLR(0,arg1);
+	RTLR(1,loc6);
+	RTLR(2,tr1);
+	RTLR(3,ur1);
+	RTLR(4,loc5);
+	RTLR(5,loc3);
+	RTLR(6,tr2);
+	RTLR(7,loc4);
+	RTLR(8,Current);
+	RTLIU(9);
+	RTLU (SK_VOID, NULL);
+	RTLU(SK_REF,&arg1);
+	RTLU (SK_REF, &Current);
+	RTLU(SK_POINTER, &loc1);
+	RTLU(SK_INT32, &loc2);
+	RTLU(SK_REF, &loc3);
+	RTLU(SK_REF, &loc4);
+	RTLU(SK_REF, &loc5);
+	RTLU(SK_REF, &loc6);
+	
+	RTEAA(l_feature_name, 898, Current, 6, 1, 14930);
+	RTSA(dtype);
+	RTSC;
+	RTME(dtype, 0);
+	RTGC;
+	RTDBGEAA(898, Current, 14930);
+	RTCC(arg1, 898, l_feature_name, 1, eif_new_type(217, 0x01), 0x01);
+	RTIV(Current, RTAL);
+	if ((RTAL & CK_REQUIRE) || RTAC) {
+		RTHOOK(1);
+		RTCT("is_file_valid", EX_PRE);
+		tb1 = '\01';
+		tr1 = RTLN(eif_new_type(165, 0x01).id);
+		ur1 = RTCCL(arg1);
+		(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWC(3096, Dtype(tr1)))(tr1, ur1x);
+		RTNHOOK(1,1);
+		loc6 = RTCCL(tr1);
+		if ((EIF_TRUE)) {
+			tb2 = '\0';
+			tb3 = '\01';
+			tb4 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(2842, "exists", loc6))(loc6)).it_b);
+			if (tb4) {
+				tb4 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(3134, "is_access_writable", loc6))(loc6)).it_b);
+				tb3 = tb4;
+			}
+			if (tb3) {
+				tb3 = '\01';
+				tb4 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(2842, "exists", loc6))(loc6)).it_b);
+				if ((EIF_BOOLEAN) !tb4) {
+					tb4 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(3120, "is_creatable", loc6))(loc6)).it_b);
+					tb3 = tb4;
+				}
+				tb2 = tb3;
+			}
+			tb1 = tb2;
+		}
+		RTTE(tb1, label_1);
+		RTCK;
+		RTJB;
+label_1:
+		RTCF;
+	}
+body:;
+	wstdinit(loc5,loc5);
+	RTLXI(loc5);
+	RTHOOK(2);
+	RTDBGAL(Current, 5, 0x80000016, 1, 0); /* loc5 */
+	tr1 = RTLN(eif_new_type(22, 0x00).id);
+	(FUNCTION_CAST(void, (EIF_REFERENCE)) RTWC(32, Dtype(tr1)))(tr1);
+	RTNHOOK(2,1);
+	tr1 = (tr1);
+	RTXA(tr1, loc5);
+	RTHOOK(3);
+	RTDBGAL(Current, 3, 0xF800007E, 0, 0); /* loc3 */
+	tr1 = RTLN(eif_new_type(126, 0x01).id);
+	tr2 = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(4402, "to_string_32", arg1))(arg1)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
+	ur1 = RTCCL(tr2);
+	tr2 = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTVF(598, "string_32_to_utf_8_string_8", loc5))(loc5, ur1x)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
+	ur1 = RTCCL(tr2);
+	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWC(1642, Dtype(tr1)))(tr1, ur1x);
+	RTNHOOK(3,1);
+	loc3 = (EIF_REFERENCE) RTCCL(tr1);
+	RTHOOK(4);
+	RTDBGAL(Current, 4, 0xF800007E, 0, 0); /* loc4 */
+	tr1 = RTLN(eif_new_type(126, 0x01).id);
+	tr2 = RTMS_EX_H("ab",2,24930);
+	ur1 = tr2;
+	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWC(1642, Dtype(tr1)))(tr1, ur1x);
+	RTNHOOK(4,1);
+	loc4 = (EIF_REFERENCE) RTCCL(tr1);
+	RTHOOK(5);
+	(FUNCTION_CAST(void, (EIF_REFERENCE)) RTWF(6562, dtype))(Current);
+	RTHOOK(6);
+	RTDBGAL(Current, 1, 0x40000000, 1, 0); /* loc1 */
+	tp1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(1661, "item", loc3))(loc3)).it_p);
+	up1 = tp1;
+	tp2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(1661, "item", loc4))(loc4)).it_p);
+	up2 = tp2;
+	loc1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(5107, 865))(Current, up1x, up2x)).it_p);
+	RTHOOK(7);
+	tb1 = !loc1;
+	if (tb1) {
+		RTHOOK(8);
+		up1 = loc1;
+		tr1 = RTMS_EX_H("Cannot create the dollar template file.",39,1938509614);
+		ur1 = tr1;
+		(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(6631, dtype))(Current, up1x, ur1x);
+	} else {
+		RTHOOK(9);
+		RTDBGAL(Current, 2, 0x10000000, 1, 0); /* loc2 */
+		up1 = loc1;
+		loc2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(5216, 865))(Current, up1x)).it_i4);
+		RTHOOK(10);
+		ui4_1 = (EIF_INTEGER_32) (loc2 - ((EIF_INTEGER_32) 1L));
+		tr1 = RTMS_EX_H("Cannot save the dollar templates",32,318272371);
+		ur1 = tr1;
+		(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(6630, dtype))(Current, ui4_1x, ur1x);
+		RTHOOK(11);
+		RTDBGAA(Current, dtype, 7162, 0x10000000, 1); /* last_saved_dollar_gesture_template */
+		*(EIF_INTEGER_32 *)(Current + RTWA(7162, dtype)) = (EIF_INTEGER_32) loc2;
+		RTHOOK(12);
+		RTDBGAL(Current, 2, 0x10000000, 1, 0); /* loc2 */
+		up1 = loc1;
+		loc2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(5111, 865))(Current, up1x)).it_i4);
+		RTHOOK(13);
+		tb1 = *(EIF_BOOLEAN *)(Current + RTWA(6570, dtype));
+		if ((EIF_BOOLEAN) ((EIF_BOOLEAN) !tb1 && (EIF_BOOLEAN) (loc2 < ((EIF_INTEGER_32) 0L)))) {
+			RTHOOK(14);
+			ui4_1 = loc2;
+			tr1 = RTMS_EX_H("Cannot close the dollar template file",37,1997691749);
+			ur1 = tr1;
+			(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(6630, dtype))(Current, ui4_1x, ur1x);
+		}
+	}
+	RTVI(Current, RTAL);
+	RTRS;
+	RTHOOK(15);
+	RTDBGLE;
+	RTMD(0);
+	RTLE;
+	RTLO(9);
+	RTEE;
+#undef up1
+#undef up2
+#undef ur1
+#undef ui4_1
+#undef arg1
+}
+
+/* {GAME_DOLLAR_GESTURE_MANAGER}.last_loaded_dollar_gesture_template */
+EIF_TYPED_VALUE F899_9264 (EIF_REFERENCE Current)
+{
+	EIF_TYPED_VALUE r;
+	r.type = SK_INT32;
+	r.it_i4 = *(EIF_INTEGER_32 *)(Current + RTWA(7161,Dtype(Current)));
+	return r;
+}
+
+
+/* {GAME_DOLLAR_GESTURE_MANAGER}.last_saved_dollar_gesture_template */
+EIF_TYPED_VALUE F899_9265 (EIF_REFERENCE Current)
+{
+	EIF_TYPED_VALUE r;
+	r.type = SK_INT32;
+	r.it_i4 = *(EIF_INTEGER_32 *)(Current + RTWA(7162,Dtype(Current)));
+	return r;
+}
+
 
 void EIF_Minit899 (void)
 {

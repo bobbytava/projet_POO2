@@ -1,14 +1,14 @@
 note
-	description: "Summary description for {BOB}."
-	author: ""
-	date: "$Date$"
-	revision: "$Revision$"
+	description: "Personnage du jeu"
+	author: "Simon Gagné"
+	date: "04/04/2016"
 
 class
 	BOB
 
 inherit
-	SPRITE
+	DRAWABLE
+	HEARABLE
 		redefine
 			play_sound
 		end
@@ -40,8 +40,8 @@ feature
 			animation.extend (0)
 
 			surface := surface_right
-			animation_x := animation.at (1)
-			animation_y := animation.at (2)
+			sub_x := animation.at (1)
+			sub_y := animation.at (2)
 
 			create sound.make("sound.aif")
 			if sound.is_openable then
@@ -96,10 +96,6 @@ feature
 
 	surface:GAME_SURFACE
 
-	animation_x:INTEGER
-
-	animation_y:INTEGER
-
 
 
 	temps:INTEGER
@@ -108,30 +104,30 @@ feature
 	animate(a_background:BACKGROUND)
 		do
 			if going_right = false and going_left = false then
-				animation_x := animation.at (1)
-				animation_y := animation.at (2)
+				sub_x := animation.at (1)
+				sub_y := animation.at (2)
 			else
 				if going_left = true then
 					surface := surface_left
 
-					x := x - 2
+					x := x - 3
 					if x < 0 then
 						x := 0
 					end
 				else
 					surface := surface_right
-					x := x + 2
+					x := x + 3
 					if x > a_background.width - (current.width // 3) then
 						x := a_background.width - (current.width // 3)
 					end
 				end
 
 				if temps < 8 then
-						animation_x := animation.at (3)
-						animation_y := animation.at (4)
+						sub_x := animation.at (3)
+						sub_y := animation.at (4)
 					else
-						animation_x := animation.at (5)
-						animation_y := animation.at (6)
+						sub_x := animation.at (5)
+						sub_y := animation.at (6)
 					end
 				temps := temps+1
 				if temps > 16 then

@@ -1,14 +1,14 @@
 note
-	description: "Summary description for {HEARABLE}."
-	author: ""
-	date: "$Date$"
-	revision: "$Revision$"
+	description: "Représente ce qui fait du son"
+	author: "Simon Gagné"
+	date: "04/04/2016"
 
 deferred class
 	HEARABLE
 
 inherit
-	SOUND_CONTROLLER
+	AUDIO_LIBRARY_SHARED	-- To use `audio_library'
+	EXCEPTIONS
 
 
 feature

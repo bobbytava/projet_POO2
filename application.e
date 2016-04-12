@@ -1,7 +1,7 @@
 note
-	description : "project application root class"
-	date        : "$Date$"
-	revision    : "$Revision$"
+	description : "Class 'main' du jeu"
+	author		: "Simon Gagné"
+	date        : "04/04/2016"
 
 class
 	APPLICATION

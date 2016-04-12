@@ -17,8 +17,7 @@
 		<cluster name="project" location=".\" recursive="true">
 			<file_rule>
 				<exclude>/EIFGENs$</exclude>
-				<exclude>/.svn$</exclude>
-				<exclude>/CVS$</exclude>
+				<exclude>/.git$</exclude>
 			</file_rule>
 		</cluster>
 	</target>

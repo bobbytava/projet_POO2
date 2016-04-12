@@ -1,8 +1,7 @@
 note
-	description: "Summary description for {ENGINE}."
-	author: ""
-	date: "$Date$"
-	revision: "$Revision$"
+	description: "Contrôleur du jeu"
+	author: "Simon Gagné"
+	date: "04/04/2016"
 
 class
 	ENGINE
@@ -10,6 +9,7 @@ class
 inherit
 	GAME_LIBRARY_SHARED
 	IMG_LIBRARY_SHARED
+	AUDIO_LIBRARY_SHARED	-- To use `audio_library'
 
 create
 	make
@@ -17,60 +17,79 @@ create
 feature {NONE}  -- Initialization
 	make
 			-- Run application.
-		local
-			l_sound_ctrl:SOUND_CONTROLLER
 		do
 			game_library.enable_video -- Enable the video functionalities
-			create l_sound_ctrl
-			l_sound_ctrl.audio_library.enable_sound	-- Permit to the Audio
-			image_file_library.enable_image (true, true, false)  -- Enable PNG image (but not TIF or JPG).
+			audio_library.enable_sound	-- Permit to the Audio
+			image_file_library.enable_image (true, false, false)  -- Enable PNG image
 
-			run_game(l_sound_ctrl) -- Run the core creator of the game.
-			l_sound_ctrl.audio_library.quit_library	-- Properly quit the library
+			run_game
+			audio_library.quit_library	-- Properly quit the library
 			image_file_library.quit_library  -- Correctly unlink image files library
 			game_library.quit_library  -- Clear the library before quitting
 		end
 
-	run_game (a_sound_ctrl:SOUND_CONTROLLER)
+	run_game
 			-- Create ressources and launch the game
 		local
 			l_background:BACKGROUND
 			l_window_builder:GAME_WINDOW_SURFACED_BUILDER
 			l_window:GAME_WINDOW_SURFACED
 			l_character:BOB
+			l_ball:BALL
+			l_ball2:BALL
+			l_ball3:BALL
 
 		do
 
-
+			create array_balls.make (0)
 			create l_background.make
 			l_background.play_sound
 			create l_character.make
-			l_character.x := 400
-			l_character.y := 350
+			l_character.set_x (400)
+			l_character.set_y (340)
+
+			create l_ball.make(600,153,1,true)
+			create l_ball2.make(100,145,2,true)
+			create l_ball3.make(300,125,3,true)
+			array_balls.extend (l_ball)
+			array_balls.extend (l_ball2)
+			array_balls.extend (l_ball3)
+
 			create l_window_builder
 			l_window_builder.set_dimension (l_background.width, l_background.height)
-			l_window_builder.set_title ("Example Animation")
+			l_window_builder.set_title ("Bubble Trouble")
 			l_window := l_window_builder.generate_window
 
 			game_library.quit_signal_actions.extend (agent on_quit)
 			l_window.key_pressed_actions.extend (agent on_key_pressed(?, ?, l_character))
 			l_window.key_released_actions.extend (agent on_key_released(?,?,  l_character))
-			game_library.iteration_actions.extend (agent on_iteration(?, l_background,l_character, l_window, a_sound_ctrl))
+			game_library.iteration_actions.extend (agent on_iteration(?, l_character, l_background, l_window))
 			game_library.launch
 		end
 
 feature
-	on_iteration(a_timestamp:NATURAL_32; a_background:BACKGROUND; a_character:BOB; a_window:GAME_WINDOW_SURFACED;a_sound_ctrl:SOUND_CONTROLLER)
+	on_iteration(a_timestamp:NATURAL_32; a_character:BOB; a_background:BACKGROUND; a_window:GAME_WINDOW_SURFACED)
 			-- Event that is launch at each iteration.
 		do
 			-- Draw the scene
 			a_window.surface.draw_rectangle (create {GAME_COLOR}.make_rgb (0, 128, 255), 0, 0, a_background.width, a_background.height)
-			a_window.surface.draw_surface (a_background, 0, 0)
-			a_window.surface.draw_sub_surface (a_character.surface, a_character.animation_x, a_character.animation_y, a_character.width // 3, a_character.height, a_character.x, a_character.y)
+			a_window.surface.draw_surface (a_background, a_background.x, a_background.y)
+			a_window.surface.draw_sub_surface (a_character.surface, a_character.sub_x, a_character.sub_y, a_character.width // 3,
+				a_character.height, a_character.x, a_character.y)
+			from
+				array_balls.start
+			until
+				array_balls.off
+			loop
+				a_window.surface.draw_sub_surface (array_balls.item, 0, 0,
+					array_balls.item.width, array_balls.item.height, array_balls.item.x, array_balls.item.y)
+				array_balls.item.move(a_background)
+				array_balls.forth
+			end
 			a_character.animate(a_background)
 
 			-- Update modification in the screen
-			a_sound_ctrl.audio_library.update
+			audio_library.update
 			a_window.update
 		end
 
@@ -106,4 +125,6 @@ feature
 		do
 			game_library.stop  -- Stop the controller loop (allow game_library.launch to return)
 		end
+
+	array_balls:ARRAYED_LIST[BALL]
 end
