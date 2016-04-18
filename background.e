@@ -20,10 +20,16 @@ feature
 	make
 		local
 			l_image:IMG_IMAGE_FILE
+			l_image_footer:IMG_IMAGE_FILE
 		do
-			create l_image.make("desert.png")
+			create l_image.make("background.png")
 			l_image.open
 			make_from_image (l_image)
+
+			create l_image_footer.make ("footer.png")
+			l_image_footer.open
+			create footer.make_from_image (l_image_footer)
+
 
 			create sound.make("loop.flac")
 			if sound.is_openable then
@@ -44,4 +50,6 @@ feature
 	do
 		source.play					-- Play the source
 	end
+
+	footer:GAME_SURFACE
 end

@@ -22,7 +22,7 @@ static const EIF_TYPE_INDEX egt_9_882 [] = {0xFF01,220,0xFFFF};
 static const EIF_TYPE_INDEX egt_10_882 [] = {0xFF01,220,0xFFFF};
 static const EIF_TYPE_INDEX egt_11_882 [] = {0xFF01,15,0xFFFF};
 static const EIF_TYPE_INDEX egt_12_882 [] = {0xFF01,881,0xFFFF};
-static const EIF_TYPE_INDEX egt_13_882 [] = {0xFF01,933,0xFFFF};
+static const EIF_TYPE_INDEX egt_13_882 [] = {0xFF01,932,0xFFFF};
 static const EIF_TYPE_INDEX egt_14_882 [] = {0xFF01,811,191,0xFFFF};
 
 
@@ -88,9 +88,9 @@ void Init882(void)
 {
 	IDSC(desc_882, 0, 881);
 	IDSC(desc_882 + 1, 1, 881);
-	IDSC(desc_882 + 32, 425, 881);
-	IDSC(desc_882 + 34, 421, 881);
-	IDSC(desc_882 + 36, 398, 881);
+	IDSC(desc_882 + 32, 424, 881);
+	IDSC(desc_882 + 34, 420, 881);
+	IDSC(desc_882 + 36, 397, 881);
 }
 
 

@@ -74,9 +74,9 @@ void Init870(void)
 {
 	IDSC(desc_870, 0, 869);
 	IDSC(desc_870 + 1, 1, 869);
-	IDSC(desc_870 + 32, 424, 869);
-	IDSC(desc_870 + 40, 406, 869);
-	IDSC(desc_870 + 43, 407, 869);
+	IDSC(desc_870 + 32, 423, 869);
+	IDSC(desc_870 + 40, 405, 869);
+	IDSC(desc_870 + 43, 403, 869);
 }
 
 

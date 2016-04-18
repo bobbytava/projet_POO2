@@ -1482,9 +1482,9 @@ extern void EIF_Minit866(void);
 }
 #endif
 
-#include "sdl_additions.h"
 #include <SDL.h>
 #include <SDL_syswm.h>
+#include "sdl_additions.h"
 
 #ifdef __cplusplus
 extern "C" {

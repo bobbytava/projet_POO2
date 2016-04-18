@@ -41,14 +41,14 @@ SYSTEM_IN_DYNAMIC_LIB = project.dll
 
 OBJECTS = big_file_C1_c.obj 
 
-OLDOBJECTS =  so885.obj so885d.obj ga874.obj ga874d.obj im875.obj im875d.obj au884.obj au884d.obj \
-	ga866.obj ga866d.obj ga873.obj ga873d.obj he886.obj he886d.obj au890.obj au890d.obj \
-	ga883.obj ga883d.obj im865.obj im865d.obj ga864.obj ga864d.obj au863.obj au863d.obj \
-	au892.obj au892d.obj au889.obj au889d.obj th882.obj th882d.obj ga887.obj ga887d.obj \
-	ga871.obj ga871d.obj ga872.obj ga872d.obj ga869.obj ga869d.obj ga870.obj ga870d.obj \
-	au888.obj au888d.obj au891.obj au891d.obj au862.obj au862d.obj ga861.obj ga861d.obj \
-	th881.obj th881d.obj ga868.obj ga868d.obj th880.obj th880d.obj ga867.obj ga867d.obj \
-	ga878.obj ga878d.obj ga877.obj ga877d.obj ga879.obj ga879d.obj ga876.obj ga876d.obj 
+OLDOBJECTS =  ga874.obj ga874d.obj im875.obj im875d.obj ga866.obj ga866d.obj ga873.obj ga873d.obj \
+	au887.obj au887d.obj ga883.obj ga883d.obj ga890.obj ga890d.obj im865.obj im865d.obj \
+	ga864.obj ga864d.obj au889.obj au889d.obj au863.obj au863d.obj au886.obj au886d.obj \
+	th882.obj th882d.obj ga884.obj ga884d.obj ga870.obj ga870d.obj ga872.obj ga872d.obj \
+	ga869.obj ga869d.obj ga871.obj ga871d.obj au862.obj au862d.obj au885.obj au885d.obj \
+	au888.obj au888d.obj ga861.obj ga861d.obj ga892.obj ga892d.obj th881.obj th881d.obj \
+	ga868.obj ga868d.obj th880.obj th880d.obj ga867.obj ga867d.obj ga879.obj ga879d.obj \
+	ga891.obj ga891d.obj ga878.obj ga878d.obj ga877.obj ga877d.obj ga876.obj ga876d.obj 
 
 all::  Cobj1.lib
 

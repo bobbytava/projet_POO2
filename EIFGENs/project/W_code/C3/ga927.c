@@ -1,5 +1,5 @@
 /*
- * Code for class GAME_HAPTIC_MOUSE
+ * Code for class GAME_HAPTIC_EFFECT
  */
 
 #include "eif_eiffel.h"
@@ -10,8 +10,10 @@
 extern "C" {
 #endif
 
-extern void F927_10055(EIF_REFERENCE);
-extern EIF_TYPED_VALUE F927_10056(EIF_REFERENCE);
+extern EIF_TYPED_VALUE F927_9745(EIF_REFERENCE);
+extern EIF_TYPED_VALUE F927_9746(EIF_REFERENCE);
+extern void F927_9747(EIF_REFERENCE, EIF_TYPED_VALUE);
+extern void F927_10556(EIF_REFERENCE, int);
 extern void EIF_Minit927(void);
 
 #ifdef __cplusplus
@@ -33,76 +35,15 @@ extern "C" {
 extern "C" {
 #endif
 
-/* {GAME_HAPTIC_MOUSE}.make */
-void F927_10055 (EIF_REFERENCE Current)
+/* {GAME_HAPTIC_EFFECT}.structure_size */
+EIF_TYPED_VALUE F927_9745 (EIF_REFERENCE Current)
 {
 	GTCX
-	char *l_feature_name = "make";
+	char *l_feature_name = "structure_size";
 	RTEX;
-	EIF_TYPED_VALUE up1x = {{0}, SK_POINTER};
-#define up1 up1x.it_p
-	EIF_REFERENCE tr1 = NULL;
-	EIF_BOOLEAN tb1;
+	EIF_INTEGER_32 Result = ((EIF_INTEGER_32) 0);
+	
 	RTCDT;
-	RTSN;
-	RTDA;
-	RTLD;
-	
-	RTLI(2);
-	RTLR(0,Current);
-	RTLR(1,tr1);
-	RTLIU(2);
-	RTLU (SK_VOID, NULL);
-	RTLU (SK_REF, &Current);
-	
-	RTEAA(l_feature_name, 926, Current, 0, 0, 15756);
-	RTSA(dtype);
-	RTSC;
-	RTME(dtype, 0);
-	RTGC;
-	RTDBGEAA(926, Current, 15756);
-	RTIV(Current, RTAL);
-	if ((RTAL & CK_REQUIRE) || RTAC) {
-		RTHOOK(1);
-		RTCT("is_haptic_enabled", EX_PRE);
-		tr1 = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(7247, dtype))(Current)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
-		RTNHOOK(1,1);
-		tb1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(7120, "is_haptic_enable", tr1))(tr1)).it_b);
-		RTTE(tb1, label_1);
-		RTCK;
-		RTHOOK(2);
-		RTCT("mouse_has_haptic", EX_PRE);
-		tr1 = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(7247, dtype))(Current)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
-		RTNHOOK(2,1);
-		tb1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(7176, "mouse_has_haptic", tr1))(tr1)).it_b);
-		RTTE(tb1, label_1);
-		RTCK;
-		RTJB;
-label_1:
-		RTCF;
-	}
-body:;
-	RTHOOK(3);
-	(FUNCTION_CAST(void, (EIF_REFERENCE)) RTWF(32, dtype))(Current);
-	RTVI(Current, RTAL);
-	RTRS;
-	RTHOOK(4);
-	RTDBGLE;
-	RTMD(0);
-	RTLE;
-	RTLO(2);
-	RTEE;
-#undef up1
-}
-
-/* {GAME_HAPTIC_MOUSE}.internal_open */
-EIF_TYPED_VALUE F927_10056 (EIF_REFERENCE Current)
-{
-	GTCX
-	char *l_feature_name = "internal_open";
-	RTEX;
-	EIF_POINTER Result = ((EIF_POINTER) 0);
-	
 	RTSN;
 	RTDA;
 	RTLD;
@@ -110,28 +51,201 @@ EIF_TYPED_VALUE F927_10056 (EIF_REFERENCE Current)
 	RTLI(1);
 	RTLR(0,Current);
 	RTLIU(1);
-	RTLU (SK_POINTER, &Result);
+	RTLU (SK_INT32, &Result);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 926, Current, 0, 0, 15757);
-	RTSA(Dtype(Current));
+	RTEAA(l_feature_name, 926, Current, 0, 0, 15437);
+	RTSA(dtype);
 	RTSC;
-	RTME(Dtype(Current), 0);
+	RTME(dtype, 0);
 	RTGC;
-	RTDBGEAA(926, Current, 15757);
+	RTDBGEAA(926, Current, 15437);
 	RTIV(Current, RTAL);
 	RTHOOK(1);
-	RTDBGAL(Current, 0, 0x40000000, 1,0); /* Result */
-	Result = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(5104, 862))(Current)).it_p);
+	RTDBGAL(Current, 0, 0x10000000, 1,0); /* Result */
+	Result = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(5596, 865))(Current)).it_i4);
+	if (RTAL & CK_ENSURE) {
+		RTHOOK(2);
+		RTCT("positive_result", EX_POST);
+		if ((EIF_BOOLEAN) (Result > ((EIF_INTEGER_32) 0L))) {
+			RTCK;
+		} else {
+			RTCF;
+		}
+	}
 	RTVI(Current, RTAL);
 	RTRS;
-	RTHOOK(2);
+	RTHOOK(3);
 	RTDBGLE;
 	RTMD(0);
 	RTLE;
 	RTLO(2);
 	RTEE;
-	{ EIF_TYPED_VALUE r; r.type = SK_POINTER; r.it_p = Result; return r; }
+	{ EIF_TYPED_VALUE r; r.type = SK_INT32; r.it_i4 = Result; return r; }
+}
+
+/* {GAME_HAPTIC_EFFECT}.type */
+EIF_TYPED_VALUE F927_9746 (EIF_REFERENCE Current)
+{
+	GTCX
+	char *l_feature_name = "type";
+	RTEX;
+	EIF_TYPED_VALUE up1x = {{0}, SK_POINTER};
+#define up1 up1x.it_p
+	EIF_POINTER tp1;
+	EIF_BOOLEAN tb1;
+	EIF_NATURAL_16 Result = ((EIF_NATURAL_16) 0);
+	
+	RTCDT;
+	RTSN;
+	RTDA;
+	RTLD;
+	
+	RTLI(1);
+	RTLR(0,Current);
+	RTLIU(1);
+	RTLU (SK_UINT16, &Result);
+	RTLU (SK_REF, &Current);
+	
+	RTEAA(l_feature_name, 926, Current, 0, 0, 15438);
+	RTSA(dtype);
+	RTSC;
+	RTME(dtype, 0);
+	RTGC;
+	RTDBGEAA(926, Current, 15438);
+	RTIV(Current, RTAL);
+	if ((RTAL & CK_REQUIRE) || RTAC) {
+		RTHOOK(1);
+		RTCT("exists", EX_PRE);
+		tb1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(1061, dtype))(Current)).it_b);
+		RTTE(tb1, label_1);
+		RTCK;
+		RTJB;
+label_1:
+		RTCF;
+	}
+body:;
+	RTHOOK(2);
+	RTDBGAL(Current, 0, 0x34000000, 1,0); /* Result */
+	tp1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(1060, dtype))(Current)).it_p);
+	up1 = tp1;
+	Result = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(5598, 865))(Current, up1x)).it_n2);
+	RTVI(Current, RTAL);
+	RTRS;
+	RTHOOK(3);
+	RTDBGLE;
+	RTMD(0);
+	RTLE;
+	RTLO(2);
+	RTEE;
+	{ EIF_TYPED_VALUE r; r.type = SK_UINT16; r.it_n2 = Result; return r; }
+#undef up1
+}
+
+/* {GAME_HAPTIC_EFFECT}.set_type */
+void F927_9747 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
+{
+	GTCX
+	char *l_feature_name = "set_type";
+	RTEX;
+#define arg1 arg1x.it_n2
+	EIF_TYPED_VALUE up1x = {{0}, SK_POINTER};
+#define up1 up1x.it_p
+	EIF_TYPED_VALUE uu2_1x = {{0}, SK_UINT16};
+#define uu2_1 uu2_1x.it_n2
+	EIF_POINTER tp1;
+	EIF_NATURAL_16 tu2_1;
+	EIF_BOOLEAN tb1;
+	RTCDT;
+	RTSN;
+	RTDA;
+	RTLD;
+	
+	if ((arg1x.type & SK_HEAD) == SK_REF) arg1x.it_n2 = * (EIF_NATURAL_16 *) arg1x.it_r;
+	
+	RTLI(1);
+	RTLR(0,Current);
+	RTLIU(1);
+	RTLU (SK_VOID, NULL);
+	RTLU(SK_UINT16,&arg1);
+	RTLU (SK_REF, &Current);
+	
+	RTEAA(l_feature_name, 926, Current, 0, 1, 15439);
+	RTSA(dtype);
+	RTSC;
+	RTME(dtype, 0);
+	RTGC;
+	RTDBGEAA(926, Current, 15439);
+	RTIV(Current, RTAL);
+	if ((RTAL & CK_REQUIRE) || RTAC) {
+		RTHOOK(1);
+		RTCT("exists", EX_PRE);
+		tb1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(1061, dtype))(Current)).it_b);
+		RTTE(tb1, label_1);
+		RTCK;
+		RTJB;
+label_1:
+		RTCF;
+	}
+body:;
+	RTHOOK(2);
+	tp1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(1060, dtype))(Current)).it_p);
+	up1 = tp1;
+	uu2_1 = arg1;
+	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(5597, 865))(Current, up1x, uu2_1x);
+	if (RTAL & CK_ENSURE) {
+		RTHOOK(3);
+		RTCT("is_assign", EX_POST);
+		tu2_1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(7600, dtype))(Current)).it_n2);
+		if ((EIF_BOOLEAN)(tu2_1 == arg1)) {
+			RTCK;
+		} else {
+			RTCF;
+		}
+	}
+	RTVI(Current, RTAL);
+	RTRS;
+	RTHOOK(4);
+	RTDBGLE;
+	RTMD(0);
+	RTLE;
+	RTLO(3);
+	RTEE;
+#undef up1
+#undef uu2_1
+#undef arg1
+}
+
+/* {GAME_HAPTIC_EFFECT}._invariant */
+void F927_10556 (EIF_REFERENCE Current, int where)
+{
+	GTCX
+	char *l_feature_name = "_invariant";
+	RTEX;
+	EIF_NATURAL_16 tu2_1;
+	RTCDT;
+	RTLD;
+	RTDA;
+	
+	RTLI(1);
+	RTLR(0,Current);
+	RTLIU(1);
+	RTLU (SK_VOID, NULL);
+	RTLU (SK_REF, &Current);
+	RTEAINV(l_feature_name, 926, Current, 0, 10555);
+	RTSA(dtype);
+	RTME(dtype, 0);
+	RTIT("type_valid", Current);
+	tu2_1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(7600, dtype))(Current)).it_n2);
+	if ((EIF_BOOLEAN) (tu2_1 > (EIF_NATURAL_16) ((EIF_INTEGER_32) 0L))) {
+		RTCK;
+	} else {
+		RTCF;
+	}
+	RTLO(2);
+	RTMD(0);
+	RTLE;
+	RTEE;
 }
 
 void EIF_Minit927 (void)

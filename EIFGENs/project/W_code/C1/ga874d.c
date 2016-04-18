@@ -87,7 +87,7 @@ void Init874(void)
 {
 	IDSC(desc_874, 0, 873);
 	IDSC(desc_874 + 1, 1, 873);
-	IDSC(desc_874 + 32, 363, 873);
+	IDSC(desc_874 + 32, 364, 873);
 	IDSC(desc_874 + 50, 348, 873);
 }
 

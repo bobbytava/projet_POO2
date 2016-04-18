@@ -10,8 +10,8 @@
 extern "C" {
 #endif
 
-extern void F948_10342(EIF_REFERENCE);
-extern EIF_TYPED_VALUE F948_10343(EIF_REFERENCE);
+extern void F948_10356(EIF_REFERENCE);
+extern EIF_TYPED_VALUE F948_10357(EIF_REFERENCE);
 extern void EIF_Minit948(void);
 
 #ifdef __cplusplus
@@ -34,7 +34,7 @@ extern "C" {
 #endif
 
 /* {GAME_HAPTIC_MOUSE}.make */
-void F948_10342 (EIF_REFERENCE Current)
+void F948_10356 (EIF_REFERENCE Current)
 {
 	GTCX
 	char *l_feature_name = "make";
@@ -55,26 +55,26 @@ void F948_10342 (EIF_REFERENCE Current)
 	RTLU (SK_VOID, NULL);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 947, Current, 0, 0, 16059);
+	RTEAA(l_feature_name, 947, Current, 0, 0, 16073);
 	RTSA(dtype);
 	RTSC;
 	RTME(dtype, 0);
 	RTGC;
-	RTDBGEAA(947, Current, 16059);
+	RTDBGEAA(947, Current, 16073);
 	RTIV(Current, RTAL);
 	if ((RTAL & CK_REQUIRE) || RTAC) {
 		RTHOOK(1);
 		RTCT("is_haptic_enabled", EX_PRE);
 		tr1 = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(7424, dtype))(Current)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
 		RTNHOOK(1,1);
-		tb1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(7334, "is_haptic_enable", tr1))(tr1)).it_b);
+		tb1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(7330, "is_haptic_enable", tr1))(tr1)).it_b);
 		RTTE(tb1, label_1);
 		RTCK;
 		RTHOOK(2);
 		RTCT("mouse_has_haptic", EX_PRE);
 		tr1 = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(7424, dtype))(Current)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
 		RTNHOOK(2,1);
-		tb1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(7390, "mouse_has_haptic", tr1))(tr1)).it_b);
+		tb1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(7386, "mouse_has_haptic", tr1))(tr1)).it_b);
 		RTTE(tb1, label_1);
 		RTCK;
 		RTJB;
@@ -96,7 +96,7 @@ body:;
 }
 
 /* {GAME_HAPTIC_MOUSE}.internal_open */
-EIF_TYPED_VALUE F948_10343 (EIF_REFERENCE Current)
+EIF_TYPED_VALUE F948_10357 (EIF_REFERENCE Current)
 {
 	GTCX
 	char *l_feature_name = "internal_open";
@@ -113,12 +113,12 @@ EIF_TYPED_VALUE F948_10343 (EIF_REFERENCE Current)
 	RTLU (SK_POINTER, &Result);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 947, Current, 0, 0, 16060);
+	RTEAA(l_feature_name, 947, Current, 0, 0, 16074);
 	RTSA(Dtype(Current));
 	RTSC;
 	RTME(Dtype(Current), 0);
 	RTGC;
-	RTDBGEAA(947, Current, 16060);
+	RTDBGEAA(947, Current, 16074);
 	RTIV(Current, RTAL);
 	RTHOOK(1);
 	RTDBGAL(Current, 0, 0x40000000, 1,0); /* Result */

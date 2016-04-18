@@ -74,9 +74,9 @@ void Init871(void)
 {
 	IDSC(desc_871, 0, 870);
 	IDSC(desc_871 + 1, 1, 870);
-	IDSC(desc_871 + 32, 424, 870);
-	IDSC(desc_871 + 40, 406, 870);
-	IDSC(desc_871 + 43, 407, 870);
+	IDSC(desc_871 + 32, 423, 870);
+	IDSC(desc_871 + 40, 405, 870);
+	IDSC(desc_871 + 43, 403, 870);
 }
 
 

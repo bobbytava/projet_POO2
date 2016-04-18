@@ -20,7 +20,7 @@ feature {NONE}  -- Initialization
 		do
 			game_library.enable_video -- Enable the video functionalities
 			audio_library.enable_sound	-- Permit to the Audio
-			image_file_library.enable_image (true, false, false)  -- Enable PNG image
+			image_file_library.enable_image (true, true, false)  -- Enable PNG image
 
 			run_game
 			audio_library.quit_library	-- Properly quit the library
@@ -38,6 +38,7 @@ feature {NONE}  -- Initialization
 			l_ball:BALL
 			l_ball2:BALL
 			l_ball3:BALL
+			l_arrow:ARROW
 
 		do
 
@@ -46,14 +47,16 @@ feature {NONE}  -- Initialization
 			l_background.play_sound
 			create l_character.make
 			l_character.set_x (400)
-			l_character.set_y (340)
+			l_character.set_y (387)
 
-			create l_ball.make(600,153,1,true)
-			create l_ball2.make(100,145,2,true)
-			create l_ball3.make(300,125,3,true)
+			create l_ball.make(600,200,1,true)
+			create l_ball2.make(100,192,2,true)
+			create l_ball3.make(300,172,3,true)
 			array_balls.extend (l_ball)
 			array_balls.extend (l_ball2)
 			array_balls.extend (l_ball3)
+
+			create l_arrow.make
 
 			create l_window_builder
 			l_window_builder.set_dimension (l_background.width, l_background.height)
@@ -61,19 +64,29 @@ feature {NONE}  -- Initialization
 			l_window := l_window_builder.generate_window
 
 			game_library.quit_signal_actions.extend (agent on_quit)
-			l_window.key_pressed_actions.extend (agent on_key_pressed(?, ?, l_character))
+			l_window.key_pressed_actions.extend (agent on_key_pressed(?, ?, l_character, l_arrow))
 			l_window.key_released_actions.extend (agent on_key_released(?,?,  l_character))
-			game_library.iteration_actions.extend (agent on_iteration(?, l_character, l_background, l_window))
+			game_library.iteration_actions.extend (agent on_iteration(?, l_character, l_background, l_arrow, l_window))
 			game_library.launch
 		end
 
 feature
-	on_iteration(a_timestamp:NATURAL_32; a_character:BOB; a_background:BACKGROUND; a_window:GAME_WINDOW_SURFACED)
+	on_iteration(a_timestamp:NATURAL_32; a_character:BOB; a_background:BACKGROUND; a_arrow:ARROW; a_window:GAME_WINDOW_SURFACED)
 			-- Event that is launch at each iteration.
 		do
 			-- Draw the scene
 			a_window.surface.draw_rectangle (create {GAME_COLOR}.make_rgb (0, 128, 255), 0, 0, a_background.width, a_background.height)
 			a_window.surface.draw_surface (a_background, a_background.x, a_background.y)
+
+			if a_arrow.is_fired then
+				a_window.surface.draw_surface (a_arrow, a_arrow.x, a_arrow.y)
+				a_arrow.y:=a_arrow.y - 5
+				if a_arrow.y <= 0 then
+					a_arrow.set_y(387)
+					a_arrow.is_fired:=false
+				end
+			end
+
 			a_window.surface.draw_sub_surface (a_character.surface, a_character.sub_x, a_character.sub_y, a_character.width // 3,
 				a_character.height, a_character.x, a_character.y)
 			from
@@ -86,6 +99,8 @@ feature
 				array_balls.item.move(a_background)
 				array_balls.forth
 			end
+
+			a_window.surface.draw_surface (a_background.footer, 0, 462)
 			a_character.animate(a_background)
 
 			-- Update modification in the screen
@@ -93,7 +108,7 @@ feature
 			a_window.update
 		end
 
-	on_key_pressed(a_timestamp: NATURAL_32; a_key_state: GAME_KEY_STATE; a_character:BOB)
+	on_key_pressed(a_timestamp: NATURAL_32; a_key_state: GAME_KEY_STATE; a_character:BOB; a_arrow:ARROW)
 			-- Action when a keyboard key has been pushed
 		do
 			if not a_key_state.is_repeat then		-- Be sure that the event is not only an automatic repetition of the key
@@ -102,6 +117,9 @@ feature
 				elseif a_key_state.is_left then
 					a_character.go_left
 				elseif a_key_state.is_up then
+					if not a_arrow.is_fired then
+						a_arrow.fire(a_character.x)
+					end
 					a_character.play_sound
 				end
 			end

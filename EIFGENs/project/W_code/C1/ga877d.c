@@ -69,8 +69,8 @@ void Init877(void)
 {
 	IDSC(desc_877, 0, 876);
 	IDSC(desc_877 + 1, 1, 876);
-	IDSC(desc_877 + 32, 435, 876);
-	IDSC(desc_877 + 36, 428, 876);
+	IDSC(desc_877 + 32, 434, 876);
+	IDSC(desc_877 + 36, 432, 876);
 }
 
 
