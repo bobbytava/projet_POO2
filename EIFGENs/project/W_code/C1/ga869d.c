@@ -1,5 +1,5 @@
 /*
- * Class GAME_MOUSE_EVENTS_STATE
+ * Class GAME_3D_OBJECT
  */
 
 #include "eif_macros.h"
@@ -22,6 +22,7 @@ static const EIF_TYPE_INDEX egt_9_869 [] = {0xFF01,220,0xFFFF};
 static const EIF_TYPE_INDEX egt_10_869 [] = {0xFF01,220,0xFFFF};
 static const EIF_TYPE_INDEX egt_11_869 [] = {0xFF01,15,0xFFFF};
 static const EIF_TYPE_INDEX egt_12_869 [] = {0xFF01,868,0xFFFF};
+static const EIF_TYPE_INDEX egt_13_869 [] = {0xFF01,0xFFF9,3,174,179,179,179,0xFFFF};
 
 
 static const struct desc_info desc_869[] = {
@@ -57,15 +58,20 @@ static const struct desc_info desc_869[] = {
 	{EIF_NON_GENERIC(0x06C9 /*868*/), 28, 0xFFFFFFFF},
 	{EIF_NON_GENERIC(0x01AF /*215*/), 29, 0xFFFFFFFF},
 	{EIF_GENERIC(egt_12_869), 30, 0xFFFFFFFF},
-	{EIF_GENERIC(NULL), 14244, 0xFFFFFFFF},
-	{EIF_NON_GENERIC(0x0191 /*200*/), 14245, 0},
-	{EIF_NON_GENERIC(0x017F /*191*/), 14246, 0xFFFFFFFF},
+	{EIF_GENERIC(NULL), 0x00, 0xFFFFFFFF},
+	{EIF_GENERIC(egt_13_869), 0x00, 0xFFFFFFFF},
+	{EIF_NON_GENERIC(0x0167 /*179*/), 14275, 0xFFFFFFFF},
+	{EIF_GENERIC(NULL), 14276, 0xFFFFFFFF},
+	{EIF_NON_GENERIC(0x0167 /*179*/), 14277, 0xFFFFFFFF},
+	{EIF_GENERIC(NULL), 14278, 0xFFFFFFFF},
+	{EIF_NON_GENERIC(0x0167 /*179*/), 14279, 0xFFFFFFFF},
+	{EIF_GENERIC(NULL), 14280, 0xFFFFFFFF},
 };
 void Init869(void)
 {
 	IDSC(desc_869, 0, 868);
 	IDSC(desc_869 + 1, 1, 868);
-	IDSC(desc_869 + 32, 405, 868);
+	IDSC(desc_869 + 32, 430, 868);
 }
 
 

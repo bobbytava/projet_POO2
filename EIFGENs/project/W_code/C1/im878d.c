@@ -1,5 +1,5 @@
 /*
- * Class IMG_ANY
+ * Class IMG_LIBRARY_SHARED
  */
 
 #include "eif_macros.h"
@@ -22,8 +22,7 @@ static const EIF_TYPE_INDEX egt_9_878 [] = {0xFF01,220,0xFFFF};
 static const EIF_TYPE_INDEX egt_10_878 [] = {0xFF01,220,0xFFFF};
 static const EIF_TYPE_INDEX egt_11_878 [] = {0xFF01,15,0xFFFF};
 static const EIF_TYPE_INDEX egt_12_878 [] = {0xFF01,877,0xFFFF};
-static const EIF_TYPE_INDEX egt_13_878 [] = {0xFF01,811,191,0xFFFF};
-static const EIF_TYPE_INDEX egt_14_878 [] = {0xFF01,217,0xFFFF};
+static const EIF_TYPE_INDEX egt_13_878 [] = {0xFF01,900,0xFFFF};
 
 
 static const struct desc_info desc_878[] = {
@@ -59,27 +58,13 @@ static const struct desc_info desc_878[] = {
 	{EIF_NON_GENERIC(0x06DB /*877*/), 28, 0xFFFFFFFF},
 	{EIF_NON_GENERIC(0x01AF /*215*/), 29, 0xFFFFFFFF},
 	{EIF_GENERIC(egt_12_878), 30, 0xFFFFFFFF},
-	{EIF_GENERIC(NULL), 14717, 0xFFFFFFFF},
-	{EIF_GENERIC(NULL), 14185, 0xFFFFFFFF},
-	{EIF_NON_GENERIC(0x01B3 /*217*/), 14179, 0},
-	{EIF_GENERIC(egt_13_878), 14180, 0xFFFFFFFF},
-	{EIF_NON_GENERIC(0x017F /*191*/), 14171, 0xFFFFFFFF},
-	{EIF_GENERIC(NULL), 14172, 0xFFFFFFFF},
-	{EIF_GENERIC(NULL), 14173, 0xFFFFFFFF},
-	{EIF_GENERIC(NULL), 14174, 0xFFFFFFFF},
-	{EIF_NON_GENERIC(0x017F /*191*/), 14175, 4},
-	{EIF_GENERIC(egt_14_878), 14718, 0xFFFFFFFF},
-	{EIF_GENERIC(NULL), 14182, 0xFFFFFFFF},
-	{EIF_GENERIC(NULL), 14183, 0xFFFFFFFF},
-	{EIF_GENERIC(NULL), 14184, 0xFFFFFFFF},
-	{EIF_NON_GENERIC(0x017F /*191*/), 14186, 5},
+	{EIF_GENERIC(egt_13_878), 14335, 0xFFFFFFFF},
 };
 void Init878(void)
 {
 	IDSC(desc_878, 0, 877);
 	IDSC(desc_878 + 1, 1, 877);
-	IDSC(desc_878 + 32, 389, 877);
-	IDSC(desc_878 + 42, 368, 877);
+	IDSC(desc_878 + 32, 354, 877);
 }
 
 

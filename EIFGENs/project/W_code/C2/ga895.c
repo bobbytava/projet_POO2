@@ -1,5 +1,5 @@
 /*
- * Code for class GAME_KEY_STATE
+ * Code for class GAME_FINGER_STATE
  */
 
 #include "eif_eiffel.h"
@@ -10,33 +10,17 @@
 extern "C" {
 #endif
 
-extern void F895_9234(EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE);
-extern EIF_TYPED_VALUE F895_9235(EIF_REFERENCE);
-extern EIF_TYPED_VALUE F895_9236(EIF_REFERENCE);
-extern EIF_TYPED_VALUE F895_9237(EIF_REFERENCE);
-extern EIF_TYPED_VALUE F895_9238(EIF_REFERENCE);
-extern EIF_TYPED_VALUE F895_9239(EIF_REFERENCE);
-extern EIF_TYPED_VALUE F895_9240(EIF_REFERENCE);
-extern EIF_TYPED_VALUE F895_9241(EIF_REFERENCE);
-extern EIF_TYPED_VALUE F895_9242(EIF_REFERENCE);
-extern EIF_TYPED_VALUE F895_9243(EIF_REFERENCE);
-extern EIF_TYPED_VALUE F895_9244(EIF_REFERENCE);
-extern EIF_TYPED_VALUE F895_9245(EIF_REFERENCE);
-extern EIF_TYPED_VALUE F895_9246(EIF_REFERENCE);
-extern EIF_TYPED_VALUE F895_9247(EIF_REFERENCE);
-extern EIF_TYPED_VALUE F895_9248(EIF_REFERENCE);
-extern EIF_TYPED_VALUE F895_9249(EIF_REFERENCE);
-extern EIF_TYPED_VALUE F895_9250(EIF_REFERENCE);
-extern EIF_TYPED_VALUE F895_9251(EIF_REFERENCE);
-extern EIF_TYPED_VALUE F895_9252(EIF_REFERENCE);
-extern EIF_TYPED_VALUE F895_9253(EIF_REFERENCE);
+extern void F895_8790(EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE);
+extern EIF_TYPED_VALUE F895_8791(EIF_REFERENCE);
+extern EIF_TYPED_VALUE F895_8792(EIF_REFERENCE);
+extern EIF_TYPED_VALUE F895_8793(EIF_REFERENCE);
+extern EIF_TYPED_VALUE F895_8794(EIF_REFERENCE);
 extern void EIF_Minit895(void);
 
 #ifdef __cplusplus
 }
 #endif
 
-#include "eif_misc.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -52,889 +36,160 @@ extern "C" {
 extern "C" {
 #endif
 
-/* {GAME_KEY_STATE}.make */
-void F895_9234 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg2x, EIF_TYPED_VALUE arg3x, EIF_TYPED_VALUE arg4x)
+/* {GAME_FINGER_STATE}.make */
+void F895_8790 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg2x)
 {
 	GTCX
 	char *l_feature_name = "make";
 	RTEX;
-#define arg1 arg1x.it_i4
+	EIF_POINTER loc1 = (EIF_POINTER) 0;
+#define arg1 arg1x.it_r
 #define arg2 arg2x.it_i4
-#define arg3 arg3x.it_n2
-#define arg4 arg4x.it_n1
+	EIF_TYPED_VALUE up1x = {{0}, SK_POINTER};
+#define up1 up1x.it_p
+	EIF_TYPED_VALUE ur1x = {{0}, SK_REF};
+#define ur1 ur1x.it_r
+	EIF_TYPED_VALUE ui8_1x = {{0}, SK_INT64};
+#define ui8_1 ui8_1x.it_i8
+	EIF_TYPED_VALUE ui4_1x = {{0}, SK_INT32};
+#define ui4_1 ui4_1x.it_i4
+	EIF_REFERENCE tr1 = NULL;
+	EIF_INTEGER_64 ti8_1;
+	EIF_REAL_32 tr4_1;
+	EIF_INTEGER_32 ti4_1;
+	EIF_BOOLEAN tb1;
 	RTCDT;
 	RTSN;
 	RTDA;
 	RTLD;
 	
-	if ((arg4x.type & SK_HEAD) == SK_REF) arg4x.it_n1 = * (EIF_NATURAL_8 *) arg4x.it_r;
-	if ((arg3x.type & SK_HEAD) == SK_REF) arg3x.it_n2 = * (EIF_NATURAL_16 *) arg3x.it_r;
 	if ((arg2x.type & SK_HEAD) == SK_REF) arg2x.it_i4 = * (EIF_INTEGER_32 *) arg2x.it_r;
-	if ((arg1x.type & SK_HEAD) == SK_REF) arg1x.it_i4 = * (EIF_INTEGER_32 *) arg1x.it_r;
 	
-	RTLI(1);
-	RTLR(0,Current);
-	RTLIU(1);
+	RTLI(4);
+	RTLR(0,arg1);
+	RTLR(1,Current);
+	RTLR(2,tr1);
+	RTLR(3,ur1);
+	RTLIU(4);
 	RTLU (SK_VOID, NULL);
-	RTLU(SK_INT32,&arg1);
+	RTLU(SK_REF,&arg1);
 	RTLU(SK_INT32,&arg2);
-	RTLU(SK_UINT16,&arg3);
-	RTLU(SK_UINT8,&arg4);
 	RTLU (SK_REF, &Current);
+	RTLU(SK_POINTER, &loc1);
 	
-	RTEAA(l_feature_name, 894, Current, 0, 4, 14918);
+	RTEAA(l_feature_name, 894, Current, 1, 2, 14458);
 	RTSA(dtype);
 	RTSC;
 	RTME(dtype, 0);
 	RTGC;
-	RTDBGEAA(894, Current, 14918);
+	RTDBGEAA(894, Current, 14458);
+	RTCC(arg1, 894, l_feature_name, 1, eif_new_type(917, 0x01), 0x01);
 	RTIV(Current, RTAL);
-	RTHOOK(1);
-	RTDBGAA(Current, dtype, 6652, 0x10000000, 1); /* physical_code */
-	*(EIF_INTEGER_32 *)(Current + RTWA(6652, dtype)) = (EIF_INTEGER_32) arg1;
+	if ((RTAL & CK_REQUIRE) || RTAC) {
+		RTHOOK(1);
+		RTCT("index_valid", EX_PRE);
+		tb1 = '\0';
+		if ((EIF_BOOLEAN) (arg2 > ((EIF_INTEGER_32) 0L))) {
+			ti4_1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(7477, "finger_count", arg1))(arg1)).it_i4);
+			tb1 = (EIF_BOOLEAN) (arg2 <= ti4_1);
+		}
+		RTTE(tb1, label_1);
+		RTCK;
+		RTJB;
+label_1:
+		RTCF;
+	}
+body:;
 	RTHOOK(2);
-	RTDBGAA(Current, dtype, 6651, 0x10000000, 1); /* virtual_code */
-	*(EIF_INTEGER_32 *)(Current + RTWA(6651, dtype)) = (EIF_INTEGER_32) arg2;
+	(FUNCTION_CAST(void, (EIF_REFERENCE)) RTWF(6605, dtype))(Current);
 	RTHOOK(3);
-	RTDBGAA(Current, dtype, 7149, 0x30000000, 1); /* repeat */
-	*(EIF_NATURAL_8 *)(Current + RTWA(7149, dtype)) = (EIF_NATURAL_8) arg4;
+	RTDBGAL(Current, 1, 0x40000000, 1, 0); /* loc1 */
+	ti8_1 = *(EIF_INTEGER_64 *)(arg1 + RTVA(7481, "index", arg1));
+	ui8_1 = ti8_1;
+	ui4_1 = (EIF_INTEGER_32) (arg2 - ((EIF_INTEGER_32) 1L));
+	loc1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(5252, 866))(Current, ui8_1x, ui4_1x)).it_p);
 	RTHOOK(4);
-	RTDBGAA(Current, dtype, 7150, 0x34000000, 1); /* modifier */
-	*(EIF_NATURAL_16 *)(Current + RTWA(7150, dtype)) = (EIF_NATURAL_16) arg3;
+	tb1 = !loc1;
+	if (tb1) {
+		RTHOOK(5);
+		up1 = loc1;
+		tr1 = RTMS_EX_H("Cannot get the touch finger state.",34,1792091694);
+		ur1 = tr1;
+		(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(6674, dtype))(Current, up1x, ur1x);
+	} else {
+		RTHOOK(6);
+		RTDBGAA(Current, dtype, 6689, 0x24000000, 1); /* index */
+		up1 = loc1;
+		ti8_1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(5768, 866))(Current, up1x)).it_i8);
+		*(EIF_INTEGER_64 *)(Current + RTWA(6689, dtype)) = (EIF_INTEGER_64) ti8_1;
+		RTHOOK(7);
+		RTDBGAA(Current, dtype, 6690, 0x18000000, 1); /* x */
+		up1 = loc1;
+		tr4_1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(5769, 866))(Current, up1x)).it_r4);
+		*(EIF_REAL_32 *)(Current + RTWA(6690, dtype)) = (EIF_REAL_32) tr4_1;
+		RTHOOK(8);
+		RTDBGAA(Current, dtype, 6691, 0x18000000, 1); /* y */
+		up1 = loc1;
+		tr4_1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(5770, 866))(Current, up1x)).it_r4);
+		*(EIF_REAL_32 *)(Current + RTWA(6691, dtype)) = (EIF_REAL_32) tr4_1;
+		RTHOOK(9);
+		RTDBGAA(Current, dtype, 6692, 0x18000000, 1); /* pressure */
+		up1 = loc1;
+		tr4_1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(5771, 866))(Current, up1x)).it_r4);
+		*(EIF_REAL_32 *)(Current + RTWA(6692, dtype)) = (EIF_REAL_32) tr4_1;
+	}
 	RTVI(Current, RTAL);
 	RTRS;
-	RTHOOK(5);
+	RTHOOK(10);
 	RTDBGLE;
 	RTMD(0);
 	RTLE;
-	RTLO(6);
+	RTLO(5);
 	RTEE;
-#undef arg4
-#undef arg3
+#undef up1
+#undef ur1
+#undef ui8_1
+#undef ui4_1
 #undef arg2
 #undef arg1
 }
 
-/* {GAME_KEY_STATE}.is_repeat */
-EIF_TYPED_VALUE F895_9235 (EIF_REFERENCE Current)
-{
-	GTCX
-	char *l_feature_name = "is_repeat";
-	RTEX;
-	EIF_NATURAL_8 tu1_1;
-	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
-	
-	RTSN;
-	RTDA;
-	RTLD;
-	
-	RTLI(1);
-	RTLR(0,Current);
-	RTLIU(1);
-	RTLU (SK_BOOL, &Result);
-	RTLU (SK_REF, &Current);
-	
-	RTEAA(l_feature_name, 894, Current, 0, 0, 14919);
-	RTSA(Dtype(Current));
-	RTSC;
-	RTME(Dtype(Current), 0);
-	RTGC;
-	RTDBGEAA(894, Current, 14919);
-	RTIV(Current, RTAL);
-	RTHOOK(1);
-	RTDBGAL(Current, 0, 0x04000000, 1,0); /* Result */
-	tu1_1 = *(EIF_NATURAL_8 *)(Current + RTWA(7149, Dtype(Current)));
-	Result = (EIF_BOOLEAN) (EIF_BOOLEAN)(tu1_1 != (EIF_NATURAL_8) ((EIF_INTEGER_32) 0L));
-	RTVI(Current, RTAL);
-	RTRS;
-	RTHOOK(2);
-	RTDBGLE;
-	RTMD(0);
-	RTLE;
-	RTLO(2);
-	RTEE;
-	{ EIF_TYPED_VALUE r; r.type = SK_BOOL; r.it_b = Result; return r; }
-}
-
-/* {GAME_KEY_STATE}.has_no_modifier */
-EIF_TYPED_VALUE F895_9236 (EIF_REFERENCE Current)
-{
-	GTCX
-	char *l_feature_name = "has_no_modifier";
-	RTEX;
-	EIF_NATURAL_16 tu2_1;
-	EIF_NATURAL_16 tu2_2;
-	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
-	
-	RTSN;
-	RTDA;
-	RTLD;
-	
-	RTLI(1);
-	RTLR(0,Current);
-	RTLIU(1);
-	RTLU (SK_BOOL, &Result);
-	RTLU (SK_REF, &Current);
-	
-	RTEAA(l_feature_name, 894, Current, 0, 0, 14920);
-	RTSA(Dtype(Current));
-	RTSC;
-	RTME(Dtype(Current), 0);
-	RTGC;
-	RTDBGEAA(894, Current, 14920);
-	RTIV(Current, RTAL);
-	RTHOOK(1);
-	RTDBGAL(Current, 0, 0x04000000, 1,0); /* Result */
-	tu2_1 = *(EIF_NATURAL_16 *)(Current + RTWA(7150, Dtype(Current)));
-	tu2_2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(5852, 865))(Current)).it_n2);
-	Result = (EIF_BOOLEAN) (EIF_BOOLEAN)(tu2_1 == tu2_2);
-	RTVI(Current, RTAL);
-	RTRS;
-	RTHOOK(2);
-	RTDBGLE;
-	RTMD(0);
-	RTLE;
-	RTLO(2);
-	RTEE;
-	{ EIF_TYPED_VALUE r; r.type = SK_BOOL; r.it_b = Result; return r; }
-}
-
-/* {GAME_KEY_STATE}.has_left_shift_modifier */
-EIF_TYPED_VALUE F895_9237 (EIF_REFERENCE Current)
-{
-	GTCX
-	char *l_feature_name = "has_left_shift_modifier";
-	RTEX;
-	EIF_TYPED_VALUE uu2_1x = {{0}, SK_UINT16};
-#define uu2_1 uu2_1x.it_n2
-	EIF_NATURAL_16 tu2_1;
-	EIF_NATURAL_16 tu2_2;
-	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
-	
-	RTSN;
-	RTDA;
-	RTLD;
-	
-	RTLI(1);
-	RTLR(0,Current);
-	RTLIU(1);
-	RTLU (SK_BOOL, &Result);
-	RTLU (SK_REF, &Current);
-	
-	RTEAA(l_feature_name, 894, Current, 0, 0, 14921);
-	RTSA(Dtype(Current));
-	RTSC;
-	RTME(Dtype(Current), 0);
-	RTGC;
-	RTDBGEAA(894, Current, 14921);
-	RTIV(Current, RTAL);
-	RTHOOK(1);
-	RTDBGAL(Current, 0, 0x04000000, 1,0); /* Result */
-	tu2_1 = *(EIF_NATURAL_16 *)(Current + RTWA(7150, Dtype(Current)));
-	tu2_2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(5853, 865))(Current)).it_n2);
-	uu2_1 = tu2_2;
-	tu2_2 = eif_bit_or(tu2_1,uu2_1);
-	Result = (EIF_BOOLEAN) (EIF_BOOLEAN)(tu2_2 != (EIF_NATURAL_16) ((EIF_INTEGER_32) 0L));
-	RTVI(Current, RTAL);
-	RTRS;
-	RTHOOK(2);
-	RTDBGLE;
-	RTMD(0);
-	RTLE;
-	RTLO(2);
-	RTEE;
-	{ EIF_TYPED_VALUE r; r.type = SK_BOOL; r.it_b = Result; return r; }
-#undef uu2_1
-}
-
-/* {GAME_KEY_STATE}.has_right_shift_modifier */
-EIF_TYPED_VALUE F895_9238 (EIF_REFERENCE Current)
-{
-	GTCX
-	char *l_feature_name = "has_right_shift_modifier";
-	RTEX;
-	EIF_TYPED_VALUE uu2_1x = {{0}, SK_UINT16};
-#define uu2_1 uu2_1x.it_n2
-	EIF_NATURAL_16 tu2_1;
-	EIF_NATURAL_16 tu2_2;
-	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
-	
-	RTSN;
-	RTDA;
-	RTLD;
-	
-	RTLI(1);
-	RTLR(0,Current);
-	RTLIU(1);
-	RTLU (SK_BOOL, &Result);
-	RTLU (SK_REF, &Current);
-	
-	RTEAA(l_feature_name, 894, Current, 0, 0, 14902);
-	RTSA(Dtype(Current));
-	RTSC;
-	RTME(Dtype(Current), 0);
-	RTGC;
-	RTDBGEAA(894, Current, 14902);
-	RTIV(Current, RTAL);
-	RTHOOK(1);
-	RTDBGAL(Current, 0, 0x04000000, 1,0); /* Result */
-	tu2_1 = *(EIF_NATURAL_16 *)(Current + RTWA(7150, Dtype(Current)));
-	tu2_2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(5854, 865))(Current)).it_n2);
-	uu2_1 = tu2_2;
-	tu2_2 = eif_bit_or(tu2_1,uu2_1);
-	Result = (EIF_BOOLEAN) (EIF_BOOLEAN)(tu2_2 != (EIF_NATURAL_16) ((EIF_INTEGER_32) 0L));
-	RTVI(Current, RTAL);
-	RTRS;
-	RTHOOK(2);
-	RTDBGLE;
-	RTMD(0);
-	RTLE;
-	RTLO(2);
-	RTEE;
-	{ EIF_TYPED_VALUE r; r.type = SK_BOOL; r.it_b = Result; return r; }
-#undef uu2_1
-}
-
-/* {GAME_KEY_STATE}.has_left_ctrl_modifier */
-EIF_TYPED_VALUE F895_9239 (EIF_REFERENCE Current)
-{
-	GTCX
-	char *l_feature_name = "has_left_ctrl_modifier";
-	RTEX;
-	EIF_TYPED_VALUE uu2_1x = {{0}, SK_UINT16};
-#define uu2_1 uu2_1x.it_n2
-	EIF_NATURAL_16 tu2_1;
-	EIF_NATURAL_16 tu2_2;
-	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
-	
-	RTSN;
-	RTDA;
-	RTLD;
-	
-	RTLI(1);
-	RTLR(0,Current);
-	RTLIU(1);
-	RTLU (SK_BOOL, &Result);
-	RTLU (SK_REF, &Current);
-	
-	RTEAA(l_feature_name, 894, Current, 0, 0, 14903);
-	RTSA(Dtype(Current));
-	RTSC;
-	RTME(Dtype(Current), 0);
-	RTGC;
-	RTDBGEAA(894, Current, 14903);
-	RTIV(Current, RTAL);
-	RTHOOK(1);
-	RTDBGAL(Current, 0, 0x04000000, 1,0); /* Result */
-	tu2_1 = *(EIF_NATURAL_16 *)(Current + RTWA(7150, Dtype(Current)));
-	tu2_2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(5855, 865))(Current)).it_n2);
-	uu2_1 = tu2_2;
-	tu2_2 = eif_bit_or(tu2_1,uu2_1);
-	Result = (EIF_BOOLEAN) (EIF_BOOLEAN)(tu2_2 != (EIF_NATURAL_16) ((EIF_INTEGER_32) 0L));
-	RTVI(Current, RTAL);
-	RTRS;
-	RTHOOK(2);
-	RTDBGLE;
-	RTMD(0);
-	RTLE;
-	RTLO(2);
-	RTEE;
-	{ EIF_TYPED_VALUE r; r.type = SK_BOOL; r.it_b = Result; return r; }
-#undef uu2_1
-}
-
-/* {GAME_KEY_STATE}.has_right_ctrl_modifier */
-EIF_TYPED_VALUE F895_9240 (EIF_REFERENCE Current)
-{
-	GTCX
-	char *l_feature_name = "has_right_ctrl_modifier";
-	RTEX;
-	EIF_TYPED_VALUE uu2_1x = {{0}, SK_UINT16};
-#define uu2_1 uu2_1x.it_n2
-	EIF_NATURAL_16 tu2_1;
-	EIF_NATURAL_16 tu2_2;
-	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
-	
-	RTSN;
-	RTDA;
-	RTLD;
-	
-	RTLI(1);
-	RTLR(0,Current);
-	RTLIU(1);
-	RTLU (SK_BOOL, &Result);
-	RTLU (SK_REF, &Current);
-	
-	RTEAA(l_feature_name, 894, Current, 0, 0, 14904);
-	RTSA(Dtype(Current));
-	RTSC;
-	RTME(Dtype(Current), 0);
-	RTGC;
-	RTDBGEAA(894, Current, 14904);
-	RTIV(Current, RTAL);
-	RTHOOK(1);
-	RTDBGAL(Current, 0, 0x04000000, 1,0); /* Result */
-	tu2_1 = *(EIF_NATURAL_16 *)(Current + RTWA(7150, Dtype(Current)));
-	tu2_2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(5856, 865))(Current)).it_n2);
-	uu2_1 = tu2_2;
-	tu2_2 = eif_bit_or(tu2_1,uu2_1);
-	Result = (EIF_BOOLEAN) (EIF_BOOLEAN)(tu2_2 != (EIF_NATURAL_16) ((EIF_INTEGER_32) 0L));
-	RTVI(Current, RTAL);
-	RTRS;
-	RTHOOK(2);
-	RTDBGLE;
-	RTMD(0);
-	RTLE;
-	RTLO(2);
-	RTEE;
-	{ EIF_TYPED_VALUE r; r.type = SK_BOOL; r.it_b = Result; return r; }
-#undef uu2_1
-}
-
-/* {GAME_KEY_STATE}.has_left_alt_modifier */
-EIF_TYPED_VALUE F895_9241 (EIF_REFERENCE Current)
-{
-	GTCX
-	char *l_feature_name = "has_left_alt_modifier";
-	RTEX;
-	EIF_TYPED_VALUE uu2_1x = {{0}, SK_UINT16};
-#define uu2_1 uu2_1x.it_n2
-	EIF_NATURAL_16 tu2_1;
-	EIF_NATURAL_16 tu2_2;
-	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
-	
-	RTSN;
-	RTDA;
-	RTLD;
-	
-	RTLI(1);
-	RTLR(0,Current);
-	RTLIU(1);
-	RTLU (SK_BOOL, &Result);
-	RTLU (SK_REF, &Current);
-	
-	RTEAA(l_feature_name, 894, Current, 0, 0, 14905);
-	RTSA(Dtype(Current));
-	RTSC;
-	RTME(Dtype(Current), 0);
-	RTGC;
-	RTDBGEAA(894, Current, 14905);
-	RTIV(Current, RTAL);
-	RTHOOK(1);
-	RTDBGAL(Current, 0, 0x04000000, 1,0); /* Result */
-	tu2_1 = *(EIF_NATURAL_16 *)(Current + RTWA(7150, Dtype(Current)));
-	tu2_2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(5857, 865))(Current)).it_n2);
-	uu2_1 = tu2_2;
-	tu2_2 = eif_bit_or(tu2_1,uu2_1);
-	Result = (EIF_BOOLEAN) (EIF_BOOLEAN)(tu2_2 != (EIF_NATURAL_16) ((EIF_INTEGER_32) 0L));
-	RTVI(Current, RTAL);
-	RTRS;
-	RTHOOK(2);
-	RTDBGLE;
-	RTMD(0);
-	RTLE;
-	RTLO(2);
-	RTEE;
-	{ EIF_TYPED_VALUE r; r.type = SK_BOOL; r.it_b = Result; return r; }
-#undef uu2_1
-}
-
-/* {GAME_KEY_STATE}.has_right_alt_modifier */
-EIF_TYPED_VALUE F895_9242 (EIF_REFERENCE Current)
-{
-	GTCX
-	char *l_feature_name = "has_right_alt_modifier";
-	RTEX;
-	EIF_TYPED_VALUE uu2_1x = {{0}, SK_UINT16};
-#define uu2_1 uu2_1x.it_n2
-	EIF_NATURAL_16 tu2_1;
-	EIF_NATURAL_16 tu2_2;
-	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
-	
-	RTSN;
-	RTDA;
-	RTLD;
-	
-	RTLI(1);
-	RTLR(0,Current);
-	RTLIU(1);
-	RTLU (SK_BOOL, &Result);
-	RTLU (SK_REF, &Current);
-	
-	RTEAA(l_feature_name, 894, Current, 0, 0, 14906);
-	RTSA(Dtype(Current));
-	RTSC;
-	RTME(Dtype(Current), 0);
-	RTGC;
-	RTDBGEAA(894, Current, 14906);
-	RTIV(Current, RTAL);
-	RTHOOK(1);
-	RTDBGAL(Current, 0, 0x04000000, 1,0); /* Result */
-	tu2_1 = *(EIF_NATURAL_16 *)(Current + RTWA(7150, Dtype(Current)));
-	tu2_2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(5858, 865))(Current)).it_n2);
-	uu2_1 = tu2_2;
-	tu2_2 = eif_bit_or(tu2_1,uu2_1);
-	Result = (EIF_BOOLEAN) (EIF_BOOLEAN)(tu2_2 != (EIF_NATURAL_16) ((EIF_INTEGER_32) 0L));
-	RTVI(Current, RTAL);
-	RTRS;
-	RTHOOK(2);
-	RTDBGLE;
-	RTMD(0);
-	RTLE;
-	RTLO(2);
-	RTEE;
-	{ EIF_TYPED_VALUE r; r.type = SK_BOOL; r.it_b = Result; return r; }
-#undef uu2_1
-}
-
-/* {GAME_KEY_STATE}.has_left_gui_modifier */
-EIF_TYPED_VALUE F895_9243 (EIF_REFERENCE Current)
-{
-	GTCX
-	char *l_feature_name = "has_left_gui_modifier";
-	RTEX;
-	EIF_TYPED_VALUE uu2_1x = {{0}, SK_UINT16};
-#define uu2_1 uu2_1x.it_n2
-	EIF_NATURAL_16 tu2_1;
-	EIF_NATURAL_16 tu2_2;
-	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
-	
-	RTSN;
-	RTDA;
-	RTLD;
-	
-	RTLI(1);
-	RTLR(0,Current);
-	RTLIU(1);
-	RTLU (SK_BOOL, &Result);
-	RTLU (SK_REF, &Current);
-	
-	RTEAA(l_feature_name, 894, Current, 0, 0, 14907);
-	RTSA(Dtype(Current));
-	RTSC;
-	RTME(Dtype(Current), 0);
-	RTGC;
-	RTDBGEAA(894, Current, 14907);
-	RTIV(Current, RTAL);
-	RTHOOK(1);
-	RTDBGAL(Current, 0, 0x04000000, 1,0); /* Result */
-	tu2_1 = *(EIF_NATURAL_16 *)(Current + RTWA(7150, Dtype(Current)));
-	tu2_2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(5859, 865))(Current)).it_n2);
-	uu2_1 = tu2_2;
-	tu2_2 = eif_bit_or(tu2_1,uu2_1);
-	Result = (EIF_BOOLEAN) (EIF_BOOLEAN)(tu2_2 != (EIF_NATURAL_16) ((EIF_INTEGER_32) 0L));
-	RTVI(Current, RTAL);
-	RTRS;
-	RTHOOK(2);
-	RTDBGLE;
-	RTMD(0);
-	RTLE;
-	RTLO(2);
-	RTEE;
-	{ EIF_TYPED_VALUE r; r.type = SK_BOOL; r.it_b = Result; return r; }
-#undef uu2_1
-}
-
-/* {GAME_KEY_STATE}.has_right_gui_modifier */
-EIF_TYPED_VALUE F895_9244 (EIF_REFERENCE Current)
-{
-	GTCX
-	char *l_feature_name = "has_right_gui_modifier";
-	RTEX;
-	EIF_TYPED_VALUE uu2_1x = {{0}, SK_UINT16};
-#define uu2_1 uu2_1x.it_n2
-	EIF_NATURAL_16 tu2_1;
-	EIF_NATURAL_16 tu2_2;
-	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
-	
-	RTSN;
-	RTDA;
-	RTLD;
-	
-	RTLI(1);
-	RTLR(0,Current);
-	RTLIU(1);
-	RTLU (SK_BOOL, &Result);
-	RTLU (SK_REF, &Current);
-	
-	RTEAA(l_feature_name, 894, Current, 0, 0, 14908);
-	RTSA(Dtype(Current));
-	RTSC;
-	RTME(Dtype(Current), 0);
-	RTGC;
-	RTDBGEAA(894, Current, 14908);
-	RTIV(Current, RTAL);
-	RTHOOK(1);
-	RTDBGAL(Current, 0, 0x04000000, 1,0); /* Result */
-	tu2_1 = *(EIF_NATURAL_16 *)(Current + RTWA(7150, Dtype(Current)));
-	tu2_2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(5860, 865))(Current)).it_n2);
-	uu2_1 = tu2_2;
-	tu2_2 = eif_bit_or(tu2_1,uu2_1);
-	Result = (EIF_BOOLEAN) (EIF_BOOLEAN)(tu2_2 != (EIF_NATURAL_16) ((EIF_INTEGER_32) 0L));
-	RTVI(Current, RTAL);
-	RTRS;
-	RTHOOK(2);
-	RTDBGLE;
-	RTMD(0);
-	RTLE;
-	RTLO(2);
-	RTEE;
-	{ EIF_TYPED_VALUE r; r.type = SK_BOOL; r.it_b = Result; return r; }
-#undef uu2_1
-}
-
-/* {GAME_KEY_STATE}.has_num_lock_modifier */
-EIF_TYPED_VALUE F895_9245 (EIF_REFERENCE Current)
-{
-	GTCX
-	char *l_feature_name = "has_num_lock_modifier";
-	RTEX;
-	EIF_TYPED_VALUE uu2_1x = {{0}, SK_UINT16};
-#define uu2_1 uu2_1x.it_n2
-	EIF_NATURAL_16 tu2_1;
-	EIF_NATURAL_16 tu2_2;
-	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
-	
-	RTSN;
-	RTDA;
-	RTLD;
-	
-	RTLI(1);
-	RTLR(0,Current);
-	RTLIU(1);
-	RTLU (SK_BOOL, &Result);
-	RTLU (SK_REF, &Current);
-	
-	RTEAA(l_feature_name, 894, Current, 0, 0, 14909);
-	RTSA(Dtype(Current));
-	RTSC;
-	RTME(Dtype(Current), 0);
-	RTGC;
-	RTDBGEAA(894, Current, 14909);
-	RTIV(Current, RTAL);
-	RTHOOK(1);
-	RTDBGAL(Current, 0, 0x04000000, 1,0); /* Result */
-	tu2_1 = *(EIF_NATURAL_16 *)(Current + RTWA(7150, Dtype(Current)));
-	tu2_2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(5861, 865))(Current)).it_n2);
-	uu2_1 = tu2_2;
-	tu2_2 = eif_bit_or(tu2_1,uu2_1);
-	Result = (EIF_BOOLEAN) (EIF_BOOLEAN)(tu2_2 != (EIF_NATURAL_16) ((EIF_INTEGER_32) 0L));
-	RTVI(Current, RTAL);
-	RTRS;
-	RTHOOK(2);
-	RTDBGLE;
-	RTMD(0);
-	RTLE;
-	RTLO(2);
-	RTEE;
-	{ EIF_TYPED_VALUE r; r.type = SK_BOOL; r.it_b = Result; return r; }
-#undef uu2_1
-}
-
-/* {GAME_KEY_STATE}.has_caps_lock_modifier */
-EIF_TYPED_VALUE F895_9246 (EIF_REFERENCE Current)
-{
-	GTCX
-	char *l_feature_name = "has_caps_lock_modifier";
-	RTEX;
-	EIF_TYPED_VALUE uu2_1x = {{0}, SK_UINT16};
-#define uu2_1 uu2_1x.it_n2
-	EIF_NATURAL_16 tu2_1;
-	EIF_NATURAL_16 tu2_2;
-	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
-	
-	RTSN;
-	RTDA;
-	RTLD;
-	
-	RTLI(1);
-	RTLR(0,Current);
-	RTLIU(1);
-	RTLU (SK_BOOL, &Result);
-	RTLU (SK_REF, &Current);
-	
-	RTEAA(l_feature_name, 894, Current, 0, 0, 14910);
-	RTSA(Dtype(Current));
-	RTSC;
-	RTME(Dtype(Current), 0);
-	RTGC;
-	RTDBGEAA(894, Current, 14910);
-	RTIV(Current, RTAL);
-	RTHOOK(1);
-	RTDBGAL(Current, 0, 0x04000000, 1,0); /* Result */
-	tu2_1 = *(EIF_NATURAL_16 *)(Current + RTWA(7150, Dtype(Current)));
-	tu2_2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(5862, 865))(Current)).it_n2);
-	uu2_1 = tu2_2;
-	tu2_2 = eif_bit_or(tu2_1,uu2_1);
-	Result = (EIF_BOOLEAN) (EIF_BOOLEAN)(tu2_2 != (EIF_NATURAL_16) ((EIF_INTEGER_32) 0L));
-	RTVI(Current, RTAL);
-	RTRS;
-	RTHOOK(2);
-	RTDBGLE;
-	RTMD(0);
-	RTLE;
-	RTLO(2);
-	RTEE;
-	{ EIF_TYPED_VALUE r; r.type = SK_BOOL; r.it_b = Result; return r; }
-#undef uu2_1
-}
-
-/* {GAME_KEY_STATE}.has_alt_gr_modifier */
-EIF_TYPED_VALUE F895_9247 (EIF_REFERENCE Current)
-{
-	GTCX
-	char *l_feature_name = "has_alt_gr_modifier";
-	RTEX;
-	EIF_TYPED_VALUE uu2_1x = {{0}, SK_UINT16};
-#define uu2_1 uu2_1x.it_n2
-	EIF_NATURAL_16 tu2_1;
-	EIF_NATURAL_16 tu2_2;
-	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
-	
-	RTSN;
-	RTDA;
-	RTLD;
-	
-	RTLI(1);
-	RTLR(0,Current);
-	RTLIU(1);
-	RTLU (SK_BOOL, &Result);
-	RTLU (SK_REF, &Current);
-	
-	RTEAA(l_feature_name, 894, Current, 0, 0, 14911);
-	RTSA(Dtype(Current));
-	RTSC;
-	RTME(Dtype(Current), 0);
-	RTGC;
-	RTDBGEAA(894, Current, 14911);
-	RTIV(Current, RTAL);
-	RTHOOK(1);
-	RTDBGAL(Current, 0, 0x04000000, 1,0); /* Result */
-	tu2_1 = *(EIF_NATURAL_16 *)(Current + RTWA(7150, Dtype(Current)));
-	tu2_2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(5863, 865))(Current)).it_n2);
-	uu2_1 = tu2_2;
-	tu2_2 = eif_bit_or(tu2_1,uu2_1);
-	Result = (EIF_BOOLEAN) (EIF_BOOLEAN)(tu2_2 != (EIF_NATURAL_16) ((EIF_INTEGER_32) 0L));
-	RTVI(Current, RTAL);
-	RTRS;
-	RTHOOK(2);
-	RTDBGLE;
-	RTMD(0);
-	RTLE;
-	RTLO(2);
-	RTEE;
-	{ EIF_TYPED_VALUE r; r.type = SK_BOOL; r.it_b = Result; return r; }
-#undef uu2_1
-}
-
-/* {GAME_KEY_STATE}.has_ctrl_modifier */
-EIF_TYPED_VALUE F895_9248 (EIF_REFERENCE Current)
-{
-	GTCX
-	char *l_feature_name = "has_ctrl_modifier";
-	RTEX;
-	EIF_TYPED_VALUE uu2_1x = {{0}, SK_UINT16};
-#define uu2_1 uu2_1x.it_n2
-	EIF_NATURAL_16 tu2_1;
-	EIF_NATURAL_16 tu2_2;
-	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
-	
-	RTSN;
-	RTDA;
-	RTLD;
-	
-	RTLI(1);
-	RTLR(0,Current);
-	RTLIU(1);
-	RTLU (SK_BOOL, &Result);
-	RTLU (SK_REF, &Current);
-	
-	RTEAA(l_feature_name, 894, Current, 0, 0, 14912);
-	RTSA(Dtype(Current));
-	RTSC;
-	RTME(Dtype(Current), 0);
-	RTGC;
-	RTDBGEAA(894, Current, 14912);
-	RTIV(Current, RTAL);
-	RTHOOK(1);
-	RTDBGAL(Current, 0, 0x04000000, 1,0); /* Result */
-	tu2_1 = *(EIF_NATURAL_16 *)(Current + RTWA(7150, Dtype(Current)));
-	tu2_2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(5864, 865))(Current)).it_n2);
-	uu2_1 = tu2_2;
-	tu2_2 = eif_bit_or(tu2_1,uu2_1);
-	Result = (EIF_BOOLEAN) (EIF_BOOLEAN)(tu2_2 != (EIF_NATURAL_16) ((EIF_INTEGER_32) 0L));
-	RTVI(Current, RTAL);
-	RTRS;
-	RTHOOK(2);
-	RTDBGLE;
-	RTMD(0);
-	RTLE;
-	RTLO(2);
-	RTEE;
-	{ EIF_TYPED_VALUE r; r.type = SK_BOOL; r.it_b = Result; return r; }
-#undef uu2_1
-}
-
-/* {GAME_KEY_STATE}.has_shift_modifier */
-EIF_TYPED_VALUE F895_9249 (EIF_REFERENCE Current)
-{
-	GTCX
-	char *l_feature_name = "has_shift_modifier";
-	RTEX;
-	EIF_TYPED_VALUE uu2_1x = {{0}, SK_UINT16};
-#define uu2_1 uu2_1x.it_n2
-	EIF_NATURAL_16 tu2_1;
-	EIF_NATURAL_16 tu2_2;
-	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
-	
-	RTSN;
-	RTDA;
-	RTLD;
-	
-	RTLI(1);
-	RTLR(0,Current);
-	RTLIU(1);
-	RTLU (SK_BOOL, &Result);
-	RTLU (SK_REF, &Current);
-	
-	RTEAA(l_feature_name, 894, Current, 0, 0, 14913);
-	RTSA(Dtype(Current));
-	RTSC;
-	RTME(Dtype(Current), 0);
-	RTGC;
-	RTDBGEAA(894, Current, 14913);
-	RTIV(Current, RTAL);
-	RTHOOK(1);
-	RTDBGAL(Current, 0, 0x04000000, 1,0); /* Result */
-	tu2_1 = *(EIF_NATURAL_16 *)(Current + RTWA(7150, Dtype(Current)));
-	tu2_2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(5865, 865))(Current)).it_n2);
-	uu2_1 = tu2_2;
-	tu2_2 = eif_bit_or(tu2_1,uu2_1);
-	Result = (EIF_BOOLEAN) (EIF_BOOLEAN)(tu2_2 != (EIF_NATURAL_16) ((EIF_INTEGER_32) 0L));
-	RTVI(Current, RTAL);
-	RTRS;
-	RTHOOK(2);
-	RTDBGLE;
-	RTMD(0);
-	RTLE;
-	RTLO(2);
-	RTEE;
-	{ EIF_TYPED_VALUE r; r.type = SK_BOOL; r.it_b = Result; return r; }
-#undef uu2_1
-}
-
-/* {GAME_KEY_STATE}.has_alt_modifier */
-EIF_TYPED_VALUE F895_9250 (EIF_REFERENCE Current)
-{
-	GTCX
-	char *l_feature_name = "has_alt_modifier";
-	RTEX;
-	EIF_TYPED_VALUE uu2_1x = {{0}, SK_UINT16};
-#define uu2_1 uu2_1x.it_n2
-	EIF_NATURAL_16 tu2_1;
-	EIF_NATURAL_16 tu2_2;
-	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
-	
-	RTSN;
-	RTDA;
-	RTLD;
-	
-	RTLI(1);
-	RTLR(0,Current);
-	RTLIU(1);
-	RTLU (SK_BOOL, &Result);
-	RTLU (SK_REF, &Current);
-	
-	RTEAA(l_feature_name, 894, Current, 0, 0, 14914);
-	RTSA(Dtype(Current));
-	RTSC;
-	RTME(Dtype(Current), 0);
-	RTGC;
-	RTDBGEAA(894, Current, 14914);
-	RTIV(Current, RTAL);
-	RTHOOK(1);
-	RTDBGAL(Current, 0, 0x04000000, 1,0); /* Result */
-	tu2_1 = *(EIF_NATURAL_16 *)(Current + RTWA(7150, Dtype(Current)));
-	tu2_2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(5866, 865))(Current)).it_n2);
-	uu2_1 = tu2_2;
-	tu2_2 = eif_bit_or(tu2_1,uu2_1);
-	Result = (EIF_BOOLEAN) (EIF_BOOLEAN)(tu2_2 != (EIF_NATURAL_16) ((EIF_INTEGER_32) 0L));
-	RTVI(Current, RTAL);
-	RTRS;
-	RTHOOK(2);
-	RTDBGLE;
-	RTMD(0);
-	RTLE;
-	RTLO(2);
-	RTEE;
-	{ EIF_TYPED_VALUE r; r.type = SK_BOOL; r.it_b = Result; return r; }
-#undef uu2_1
-}
-
-/* {GAME_KEY_STATE}.has_gui_modifier */
-EIF_TYPED_VALUE F895_9251 (EIF_REFERENCE Current)
-{
-	GTCX
-	char *l_feature_name = "has_gui_modifier";
-	RTEX;
-	EIF_TYPED_VALUE uu2_1x = {{0}, SK_UINT16};
-#define uu2_1 uu2_1x.it_n2
-	EIF_NATURAL_16 tu2_1;
-	EIF_NATURAL_16 tu2_2;
-	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
-	
-	RTSN;
-	RTDA;
-	RTLD;
-	
-	RTLI(1);
-	RTLR(0,Current);
-	RTLIU(1);
-	RTLU (SK_BOOL, &Result);
-	RTLU (SK_REF, &Current);
-	
-	RTEAA(l_feature_name, 894, Current, 0, 0, 14915);
-	RTSA(Dtype(Current));
-	RTSC;
-	RTME(Dtype(Current), 0);
-	RTGC;
-	RTDBGEAA(894, Current, 14915);
-	RTIV(Current, RTAL);
-	RTHOOK(1);
-	RTDBGAL(Current, 0, 0x04000000, 1,0); /* Result */
-	tu2_1 = *(EIF_NATURAL_16 *)(Current + RTWA(7150, Dtype(Current)));
-	tu2_2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(5867, 865))(Current)).it_n2);
-	uu2_1 = tu2_2;
-	tu2_2 = eif_bit_or(tu2_1,uu2_1);
-	Result = (EIF_BOOLEAN) (EIF_BOOLEAN)(tu2_2 != (EIF_NATURAL_16) ((EIF_INTEGER_32) 0L));
-	RTVI(Current, RTAL);
-	RTRS;
-	RTHOOK(2);
-	RTDBGLE;
-	RTMD(0);
-	RTLE;
-	RTLO(2);
-	RTEE;
-	{ EIF_TYPED_VALUE r; r.type = SK_BOOL; r.it_b = Result; return r; }
-#undef uu2_1
-}
-
-/* {GAME_KEY_STATE}.repeat */
-EIF_TYPED_VALUE F895_9252 (EIF_REFERENCE Current)
+/* {GAME_FINGER_STATE}.index */
+EIF_TYPED_VALUE F895_8791 (EIF_REFERENCE Current)
 {
 	EIF_TYPED_VALUE r;
-	r.type = SK_UINT8;
-	r.it_n1 = *(EIF_NATURAL_8 *)(Current + RTWA(7149,Dtype(Current)));
+	r.type = SK_INT64;
+	r.it_i8 = *(EIF_INTEGER_64 *)(Current + RTWA(6689,Dtype(Current)));
 	return r;
 }
 
 
-/* {GAME_KEY_STATE}.modifier */
-EIF_TYPED_VALUE F895_9253 (EIF_REFERENCE Current)
+/* {GAME_FINGER_STATE}.x */
+EIF_TYPED_VALUE F895_8792 (EIF_REFERENCE Current)
 {
 	EIF_TYPED_VALUE r;
-	r.type = SK_UINT16;
-	r.it_n2 = *(EIF_NATURAL_16 *)(Current + RTWA(7150,Dtype(Current)));
+	r.type = SK_REAL32;
+	r.it_r4 = *(EIF_REAL_32 *)(Current + RTWA(6690,Dtype(Current)));
+	return r;
+}
+
+
+/* {GAME_FINGER_STATE}.y */
+EIF_TYPED_VALUE F895_8793 (EIF_REFERENCE Current)
+{
+	EIF_TYPED_VALUE r;
+	r.type = SK_REAL32;
+	r.it_r4 = *(EIF_REAL_32 *)(Current + RTWA(6691,Dtype(Current)));
+	return r;
+}
+
+
+/* {GAME_FINGER_STATE}.pressure */
+EIF_TYPED_VALUE F895_8794 (EIF_REFERENCE Current)
+{
+	EIF_TYPED_VALUE r;
+	r.type = SK_REAL32;
+	r.it_r4 = *(EIF_REAL_32 *)(Current + RTWA(6692,Dtype(Current)));
 	return r;
 }
 

@@ -18,7 +18,7 @@ CPP = $cpp
 CFLAGS = $wkoptimize $ccflags $large -DEIF_IEEE_BEHAVIOR -DWORKBENCH -I"$rt_include" -I. \$(INCLUDE_PATH)
 CPPFLAGS = $wkoptimize $cppflags $large -DWORKBENCH -I"$rt_include" -I. \$(INCLUDE_PATH)
 LDFLAGS = $ldflags
-CCLDFLAGS = $ccldflags  $console_flags
+CCLDFLAGS = $ccldflags  $windows_flags
 LDSHAREDFLAGS =  $ldsharedflags
 EIFLIB = "$rt_lib/$prefix$wkeiflib$suffix"
 EIFTEMPLATES = $rt_templates
@@ -55,14 +55,15 @@ $spitshell >>Makefile <<'!NO!SUBS!'
 
 OBJECTS = big_file_C3_c.obj 
 
-OLDOBJECTS =  ty954.o ty954d.o ga952.o ga952d.o bo926.o bo926d.o ga942.o ga942d.o \
-	ga949.o ga949d.o im943.o im943d.o ga930.o ga930d.o ga940.o ga940d.o \
-	ga944.o ga944d.o ga939.o ga939d.o au938.o au938d.o au937.o au937d.o \
-	ga929.o ga929d.o ga948.o ga948d.o ga951.o ga951d.o ga936.o ga936d.o \
-	ga935.o ga935d.o ch955.o ch955d.o ga947.o ga947d.o ga941.o ga941d.o \
-	ga934.o ga934d.o mu933.o mu933d.o ga932.o ga932d.o ga945.o ga945d.o \
-	ga946.o ga946d.o th953.o th953d.o ga928.o ga928d.o ga931.o ga931d.o \
-	ga950.o ga950d.o ga927.o ga927d.o 
+OLDOBJECTS =  ga957.o ga957d.o bo930.o bo930d.o ar929.o ar929d.o ba928.o ba928d.o \
+	ba927.o ba927d.o ga946.o ga946d.o ga954.o ga954d.o im947.o im947d.o \
+	dr926.o dr926d.o te949.o te949d.o ga944.o ga944d.o ga934.o ga934d.o \
+	ga948.o ga948d.o ga943.o ga943d.o au942.o au942d.o au941.o au941d.o \
+	ga940.o ga940d.o ga933.o ga933d.o ga939.o ga939d.o ga953.o ga953d.o \
+	ga952.o ga952d.o ga956.o ga956d.o ga938.o ga938d.o ga945.o ga945d.o \
+	mu937.o mu937d.o ga951.o ga951d.o ga936.o ga936d.o ga950.o ga950d.o \
+	th958.o th958d.o ga932.o ga932d.o ga955.o ga955d.o ga935.o ga935d.o \
+	ga931.o ga931d.o 
 
 all: Cobj3.o
 

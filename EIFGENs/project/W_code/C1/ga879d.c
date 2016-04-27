@@ -1,5 +1,5 @@
 /*
- * Class GAME_RENDER_TARGET
+ * Class GAME_GESTURE
  */
 
 #include "eif_macros.h"
@@ -57,11 +57,16 @@ static const struct desc_info desc_879[] = {
 	{EIF_NON_GENERIC(0x06DD /*878*/), 28, 0xFFFFFFFF},
 	{EIF_NON_GENERIC(0x01AF /*215*/), 29, 0xFFFFFFFF},
 	{EIF_GENERIC(egt_12_879), 30, 0xFFFFFFFF},
+	{EIF_GENERIC(NULL), 14336, 0xFFFFFFFF},
+	{EIF_NON_GENERIC(0x0167 /*179*/), 14337, 4},
+	{EIF_NON_GENERIC(0x0167 /*179*/), 14338, 8},
+	{EIF_NON_GENERIC(0x0191 /*200*/), 14339, 0},
 };
 void Init879(void)
 {
 	IDSC(desc_879, 0, 878);
 	IDSC(desc_879 + 1, 1, 878);
+	IDSC(desc_879 + 32, 439, 878);
 }
 
 

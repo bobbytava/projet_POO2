@@ -43,6 +43,8 @@ feature
 			sub_x := animation.at (1)
 			sub_y := animation.at (2)
 
+			is_dead := false
+
 			create sound.make("sound.aif")
 			if sound.is_openable then
 				sound.open
@@ -63,25 +65,21 @@ feature
 	go_right
 		do
 			going_right:= true
-			print ("Go right%N")
 		end
 
 	go_left
 		do
 			going_left:= true
-			print("Go left%N")
 		end
 
 	stop_right
 		do
 			going_right:= false
-			print("stop right%N")
 		end
 
 	stop_left
 		do
 			going_left := false
-			print("stop left%N")
 		end
 
 	going_right:BOOLEAN
@@ -96,7 +94,12 @@ feature
 
 	surface:GAME_SURFACE
 
+	is_dead:BOOLEAN assign set_is_dead
 
+	set_is_dead(a_is_dead:BOOLEAN)
+		do
+			is_dead := a_is_dead
+		end
 
 	temps:INTEGER
 

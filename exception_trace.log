@@ -23,3 +23,70 @@ APPLICATION         make @1
 APPLICATION         root's creation                                     
 <0000000004A8E418>                         Routine failure.              Exit
 -------------------------------------------------------------------------------
+
+project: PANIC: Unexpected harmful signal (Segmentation violation) ...
+
+project: system execution failed.
+Following is the set of recorded exceptions.
+NB: The raised panic may have induced completely inconsistent information:
+
+-------------------------------------------------------------------------------
+Class / Object      Routine                Nature of exception           Effect
+-------------------------------------------------------------------------------
+APPLICATION         root's creation        Unexpected harmful signal (Segmentation violation):
+<0000000004A06058>                         Eiffel run-time panic.        Bye
+-------------------------------------------------------------------------------
+
+project: PANIC: Unexpected harmful signal (Segmentation violation) ...
+
+project: system execution failed.
+Following is the set of recorded exceptions.
+NB: The raised panic may have induced completely inconsistent information:
+
+-------------------------------------------------------------------------------
+Class / Object      Routine                Nature of exception           Effect
+-------------------------------------------------------------------------------
+APPLICATION         root's creation        Unexpected harmful signal (Segmentation violation):
+<00000000049C4058>                         Eiffel run-time panic.        Bye
+-------------------------------------------------------------------------------
+
+project: PANIC: Unexpected harmful signal (Segmentation violation) ...
+
+project: system execution failed.
+Following is the set of recorded exceptions.
+NB: The raised panic may have induced completely inconsistent information:
+
+-------------------------------------------------------------------------------
+Class / Object      Routine                Nature of exception           Effect
+-------------------------------------------------------------------------------
+APPLICATION         root's creation        Unexpected harmful signal (Segmentation violation):
+<0000000004B8C058>                         Eiffel run-time panic.        Bye
+-------------------------------------------------------------------------------
+
+project: dumping core to generate debugging information...
+
+project: PANIC: Unexpected harmful signal (Segmentation violation) ...
+
+project: system execution failed.
+Following is the set of recorded exceptions.
+NB: The raised panic may have induced completely inconsistent information:
+
+-------------------------------------------------------------------------------
+Class / Object      Routine                Nature of exception           Effect
+-------------------------------------------------------------------------------
+APPLICATION         root's creation        Unexpected harmful signal (Segmentation violation):
+<0000000004B85058>                         Eiffel run-time panic.        Bye
+-------------------------------------------------------------------------------
+
+project: PANIC: Unexpected harmful signal (Segmentation violation) ...
+
+project: system execution failed.
+Following is the set of recorded exceptions.
+NB: The raised panic may have induced completely inconsistent information:
+
+-------------------------------------------------------------------------------
+Class / Object      Routine                Nature of exception           Effect
+-------------------------------------------------------------------------------
+APPLICATION         root's creation        Unexpected harmful signal (Segmentation violation):
+<0000000004BE4058>                         Eiffel run-time panic.        Bye
+-------------------------------------------------------------------------------

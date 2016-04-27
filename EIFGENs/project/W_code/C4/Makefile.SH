@@ -18,7 +18,7 @@ CPP = $cpp
 CFLAGS = $wkoptimize $ccflags $large -DEIF_IEEE_BEHAVIOR -DWORKBENCH -I"$rt_include" -I. \$(INCLUDE_PATH)
 CPPFLAGS = $wkoptimize $cppflags $large -DWORKBENCH -I"$rt_include" -I. \$(INCLUDE_PATH)
 LDFLAGS = $ldflags
-CCLDFLAGS = $ccldflags  $console_flags
+CCLDFLAGS = $ccldflags  $windows_flags
 LDSHAREDFLAGS =  $ldsharedflags
 EIFLIB = "$rt_lib/$prefix$wkeiflib$suffix"
 EIFTEMPLATES = $rt_templates
@@ -55,7 +55,7 @@ $spitshell >>Makefile <<'!NO!SUBS!'
 
 OBJECTS = big_file_C4_c.obj 
 
-OLDOBJECTS =  he959.o he959d.o au961.o au961d.o au960.o au960d.o 
+OLDOBJECTS =  ty959.o ty959d.o ch960.o ch960d.o 
 
 all: Cobj4.o
 

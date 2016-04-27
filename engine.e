@@ -23,6 +23,7 @@ feature {NONE}  -- Initialization
 			image_file_library.enable_image (true, true, false)  -- Enable PNG image
 
 			run_game
+
 			audio_library.quit_library	-- Properly quit the library
 			image_file_library.quit_library  -- Correctly unlink image files library
 			game_library.quit_library  -- Clear the library before quitting
@@ -35,26 +36,27 @@ feature {NONE}  -- Initialization
 			l_window_builder:GAME_WINDOW_SURFACED_BUILDER
 			l_window:GAME_WINDOW_SURFACED
 			l_character:BOB
-			l_ball:BALL
-			l_ball2:BALL
-			l_ball3:BALL
+			l_lvl1:LEVEL
+			l_lvl2:LEVEL
+			l_lvl3:LEVEL
 			l_arrow:ARROW
 
 		do
 
-			create array_balls.make (0)
 			create l_background.make
 			l_background.play_sound
 			create l_character.make
 			l_character.set_x (400)
 			l_character.set_y (387)
 
-			create l_ball.make(600,200,1,true)
-			create l_ball2.make(100,192,2,true)
-			create l_ball3.make(300,172,3,true)
-			array_balls.extend (l_ball)
-			array_balls.extend (l_ball2)
-			array_balls.extend (l_ball3)
+			create l_lvl1.make_lvl1
+			create l_lvl2.make_lvl2
+			create l_lvl3.make_lvl3
+			create array_levels.make
+			array_levels.extend (l_lvl1)
+			array_levels.extend (l_lvl2)
+			array_levels.extend (l_lvl3)
+			level:= array_levels.at(1)
 
 			create l_arrow.make
 
@@ -71,8 +73,12 @@ feature {NONE}  -- Initialization
 		end
 
 feature
-	on_iteration(a_timestamp:NATURAL_32; a_character:BOB; a_background:BACKGROUND; a_arrow:ARROW; a_window:GAME_WINDOW_SURFACED)
+	on_iteration(a_timestamp:NATURAL_32; a_character:BOB; a_background:BACKGROUND; a_arrow:ARROW;
+					a_window:GAME_WINDOW_SURFACED)
 			-- Event that is launch at each iteration.
+		local
+			l_new_ball1:BALL
+			l_new_ball2:BALL
 		do
 			-- Draw the scene
 			a_window.surface.draw_rectangle (create {GAME_COLOR}.make_rgb (0, 128, 255), 0, 0, a_background.width, a_background.height)
@@ -90,14 +96,50 @@ feature
 			a_window.surface.draw_sub_surface (a_character.surface, a_character.sub_x, a_character.sub_y, a_character.width // 3,
 				a_character.height, a_character.x, a_character.y)
 			from
-				array_balls.start
+				level.array_balls.start
 			until
-				array_balls.off
+				level.array_balls.off
 			loop
-				a_window.surface.draw_sub_surface (array_balls.item, 0, 0,
-					array_balls.item.width, array_balls.item.height, array_balls.item.x, array_balls.item.y)
-				array_balls.item.move(a_background)
-				array_balls.forth
+				a_window.surface.draw_sub_surface (level.array_balls.item, 0, 0,
+					level.array_balls.item.width, level.array_balls.item.height, level.array_balls.item.x, level.array_balls.item.y)
+				level.array_balls.item.move(a_background)
+				check_collisions (level.array_balls.item, a_character, a_arrow)
+				if a_character.is_dead then
+					print("YOU DIED%N")
+				end
+				a_character.set_is_dead (false)
+				if level.array_balls.item.is_dead then
+					if level.array_balls.item.size /= 1 then
+						create l_new_ball1.make (level.array_balls.item.x, level.array_balls.item.y, level.array_balls.item.size - 1,true)
+						create l_new_ball2.make (level.array_balls.item.x, level.array_balls.item.y, level.array_balls.item.size - 1,false)
+						l_new_ball1.set_speed (-8)
+						l_new_ball2.set_speed (-8)
+						level.array_balls.extend (l_new_ball1)
+						level.array_balls.extend (l_new_ball2)
+					end
+					level.array_balls.item.play_sound
+
+					if level.array_balls.islast then
+						level.array_balls.move (-1)
+						level.array_balls.remove_right
+					else
+						level.array_balls.remove
+					end
+					a_arrow.set_is_fired (false)
+					a_arrow.set_y (387)
+				end
+				level.array_balls.forth
+				if level.array_balls.is_empty then
+					if level = array_levels.at (1) then
+						level:=array_levels.at (2)
+						a_character.set_x (500)
+					elseif level = array_levels.at (2) then
+						level:=array_levels.at (3)
+						a_character.set_x (500)
+					else
+						print("YOU WON")
+					end
+				end
 			end
 
 			a_window.surface.draw_surface (a_background.footer, 0, 462)
@@ -106,6 +148,20 @@ feature
 			-- Update modification in the screen
 			audio_library.update
 			a_window.update
+		end
+
+
+	check_collisions(a_ball:BALL; a_character:BOB; a_arrow:ARROW)
+		do
+			if a_ball.y + a_ball.height >= a_character.y and a_ball.x <= a_character.x + a_character.width // 3
+																and a_ball.x + a_ball.width >= a_character.x then
+				a_character.set_is_dead (true)
+			end
+
+			if a_ball.x <= a_arrow.x and a_ball.x + a_ball.width >= a_arrow.x and a_ball.y + a_ball.height >= a_arrow.y
+																					and a_arrow.is_fired = true then
+				a_ball.set_is_dead(true)
+			end
 		end
 
 	on_key_pressed(a_timestamp: NATURAL_32; a_key_state: GAME_KEY_STATE; a_character:BOB; a_arrow:ARROW)
@@ -118,9 +174,8 @@ feature
 					a_character.go_left
 				elseif a_key_state.is_up then
 					if not a_arrow.is_fired then
-						a_arrow.fire(a_character.x)
+						a_arrow.fire(a_character.x + (a_character.width // 6)) -- divisé par 6 car 3 sprites d'animation
 					end
-					a_character.play_sound
 				end
 			end
 
@@ -144,5 +199,6 @@ feature
 			game_library.stop  -- Stop the controller loop (allow game_library.launch to return)
 		end
 
-	array_balls:ARRAYED_LIST[BALL]
+	level:LEVEL
+	array_levels:LINKED_LIST[LEVEL]
 end

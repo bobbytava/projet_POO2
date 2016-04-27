@@ -5,7 +5,7 @@ CPP = cl
 CFLAGS = -Od -MT -w -nologo -D_WIN32_WINNT=0x0500 -DWINVER=0x0500 -D_CRT_SECURE_NO_DEPRECATE -D_UNICODE -DUNICODE   -DEIF_IEEE_BEHAVIOR -DWORKBENCH -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\studio\spec\windows\include" -I. $(INCLUDE_PATH)
 CPPFLAGS = -Od -MT -w -nologo -D_WIN32_WINNT=0x0500 -DWINVER=0x0500 -D_CRT_SECURE_NO_DEPRECATE -D_UNICODE -DUNICODE   -DWORKBENCH -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\studio\spec\windows\include" -I. $(INCLUDE_PATH)
 LDFLAGS = -STACK:5000000 -NODEFAULTLIB:libc
-CCLDFLAGS = -STACK:5000000 -NODEFAULTLIB:libc  -SUBSYSTEM:CONSOLE
+CCLDFLAGS = -STACK:5000000 -NODEFAULTLIB:libc  -SUBSYSTEM:WINDOWS
 LDSHAREDFLAGS =  -dll -incremental:no -NODEFAULTLIB:libc
 EIFLIB = "C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\studio\spec\windows\lib\msc\wkbench.lib"
 EIFTEMPLATES = C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\studio\config\windows\templates
@@ -41,14 +41,15 @@ SYSTEM_IN_DYNAMIC_LIB = project.dll
 
 OBJECTS = big_file_C3_c.obj 
 
-OLDOBJECTS =  ty954.obj ty954d.obj ga952.obj ga952d.obj bo926.obj bo926d.obj ga942.obj ga942d.obj \
-	ga949.obj ga949d.obj im943.obj im943d.obj ga930.obj ga930d.obj ga940.obj ga940d.obj \
-	ga944.obj ga944d.obj ga939.obj ga939d.obj au938.obj au938d.obj au937.obj au937d.obj \
-	ga929.obj ga929d.obj ga948.obj ga948d.obj ga951.obj ga951d.obj ga936.obj ga936d.obj \
-	ga935.obj ga935d.obj ch955.obj ch955d.obj ga947.obj ga947d.obj ga941.obj ga941d.obj \
-	ga934.obj ga934d.obj mu933.obj mu933d.obj ga932.obj ga932d.obj ga945.obj ga945d.obj \
-	ga946.obj ga946d.obj th953.obj th953d.obj ga928.obj ga928d.obj ga931.obj ga931d.obj \
-	ga950.obj ga950d.obj ga927.obj ga927d.obj 
+OLDOBJECTS =  ga957.obj ga957d.obj bo930.obj bo930d.obj ar929.obj ar929d.obj ba928.obj ba928d.obj \
+	ba927.obj ba927d.obj ga946.obj ga946d.obj ga954.obj ga954d.obj im947.obj im947d.obj \
+	dr926.obj dr926d.obj te949.obj te949d.obj ga944.obj ga944d.obj ga934.obj ga934d.obj \
+	ga948.obj ga948d.obj ga943.obj ga943d.obj au942.obj au942d.obj au941.obj au941d.obj \
+	ga940.obj ga940d.obj ga933.obj ga933d.obj ga939.obj ga939d.obj ga953.obj ga953d.obj \
+	ga952.obj ga952d.obj ga956.obj ga956d.obj ga938.obj ga938d.obj ga945.obj ga945d.obj \
+	mu937.obj mu937d.obj ga951.obj ga951d.obj ga936.obj ga936d.obj ga950.obj ga950d.obj \
+	th958.obj th958d.obj ga932.obj ga932d.obj ga955.obj ga955d.obj ga935.obj ga935d.obj \
+	ga931.obj ga931d.obj 
 
 all::  Cobj3.lib
 

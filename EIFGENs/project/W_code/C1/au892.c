@@ -10,13 +10,13 @@
 extern "C" {
 #endif
 
-extern void F892_8722(EIF_REFERENCE);
-extern void F892_8723(EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE);
-extern EIF_TYPED_VALUE F892_8724(EIF_REFERENCE);
-extern void F892_8725(EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE);
-extern EIF_TYPED_VALUE F892_8726(EIF_REFERENCE, EIF_TYPED_VALUE);
-extern void F892_8727(EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE);
-extern void F892_8728(EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE);
+extern void F892_8765(EIF_REFERENCE);
+extern void F892_8766(EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE);
+extern EIF_TYPED_VALUE F892_8767(EIF_REFERENCE);
+extern void F892_8768(EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE);
+extern EIF_TYPED_VALUE F892_8769(EIF_REFERENCE, EIF_TYPED_VALUE);
+extern void F892_8770(EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE);
+extern void F892_8771(EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE);
 extern void EIF_Minit892(void);
 
 #ifdef __cplusplus
@@ -39,7 +39,7 @@ extern "C" {
 #endif
 
 /* {AUDIO_LISTENER}.initialize */
-void F892_8722 (EIF_REFERENCE Current)
+void F892_8765 (EIF_REFERENCE Current)
 {
 	GTCX
 	char *l_feature_name = "initialize";
@@ -67,23 +67,23 @@ void F892_8722 (EIF_REFERENCE Current)
 	RTLU (SK_VOID, NULL);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 891, Current, 0, 0, 14390);
+	RTEAA(l_feature_name, 891, Current, 0, 0, 14433);
 	RTSA(dtype);
 	RTSC;
 	RTME(dtype, 0);
 	RTGC;
-	RTDBGEAA(891, Current, 14390);
+	RTDBGEAA(891, Current, 14433);
 	RTIV(Current, RTAL);
 	RTHOOK(1);
 	ur4_1 = (EIF_REAL_32) (EIF_REAL_64) 0.0;
 	ur4_2 = (EIF_REAL_32) (EIF_REAL_64) 0.0;
 	ur4_3 = (EIF_REAL_32) (EIF_REAL_64) 0.0;
-	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(6477, dtype))(Current, ur4_1x, ur4_2x, ur4_3x);
+	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(6523, dtype))(Current, ur4_1x, ur4_2x, ur4_3x);
 	RTHOOK(2);
 	ur4_1 = (EIF_REAL_32) (EIF_REAL_64) 0.0;
 	ur4_2 = (EIF_REAL_32) (EIF_REAL_64) 0.0;
 	ur4_3 = (EIF_REAL_32) (EIF_REAL_64) 0.0;
-	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(6619, dtype))(Current, ur4_1x, ur4_2x, ur4_3x);
+	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(6662, dtype))(Current, ur4_1x, ur4_2x, ur4_3x);
 	RTHOOK(3);
 	ur4_1 = (EIF_REAL_32) (EIF_REAL_64) 0.0;
 	ur4_2 = (EIF_REAL_32) (EIF_REAL_64) 0.0;
@@ -91,7 +91,7 @@ void F892_8722 (EIF_REFERENCE Current)
 	ur4_4 = (EIF_REAL_32) (EIF_REAL_64) 0.0;
 	ur4_5 = (EIF_REAL_32) (EIF_REAL_64) 1.0;
 	ur4_6 = (EIF_REAL_32) (EIF_REAL_64) 0.0;
-	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(6626, dtype))(Current, ur4_1x, ur4_2x, ur4_3x, ur4_4x, ur4_5x, ur4_6x);
+	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(6669, dtype))(Current, ur4_1x, ur4_2x, ur4_3x, ur4_4x, ur4_5x, ur4_6x);
 	RTVI(Current, RTAL);
 	RTRS;
 	RTHOOK(4);
@@ -109,7 +109,7 @@ void F892_8722 (EIF_REFERENCE Current)
 }
 
 /* {AUDIO_LISTENER}.set_orientation */
-void F892_8723 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg2x, EIF_TYPED_VALUE arg3x, EIF_TYPED_VALUE arg4x, EIF_TYPED_VALUE arg5x, EIF_TYPED_VALUE arg6x)
+void F892_8766 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg2x, EIF_TYPED_VALUE arg3x, EIF_TYPED_VALUE arg4x, EIF_TYPED_VALUE arg5x, EIF_TYPED_VALUE arg6x)
 {
 	GTCX
 	char *l_feature_name = "set_orientation";
@@ -160,12 +160,12 @@ void F892_8723 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE ar
 	RTLU(SK_REAL32,&arg6);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 891, Current, 0, 6, 14391);
+	RTEAA(l_feature_name, 891, Current, 0, 6, 14434);
 	RTSA(dtype);
 	RTSC;
 	RTME(dtype, 0);
 	RTGC;
-	RTDBGEAA(891, Current, 14391);
+	RTDBGEAA(891, Current, 14434);
 	RTIV(Current, RTAL);
 	if ((RTAL & CK_REQUIRE) || RTAC) {
 		RTHOOK(1);
@@ -179,7 +179,7 @@ label_1:
 	}
 body:;
 	RTHOOK(2);
-	ti4_1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(4977, 862))(Current)).it_i4);
+	ti4_1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(5017, 863))(Current)).it_i4);
 	ui4_1 = ti4_1;
 	ur4_1 = arg1;
 	ur4_2 = arg2;
@@ -187,7 +187,7 @@ body:;
 	ur4_4 = arg4;
 	ur4_5 = arg5;
 	ur4_6 = arg6;
-	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(6628, dtype))(Current, ui4_1x, ur4_1x, ur4_2x, ur4_3x, ur4_4x, ur4_5x, ur4_6x);
+	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(6671, dtype))(Current, ui4_1x, ur4_1x, ur4_2x, ur4_3x, ur4_4x, ur4_5x, ur4_6x);
 	RTVI(Current, RTAL);
 	RTRS;
 	RTHOOK(3);
@@ -212,7 +212,7 @@ body:;
 }
 
 /* {AUDIO_LISTENER}.orientation */
-EIF_TYPED_VALUE F892_8724 (EIF_REFERENCE Current)
+EIF_TYPED_VALUE F892_8767 (EIF_REFERENCE Current)
 {
 	GTCX
 	char *l_feature_name = "orientation";
@@ -235,18 +235,18 @@ EIF_TYPED_VALUE F892_8724 (EIF_REFERENCE Current)
 	RTLU (SK_REF, &Result);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 891, Current, 0, 0, 14392);
+	RTEAA(l_feature_name, 891, Current, 0, 0, 14435);
 	RTSA(Dtype(Current));
 	RTSC;
 	RTME(Dtype(Current), 0);
 	RTGC;
-	RTDBGEAA(891, Current, 14392);
+	RTDBGEAA(891, Current, 14435);
 	RTIV(Current, RTAL);
 	RTHOOK(1);
 	RTDBGAL(Current, 0, 0xF80000AE, 0,0); /* Result */
-	ti4_1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(4977, 862))(Current)).it_i4);
+	ti4_1 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(5017, 863))(Current)).it_i4);
 	ui4_1 = ti4_1;
-	Result = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(6629, Dtype(Current)))(Current, ui4_1x)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
+	Result = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(6672, Dtype(Current)))(Current, ui4_1x)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
 	RTVI(Current, RTAL);
 	RTRS;
 	RTHOOK(2);
@@ -261,7 +261,7 @@ EIF_TYPED_VALUE F892_8724 (EIF_REFERENCE Current)
 }
 
 /* {AUDIO_LISTENER}.set_params_6_float */
-void F892_8725 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg2x, EIF_TYPED_VALUE arg3x, EIF_TYPED_VALUE arg4x, EIF_TYPED_VALUE arg5x, EIF_TYPED_VALUE arg6x, EIF_TYPED_VALUE arg7x)
+void F892_8768 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg2x, EIF_TYPED_VALUE arg3x, EIF_TYPED_VALUE arg4x, EIF_TYPED_VALUE arg5x, EIF_TYPED_VALUE arg6x, EIF_TYPED_VALUE arg7x)
 {
 	GTCX
 	char *l_feature_name = "set_params_6_float";
@@ -318,12 +318,12 @@ void F892_8725 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE ar
 	RTLU(SK_REF, &loc1);
 	RTLU(SK_REF, &loc2);
 	
-	RTEAA(l_feature_name, 891, Current, 2, 7, 14393);
+	RTEAA(l_feature_name, 891, Current, 2, 7, 14436);
 	RTSA(dtype);
 	RTSC;
 	RTME(dtype, 0);
 	RTGC;
-	RTDBGEAA(891, Current, 14393);
+	RTDBGEAA(891, Current, 14436);
 	RTIV(Current, RTAL);
 	RTHOOK(1);
 	RTDBGAL(Current, 1, 0xF80002AD, 0, 0); /* loc1 */
@@ -370,15 +370,15 @@ void F892_8725 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE ar
 	tr1 = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(2643, "to_c", loc1))(loc1)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
 	loc2 = (EIF_REFERENCE) RTCCL(tr1);
 	RTHOOK(9);
-	(FUNCTION_CAST(void, (EIF_REFERENCE)) RTWF(6562, dtype))(Current);
+	(FUNCTION_CAST(void, (EIF_REFERENCE)) RTWF(6605, dtype))(Current);
 	RTHOOK(10);
 	ui4_1 = arg1;
 	up1 = loc2;
-	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(6621, dtype))(Current, ui4_1x, up1x);
+	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(6664, dtype))(Current, ui4_1x, up1x);
 	RTHOOK(11);
 	tr1 = RTMS_EX_H("Cannot set audio float parameters (6).",38,331096110);
 	ur1 = tr1;
-	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(6582, dtype))(Current, ur1x);
+	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(6625, dtype))(Current, ur1x);
 	RTVI(Current, RTAL);
 	RTRS;
 	RTHOOK(12);
@@ -402,7 +402,7 @@ void F892_8725 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE ar
 }
 
 /* {AUDIO_LISTENER}.params_6_float */
-EIF_TYPED_VALUE F892_8726 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
+EIF_TYPED_VALUE F892_8769 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
 {
 	GTCX
 	char *l_feature_name = "params_6_float";
@@ -446,12 +446,12 @@ EIF_TYPED_VALUE F892_8726 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
 	RTLU(SK_REF, &loc1);
 	RTLU(SK_REF, &loc2);
 	
-	RTEAA(l_feature_name, 891, Current, 2, 1, 14394);
+	RTEAA(l_feature_name, 891, Current, 2, 1, 14437);
 	RTSA(dtype);
 	RTSC;
 	RTME(dtype, 0);
 	RTGC;
-	RTDBGEAA(891, Current, 14394);
+	RTDBGEAA(891, Current, 14437);
 	RTIV(Current, RTAL);
 	RTHOOK(1);
 	RTDBGAL(Current, 1, 0xF80002AD, 0, 0); /* loc1 */
@@ -474,15 +474,15 @@ EIF_TYPED_VALUE F892_8726 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
 	tr1 = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(2643, "to_c", loc1))(loc1)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
 	loc2 = (EIF_REFERENCE) RTCCL(tr1);
 	RTHOOK(3);
-	(FUNCTION_CAST(void, (EIF_REFERENCE)) RTWF(6562, dtype))(Current);
+	(FUNCTION_CAST(void, (EIF_REFERENCE)) RTWF(6605, dtype))(Current);
 	RTHOOK(4);
 	ui4_1 = arg1;
 	up1 = loc2;
-	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(6623, dtype))(Current, ui4_1x, up1x);
+	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(6666, dtype))(Current, ui4_1x, up1x);
 	RTHOOK(5);
 	tr1 = RTMS_EX_H("Cannot get audio float parameters (6).",38,540047918);
 	ur1 = tr1;
-	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(6582, dtype))(Current, ur1x);
+	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(6625, dtype))(Current, ur1x);
 	RTHOOK(6);
 	RTDBGAL(Current, 0, 0xF80000AE, 0,0); /* Result */
 	{
@@ -530,7 +530,7 @@ EIF_TYPED_VALUE F892_8726 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
 }
 
 /* {AUDIO_LISTENER}.set_params_float_pointer_c */
-void F892_8727 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg2x)
+void F892_8770 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg2x)
 {
 	GTCX
 	char *l_feature_name = "set_params_float_pointer_c";
@@ -556,17 +556,17 @@ void F892_8727 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE ar
 	RTLU(SK_POINTER,&arg2);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 891, Current, 0, 2, 14395);
+	RTEAA(l_feature_name, 891, Current, 0, 2, 14438);
 	RTSA(Dtype(Current));
 	RTSC;
 	RTME(Dtype(Current), 0);
 	RTGC;
-	RTDBGEAA(891, Current, 14395);
+	RTDBGEAA(891, Current, 14438);
 	RTIV(Current, RTAL);
 	RTHOOK(1);
 	ui4_1 = arg1;
 	up1 = arg2;
-	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(4942, 862))(Current, ui4_1x, up1x);
+	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(4982, 863))(Current, ui4_1x, up1x);
 	RTVI(Current, RTAL);
 	RTRS;
 	RTHOOK(2);
@@ -582,7 +582,7 @@ void F892_8727 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE ar
 }
 
 /* {AUDIO_LISTENER}.assign_params_float_pointer_c */
-void F892_8728 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg2x)
+void F892_8771 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg2x)
 {
 	GTCX
 	char *l_feature_name = "assign_params_float_pointer_c";
@@ -608,17 +608,17 @@ void F892_8728 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE ar
 	RTLU(SK_POINTER,&arg2);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 891, Current, 0, 2, 14396);
+	RTEAA(l_feature_name, 891, Current, 0, 2, 14439);
 	RTSA(Dtype(Current));
 	RTSC;
 	RTME(Dtype(Current), 0);
 	RTGC;
-	RTDBGEAA(891, Current, 14396);
+	RTDBGEAA(891, Current, 14439);
 	RTIV(Current, RTAL);
 	RTHOOK(1);
 	ui4_1 = arg1;
 	up1 = arg2;
-	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(4941, 862))(Current, ui4_1x, up1x);
+	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTWF(4981, 863))(Current, ui4_1x, up1x);
 	RTVI(Current, RTAL);
 	RTRS;
 	RTHOOK(2);

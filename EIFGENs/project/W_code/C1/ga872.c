@@ -1,5 +1,5 @@
 /*
- * Code for class GAME_MOUSE_BUTTON_RELEASED_STATE
+ * Code for class GAME_MOUSE_MOTION_STATE
  */
 
 #include "eif_eiffel.h"
@@ -10,11 +10,7 @@
 extern "C" {
 #endif
 
-extern EIF_TYPED_VALUE F872_8575(EIF_REFERENCE);
-extern EIF_TYPED_VALUE F872_8576(EIF_REFERENCE);
-extern EIF_TYPED_VALUE F872_8577(EIF_REFERENCE);
-extern EIF_TYPED_VALUE F872_8578(EIF_REFERENCE);
-extern EIF_TYPED_VALUE F872_8579(EIF_REFERENCE);
+extern void F872_8614(EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE);
 extern void EIF_Minit872(void);
 
 #ifdef __cplusplus
@@ -36,199 +32,70 @@ extern "C" {
 extern "C" {
 #endif
 
-/* {GAME_MOUSE_BUTTON_RELEASED_STATE}.is_left_button_released */
-EIF_TYPED_VALUE F872_8575 (EIF_REFERENCE Current)
+/* {GAME_MOUSE_MOTION_STATE}.make */
+void F872_8614 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg2x, EIF_TYPED_VALUE arg3x, EIF_TYPED_VALUE arg4x)
 {
 	GTCX
-	char *l_feature_name = "is_left_button_released";
+	char *l_feature_name = "make";
 	RTEX;
-	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
-	
+#define arg1 arg1x.it_n4
+#define arg2 arg2x.it_n4
+#define arg3 arg3x.it_i4
+#define arg4 arg4x.it_i4
+	EIF_TYPED_VALUE uu4_1x = {{0}, SK_UINT32};
+#define uu4_1 uu4_1x.it_n4
+	RTCDT;
 	RTSN;
 	RTDA;
 	RTLD;
 	
-	RTLI(1);
-	RTLR(0,Current);
-	RTLIU(1);
-	RTLU (SK_BOOL, &Result);
-	RTLU (SK_REF, &Current);
-	
-	RTEAA(l_feature_name, 871, Current, 0, 0, 14254);
-	RTSA(Dtype(Current));
-	RTSC;
-	RTME(Dtype(Current), 0);
-	RTGC;
-	RTDBGEAA(871, Current, 14254);
-	RTIV(Current, RTAL);
-	RTHOOK(1);
-	RTDBGAL(Current, 0, 0x04000000, 1,0); /* Result */
-	Result = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(6487, 870))(Current)).it_b);
-	RTVI(Current, RTAL);
-	RTRS;
-	RTHOOK(2);
-	RTDBGLE;
-	RTMD(0);
-	RTLE;
-	RTLO(2);
-	RTEE;
-	{ EIF_TYPED_VALUE r; r.type = SK_BOOL; r.it_b = Result; return r; }
-}
-
-/* {GAME_MOUSE_BUTTON_RELEASED_STATE}.is_right_button_released */
-EIF_TYPED_VALUE F872_8576 (EIF_REFERENCE Current)
-{
-	GTCX
-	char *l_feature_name = "is_right_button_released";
-	RTEX;
-	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
-	
-	RTSN;
-	RTDA;
-	RTLD;
+	if ((arg4x.type & SK_HEAD) == SK_REF) arg4x.it_i4 = * (EIF_INTEGER_32 *) arg4x.it_r;
+	if ((arg3x.type & SK_HEAD) == SK_REF) arg3x.it_i4 = * (EIF_INTEGER_32 *) arg3x.it_r;
+	if ((arg2x.type & SK_HEAD) == SK_REF) arg2x.it_n4 = * (EIF_NATURAL_32 *) arg2x.it_r;
+	if ((arg1x.type & SK_HEAD) == SK_REF) arg1x.it_n4 = * (EIF_NATURAL_32 *) arg1x.it_r;
 	
 	RTLI(1);
 	RTLR(0,Current);
 	RTLIU(1);
-	RTLU (SK_BOOL, &Result);
+	RTLU (SK_VOID, NULL);
+	RTLU(SK_UINT32,&arg1);
+	RTLU(SK_UINT32,&arg2);
+	RTLU(SK_INT32,&arg3);
+	RTLU(SK_INT32,&arg4);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 871, Current, 0, 0, 14255);
-	RTSA(Dtype(Current));
+	RTEAA(l_feature_name, 871, Current, 0, 4, 14293);
+	RTSA(dtype);
 	RTSC;
-	RTME(Dtype(Current), 0);
+	RTME(dtype, 0);
 	RTGC;
-	RTDBGEAA(871, Current, 14255);
+	RTDBGEAA(871, Current, 14293);
 	RTIV(Current, RTAL);
 	RTHOOK(1);
-	RTDBGAL(Current, 0, 0x04000000, 1,0); /* Result */
-	Result = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(6488, 870))(Current)).it_b);
+	uu4_1 = arg1;
+	(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(6539, dtype))(Current, uu4_1x);
+	RTHOOK(2);
+	RTDBGAA(Current, dtype, 6538, 0x38000000, 1); /* state */
+	*(EIF_NATURAL_32 *)(Current + RTWA(6538, dtype)) = (EIF_NATURAL_32) arg2;
+	RTHOOK(3);
+	RTDBGAA(Current, dtype, 6531, 0x10000000, 1); /* x */
+	*(EIF_INTEGER_32 *)(Current + RTWA(6531, dtype)) = (EIF_INTEGER_32) arg3;
+	RTHOOK(4);
+	RTDBGAA(Current, dtype, 6532, 0x10000000, 1); /* y */
+	*(EIF_INTEGER_32 *)(Current + RTWA(6532, dtype)) = (EIF_INTEGER_32) arg4;
 	RTVI(Current, RTAL);
 	RTRS;
-	RTHOOK(2);
+	RTHOOK(5);
 	RTDBGLE;
 	RTMD(0);
 	RTLE;
-	RTLO(2);
+	RTLO(6);
 	RTEE;
-	{ EIF_TYPED_VALUE r; r.type = SK_BOOL; r.it_b = Result; return r; }
-}
-
-/* {GAME_MOUSE_BUTTON_RELEASED_STATE}.is_middle_button_released */
-EIF_TYPED_VALUE F872_8577 (EIF_REFERENCE Current)
-{
-	GTCX
-	char *l_feature_name = "is_middle_button_released";
-	RTEX;
-	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
-	
-	RTSN;
-	RTDA;
-	RTLD;
-	
-	RTLI(1);
-	RTLR(0,Current);
-	RTLIU(1);
-	RTLU (SK_BOOL, &Result);
-	RTLU (SK_REF, &Current);
-	
-	RTEAA(l_feature_name, 871, Current, 0, 0, 14256);
-	RTSA(Dtype(Current));
-	RTSC;
-	RTME(Dtype(Current), 0);
-	RTGC;
-	RTDBGEAA(871, Current, 14256);
-	RTIV(Current, RTAL);
-	RTHOOK(1);
-	RTDBGAL(Current, 0, 0x04000000, 1,0); /* Result */
-	Result = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(6489, 870))(Current)).it_b);
-	RTVI(Current, RTAL);
-	RTRS;
-	RTHOOK(2);
-	RTDBGLE;
-	RTMD(0);
-	RTLE;
-	RTLO(2);
-	RTEE;
-	{ EIF_TYPED_VALUE r; r.type = SK_BOOL; r.it_b = Result; return r; }
-}
-
-/* {GAME_MOUSE_BUTTON_RELEASED_STATE}.is_optionnal_button_1_released */
-EIF_TYPED_VALUE F872_8578 (EIF_REFERENCE Current)
-{
-	GTCX
-	char *l_feature_name = "is_optionnal_button_1_released";
-	RTEX;
-	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
-	
-	RTSN;
-	RTDA;
-	RTLD;
-	
-	RTLI(1);
-	RTLR(0,Current);
-	RTLIU(1);
-	RTLU (SK_BOOL, &Result);
-	RTLU (SK_REF, &Current);
-	
-	RTEAA(l_feature_name, 871, Current, 0, 0, 14257);
-	RTSA(Dtype(Current));
-	RTSC;
-	RTME(Dtype(Current), 0);
-	RTGC;
-	RTDBGEAA(871, Current, 14257);
-	RTIV(Current, RTAL);
-	RTHOOK(1);
-	RTDBGAL(Current, 0, 0x04000000, 1,0); /* Result */
-	Result = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(6490, 870))(Current)).it_b);
-	RTVI(Current, RTAL);
-	RTRS;
-	RTHOOK(2);
-	RTDBGLE;
-	RTMD(0);
-	RTLE;
-	RTLO(2);
-	RTEE;
-	{ EIF_TYPED_VALUE r; r.type = SK_BOOL; r.it_b = Result; return r; }
-}
-
-/* {GAME_MOUSE_BUTTON_RELEASED_STATE}.is_optionnal_button_2_released */
-EIF_TYPED_VALUE F872_8579 (EIF_REFERENCE Current)
-{
-	GTCX
-	char *l_feature_name = "is_optionnal_button_2_released";
-	RTEX;
-	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
-	
-	RTSN;
-	RTDA;
-	RTLD;
-	
-	RTLI(1);
-	RTLR(0,Current);
-	RTLIU(1);
-	RTLU (SK_BOOL, &Result);
-	RTLU (SK_REF, &Current);
-	
-	RTEAA(l_feature_name, 871, Current, 0, 0, 14258);
-	RTSA(Dtype(Current));
-	RTSC;
-	RTME(Dtype(Current), 0);
-	RTGC;
-	RTDBGEAA(871, Current, 14258);
-	RTIV(Current, RTAL);
-	RTHOOK(1);
-	RTDBGAL(Current, 0, 0x04000000, 1,0); /* Result */
-	Result = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(6491, 870))(Current)).it_b);
-	RTVI(Current, RTAL);
-	RTRS;
-	RTHOOK(2);
-	RTDBGLE;
-	RTMD(0);
-	RTLE;
-	RTLO(2);
-	RTEE;
-	{ EIF_TYPED_VALUE r; r.type = SK_BOOL; r.it_b = Result; return r; }
+#undef uu4_1
+#undef arg4
+#undef arg3
+#undef arg2
+#undef arg1
 }
 
 void EIF_Minit872 (void)
