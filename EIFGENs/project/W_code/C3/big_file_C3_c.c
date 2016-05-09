@@ -60,7 +60,5 @@
 #include "im947d.c"
 #include "mu937.c"
 #include "mu937d.c"
-#include "te949.c"
-#include "te949d.c"
 #include "th958.c"
 #include "th958d.c"

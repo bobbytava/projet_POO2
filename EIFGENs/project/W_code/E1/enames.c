@@ -5457,6 +5457,7 @@ char *names920 [] =
 {
 "internal_game_library",
 "level",
+"array_levels",
 };
 
 char *names921 [] =
@@ -5871,13 +5872,6 @@ char *names948 [] =
 "internal_item",
 };
 
-char *names949 [] =
-{
-"manual_error",
-"has_error",
-"is_manual_error",
-};
-
 char *names950 [] =
 {
 "manual_error",
@@ -6115,6 +6109,136 @@ char *names960 [] =
 {
 "target",
 "object_comparison",
+};
+
+char *names963 [] =
+{
+"manual_error",
+"has_error",
+"is_manual_error",
+};
+
+char *names964 [] =
+{
+"manual_error",
+"is_open",
+"has_ressource_error",
+"has_error",
+"is_manual_error",
+"size",
+"index",
+"internal_pointer",
+"rwop",
+};
+
+char *names968 [] =
+{
+"cpf",
+"cpf_index",
+};
+
+char *names969 [] =
+{
+"manual_error",
+"internal_game_library",
+"image",
+"internal_pixels",
+"text",
+"font",
+"color",
+"has_error",
+"is_manual_error",
+"is_open",
+};
+
+char *names970 [] =
+{
+"manual_error",
+"internal_game_library",
+"image",
+"internal_pixels",
+"text",
+"font",
+"color",
+"has_error",
+"is_manual_error",
+"is_open",
+};
+
+char *names971 [] =
+{
+"manual_error",
+"cpf",
+"is_open",
+"has_ressource_error",
+"has_error",
+"is_manual_error",
+"size",
+"index",
+"cpf_index",
+"last_position",
+"internal_pointer",
+"rwop",
+};
+
+char *names972 [] =
+{
+"last_string",
+"internal_name",
+"internal_detachable_name_pointer",
+"internal_mutex",
+"internal_integer_buffer",
+"last_character",
+"separator",
+"object_comparison",
+"descriptor_available",
+"is_thread_safe",
+"last_natural_8",
+"last_integer_8",
+"last_natural_16",
+"last_integer_16",
+"last_natural",
+"last_integer",
+"bytes_read",
+"mode",
+"last_real",
+"file_pointer",
+"last_natural_64",
+"last_integer_64",
+"last_double",
+};
+
+char *names973 [] =
+{
+"last_string",
+"internal_name",
+"internal_detachable_name_pointer",
+"internal_mutex",
+"internal_integer_buffer",
+"sub_files_infos",
+"cpf_infos",
+"last_character",
+"separator",
+"object_comparison",
+"descriptor_available",
+"is_thread_safe",
+"is_valid",
+"last_natural_8",
+"last_integer_8",
+"last_natural_16",
+"last_integer_16",
+"last_natural",
+"last_integer",
+"bytes_read",
+"mode",
+"current_sub_file_first_position",
+"current_sub_file_count",
+"file_index",
+"last_real",
+"file_pointer",
+"last_natural_64",
+"last_integer_64",
+"last_double",
 };
 
 

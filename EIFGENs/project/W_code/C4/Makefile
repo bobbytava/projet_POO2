@@ -41,7 +41,10 @@ SYSTEM_IN_DYNAMIC_LIB = project.dll
 
 OBJECTS = big_file_C4_c.obj 
 
-OLDOBJECTS =  ty959.obj ty959d.obj ch960.obj ch960d.obj 
+OLDOBJECTS =  ty959.obj ty959d.obj ch960.obj ch960d.obj te962.obj te962d.obj te963.obj te963d.obj \
+	ga961.obj ga961d.obj te964.obj te964d.obj te970.obj te970d.obj te969.obj te969d.obj \
+	te971.obj te971d.obj cp973.obj cp973d.obj cp968.obj cp968d.obj cp966.obj cp966d.obj \
+	ga972.obj ga972d.obj ga967.obj ga967d.obj sh965.obj sh965d.obj 
 
 all::  Cobj4.lib
 

@@ -151,33 +151,27 @@ void F929_9787 (EIF_REFERENCE Current)
 			tr2 = ((up2x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTVF(6646, "last_source_added", tr1))(tr1)), (((up2x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up2x.it_r = RTBU(up2x))), (up2x.type = SK_POINTER), up2x.it_r);
 			RTAR(Current, tr2);
 			*(EIF_REFERENCE *)(Current + RTWA(7451, dtype)) = (EIF_REFERENCE) RTCCL(tr2);
-			RTHOOK(16);
-			tr1 = ((up1x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(7451, dtype))(Current)), (((up1x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up1x.it_r = RTBU(up1x))), (up1x.type = SK_POINTER), up1x.it_r);
-			RTNHOOK(16,1);
-			tr2 = ((up2x = (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(7452, dtype))(Current)), (((up2x.type & SK_HEAD) == SK_REF)? (EIF_REFERENCE) 0: (up2x.it_r = RTBU(up2x))), (up2x.type = SK_POINTER), up2x.it_r);
-			ur1 = RTCCL(tr2);
-			(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTVF(7839, "queue_sound", tr1))(tr1, ur1x);
 		} else {
-			RTHOOK(17);
+			RTHOOK(16);
 			tr1 = RTMS_EX_H("Cannot open sound files.",24,1305193262);
 			ur1 = tr1;
 			(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(30, dtype))(Current, ur1x);
-			RTHOOK(18);
+			RTHOOK(17);
 			ui4_1 = ((EIF_INTEGER_32) 1L);
 			(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(1251, dtype))(Current, ui4_1x);
 		}
 	} else {
-		RTHOOK(19);
+		RTHOOK(18);
 		tr1 = RTMS_EX_H("Sound files not valid.",22,1321612078);
 		ur1 = tr1;
 		(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(30, dtype))(Current, ur1x);
-		RTHOOK(20);
+		RTHOOK(19);
 		ui4_1 = ((EIF_INTEGER_32) 1L);
 		(FUNCTION_CAST(void, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTWF(1251, dtype))(Current, ui4_1x);
 	}
 	RTVI(Current, RTAL);
 	RTRS;
-	RTHOOK(21);
+	RTHOOK(20);
 	RTDBGLE;
 	RTMD(0);
 	RTLE;

@@ -3452,10 +3452,6 @@ static struct eif_par_types par860 = {860, ptf860, (uint16) 1, (uint16) 0, (char
 static EIF_TYPE_INDEX ptf861[] = {0,0xFFFF};
 static struct eif_par_types par861 = {861, ptf861, (uint16) 1, (uint16) 0, (char) 0};
 
-/* GAME_TEXT_EXTERNAL */
-static EIF_TYPE_INDEX ptf862[] = {0,0xFFFF};
-static struct eif_par_types par862 = {862, ptf862, (uint16) 1, (uint16) 0, (char) 0};
-
 /* AUDIO_EXTERNAL */
 static EIF_TYPE_INDEX ptf863[] = {0,0xFFFF};
 static struct eif_par_types par863 = {863, ptf863, (uint16) 1, (uint16) 0, (char) 0};
@@ -3507,10 +3503,6 @@ static struct eif_par_types par874 = {874, ptf874, (uint16) 1, (uint16) 0, (char
 /* GAME_COLOR */
 static EIF_TYPE_INDEX ptf875[] = {874,0xFFFF};
 static struct eif_par_types par875 = {875, ptf875, (uint16) 1, (uint16) 0, (char) 0};
-
-/* TEXT_LIBRARY_SHARED */
-static EIF_TYPE_INDEX ptf876[] = {0,0xFFFF};
-static struct eif_par_types par876 = {876, ptf876, (uint16) 1, (uint16) 0, (char) 0};
 
 /* IMG_LIBRARY_SHARED */
 static EIF_TYPE_INDEX ptf877[] = {0,0xFFFF};
@@ -3681,7 +3673,7 @@ static EIF_TYPE_INDEX ptf918[] = {892,0xFFF7,916,0xFFFF};
 static struct eif_par_types par918 = {918, ptf918, (uint16) 2, (uint16) 0, (char) 0};
 
 /* ENGINE */
-static EIF_TYPE_INDEX ptf919[] = {916,0xFFF7,877,0xFFF7,909,0xFFF7,876,0xFFFF};
+static EIF_TYPE_INDEX ptf919[] = {916,0xFFF7,877,0xFFF7,909,0xFFF7,961,0xFFFF};
 static struct eif_par_types par919 = {919, ptf919, (uint16) 4, (uint16) 0, (char) 0};
 
 /* GAME_WINDOW_BUILDER */
@@ -3796,10 +3788,6 @@ static struct eif_par_types par946 = {946, ptf946, (uint16) 2, (uint16) 0, (char
 static EIF_TYPE_INDEX ptf947[] = {892,0xFFF7,46,0xFFF7,153,0xFFFF};
 static struct eif_par_types par947 = {947, ptf947, (uint16) 3, (uint16) 0, (char) 0};
 
-/* TEXT_CONTROLLER */
-static EIF_TYPE_INDEX ptf948[] = {892,0xFFF7,153,0xFFFF};
-static struct eif_par_types par948 = {948, ptf948, (uint16) 2, (uint16) 0, (char) 0};
-
 /* GAME_HAPTIC */
 static EIF_TYPE_INDEX ptf949[] = {892,0xFFF7,916,0xFFF7,150,0xFFFF};
 static struct eif_par_types par949 = {949, ptf949, (uint16) 3, (uint16) 0, (char) 0};
@@ -3844,7 +3832,59 @@ static struct eif_par_types par958 = {958, ptf958, (uint16) 3, (uint16) 1, (char
 static EIF_TYPE_INDEX ptf959[] = {322,0xFFF8,1,0xFFF7,326,0xFFF8,1,0xFFF7,324,0xFFF8,1,0xFFFF};
 static struct eif_par_types par959 = {959, ptf959, (uint16) 3, (uint16) 1, (char) 0};
 
-int egc_partab_size_init = 959;
+/* GAME_TEXT_EXTERNAL */
+static EIF_TYPE_INDEX ptf960[] = {0,0xFFFF};
+static struct eif_par_types par960 = {960, ptf960, (uint16) 1, (uint16) 0, (char) 0};
+
+/* TEXT_LIBRARY_SHARED */
+static EIF_TYPE_INDEX ptf961[] = {0,0xFFFF};
+static struct eif_par_types par961 = {961, ptf961, (uint16) 1, (uint16) 0, (char) 0};
+
+/* TEXT_CONTROLLER */
+static EIF_TYPE_INDEX ptf962[] = {892,0xFFF7,153,0xFFFF};
+static struct eif_par_types par962 = {962, ptf962, (uint16) 2, (uint16) 0, (char) 0};
+
+/* TEXT_FONT */
+static EIF_TYPE_INDEX ptf963[] = {885,0xFFF7,150,0xFFF7,961,0xFFF7,892,0xFFFF};
+static struct eif_par_types par963 = {963, ptf963, (uint16) 4, (uint16) 0, (char) 0};
+
+/* SHARED_EXTERNAL */
+static EIF_TYPE_INDEX ptf964[] = {0,0xFFFF};
+static struct eif_par_types par964 = {964, ptf964, (uint16) 1, (uint16) 0, (char) 0};
+
+/* CPF_EXTERNAL */
+static EIF_TYPE_INDEX ptf965[] = {0,0xFFFF};
+static struct eif_par_types par965 = {965, ptf965, (uint16) 1, (uint16) 0, (char) 0};
+
+/* GAME_RESSOURCE_MANAGER */
+static EIF_TYPE_INDEX ptf966[] = {0,0xFFFF};
+static struct eif_par_types par966 = {966, ptf966, (uint16) 1, (uint16) 0, (char) 0};
+
+/* CPF_RESSOURCE_MANAGER */
+static EIF_TYPE_INDEX ptf967[] = {966,0xFFFF};
+static struct eif_par_types par967 = {967, ptf967, (uint16) 1, (uint16) 0, (char) 0};
+
+/* TEXT_SURFACE */
+static EIF_TYPE_INDEX ptf968[] = {923,0xFFF7,961,0xFFFF};
+static struct eif_par_types par968 = {968, ptf968, (uint16) 2, (uint16) 0, (char) 0};
+
+/* TEXT_SURFACE_BLENDED */
+static EIF_TYPE_INDEX ptf969[] = {968,0xFFFF};
+static struct eif_par_types par969 = {969, ptf969, (uint16) 1, (uint16) 0, (char) 0};
+
+/* TEXT_FONT_CPF */
+static EIF_TYPE_INDEX ptf970[] = {967,0xFFF7,963,0xFFFF};
+static struct eif_par_types par970 = {970, ptf970, (uint16) 2, (uint16) 0, (char) 0};
+
+/* GAME_FILE */
+static EIF_TYPE_INDEX ptf971[] = {164,0xFFFF};
+static struct eif_par_types par971 = {971, ptf971, (uint16) 1, (uint16) 0, (char) 0};
+
+/* CPF_PACKAGE_FILE */
+static EIF_TYPE_INDEX ptf972[] = {971,0xFFFF};
+static struct eif_par_types par972 = {972, ptf972, (uint16) 1, (uint16) 0, (char) 0};
+
+int egc_partab_size_init = 972;
 struct eif_par_types *egc_partab_init[] = {
 &par0,
 &par1,
@@ -4708,7 +4748,7 @@ struct eif_par_types *egc_partab_init[] = {
 &par859,
 &par860,
 &par861,
-&par862,
+NULL,
 &par863,
 &par864,
 &par865,
@@ -4722,7 +4762,7 @@ struct eif_par_types *egc_partab_init[] = {
 &par873,
 &par874,
 &par875,
-&par876,
+NULL,
 &par877,
 &par878,
 &par879,
@@ -4794,7 +4834,7 @@ struct eif_par_types *egc_partab_init[] = {
 &par945,
 &par946,
 &par947,
-&par948,
+NULL,
 &par949,
 &par950,
 &par951,
@@ -4806,6 +4846,19 @@ struct eif_par_types *egc_partab_init[] = {
 &par957,
 &par958,
 &par959,
+&par960,
+&par961,
+&par962,
+&par963,
+&par964,
+&par965,
+&par966,
+&par967,
+&par968,
+&par969,
+&par970,
+&par971,
+&par972,
 NULL};
 
 #ifdef __cplusplus

@@ -55,14 +55,14 @@ $spitshell >>Makefile <<'!NO!SUBS!'
 
 OBJECTS = big_file_C1_c.obj 
 
-OLDOBJECTS =  le868.o le868d.o ga876.o ga876d.o im878.o im878d.o te877.o te877d.o \
-	ga867.o ga867d.o ga875.o ga875d.o au890.o au890d.o ga886.o ga886d.o \
-	im866.o im866d.o ga865.o ga865d.o au864.o au864d.o au892.o au892d.o \
-	au889.o au889d.o th885.o th885d.o ga863.o ga863d.o ga887.o ga887d.o \
-	ga872.o ga872d.o ga873.o ga873d.o ga874.o ga874d.o ga871.o ga871d.o \
-	au888.o au888d.o au891.o au891d.o au862.o au862d.o ga861.o ga861d.o \
-	th884.o th884d.o ga870.o ga870d.o th883.o th883d.o ga869.o ga869d.o \
-	ga881.o ga881d.o ga880.o ga880d.o ga882.o ga882d.o ga879.o ga879d.o 
+OLDOBJECTS =  le868.o le868d.o ga876.o ga876d.o im878.o im878d.o ga867.o ga867d.o \
+	ga875.o ga875d.o au890.o au890d.o ga886.o ga886d.o im866.o im866d.o \
+	ga865.o ga865d.o au864.o au864d.o au892.o au892d.o au889.o au889d.o \
+	th885.o th885d.o ga887.o ga887d.o ga872.o ga872d.o ga873.o ga873d.o \
+	ga874.o ga874d.o ga871.o ga871d.o au888.o au888d.o au891.o au891d.o \
+	au862.o au862d.o ga861.o ga861d.o th884.o th884d.o ga870.o ga870d.o \
+	th883.o th883d.o ga869.o ga869d.o ga881.o ga881d.o ga880.o ga880d.o \
+	ga882.o ga882d.o ga879.o ga879d.o 
 
 all: Cobj1.o
 

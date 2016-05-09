@@ -10,6 +10,7 @@ inherit
 	GAME_LIBRARY_SHARED
 	IMG_LIBRARY_SHARED
 	AUDIO_LIBRARY_SHARED	-- To use `audio_library'
+	TEXT_LIBRARY_SHARED
 
 create
 	make
@@ -21,9 +22,12 @@ feature {NONE}  -- Initialization
 			game_library.enable_video -- Enable the video functionalities
 			audio_library.enable_sound	-- Permit to the Audio
 			image_file_library.enable_image (true, true, false)  -- Enable PNG image
+			text_library.enable_text
 
 			run_game
 
+			game_library.clear_all_events
+			text_library.quit_library
 			audio_library.quit_library	-- Properly quit the library
 			image_file_library.quit_library  -- Correctly unlink image files library
 			game_library.quit_library  -- Clear the library before quitting
@@ -40,6 +44,7 @@ feature {NONE}  -- Initialization
 			l_lvl2:LEVEL
 			l_lvl3:LEVEL
 			l_arrow:ARROW
+			l_font:TEXT_FONT
 
 		do
 
@@ -60,6 +65,11 @@ feature {NONE}  -- Initialization
 
 			create l_arrow.make
 
+			create l_font.make ("font.ttf", 64)
+			if l_font.is_openable then
+				l_font.open
+			end
+
 			create l_window_builder
 			l_window_builder.set_dimension (l_background.width, l_background.height)
 			l_window_builder.set_title ("Bubble Trouble")
@@ -68,17 +78,19 @@ feature {NONE}  -- Initialization
 			game_library.quit_signal_actions.extend (agent on_quit)
 			l_window.key_pressed_actions.extend (agent on_key_pressed(?, ?, l_character, l_arrow))
 			l_window.key_released_actions.extend (agent on_key_released(?,?,  l_character))
-			game_library.iteration_actions.extend (agent on_iteration(?, l_character, l_background, l_arrow, l_window))
+			game_library.iteration_actions.extend (agent on_iteration(?, l_character, l_background, l_arrow, l_window, l_font))
 			game_library.launch
 		end
 
 feature
 	on_iteration(a_timestamp:NATURAL_32; a_character:BOB; a_background:BACKGROUND; a_arrow:ARROW;
-					a_window:GAME_WINDOW_SURFACED)
+					a_window:GAME_WINDOW_SURFACED; a_font:TEXT_FONT)
 			-- Event that is launch at each iteration.
 		local
 			l_new_ball1:BALL
 			l_new_ball2:BALL
+			l_text_surface_died:TEXT_SURFACE_BLENDED
+			l_text_surface_win:TEXT_SURFACE_BLENDED
 		do
 			-- Draw the scene
 			a_window.surface.draw_rectangle (create {GAME_COLOR}.make_rgb (0, 128, 255), 0, 0, a_background.width, a_background.height)
@@ -100,14 +112,13 @@ feature
 			until
 				level.array_balls.off
 			loop
-				a_window.surface.draw_sub_surface (level.array_balls.item, 0, 0,
-					level.array_balls.item.width, level.array_balls.item.height, level.array_balls.item.x, level.array_balls.item.y)
+				a_window.surface.draw_surface (level.array_balls.item, level.array_balls.item.x, level.array_balls.item.y)
 				level.array_balls.item.move(a_background)
 				check_collisions (level.array_balls.item, a_character, a_arrow)
 				if a_character.is_dead then
-					print("YOU DIED%N")
+					create l_text_surface_died.make ("YOU DIED", a_font, create {GAME_COLOR}.make_rgb (255, 0, 0))
+					a_window.surface.draw_surface (l_text_surface_died, 512-l_text_surface_died.width//2, 50)
 				end
-				a_character.set_is_dead (false)
 				if level.array_balls.item.is_dead then
 					if level.array_balls.item.size /= 1 then
 						create l_new_ball1.make (level.array_balls.item.x, level.array_balls.item.y, level.array_balls.item.size - 1,true)
@@ -137,7 +148,8 @@ feature
 						level:=array_levels.at (3)
 						a_character.set_x (500)
 					else
-						print("YOU WON")
+						create l_text_surface_win.make ("YOU WON", a_font, create {GAME_COLOR}.make_rgb (255, 0, 0))
+						a_window.surface.draw_surface (l_text_surface_win, 512-l_text_surface_win.width//2, 50) --TODO Enlever de la boucle car est draw juste une fois
 					end
 				end
 			end
