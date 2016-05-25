@@ -19,6 +19,9 @@ create
 feature {NONE} -- Initialization
 
 	make(a_x:INTEGER; a_y:INTEGER; a_size:INTEGER; a_going_right:BOOLEAN)
+			--Constructeur de `Current'
+			--Reçoit en arguement la position "x" et "y", la grosseur de la balle (1 à 3)
+			--ainsi que si la balle se dirige vers la droite ou non
 		local
 			l_image:IMG_IMAGE_FILE
 			l_path:STRING
@@ -27,13 +30,13 @@ feature {NONE} -- Initialization
 			size:=a_size
 			if size = 1 then
 				l_path := "yball1.png"
-					top_speed:= 15
+				bounce_speed:= 15
 			elseif size = 2 then
 				l_path := "yball2.png"
-					top_speed:= 19
+				bounce_speed:= 19
 			elseif size = 3 then
 				l_path := "yball3.png"
-				top_speed:=24
+				bounce_speed:=24
 			end
 			create l_image.make (l_path)
 			if l_image.is_openable then
@@ -59,7 +62,7 @@ feature {NONE} -- Initialization
 				sound.open
 				if sound.is_open then
 					audio_library.sources_add
-					source:=audio_library.last_source_added	-- The first source will be use for playing the music
+					source:=audio_library.last_source_added
 				else
 					print("Cannot open sound files.")
 					die(1)
@@ -72,10 +75,11 @@ feature {NONE} -- Initialization
 
 feature
 	move(a_background:BACKGROUND)
+			--Gère le mouvement de la balle
+			--Reçoit en argument le background afin d'avoir les limites de celui-ci
 		do
 			move_timer := move_timer + 1
 			if move_timer = 3 then
-
 				if go_up then
 					y := y + speed
 					if speed = 0 then
@@ -85,14 +89,11 @@ feature
 					y := y + speed
 					if y + height >= 462 then --462 est le plancher
 						y:= 462 - height
-						speed := -top_speed --Change le speed à -9 avant de faire le y = y - 10
+						speed := -bounce_speed
 						go_up:=true
 					end
-
 				end
-
 				speed := speed + 1
-
 				move_timer := 1
 			end
 
@@ -107,34 +108,55 @@ feature
 					go_right:=True
 				end
 			end
-
 	end
 
 	size:INTEGER
+			--Grosseur de la balle (de 1 à 3)
+
 	speed:INTEGER assign set_speed
-	top_speed:INTEGER
+			--Représente la vitesse de la balle
+
+	bounce_speed:INTEGER
+			--Représente la vitesse de la balle après avoir toucher le sol
+			--N'égale pas tout le temps "-speed" car une balle détruite près du sol
+			--resterait près du sol et serait impossible à détuire
+
 	go_right:BOOLEAN
+			--Détermine si la balle se dirige vers la droite ou non
+
 	go_up:BOOLEAN
+			--Détermine si la balle se dirige vers le haut ou non
+
 	move_timer:INTEGER
+			--Correspond à un minuteur qui s'incrémente à chaque boucle de la boucle principale
+			--Permet de ne pas animer les balles à chaque boucle de la boucle principale
 
 	is_dead:BOOLEAN assign set_is_dead
-
-	set_is_dead(a_is_dead:BOOLEAN)
-		do
-			is_dead:= a_is_dead
-		end
+			--Détermine si la balle à été tuée
 
 	set_speed(a_speed:INTEGER)
+			--Assigne une valeur à l'attribut "speed"
+			--La nouvelle valeur est envoyée en argument
 		do
 			speed:=a_speed
 		end
 
-	play_sound
+	set_is_dead(a_is_dead:BOOLEAN)
+			--Assigne une valeur à l'attribut "is_dead"
+			--La nouvelle valeur est envoyée en argument
 		do
-			source.stop					-- Be sure that the queue buffer is empty on the sound_source object (when stop, the source queue is clear)
-			sound.restart						-- Be sure that the sound is at the beginning
+			is_dead:= a_is_dead
+		end
+
+
+
+	play_sound
+			--Réinitialise le son et le joue
+		do
+			source.stop
+			sound.restart
 			source.queue_sound (sound)
-			source.play					-- Play the source
+			source.play
 		end
 
 end

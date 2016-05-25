@@ -18,18 +18,27 @@ create
 
 feature
 	make
+			--Constructeur de `Current'
 		local
 			l_image:IMG_IMAGE_FILE
 		do
 			create l_image.make("animation.png")
-			l_image.open
-			make_from_image (l_image)
+			if l_image.is_openable then
+				l_image.open
+				if l_image.is_open then
+					make_from_image (l_image)
+				else
+					make_surface(1,1)
+				end
+			else
+				make_surface(1,1)
+			end
 
 			create surface_left.make_from_image (l_image)
 
 			create {GAME_SURFACE_ROTATE_ZOOM} surface_right.make_zoom_x_y (surface_left, -1, 1, True)
 
-			temps := 1
+			animation_timer := 1
 
 			create animation.make(6)
 			animation.extend (surface_right.width // 3)	-- Be sure to place the image standing still first
@@ -63,45 +72,66 @@ feature
 		end
 
 	go_right
+			--Fait en sorte que le personnage se dirige vers la droite
 		do
 			going_right:= true
 		end
 
 	go_left
+			--Fait en sorte que le personnage se dirige vrs la gauche
 		do
 			going_left:= true
 		end
 
 	stop_right
+			--Fait en sorte que le personnage ne se dirige plus vers la droite
 		do
 			going_right:= false
 		end
 
 	stop_left
+			--Fait en sorte que le personnage ne se dirige plus vers la gauche
 		do
 			going_left := false
 		end
 
 	going_right:BOOLEAN
+			--Détermine si le personnage se dirige vers la droite
+			--Si "going_right" et "going_left" sont à "false", le personnage ne bouge pas
 
 	going_left:BOOLEAN
+			--Détermine si le personnage se dirige vers la gauche
+			--Si "going_left" et "going_right" sont à "false", le personnage ne bouge pas
 
 	surface_right:GAME_SURFACE
+			--Représente la surface du personnage lorsqu'il se dirige vers la droite
+			--La surface comprend les 3 sprites de l'animation
 
 	surface_left:GAME_SURFACE
+			--Représente la surface du personnage lorsqu'il se dirige vers la gauche
+			--La surface comprend les 3 sprites de l'animation
 
 	animation:ARRAYED_LIST[INTEGER]
+			--Liste des coordonnées des différentes sprites de l'animation
+			--Se lit comme suit : "x" de la sprite sans mouvement, "y" de la sprite sans mouvement,
+			--"x" de la première sprite d'animation, "y" de la première sprite d'animation,
+			--"x" de la deuxième sprite d'animation, "y" de la deuxième sprite d'animation
 
 	surface:GAME_SURFACE
+		--Représente la surface à utiliser selon la direction du personnage ("surface_left" ou "surface_right")
 
 	is_dead:BOOLEAN assign set_is_dead
+
+	sub_x:INTEGER
+
+	sub_y:INTEGER
 
 	set_is_dead(a_is_dead:BOOLEAN)
 		do
 			is_dead := a_is_dead
 		end
 
-	temps:INTEGER
+	animation_timer:INTEGER
 
 
 	animate(a_background:BACKGROUND)
@@ -125,16 +155,16 @@ feature
 					end
 				end
 
-				if temps < 8 then
+				if animation_timer < 8 then
 						sub_x := animation.at (3)
 						sub_y := animation.at (4)
 					else
 						sub_x := animation.at (5)
 						sub_y := animation.at (6)
 					end
-				temps := temps+1
-				if temps > 16 then
-					temps := 1
+				animation_timer := animation_timer+1
+				if animation_timer > 16 then
+					animation_timer := 1
 				end
 			end
 		end
