@@ -11,18 +11,18 @@ case "$O" in
 esac
 echo "Preparing C compilation"
 $spitshell >Makefile <<!GROK!THIS!
-INCLUDE_PATH =  -I"\$(EIFFEL_LIBRARY)/contrib/library/game2/game_core/spec/include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\SDL2\include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\cpf\spec\include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\SDL2_image\include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\SDL2_gfx\include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\SDL2_ttf\include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\OpenAL\include" -I"\$(EIFFEL_LIBRARY)/contrib/library/game2/audio_sound_file/spec/include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\libsndfile\include"
+INCLUDE_PATH =  -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\OpenAL\include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\cpf\spec\include" -I"\$(EIFFEL_LIBRARY)/contrib/library/game2/audio_sound_file/spec/include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\libsndfile\include" -I"\$(EIFFEL_LIBRARY)/contrib/library/game2/game_core/spec/include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\SDL2\include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\SDL2_gfx\include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\SDL2_image\include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\SDL2_ttf\include"
 SHELL = /bin/sh
 CC = $cc
 CPP = $cpp
-CFLAGS = $wkoptimize $ccflags $large -DEIF_IEEE_BEHAVIOR -DWORKBENCH -I"$rt_include" -I. \$(INCLUDE_PATH)
-CPPFLAGS = $wkoptimize $cppflags $large -DWORKBENCH -I"$rt_include" -I. \$(INCLUDE_PATH)
+CFLAGS = $wkoptimize $mtccflags $large -DEIF_IEEE_BEHAVIOR -DWORKBENCH -I"$rt_include" -I. \$(INCLUDE_PATH)
+CPPFLAGS = $wkoptimize $mtcppflags $large -DWORKBENCH -I"$rt_include" -I. \$(INCLUDE_PATH)
 LDFLAGS = $ldflags
 CCLDFLAGS = $ccldflags  $windows_flags
-LDSHAREDFLAGS =  $ldsharedflags
-EIFLIB = "$rt_lib/$prefix$wkeiflib$suffix"
+LDSHAREDFLAGS =  $mtldsharedflags
+EIFLIB = "$rt_lib/$prefix$mt_prefix$wkeiflib$suffix"
 EIFTEMPLATES = $rt_templates
-LIBS = $libs
+LIBS = $mtlibs
 MAKE = $make
 AR = $ar
 LD = $ld
@@ -56,16 +56,17 @@ $spitshell >>Makefile <<'!NO!SUBS!'
 SUBDIRS = C1 C2 C3 C4 E1
 
 EXTERNALS =  \
-	"$(EIFFEL_LIBRARY)\contrib\library\game2\game_core\spec\$(ISE_C_COMPILER)\$(ISE_PLATFORM)\lib\sdl_additions.lib" \
+	"$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\OpenAL\lib\$(ISE_PLATFORM)\$(ISE_C_COMPILER)\OpenAL32.lib" \
+	"$(EIFFEL_LIBRARY)\contrib\library\game2\cpf\spec\$(ISE_C_COMPILER)\$(ISE_PLATFORM)\lib\mtcpf_additions.lib" \
+	"$(EIFFEL_LIBRARY)\contrib\library\game2\audio_sound_file\spec\$(ISE_C_COMPILER)\$(ISE_PLATFORM)\lib\mtsndfile_additions.lib" \
+	"$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\libsndfile\lib\$(ISE_PLATFORM)\$(ISE_C_COMPILER)\libsndfile-1.lib" \
+	"$(EIFFEL_LIBRARY)\contrib\library\game2\game_core\spec\$(ISE_C_COMPILER)\$(ISE_PLATFORM)\lib\mtsdl_additions.lib" \
 	"$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\SDL2\lib\$(ISE_PLATFORM)\$(ISE_C_COMPILER)\SDL2.lib" \
 	"$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\SDL2\lib\$(ISE_PLATFORM)\$(ISE_C_COMPILER)\SDL2main.lib" \
-	"$(EIFFEL_LIBRARY)\contrib\library\game2\cpf\spec\$(ISE_C_COMPILER)\$(ISE_PLATFORM)\lib\cpf_additions.lib" \
-	"$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\SDL2_image\lib\$(ISE_PLATFORM)\$(ISE_C_COMPILER)\SDL2_image.lib" \
 	"$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\SDL2_gfx\lib\$(ISE_PLATFORM)\$(ISE_C_COMPILER)\SDL2_gfx.lib" \
+	"$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\SDL2_image\lib\$(ISE_PLATFORM)\$(ISE_C_COMPILER)\SDL2_image.lib" \
 	"$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\SDL2_ttf\lib\$(ISE_PLATFORM)\$(ISE_C_COMPILER)\SDL2_ttf.lib" \
-	"$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\OpenAL\lib\$(ISE_PLATFORM)\$(ISE_C_COMPILER)\OpenAL32.lib" \
-	"$(EIFFEL_LIBRARY)\contrib\library\game2\audio_sound_file\spec\$(ISE_C_COMPILER)\$(ISE_PLATFORM)\lib\sndfile_additions.lib" \
-	"$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\libsndfile\lib\$(ISE_PLATFORM)\$(ISE_C_COMPILER)\libsndfile-1.lib"
+	"$(ISE_LIBRARY)\library\net\spec\$(ISE_C_COMPILER)\$(ISE_PLATFORM)\lib\mtnet.lib"
 
 all: project
 
@@ -123,7 +124,7 @@ E1/eparents.o: Makefile E1/Makefile E1/estructure.h
 
 OBJECTS= C4/Cobj4.o C3/Cobj3.o C2/Cobj2.o C1/Cobj1.o  E1/eoption.o E1/epattern.o E1/efrozen.o E1/ecall.o E1/eplug.o E1/eskelet.o E1/enames.o E1/evisib.o E1/ececil.o E1/einit.o E1/eparents.o
 
-PRECOMP_OBJECTS= "c:\users\simon\documents\eiffel user files\15.11\precomp\spec\windows\EIFGENs\base-safe\W_code\precomp.lib"
+PRECOMP_OBJECTS= "c:\users\simon\documents\eiffel user files\15.11\precomp\spec\windows\EIFGENs\base-mt-safe\W_code\precomp.lib"
 
 
 project: $(OBJECTS)  E1/emain.o Makefile
@@ -131,14 +132,19 @@ project: $(OBJECTS)  E1/emain.o Makefile
 	$(CC) -o project $(CFLAGS) $(CCLDFLAGS)  $(OBJECTS) E1/emain.o \
 		$(PRECOMP_OBJECTS) $(EXTERNALS) $(EIFLIB) $(LIBS)
 
-RCECIL = wmalloc.o wgarcol.o wlocal.o wexcept.o wstore.o wretrieve.o whash.o \
-	wtraverse.o whashin.o wtools.o winternal.o wplug.o wcopy.o wequal.o \
-	wlmalloc.o wout.o wtimer.o wurgent.o wsig.o whector.o wcecil.o \
-	wfile.o wdir.o wmisc.o werror.o wumain.o wmemory.o wargv.o wboolstr.o \
-	wsearch.o wmain.o debug.o interp.o woption.o update.o wbench.o \
-	wrun_idr.o wcompress.o wconsole.o wpath_name.o wobject_id.o \
-	weif_threads.o wgen_conf.o weif_type_id.o wrout_obj.o weif_project.o \
-	idrs.o wposix_threads.o network.o ipc.o wmemory_analyzer.o woffset.o 
+RCECIL = MTdebug.o MTidrs.o MTinterp.o mtipc.o MTnetwork.o MTupdate.o \
+	MTwargv.o MTwbench.o MTwboolstr.o MTwcecil.o MTwcompress.o \
+	MTwconsole.o MTwcopy.o MTwdir.o MTweif_project.o MTweif_threads.o \
+	MTweif_type_id.o MTwequal.o MTwerror.o MTweveqs.o MTwexcept.o  \
+	MTwfile.o MTwgarcol.o MTwgen_conf.o MTwhash.o MTwhashin.o MTwhector.o \
+	MTwinternal.o MTwlmalloc.o MTwlocal.o MTwmain.o MTwmalloc.o \
+	MTwmemory.o MTwmemory_analyzer.o MTwmisc.o MTwnotify_token.o \
+	MTwobject_id.o MTwoffset.o MTwoption.o MTwout.o MTwpath_name.o \
+	MTwplug.o MTwposix_threads.o MTwprivate_queue.o MTwprocessor.o \
+	MTwprocessor_registry.o MTwqueue_cache.o MTwreq_grp.o MTwretrieve.o \
+	MTwrout_obj.o MTwrun_idr.o MTwscoop.o MTwscoop_gc.o MTwsearch.o \
+	MTwsig.o MTwstore.o MTwtimer.o MTwtools.o MTwtraverse.o MTwumain.o \
+	MTwurgent.o 
 
 STATIC_CECIL = libproject.a
 cecil: $(STATIC_CECIL)

@@ -31,12 +31,15 @@ feature {NONE} -- Initialization
 			if size = 1 then
 				l_path := "yball1.png"
 				bounce_speed:= 15
+				score:=10
 			elseif size = 2 then
 				l_path := "yball2.png"
 				bounce_speed:= 19
+				score:=25
 			elseif size = 3 then
 				l_path := "yball3.png"
 				bounce_speed:=24
+				score:=50
 			end
 			create l_image.make (l_path)
 			if l_image.is_openable then
@@ -45,6 +48,7 @@ feature {NONE} -- Initialization
 					make_from_image (l_image)
 					x:=a_x
 					y:=a_y
+					player_who_killed:=1
 					speed := 1
 					go_right:= a_going_right
 					go_up:=False
@@ -130,6 +134,18 @@ feature
 	move_timer:INTEGER
 			--Correspond à un minuteur qui s'incrémente à chaque boucle de la boucle principale
 			--Permet de ne pas animer les balles à chaque boucle de la boucle principale
+
+	score:INTEGER
+			--Pointage qu'un joueur gagne en détruisant une balle
+
+	player_who_killed:INTEGER assign set_player_who_killed
+			--Représente le joueur qu a tué la balle
+			--1 si joueur du jeu, 2 si other_player_character
+
+	set_player_who_killed(a_player:INTEGER)
+		do
+			player_who_killed:= a_player
+		end
 
 	is_dead:BOOLEAN assign set_is_dead
 			--Détermine si la balle à été tuée

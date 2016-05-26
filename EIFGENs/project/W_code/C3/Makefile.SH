@@ -11,18 +11,18 @@ case "$O" in
 esac
 echo "Compiling C code in C3"
 $spitshell >Makefile <<!GROK!THIS!
-INCLUDE_PATH =  -I"\$(EIFFEL_LIBRARY)/contrib/library/game2/game_core/spec/include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\SDL2\include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\cpf\spec\include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\SDL2_image\include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\SDL2_gfx\include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\SDL2_ttf\include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\OpenAL\include" -I"\$(EIFFEL_LIBRARY)/contrib/library/game2/audio_sound_file/spec/include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\libsndfile\include"
+INCLUDE_PATH =  -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\OpenAL\include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\cpf\spec\include" -I"\$(EIFFEL_LIBRARY)/contrib/library/game2/audio_sound_file/spec/include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\libsndfile\include" -I"\$(EIFFEL_LIBRARY)/contrib/library/game2/game_core/spec/include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\SDL2\include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\SDL2_gfx\include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\SDL2_image\include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\SDL2_ttf\include"
 SHELL = /bin/sh
 CC = $cc
 CPP = $cpp
-CFLAGS = $wkoptimize $ccflags $large -DEIF_IEEE_BEHAVIOR -DWORKBENCH -I"$rt_include" -I. \$(INCLUDE_PATH)
-CPPFLAGS = $wkoptimize $cppflags $large -DWORKBENCH -I"$rt_include" -I. \$(INCLUDE_PATH)
+CFLAGS = $wkoptimize $mtccflags $large -DEIF_IEEE_BEHAVIOR -DWORKBENCH -I"$rt_include" -I. \$(INCLUDE_PATH)
+CPPFLAGS = $wkoptimize $mtcppflags $large -DWORKBENCH -I"$rt_include" -I. \$(INCLUDE_PATH)
 LDFLAGS = $ldflags
 CCLDFLAGS = $ccldflags  $windows_flags
-LDSHAREDFLAGS =  $ldsharedflags
-EIFLIB = "$rt_lib/$prefix$wkeiflib$suffix"
+LDSHAREDFLAGS =  $mtldsharedflags
+EIFLIB = "$rt_lib/$prefix$mt_prefix$wkeiflib$suffix"
 EIFTEMPLATES = $rt_templates
-LIBS = $libs
+LIBS = $mtlibs
 MAKE = $make
 AR = $ar
 LD = $ld
@@ -55,14 +55,15 @@ $spitshell >>Makefile <<'!NO!SUBS!'
 
 OBJECTS = big_file_C3_c.obj 
 
-OLDOBJECTS =  ga957.o ga957d.o bo930.o bo930d.o ar929.o ar929d.o ba928.o ba928d.o \
-	ba927.o ba927d.o ga946.o ga946d.o ga954.o ga954d.o im947.o im947d.o \
-	dr926.o dr926d.o ga944.o ga944d.o ga934.o ga934d.o ga948.o ga948d.o \
-	ga943.o ga943d.o au942.o au942d.o au941.o au941d.o ga940.o ga940d.o \
-	ga933.o ga933d.o ga939.o ga939d.o ga953.o ga953d.o ga952.o ga952d.o \
-	ga956.o ga956d.o ga938.o ga938d.o ga945.o ga945d.o mu937.o mu937d.o \
-	ga951.o ga951d.o ga936.o ga936d.o ga950.o ga950d.o th958.o th958d.o \
-	ga932.o ga932d.o ga955.o ga955d.o ga935.o ga935d.o ga931.o ga931d.o 
+OLDOBJECTS =  ap939.o ap939d.o en940.o en940d.o ga933.o ga933d.o au927.o au927d.o \
+	te926.o te926d.o ar949.o ar949d.o ba948.o ba948d.o te944.o te944d.o \
+	ga941.o ga941d.o ba947.o ba947d.o ga937.o ga937d.o ga938.o ga938d.o \
+	bo946.o bo946d.o dr945.o dr945d.o he928.o he928d.o te943.o te943d.o \
+	ga935.o ga935d.o ga953.o ga953d.o ga932.o ga932d.o ga936.o ga936d.o \
+	ga942.o ga942d.o ga934.o ga934d.o ga952.o ga952d.o ga951.o ga951d.o \
+	ga958.o ga958d.o ga931.o ga931d.o ga930.o ga930d.o ga957.o ga957d.o \
+	ga956.o ga956d.o mu955.o mu955d.o ga929.o ga929d.o ga950.o ga950d.o \
+	ga954.o ga954d.o 
 
 all: Cobj3.o
 

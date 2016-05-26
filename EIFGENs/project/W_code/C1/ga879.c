@@ -1,5 +1,5 @@
 /*
- * Code for class GAME_GESTURE
+ * Code for class GAME_MOUSE_BUTTON_RELEASED_STATE
  */
 
 #include "eif_eiffel.h"
@@ -10,10 +10,11 @@
 extern "C" {
 #endif
 
-extern void F879_8657(EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE);
-extern EIF_TYPED_VALUE F879_8658(EIF_REFERENCE);
-extern EIF_TYPED_VALUE F879_8659(EIF_REFERENCE);
-extern EIF_TYPED_VALUE F879_8660(EIF_REFERENCE);
+extern EIF_TYPED_VALUE F879_8649(EIF_REFERENCE);
+extern EIF_TYPED_VALUE F879_8650(EIF_REFERENCE);
+extern EIF_TYPED_VALUE F879_8651(EIF_REFERENCE);
+extern EIF_TYPED_VALUE F879_8652(EIF_REFERENCE);
+extern EIF_TYPED_VALUE F879_8653(EIF_REFERENCE);
 extern void EIF_Minit879(void);
 
 #ifdef __cplusplus
@@ -35,91 +36,200 @@ extern "C" {
 extern "C" {
 #endif
 
-/* {GAME_GESTURE}.make */
-void F879_8657 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg2x, EIF_TYPED_VALUE arg3x)
+/* {GAME_MOUSE_BUTTON_RELEASED_STATE}.is_left_button_released */
+EIF_TYPED_VALUE F879_8649 (EIF_REFERENCE Current)
 {
 	GTCX
-	char *l_feature_name = "make";
+	char *l_feature_name = "is_left_button_released";
 	RTEX;
-#define arg1 arg1x.it_r4
-#define arg2 arg2x.it_r4
-#define arg3 arg3x.it_n4
-	RTCDT;
+	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
+	
 	RTSN;
 	RTDA;
 	RTLD;
 	
-	if ((arg3x.type & SK_HEAD) == SK_REF) arg3x.it_n4 = * (EIF_NATURAL_32 *) arg3x.it_r;
-	if ((arg2x.type & SK_HEAD) == SK_REF) arg2x.it_r4 = * (EIF_REAL_32 *) arg2x.it_r;
-	if ((arg1x.type & SK_HEAD) == SK_REF) arg1x.it_r4 = * (EIF_REAL_32 *) arg1x.it_r;
+	RTLI(1);
+	RTLR(0,Current);
+	RTLIU(1);
+	RTLU (SK_BOOL, &Result);
+	RTLU (SK_REF, &Current);
+	
+	RTEAA(l_feature_name, 878, Current, 0, 0, 14330);
+	RTSA(Dtype(Current));
+	RTSC;
+	RTME(Dtype(Current), 0);
+	RTGC;
+	RTDBGEAA(878, Current, 14330);
+	RTIV(Current, RTAL);
+	RTHOOK(1);
+	RTDBGAL(Current, 0, 0x04000000, 1,0); /* Result */
+	Result = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(6548, 877))(Current)).it_b);
+	RTVI(Current, RTAL);
+	RTRS;
+	RTHOOK(2);
+	RTDBGLE;
+	RTMD(0);
+	RTLE;
+	RTLO(2);
+	RTEE;
+	{ EIF_TYPED_VALUE r; r.type = SK_BOOL; r.it_b = Result; return r; }
+}
+
+/* {GAME_MOUSE_BUTTON_RELEASED_STATE}.is_right_button_released */
+EIF_TYPED_VALUE F879_8650 (EIF_REFERENCE Current)
+{
+	GTCX
+	char *l_feature_name = "is_right_button_released";
+	RTEX;
+	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
+	
+	RTSN;
+	RTDA;
+	RTLD;
 	
 	RTLI(1);
 	RTLR(0,Current);
 	RTLIU(1);
-	RTLU (SK_VOID, NULL);
-	RTLU(SK_REAL32,&arg1);
-	RTLU(SK_REAL32,&arg2);
-	RTLU(SK_UINT32,&arg3);
+	RTLU (SK_BOOL, &Result);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 878, Current, 0, 3, 14336);
-	RTSA(dtype);
+	RTEAA(l_feature_name, 878, Current, 0, 0, 14331);
+	RTSA(Dtype(Current));
 	RTSC;
-	RTME(dtype, 0);
+	RTME(Dtype(Current), 0);
 	RTGC;
-	RTDBGEAA(878, Current, 14336);
+	RTDBGEAA(878, Current, 14331);
 	RTIV(Current, RTAL);
 	RTHOOK(1);
-	RTDBGAA(Current, dtype, 6568, 0x18000000, 1); /* x */
-	*(EIF_REAL_32 *)(Current + RTWA(6568, dtype)) = (EIF_REAL_32) arg1;
-	RTHOOK(2);
-	RTDBGAA(Current, dtype, 6569, 0x18000000, 1); /* y */
-	*(EIF_REAL_32 *)(Current + RTWA(6569, dtype)) = (EIF_REAL_32) arg2;
-	RTHOOK(3);
-	RTDBGAA(Current, dtype, 6570, 0x38000000, 1); /* fingers_count */
-	*(EIF_NATURAL_32 *)(Current + RTWA(6570, dtype)) = (EIF_NATURAL_32) arg3;
+	RTDBGAL(Current, 0, 0x04000000, 1,0); /* Result */
+	Result = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(6549, 877))(Current)).it_b);
 	RTVI(Current, RTAL);
 	RTRS;
-	RTHOOK(4);
+	RTHOOK(2);
 	RTDBGLE;
 	RTMD(0);
 	RTLE;
-	RTLO(5);
+	RTLO(2);
 	RTEE;
-#undef arg3
-#undef arg2
-#undef arg1
+	{ EIF_TYPED_VALUE r; r.type = SK_BOOL; r.it_b = Result; return r; }
 }
 
-/* {GAME_GESTURE}.x */
-EIF_TYPED_VALUE F879_8658 (EIF_REFERENCE Current)
+/* {GAME_MOUSE_BUTTON_RELEASED_STATE}.is_middle_button_released */
+EIF_TYPED_VALUE F879_8651 (EIF_REFERENCE Current)
 {
-	EIF_TYPED_VALUE r;
-	r.type = SK_REAL32;
-	r.it_r4 = *(EIF_REAL_32 *)(Current + RTWA(6568,Dtype(Current)));
-	return r;
+	GTCX
+	char *l_feature_name = "is_middle_button_released";
+	RTEX;
+	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
+	
+	RTSN;
+	RTDA;
+	RTLD;
+	
+	RTLI(1);
+	RTLR(0,Current);
+	RTLIU(1);
+	RTLU (SK_BOOL, &Result);
+	RTLU (SK_REF, &Current);
+	
+	RTEAA(l_feature_name, 878, Current, 0, 0, 14332);
+	RTSA(Dtype(Current));
+	RTSC;
+	RTME(Dtype(Current), 0);
+	RTGC;
+	RTDBGEAA(878, Current, 14332);
+	RTIV(Current, RTAL);
+	RTHOOK(1);
+	RTDBGAL(Current, 0, 0x04000000, 1,0); /* Result */
+	Result = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(6550, 877))(Current)).it_b);
+	RTVI(Current, RTAL);
+	RTRS;
+	RTHOOK(2);
+	RTDBGLE;
+	RTMD(0);
+	RTLE;
+	RTLO(2);
+	RTEE;
+	{ EIF_TYPED_VALUE r; r.type = SK_BOOL; r.it_b = Result; return r; }
 }
 
-
-/* {GAME_GESTURE}.y */
-EIF_TYPED_VALUE F879_8659 (EIF_REFERENCE Current)
+/* {GAME_MOUSE_BUTTON_RELEASED_STATE}.is_optionnal_button_1_released */
+EIF_TYPED_VALUE F879_8652 (EIF_REFERENCE Current)
 {
-	EIF_TYPED_VALUE r;
-	r.type = SK_REAL32;
-	r.it_r4 = *(EIF_REAL_32 *)(Current + RTWA(6569,Dtype(Current)));
-	return r;
+	GTCX
+	char *l_feature_name = "is_optionnal_button_1_released";
+	RTEX;
+	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
+	
+	RTSN;
+	RTDA;
+	RTLD;
+	
+	RTLI(1);
+	RTLR(0,Current);
+	RTLIU(1);
+	RTLU (SK_BOOL, &Result);
+	RTLU (SK_REF, &Current);
+	
+	RTEAA(l_feature_name, 878, Current, 0, 0, 14333);
+	RTSA(Dtype(Current));
+	RTSC;
+	RTME(Dtype(Current), 0);
+	RTGC;
+	RTDBGEAA(878, Current, 14333);
+	RTIV(Current, RTAL);
+	RTHOOK(1);
+	RTDBGAL(Current, 0, 0x04000000, 1,0); /* Result */
+	Result = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(6551, 877))(Current)).it_b);
+	RTVI(Current, RTAL);
+	RTRS;
+	RTHOOK(2);
+	RTDBGLE;
+	RTMD(0);
+	RTLE;
+	RTLO(2);
+	RTEE;
+	{ EIF_TYPED_VALUE r; r.type = SK_BOOL; r.it_b = Result; return r; }
 }
 
-
-/* {GAME_GESTURE}.fingers_count */
-EIF_TYPED_VALUE F879_8660 (EIF_REFERENCE Current)
+/* {GAME_MOUSE_BUTTON_RELEASED_STATE}.is_optionnal_button_2_released */
+EIF_TYPED_VALUE F879_8653 (EIF_REFERENCE Current)
 {
-	EIF_TYPED_VALUE r;
-	r.type = SK_UINT32;
-	r.it_n4 = *(EIF_NATURAL_32 *)(Current + RTWA(6570,Dtype(Current)));
-	return r;
+	GTCX
+	char *l_feature_name = "is_optionnal_button_2_released";
+	RTEX;
+	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
+	
+	RTSN;
+	RTDA;
+	RTLD;
+	
+	RTLI(1);
+	RTLR(0,Current);
+	RTLIU(1);
+	RTLU (SK_BOOL, &Result);
+	RTLU (SK_REF, &Current);
+	
+	RTEAA(l_feature_name, 878, Current, 0, 0, 14334);
+	RTSA(Dtype(Current));
+	RTSC;
+	RTME(Dtype(Current), 0);
+	RTGC;
+	RTDBGEAA(878, Current, 14334);
+	RTIV(Current, RTAL);
+	RTHOOK(1);
+	RTDBGAL(Current, 0, 0x04000000, 1,0); /* Result */
+	Result = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(6552, 877))(Current)).it_b);
+	RTVI(Current, RTAL);
+	RTRS;
+	RTHOOK(2);
+	RTDBGLE;
+	RTMD(0);
+	RTLE;
+	RTLO(2);
+	RTEE;
+	{ EIF_TYPED_VALUE r; r.type = SK_BOOL; r.it_b = Result; return r; }
 }
-
 
 void EIF_Minit879 (void)
 {

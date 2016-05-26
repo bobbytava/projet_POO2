@@ -1,13 +1,13 @@
-INCLUDE_PATH =  -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\game_core\spec\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\SDL2\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\cpf\spec\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\SDL2_image\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\SDL2_gfx\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\SDL2_ttf\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\OpenAL\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\audio_sound_file\spec\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\libsndfile\include"
+INCLUDE_PATH =  -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\OpenAL\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\cpf\spec\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\audio_sound_file\spec\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\libsndfile\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\game_core\spec\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\SDL2\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\SDL2_gfx\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\SDL2_image\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\SDL2_ttf\include"
 SHELL = \bin\sh
 CC = cl
 CPP = cl
-CFLAGS = -Od -MT -w -nologo -D_WIN32_WINNT=0x0500 -DWINVER=0x0500 -D_CRT_SECURE_NO_DEPRECATE -D_UNICODE -DUNICODE   -DEIF_IEEE_BEHAVIOR -DWORKBENCH -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\studio\spec\windows\include" -I. $(INCLUDE_PATH)
-CPPFLAGS = -Od -MT -w -nologo -D_WIN32_WINNT=0x0500 -DWINVER=0x0500 -D_CRT_SECURE_NO_DEPRECATE -D_UNICODE -DUNICODE   -DWORKBENCH -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\studio\spec\windows\include" -I. $(INCLUDE_PATH)
+CFLAGS = -Od -MT -w -nologo -D_WIN32_WINNT=0x0500 -DWINVER=0x0500 -D_CRT_SECURE_NO_DEPRECATE -D_UNICODE -DUNICODE  -DEIF_THREADS  -DEIF_IEEE_BEHAVIOR -DWORKBENCH -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\studio\spec\windows\include" -I. $(INCLUDE_PATH)
+CPPFLAGS = -Od -MT -w -nologo -D_WIN32_WINNT=0x0500 -DWINVER=0x0500 -D_CRT_SECURE_NO_DEPRECATE -D_UNICODE -DUNICODE  -DEIF_THREADS  -DWORKBENCH -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\studio\spec\windows\include" -I. $(INCLUDE_PATH)
 LDFLAGS = -STACK:5000000 -NODEFAULTLIB:libc
 CCLDFLAGS = -STACK:5000000 -NODEFAULTLIB:libc  -SUBSYSTEM:WINDOWS
 LDSHAREDFLAGS =  -dll -incremental:no -NODEFAULTLIB:libc
-EIFLIB = "C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\studio\spec\windows\lib\msc\wkbench.lib"
+EIFLIB = "C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\studio\spec\windows\lib\msc\mtwkbench.lib"
 EIFTEMPLATES = C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\studio\config\windows\templates
 LIBS = 
 MAKE = nmake -s -nologo
@@ -42,16 +42,17 @@ SYSTEM_IN_DYNAMIC_LIB = project.dll
 SUBDIRS = C1 C2 C3 C4 E1
 
 EXTERNALS =  \
-	"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\game_core\spec\msc\windows\lib\sdl_additions.lib" \
+	"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\OpenAL\lib\windows\msc\OpenAL32.lib" \
+	"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\cpf\spec\msc\windows\lib\mtcpf_additions.lib" \
+	"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\audio_sound_file\spec\msc\windows\lib\mtsndfile_additions.lib" \
+	"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\libsndfile\lib\windows\msc\libsndfile-1.lib" \
+	"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\game_core\spec\msc\windows\lib\mtsdl_additions.lib" \
 	"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\SDL2\lib\windows\msc\SDL2.lib" \
 	"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\SDL2\lib\windows\msc\SDL2main.lib" \
-	"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\cpf\spec\msc\windows\lib\cpf_additions.lib" \
-	"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\SDL2_image\lib\windows\msc\SDL2_image.lib" \
 	"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\SDL2_gfx\lib\windows\msc\SDL2_gfx.lib" \
+	"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\SDL2_image\lib\windows\msc\SDL2_image.lib" \
 	"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\SDL2_ttf\lib\windows\msc\SDL2_ttf.lib" \
-	"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\OpenAL\lib\windows\msc\OpenAL32.lib" \
-	"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\audio_sound_file\spec\msc\windows\lib\sndfile_additions.lib" \
-	"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\libsndfile\lib\windows\msc\libsndfile-1.lib"
+	"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\library\net\spec\msc\windows\lib\mtnet.lib"
 
 all:: project.exe
 	echo done > completed.eif
@@ -143,7 +144,7 @@ C_OBJECTS = C4\Cobj4.lib C3\Cobj3.lib C2\Cobj2.lib C1\Cobj1.lib
 
 EOBJECTS = E1\eparents.obj  E1\einit.obj  E1\ececil.obj  E1\evisib.obj  E1\enames.obj  E1\eskelet.obj  E1\eplug.obj  E1\ecall.obj  E1\efrozen.obj  E1\epattern.obj  E1\eoption.obj  
 
-PRECOMP_OBJECTS= "c:\users\simon\documents\eiffel user files\15.11\precomp\spec\windows\EIFGENs\base-safe\W_code\msc\precomp.lib"
+PRECOMP_OBJECTS= "c:\users\simon\documents\eiffel user files\15.11\precomp\spec\windows\EIFGENs\base-mt-safe\W_code\msc\precomp.lib"
 
 
 project.exe: project.lnk project.res
@@ -169,14 +170,19 @@ project.lnk: $(OBJECTS) e1\emain.obj project.res Makefile
 	echo E1\eoption.obj  C4\Cobj4.lib C3\Cobj3.lib C2\Cobj2.lib C1\Cobj1.lib  >> $@ 
 
 
-RCECIL = wmalloc.obj wgarcol.obj wlocal.obj wexcept.obj wstore.obj wretrieve.obj whash.obj \
-	wtraverse.obj whashin.obj wtools.obj winternal.obj wplug.obj wcopy.obj wequal.obj \
-	wlmalloc.obj wout.obj wtimer.obj wurgent.obj wsig.obj whector.obj wcecil.obj \
-	wfile.obj wdir.obj wmisc.obj werror.obj wumain.obj wmemory.obj wargv.obj wboolstr.obj \
-	wsearch.obj wmain.obj debug.obj interp.obj woption.obj update.obj wbench.obj \
-	wrun_idr.obj wcompress.obj wconsole.obj wpath_name.obj wobject_id.obj \
-	weif_threads.obj wgen_conf.obj weif_type_id.obj wrout_obj.obj weif_project.obj \
-	idrs.obj wposix_threads.obj network.obj ipc.obj wmemory_analyzer.obj woffset.obj 
+RCECIL = MTdebug.obj MTidrs.obj MTinterp.obj mtipc.obj MTnetwork.obj MTupdate.obj \
+	MTwargv.obj MTwbench.obj MTwboolstr.obj MTwcecil.obj MTwcompress.obj \
+	MTwconsole.obj MTwcopy.obj MTwdir.obj MTweif_project.obj MTweif_threads.obj \
+	MTweif_type_id.obj MTwequal.obj MTwerror.obj MTweveqs.obj MTwexcept.obj  \
+	MTwfile.obj MTwgarcol.obj MTwgen_conf.obj MTwhash.obj MTwhashin.obj MTwhector.obj \
+	MTwinternal.obj MTwlmalloc.obj MTwlocal.obj MTwmain.obj MTwmalloc.obj \
+	MTwmemory.obj MTwmemory_analyzer.obj MTwmisc.obj MTwnotify_token.obj \
+	MTwobject_id.obj MTwoffset.obj MTwoption.obj MTwout.obj MTwpath_name.obj \
+	MTwplug.obj MTwposix_threads.obj MTwprivate_queue.obj MTwprocessor.obj \
+	MTwprocessor_registry.obj MTwqueue_cache.obj MTwreq_grp.obj MTwretrieve.obj \
+	MTwrout_obj.obj MTwrun_idr.obj MTwscoop.obj MTwscoop_gc.obj MTwsearch.obj \
+	MTwsig.obj MTwstore.obj MTwtimer.obj MTwtools.obj MTwtraverse.obj MTwumain.obj \
+	MTwurgent.obj 
 
 
 #STATIC_CECIL PART

@@ -17,7 +17,7 @@ create
 	make
 
 feature
-	make
+	make(a_x:INTEGER; a_y:INTEGER)
 			--Constructeur de `Current'
 		local
 			l_image:IMG_IMAGE_FILE
@@ -33,6 +33,10 @@ feature
 			else
 				make_surface(1,1)
 			end
+
+			set_x (a_x)
+			set_y(a_y)
+			create arrow.make
 
 			create surface_left.make_from_image (l_image)
 
@@ -54,13 +58,12 @@ feature
 
 			is_dead := false
 
-			create sound.make("sound.aif")
+			create sound.make("wilhelm.wav")
 			if sound.is_openable then
 				sound.open
 				if sound.is_open then
 					audio_library.sources_add
 					source:=audio_library.last_source_added	-- The first source will be use for playing the music
-					source.queue_sound(sound)
 				else
 					print("Cannot open sound files.")
 					die(1)
@@ -70,6 +73,9 @@ feature
 				die(1)
 			end
 		end
+
+	arrow:ARROW
+			--La flèche du joueur
 
 	go_right
 			--Fait en sorte que le personnage se dirige vers la droite
@@ -129,6 +135,15 @@ feature
 	set_is_dead(a_is_dead:BOOLEAN)
 		do
 			is_dead := a_is_dead
+		end
+
+	score:INTEGER assign set_score
+			--Le nombre de points que le personnage a ammasé en tuant des balles
+
+	set_score(a_score:INTEGER)
+			--Assigne un score au joueur
+		do
+			score:=a_score
 		end
 
 	animation_timer:INTEGER

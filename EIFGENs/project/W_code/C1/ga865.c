@@ -1,5 +1,5 @@
 /*
- * Code for class GAME_EFFECTS_EXTERNAL
+ * Code for class GAME_JOYSTICK_HAT_STATE
  */
 
 #include "eif_eiffel.h"
@@ -10,14 +10,23 @@
 extern "C" {
 #endif
 
-extern EIF_TYPED_VALUE F865_7101(EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE, EIF_TYPED_VALUE);
+extern void F865_7016(EIF_REFERENCE, EIF_TYPED_VALUE);
+extern EIF_TYPED_VALUE F865_7017(EIF_REFERENCE);
+extern EIF_TYPED_VALUE F865_7018(EIF_REFERENCE);
+extern EIF_TYPED_VALUE F865_7019(EIF_REFERENCE);
+extern EIF_TYPED_VALUE F865_7020(EIF_REFERENCE);
+extern EIF_TYPED_VALUE F865_7021(EIF_REFERENCE);
+extern EIF_TYPED_VALUE F865_7022(EIF_REFERENCE);
+extern EIF_TYPED_VALUE F865_7023(EIF_REFERENCE);
+extern EIF_TYPED_VALUE F865_7024(EIF_REFERENCE);
+extern EIF_TYPED_VALUE F865_7025(EIF_REFERENCE);
+extern EIF_TYPED_VALUE F865_7026(EIF_REFERENCE);
 extern void EIF_Minit865(void);
 
 #ifdef __cplusplus
 }
 #endif
 
-#include <SDL2_rotozoom.h>
 
 #ifdef __cplusplus
 extern "C" {
@@ -33,62 +42,443 @@ extern "C" {
 extern "C" {
 #endif
 
-/* {GAME_EFFECTS_EXTERNAL}.rotozoomsurfacexy */
-EIF_TYPED_VALUE F865_7101 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x, EIF_TYPED_VALUE arg2x, EIF_TYPED_VALUE arg3x, EIF_TYPED_VALUE arg4x, EIF_TYPED_VALUE arg5x)
+/* {GAME_JOYSTICK_HAT_STATE}.make */
+void F865_7016 (EIF_REFERENCE Current, EIF_TYPED_VALUE arg1x)
 {
 	GTCX
-	char *l_feature_name = "rotozoomsurfacexy";
+	char *l_feature_name = "make";
 	RTEX;
-#define arg1 arg1x.it_p
-#define arg2 arg2x.it_r8
-#define arg3 arg3x.it_r8
-#define arg4 arg4x.it_r8
-#define arg5 arg5x.it_b
-	EIF_POINTER Result = ((EIF_POINTER) 0);
+#define arg1 arg1x.it_n1
+	RTSN;
+	RTDA;
+	RTLD;
+	
+	if ((arg1x.type & SK_HEAD) == SK_REF) arg1x.it_n1 = * (EIF_NATURAL_8 *) arg1x.it_r;
+	
+	RTLI(1);
+	RTLR(0,Current);
+	RTLIU(1);
+	RTLU (SK_VOID, NULL);
+	RTLU(SK_UINT8,&arg1);
+	RTLU (SK_REF, &Current);
+	
+	RTEAA(l_feature_name, 864, Current, 0, 1, 12698);
+	RTSA(Dtype(Current));
+	RTSC;
+	RTME(Dtype(Current), 0);
+	RTGC;
+	RTDBGEAA(864, Current, 12698);
+	RTIV(Current, RTAL);
+	RTHOOK(1);
+	RTDBGAA(Current, Dtype(Current), 4953, 0x30000000, 1); /* state */
+	*(EIF_NATURAL_8 *)(Current + RTWA(4953, Dtype(Current))) = (EIF_NATURAL_8) arg1;
+	RTVI(Current, RTAL);
+	RTRS;
+	RTHOOK(2);
+	RTDBGLE;
+	RTMD(0);
+	RTLE;
+	RTLO(3);
+	RTEE;
+#undef arg1
+}
+
+/* {GAME_JOYSTICK_HAT_STATE}.is_centered */
+EIF_TYPED_VALUE F865_7017 (EIF_REFERENCE Current)
+{
+	GTCX
+	char *l_feature_name = "is_centered";
+	RTEX;
+	EIF_NATURAL_8 tu1_1;
+	EIF_NATURAL_8 tu1_2;
+	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
 	
 	RTSN;
 	RTDA;
 	RTLD;
 	
-	if ((arg5x.type & SK_HEAD) == SK_REF) arg5x.it_b = * (EIF_BOOLEAN *) arg5x.it_r;
-	if ((arg4x.type & SK_HEAD) == SK_REF) arg4x.it_r8 = * (EIF_REAL_64 *) arg4x.it_r;
-	if ((arg3x.type & SK_HEAD) == SK_REF) arg3x.it_r8 = * (EIF_REAL_64 *) arg3x.it_r;
-	if ((arg2x.type & SK_HEAD) == SK_REF) arg2x.it_r8 = * (EIF_REAL_64 *) arg2x.it_r;
-	if ((arg1x.type & SK_HEAD) == SK_REF) arg1x.it_p = * (EIF_POINTER *) arg1x.it_r;
+	RTLI(1);
+	RTLR(0,Current);
+	RTLIU(1);
+	RTLU (SK_BOOL, &Result);
+	RTLU (SK_REF, &Current);
+	
+	RTEAA(l_feature_name, 864, Current, 0, 0, 12699);
+	RTSA(Dtype(Current));
+	RTSC;
+	RTME(Dtype(Current), 0);
+	RTGC;
+	RTDBGEAA(864, Current, 12699);
+	RTIV(Current, RTAL);
+	RTHOOK(1);
+	RTDBGAL(Current, 0, 0x04000000, 1,0); /* Result */
+	tu1_1 = *(EIF_NATURAL_8 *)(Current + RTWA(4953, Dtype(Current)));
+	tu1_2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(5894, 869))(Current)).it_n1);
+	Result = (EIF_BOOLEAN) (EIF_BOOLEAN)(tu1_1 == tu1_2);
+	RTVI(Current, RTAL);
+	RTRS;
+	RTHOOK(2);
+	RTDBGLE;
+	RTMD(0);
+	RTLE;
+	RTLO(2);
+	RTEE;
+	{ EIF_TYPED_VALUE r; r.type = SK_BOOL; r.it_b = Result; return r; }
+}
+
+/* {GAME_JOYSTICK_HAT_STATE}.is_up */
+EIF_TYPED_VALUE F865_7018 (EIF_REFERENCE Current)
+{
+	GTCX
+	char *l_feature_name = "is_up";
+	RTEX;
+	EIF_NATURAL_8 tu1_1;
+	EIF_NATURAL_8 tu1_2;
+	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
+	
+	RTSN;
+	RTDA;
+	RTLD;
 	
 	RTLI(1);
 	RTLR(0,Current);
 	RTLIU(1);
-	RTLU (SK_POINTER, &Result);
-	RTLU(SK_POINTER,&arg1);
-	RTLU(SK_REAL64,&arg2);
-	RTLU(SK_REAL64,&arg3);
-	RTLU(SK_REAL64,&arg4);
-	RTLU(SK_BOOL,&arg5);
+	RTLU (SK_BOOL, &Result);
 	RTLU (SK_REF, &Current);
 	
-	RTEAA(l_feature_name, 864, Current, 0, 5, 12782);
+	RTEAA(l_feature_name, 864, Current, 0, 0, 12700);
 	RTSA(Dtype(Current));
 	RTSC;
-	RTME(Dtype(Current), 1);
-	RTDBGEAA(864, Current, 12782);
-	RTIV(Current, RTAL);Result = (EIF_POINTER) rotozoomSurfaceXY((SDL_Surface *) arg1, (double) arg2, (double) arg3, (double) arg4, (int) arg5);
-	
+	RTME(Dtype(Current), 0);
+	RTGC;
+	RTDBGEAA(864, Current, 12700);
+	RTIV(Current, RTAL);
+	RTHOOK(1);
+	RTDBGAL(Current, 0, 0x04000000, 1,0); /* Result */
+	tu1_1 = *(EIF_NATURAL_8 *)(Current + RTWA(4953, Dtype(Current)));
+	tu1_2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(5895, 869))(Current)).it_n1);
+	Result = (EIF_BOOLEAN) (EIF_BOOLEAN)(tu1_1 == tu1_2);
 	RTVI(Current, RTAL);
 	RTRS;
-	RTHOOK(1);
+	RTHOOK(2);
 	RTDBGLE;
-	RTMD(1);
+	RTMD(0);
 	RTLE;
-	RTLO(7);
+	RTLO(2);
 	RTEE;
-	{ EIF_TYPED_VALUE r; r.type = SK_POINTER; r.it_p = Result; return r; }
-#undef arg5
-#undef arg4
-#undef arg3
-#undef arg2
-#undef arg1
+	{ EIF_TYPED_VALUE r; r.type = SK_BOOL; r.it_b = Result; return r; }
 }
+
+/* {GAME_JOYSTICK_HAT_STATE}.is_right */
+EIF_TYPED_VALUE F865_7019 (EIF_REFERENCE Current)
+{
+	GTCX
+	char *l_feature_name = "is_right";
+	RTEX;
+	EIF_NATURAL_8 tu1_1;
+	EIF_NATURAL_8 tu1_2;
+	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
+	
+	RTSN;
+	RTDA;
+	RTLD;
+	
+	RTLI(1);
+	RTLR(0,Current);
+	RTLIU(1);
+	RTLU (SK_BOOL, &Result);
+	RTLU (SK_REF, &Current);
+	
+	RTEAA(l_feature_name, 864, Current, 0, 0, 12701);
+	RTSA(Dtype(Current));
+	RTSC;
+	RTME(Dtype(Current), 0);
+	RTGC;
+	RTDBGEAA(864, Current, 12701);
+	RTIV(Current, RTAL);
+	RTHOOK(1);
+	RTDBGAL(Current, 0, 0x04000000, 1,0); /* Result */
+	tu1_1 = *(EIF_NATURAL_8 *)(Current + RTWA(4953, Dtype(Current)));
+	tu1_2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(5896, 869))(Current)).it_n1);
+	Result = (EIF_BOOLEAN) (EIF_BOOLEAN)(tu1_1 == tu1_2);
+	RTVI(Current, RTAL);
+	RTRS;
+	RTHOOK(2);
+	RTDBGLE;
+	RTMD(0);
+	RTLE;
+	RTLO(2);
+	RTEE;
+	{ EIF_TYPED_VALUE r; r.type = SK_BOOL; r.it_b = Result; return r; }
+}
+
+/* {GAME_JOYSTICK_HAT_STATE}.is_down */
+EIF_TYPED_VALUE F865_7020 (EIF_REFERENCE Current)
+{
+	GTCX
+	char *l_feature_name = "is_down";
+	RTEX;
+	EIF_NATURAL_8 tu1_1;
+	EIF_NATURAL_8 tu1_2;
+	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
+	
+	RTSN;
+	RTDA;
+	RTLD;
+	
+	RTLI(1);
+	RTLR(0,Current);
+	RTLIU(1);
+	RTLU (SK_BOOL, &Result);
+	RTLU (SK_REF, &Current);
+	
+	RTEAA(l_feature_name, 864, Current, 0, 0, 12702);
+	RTSA(Dtype(Current));
+	RTSC;
+	RTME(Dtype(Current), 0);
+	RTGC;
+	RTDBGEAA(864, Current, 12702);
+	RTIV(Current, RTAL);
+	RTHOOK(1);
+	RTDBGAL(Current, 0, 0x04000000, 1,0); /* Result */
+	tu1_1 = *(EIF_NATURAL_8 *)(Current + RTWA(4953, Dtype(Current)));
+	tu1_2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(5897, 869))(Current)).it_n1);
+	Result = (EIF_BOOLEAN) (EIF_BOOLEAN)(tu1_1 == tu1_2);
+	RTVI(Current, RTAL);
+	RTRS;
+	RTHOOK(2);
+	RTDBGLE;
+	RTMD(0);
+	RTLE;
+	RTLO(2);
+	RTEE;
+	{ EIF_TYPED_VALUE r; r.type = SK_BOOL; r.it_b = Result; return r; }
+}
+
+/* {GAME_JOYSTICK_HAT_STATE}.is_left */
+EIF_TYPED_VALUE F865_7021 (EIF_REFERENCE Current)
+{
+	GTCX
+	char *l_feature_name = "is_left";
+	RTEX;
+	EIF_NATURAL_8 tu1_1;
+	EIF_NATURAL_8 tu1_2;
+	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
+	
+	RTSN;
+	RTDA;
+	RTLD;
+	
+	RTLI(1);
+	RTLR(0,Current);
+	RTLIU(1);
+	RTLU (SK_BOOL, &Result);
+	RTLU (SK_REF, &Current);
+	
+	RTEAA(l_feature_name, 864, Current, 0, 0, 12703);
+	RTSA(Dtype(Current));
+	RTSC;
+	RTME(Dtype(Current), 0);
+	RTGC;
+	RTDBGEAA(864, Current, 12703);
+	RTIV(Current, RTAL);
+	RTHOOK(1);
+	RTDBGAL(Current, 0, 0x04000000, 1,0); /* Result */
+	tu1_1 = *(EIF_NATURAL_8 *)(Current + RTWA(4953, Dtype(Current)));
+	tu1_2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(5898, 869))(Current)).it_n1);
+	Result = (EIF_BOOLEAN) (EIF_BOOLEAN)(tu1_1 == tu1_2);
+	RTVI(Current, RTAL);
+	RTRS;
+	RTHOOK(2);
+	RTDBGLE;
+	RTMD(0);
+	RTLE;
+	RTLO(2);
+	RTEE;
+	{ EIF_TYPED_VALUE r; r.type = SK_BOOL; r.it_b = Result; return r; }
+}
+
+/* {GAME_JOYSTICK_HAT_STATE}.is_right_up */
+EIF_TYPED_VALUE F865_7022 (EIF_REFERENCE Current)
+{
+	GTCX
+	char *l_feature_name = "is_right_up";
+	RTEX;
+	EIF_NATURAL_8 tu1_1;
+	EIF_NATURAL_8 tu1_2;
+	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
+	
+	RTSN;
+	RTDA;
+	RTLD;
+	
+	RTLI(1);
+	RTLR(0,Current);
+	RTLIU(1);
+	RTLU (SK_BOOL, &Result);
+	RTLU (SK_REF, &Current);
+	
+	RTEAA(l_feature_name, 864, Current, 0, 0, 12704);
+	RTSA(Dtype(Current));
+	RTSC;
+	RTME(Dtype(Current), 0);
+	RTGC;
+	RTDBGEAA(864, Current, 12704);
+	RTIV(Current, RTAL);
+	RTHOOK(1);
+	RTDBGAL(Current, 0, 0x04000000, 1,0); /* Result */
+	tu1_1 = *(EIF_NATURAL_8 *)(Current + RTWA(4953, Dtype(Current)));
+	tu1_2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(5899, 869))(Current)).it_n1);
+	Result = (EIF_BOOLEAN) (EIF_BOOLEAN)(tu1_1 == tu1_2);
+	RTVI(Current, RTAL);
+	RTRS;
+	RTHOOK(2);
+	RTDBGLE;
+	RTMD(0);
+	RTLE;
+	RTLO(2);
+	RTEE;
+	{ EIF_TYPED_VALUE r; r.type = SK_BOOL; r.it_b = Result; return r; }
+}
+
+/* {GAME_JOYSTICK_HAT_STATE}.is_right_down */
+EIF_TYPED_VALUE F865_7023 (EIF_REFERENCE Current)
+{
+	GTCX
+	char *l_feature_name = "is_right_down";
+	RTEX;
+	EIF_NATURAL_8 tu1_1;
+	EIF_NATURAL_8 tu1_2;
+	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
+	
+	RTSN;
+	RTDA;
+	RTLD;
+	
+	RTLI(1);
+	RTLR(0,Current);
+	RTLIU(1);
+	RTLU (SK_BOOL, &Result);
+	RTLU (SK_REF, &Current);
+	
+	RTEAA(l_feature_name, 864, Current, 0, 0, 12705);
+	RTSA(Dtype(Current));
+	RTSC;
+	RTME(Dtype(Current), 0);
+	RTGC;
+	RTDBGEAA(864, Current, 12705);
+	RTIV(Current, RTAL);
+	RTHOOK(1);
+	RTDBGAL(Current, 0, 0x04000000, 1,0); /* Result */
+	tu1_1 = *(EIF_NATURAL_8 *)(Current + RTWA(4953, Dtype(Current)));
+	tu1_2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(5900, 869))(Current)).it_n1);
+	Result = (EIF_BOOLEAN) (EIF_BOOLEAN)(tu1_1 == tu1_2);
+	RTVI(Current, RTAL);
+	RTRS;
+	RTHOOK(2);
+	RTDBGLE;
+	RTMD(0);
+	RTLE;
+	RTLO(2);
+	RTEE;
+	{ EIF_TYPED_VALUE r; r.type = SK_BOOL; r.it_b = Result; return r; }
+}
+
+/* {GAME_JOYSTICK_HAT_STATE}.is_left_up */
+EIF_TYPED_VALUE F865_7024 (EIF_REFERENCE Current)
+{
+	GTCX
+	char *l_feature_name = "is_left_up";
+	RTEX;
+	EIF_NATURAL_8 tu1_1;
+	EIF_NATURAL_8 tu1_2;
+	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
+	
+	RTSN;
+	RTDA;
+	RTLD;
+	
+	RTLI(1);
+	RTLR(0,Current);
+	RTLIU(1);
+	RTLU (SK_BOOL, &Result);
+	RTLU (SK_REF, &Current);
+	
+	RTEAA(l_feature_name, 864, Current, 0, 0, 12706);
+	RTSA(Dtype(Current));
+	RTSC;
+	RTME(Dtype(Current), 0);
+	RTGC;
+	RTDBGEAA(864, Current, 12706);
+	RTIV(Current, RTAL);
+	RTHOOK(1);
+	RTDBGAL(Current, 0, 0x04000000, 1,0); /* Result */
+	tu1_1 = *(EIF_NATURAL_8 *)(Current + RTWA(4953, Dtype(Current)));
+	tu1_2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(5901, 869))(Current)).it_n1);
+	Result = (EIF_BOOLEAN) (EIF_BOOLEAN)(tu1_1 == tu1_2);
+	RTVI(Current, RTAL);
+	RTRS;
+	RTHOOK(2);
+	RTDBGLE;
+	RTMD(0);
+	RTLE;
+	RTLO(2);
+	RTEE;
+	{ EIF_TYPED_VALUE r; r.type = SK_BOOL; r.it_b = Result; return r; }
+}
+
+/* {GAME_JOYSTICK_HAT_STATE}.is_left_down */
+EIF_TYPED_VALUE F865_7025 (EIF_REFERENCE Current)
+{
+	GTCX
+	char *l_feature_name = "is_left_down";
+	RTEX;
+	EIF_NATURAL_8 tu1_1;
+	EIF_NATURAL_8 tu1_2;
+	EIF_BOOLEAN Result = ((EIF_BOOLEAN) 0);
+	
+	RTSN;
+	RTDA;
+	RTLD;
+	
+	RTLI(1);
+	RTLR(0,Current);
+	RTLIU(1);
+	RTLU (SK_BOOL, &Result);
+	RTLU (SK_REF, &Current);
+	
+	RTEAA(l_feature_name, 864, Current, 0, 0, 12707);
+	RTSA(Dtype(Current));
+	RTSC;
+	RTME(Dtype(Current), 0);
+	RTGC;
+	RTDBGEAA(864, Current, 12707);
+	RTIV(Current, RTAL);
+	RTHOOK(1);
+	RTDBGAL(Current, 0, 0x04000000, 1,0); /* Result */
+	tu1_1 = *(EIF_NATURAL_8 *)(Current + RTWA(4953, Dtype(Current)));
+	tu1_2 = (((FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE)) RTWF(5902, 869))(Current)).it_n1);
+	Result = (EIF_BOOLEAN) (EIF_BOOLEAN)(tu1_1 == tu1_2);
+	RTVI(Current, RTAL);
+	RTRS;
+	RTHOOK(2);
+	RTDBGLE;
+	RTMD(0);
+	RTLE;
+	RTLO(2);
+	RTEE;
+	{ EIF_TYPED_VALUE r; r.type = SK_BOOL; r.it_b = Result; return r; }
+}
+
+/* {GAME_JOYSTICK_HAT_STATE}.state */
+EIF_TYPED_VALUE F865_7026 (EIF_REFERENCE Current)
+{
+	EIF_TYPED_VALUE r;
+	r.type = SK_UINT8;
+	r.it_n1 = *(EIF_NATURAL_8 *)(Current + RTWA(4953,Dtype(Current)));
+	return r;
+}
+
 
 void EIF_Minit865 (void)
 {
