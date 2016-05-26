@@ -7,8 +7,7 @@ class
 	BALL
 
 inherit
-	DRAWABLE
-	HEARABLE
+	SPRITE
 		redefine
 			play_sound
 		end
@@ -22,6 +21,8 @@ feature {NONE} -- Initialization
 			--Constructeur de `Current'
 			--Reçoit en arguement la position "x" et "y", la grosseur de la balle (1 à 3)
 			--ainsi que si la balle se dirige vers la droite ou non
+		require
+			Size_is_valid:a_size > 0 and a_size < 4
 		local
 			l_image:IMG_IMAGE_FILE
 			l_path:STRING
@@ -75,6 +76,9 @@ feature {NONE} -- Initialization
 				print("Sound files not valid.")
 				die(1)
 			end
+		ensure
+			Bounce_speed_is_valide:bounce_speed = 15 or bounce_speed = 19 or bounce_speed = 24
+			Score_is_valide: score = 10 or score = 25 or score = 50
 		end
 
 feature
@@ -112,16 +116,12 @@ feature
 					go_right:=True
 				end
 			end
-	end
-
-	size:INTEGER assign set_size
-			--Grosseur de la balle (de 1 à 3)
-
-	set_size(a_size:INTEGER)
-			--Assigne la valeur de "a_size" à size
-		do
-			size:=a_size
+		ensure
+			Move_timer_is_valid:move_timer > 0 and move_timer < 4
 		end
+
+	size:INTEGER
+			--Grosseur de la balle (de 1 à 3)
 
 	speed:INTEGER assign set_speed
 			--Représente la vitesse de la balle
@@ -129,7 +129,7 @@ feature
 
 	bounce_speed:INTEGER
 			--Représente la vitesse de la balle après avoir toucher le sol
-			--N'égale pas tout le temps "-speed" car une balle détruite près du sol
+			--N'égale pas tout le temps l'opposé de la vitesse descendante car une balle détruite près du sol
 			--resterait près du sol et serait impossible à détuire
 
 	go_right:BOOLEAN
@@ -154,6 +154,8 @@ feature
 			--Les valeurs possibles sont 1 pour le joueur du jeu ou 2 pour `other_player_character'
 		do
 			player_who_killed:= a_player
+		ensure
+			Set_player_who_kill_normal: player_who_killed = a_player
 		end
 
 	is_dead:BOOLEAN assign set_is_dead
@@ -164,6 +166,8 @@ feature
 			--La nouvelle valeur est envoyée en argument
 		do
 			speed:=a_speed
+		ensure
+			Set_speed_normal:speed = a_speed
 		end
 
 	set_is_dead(a_is_dead:BOOLEAN)
@@ -171,6 +175,8 @@ feature
 			--La nouvelle valeur est envoyée en argument
 		do
 			is_dead:= a_is_dead
+		ensure
+			Set_is_dead: is_dead = a_is_dead
 		end
 
 
@@ -185,4 +191,9 @@ feature
 			source.play
 		end
 
+	invariant
+		Size_is_valid:size > 0 and size < 4
+		Bounce_speed_is_valide:bounce_speed = 15 or bounce_speed = 19 or bounce_speed = 24
+		Score_is_valide: score = 10 or score = 25 or score = 50
+		Y_is_valide:y<462
 end

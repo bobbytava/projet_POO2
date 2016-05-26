@@ -15,7 +15,7 @@ feature
 	play_sound
 			--Fonction abstraite
 			--Fait l'action de jouer la `source'
-	do
+	deferred
 	end
 
 	source:AUDIO_SOURCE

@@ -7,8 +7,7 @@ class
 	BOB
 
 inherit
-	DRAWABLE
-	HEARABLE
+	SPRITE
 		redefine
 			play_sound
 		end
@@ -82,24 +81,32 @@ feature --Initialization
 			--Fait en sorte que le personnage se dirige vers la droite
 		do
 			going_right:= true
+		ensure
+			Going_right_normal: going_right = true
 		end
 
 	go_left
 			--Fait en sorte que le personnage se dirige vrs la gauche
 		do
 			going_left:= true
+		ensure
+			Going_left_normal: going_left = true
 		end
 
 	stop_right
 			--Fait en sorte que le personnage ne se dirige plus vers la droite
 		do
 			going_right:= false
+		ensure
+			Going_right_normal: going_right = false
 		end
 
 	stop_left
 			--Fait en sorte que le personnage ne se dirige plus vers la gauche
 		do
 			going_left := false
+		ensure
+			Going_left_normal: going_left = false
 		end
 
 	going_right:BOOLEAN
@@ -142,6 +149,8 @@ feature --Initialization
 			--Assigne la valeur de `a_is_dead' à `is_dead'
 		do
 			is_dead := a_is_dead
+		ensure
+			Set_his_dead_normal:is_dead = a_is_dead
 		end
 
 	score:INTEGER assign set_score
@@ -151,6 +160,8 @@ feature --Initialization
 			--Assigne un score au joueur
 		do
 			score:=a_score
+		ensure
+			Set_score_normal:score = a_score
 		end
 
 	animation_timer:INTEGER
@@ -184,17 +195,20 @@ feature --Initialization
 				end
 
 				if animation_timer < 8 then
-						sub_x := animation.at (3)
-						sub_y := animation.at (4)
-					else
-						sub_x := animation.at (5)
-						sub_y := animation.at (6)
-					end
+					sub_x := animation.at (3)
+					sub_y := animation.at (4)
+				else
+					sub_x := animation.at (5)
+					sub_y := animation.at (6)
+				end
 				animation_timer := animation_timer+1
 				if animation_timer > 16 then
 					animation_timer := 1
 				end
 			end
+		ensure
+			Animation_timer_valid:animation_timer > 0 and animation_timer  < 17
+
 		end
 
 	play_sound
@@ -206,4 +220,9 @@ feature --Initialization
 			source.queue_sound (sound)
 			source.play
 		end
+
+	invariant
+		y_is_valid:y = 387
+		Animation_timer_valid:animation_timer > 0 and animation_timer  < 17
+		Score_is_valid: score >= 0
 end

@@ -7,8 +7,7 @@ class
 	ARROW
 
 inherit
-	DRAWABLE
-	HEARABLE
+	SPRITE
 		redefine
 			play_sound
 		end
@@ -29,7 +28,7 @@ feature
 				if l_image.is_open then
 					make_from_image (l_image)
 					is_fired:=false
-					y:= 387
+					set_y (387)
 				else
 					make_surface(1,1)
 				end
@@ -58,8 +57,11 @@ feature
 			--Joue aussi un son
 		do
 			is_fired:=true
-			x:= a_x
+			set_x (a_x)
 			play_sound
+		ensure
+			Fire_is_fired_normal: is_fired = true
+			Fire_x_arrow_fire_works: x = a_x
 		end
 
 	reset
@@ -67,6 +69,9 @@ feature
 		do
 			is_fired:=false
 			current.set_y (387)
+		ensure
+			Reset_is_fired_normal: is_fired = false
+			Reset_y_arrow_fire_valide: y = 387
 		end
 
 	is_fired:BOOLEAN
@@ -81,4 +86,19 @@ feature
 			source.queue_sound (sound)
 			source.play
 		end
+
+	move
+		do
+			set_y(y - 5)
+			if y <= 0 then
+				reset
+			end
+		ensure
+			Arrow_got_higher: y = old y -5
+			Arrow_not_at_roof: y > 0
+		end
+
+	invariant
+		y_is_valid:y<388 and y>0
+
 end

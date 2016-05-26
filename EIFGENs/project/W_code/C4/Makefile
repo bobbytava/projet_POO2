@@ -1,4 +1,4 @@
-INCLUDE_PATH =  -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\OpenAL\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\cpf\spec\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\audio_sound_file\spec\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\libsndfile\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\game_core\spec\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\SDL2\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\SDL2_gfx\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\SDL2_image\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\SDL2_ttf\include"
+INCLUDE_PATH =  -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\OpenAL\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\cpf\spec\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\audio_sound_file\spec\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\libsndfile\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\game_core\spec\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\SDL2\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\SDL2_gfx\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\SDL2_image\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\SDL2_ttf\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\library\process\classic\windows\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\library\wel\spec\windows\include"
 SHELL = \bin\sh
 CC = cl
 CPP = cl
@@ -41,14 +41,15 @@ SYSTEM_IN_DYNAMIC_LIB = project.dll
 
 OBJECTS = big_file_C4_c.obj 
 
-OLDOBJECTS =  ty990.obj ty990d.obj ne985.obj ne985d.obj te970.obj te970d.obj im967.obj im967d.obj \
-	ga981.obj ga981d.obj te973.obj te973d.obj ne984.obj ne984d.obj st983.obj st983d.obj \
-	ga968.obj ga968d.obj ga966.obj ga966d.obj ga978.obj ga978d.obj ga977.obj ga977d.obj \
-	ch989.obj ch989d.obj ga980.obj ga980d.obj ga962.obj ga962d.obj ga972.obj ga972d.obj \
-	ga976.obj ga976d.obj ga961.obj ga961d.obj au960.obj au960d.obj ad964.obj ad964d.obj \
-	so982.obj so982d.obj au959.obj au959d.obj te971.obj te971d.obj ga969.obj ga969d.obj \
-	ga974.obj ga974d.obj ga975.obj ga975d.obj th988.obj th988d.obj ad965.obj ad965d.obj \
-	ex963.obj ex963d.obj cp987.obj cp987d.obj ga979.obj ga979d.obj ga986.obj ga986d.obj 
+OLDOBJECTS =  eq991.obj eq991d.obj au974.obj au974d.obj te973.obj te973d.obj in971.obj in971d.obj \
+	ga966.obj ga966d.obj im959.obj im959d.obj so970.obj so970d.obj da979.obj da979d.obj \
+	ga984.obj ga984d.obj ga969.obj ga969d.obj ga960.obj ga960d.obj ga967.obj ga967d.obj \
+	ga965.obj ga965d.obj ne972.obj ne972d.obj ti978.obj ti978d.obj da977.obj da977d.obj \
+	ab980.obj ab980d.obj du976.obj du976d.obj he975.obj he975d.obj ga983.obj ga983d.obj \
+	ga982.obj ga982d.obj ga964.obj ga964d.obj ga963.obj ga963d.obj ga962.obj ga962d.obj \
+	ga961.obj ga961d.obj au968.obj au968d.obj ga981.obj ga981d.obj pr990.obj pr990d.obj \
+	pr989.obj pr989d.obj pr988.obj pr988d.obj pr987.obj pr987d.obj we986.obj we986d.obj \
+	we985.obj we985d.obj 
 
 all::  Cobj4.lib
 

@@ -11,7 +11,7 @@ case "$O" in
 esac
 echo "Compiling C code in C3"
 $spitshell >Makefile <<!GROK!THIS!
-INCLUDE_PATH =  -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\OpenAL\include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\cpf\spec\include" -I"\$(EIFFEL_LIBRARY)/contrib/library/game2/audio_sound_file/spec/include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\libsndfile\include" -I"\$(EIFFEL_LIBRARY)/contrib/library/game2/game_core/spec/include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\SDL2\include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\SDL2_gfx\include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\SDL2_image\include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\SDL2_ttf\include"
+INCLUDE_PATH =  -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\OpenAL\include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\cpf\spec\include" -I"\$(EIFFEL_LIBRARY)/contrib/library/game2/audio_sound_file/spec/include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\libsndfile\include" -I"\$(EIFFEL_LIBRARY)/contrib/library/game2/game_core/spec/include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\SDL2\include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\SDL2_gfx\include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\SDL2_image\include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\SDL2_ttf\include" -I"\$(ISE_LIBRARY)\library\process\classic\windows\include" -I"\$(ISE_LIBRARY)\library\wel\spec\windows\include"
 SHELL = /bin/sh
 CC = $cc
 CPP = $cpp
@@ -55,15 +55,15 @@ $spitshell >>Makefile <<'!NO!SUBS!'
 
 OBJECTS = big_file_C3_c.obj 
 
-OLDOBJECTS =  ap939.o ap939d.o en940.o en940d.o ga933.o ga933d.o au927.o au927d.o \
-	te926.o te926d.o ar949.o ar949d.o ba948.o ba948d.o te944.o te944d.o \
-	ga941.o ga941d.o ba947.o ba947d.o ga937.o ga937d.o ga938.o ga938d.o \
-	bo946.o bo946d.o dr945.o dr945d.o he928.o he928d.o te943.o te943d.o \
-	ga935.o ga935d.o ga953.o ga953d.o ga932.o ga932d.o ga936.o ga936d.o \
-	ga942.o ga942d.o ga934.o ga934d.o ga952.o ga952d.o ga951.o ga951d.o \
-	ga958.o ga958d.o ga931.o ga931d.o ga930.o ga930d.o ga957.o ga957d.o \
-	ga956.o ga956d.o mu955.o mu955d.o ga929.o ga929d.o ga950.o ga950d.o \
-	ga954.o ga954d.o 
+OLDOBJECTS =  in938.o in938d.o eq944.o eq944d.o in941.o in941d.o it945.o it945d.o \
+	er939.o er939d.o ga956.o ga956d.o au948.o au948d.o in936.o in936d.o \
+	in937.o in937d.o in943.o in943d.o in942.o in942d.o in935.o in935d.o \
+	it934.o it934d.o it940.o it940d.o im958.o im958d.o ga955.o ga955d.o \
+	ga951.o ga951d.o ga957.o ga957d.o au950.o au950d.o au947.o au947d.o \
+	th931.o th931d.o da928.o da928d.o da927.o da927d.o ga946.o ga946d.o \
+	ga953.o ga953d.o au949.o au949d.o th930.o th930d.o da926.o da926d.o \
+	ga933.o ga933d.o ga954.o ga954d.o ga952.o ga952d.o th929.o th929d.o \
+	pr932.o pr932d.o 
 
 all: Cobj3.o
 

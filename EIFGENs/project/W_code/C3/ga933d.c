@@ -1,5 +1,5 @@
 /*
- * Class GAME_LIBRARY_SHARED
+ * Class GAME_RENDER_TARGET
  */
 
 #include "eif_macros.h"
@@ -22,7 +22,6 @@ static const EIF_TYPE_INDEX egt_9_933 [] = {0xFF01,220,0xFFFF};
 static const EIF_TYPE_INDEX egt_10_933 [] = {0xFF01,220,0xFFFF};
 static const EIF_TYPE_INDEX egt_11_933 [] = {0xFF01,15,0xFFFF};
 static const EIF_TYPE_INDEX egt_12_933 [] = {0xFF01,932,0xFFFF};
-static const EIF_TYPE_INDEX egt_13_933 [] = {0xFF01,918,0xFFFF};
 
 
 static const struct desc_info desc_933[] = {
@@ -58,14 +57,11 @@ static const struct desc_info desc_933[] = {
 	{EIF_NON_GENERIC(0x0749 /*932*/), 28, 0xFFFFFFFF},
 	{EIF_NON_GENERIC(0x01AF /*215*/), 29, 0xFFFFFFFF},
 	{EIF_GENERIC(egt_12_933), 30, 0xFFFFFFFF},
-	{EIF_GENERIC(egt_13_933), 15546, 0xFFFFFFFF},
-	{EIF_NON_GENERIC(0x072D /*918*/), 15547, 0},
 };
 void Init933(void)
 {
 	IDSC(desc_933, 0, 932);
 	IDSC(desc_933 + 1, 1, 932);
-	IDSC(desc_933 + 32, 344, 932);
 }
 
 

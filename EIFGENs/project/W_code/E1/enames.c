@@ -4963,40 +4963,221 @@ char *names860 [] =
 "count",
 };
 
-char *names864 [] =
+char *names863 [] =
 {
-"data",
+"last_string",
+"last_write_successful",
+"last_read_successful",
+"last_written_bytes",
+"last_read_bytes",
 };
 
-char *names865 [] =
+char *names867 [] =
 {
-"state",
+"process",
+"mutex",
+"consumer_signal",
+"producer_signal",
+"next_output",
+"output_processor",
+"error_processor",
+"output_file",
+"error_file",
+"input_file",
+"is_next_error",
+"is_finished",
+"last_exit_code",
+};
+
+char *names868 [] =
+{
+"buffer",
+"is_per_character",
 };
 
 char *names871 [] =
 {
-"array_balls",
+"data",
 };
 
 char *names872 [] =
 {
 "state",
-"x",
-"y",
 };
 
-char *names874 [] =
+char *names875 [] =
+{
+"internal_item",
+"is_utc",
+"millisecond_now",
+};
+
+char *names876 [] =
+{
+"items",
+};
+
+char *names881 [] =
+{
+"internal_exception",
+};
+
+char *names882 [] =
+{
+"asserter",
+};
+
+char *names883 [] =
+{
+"last_assertion_failed",
+};
+
+char *names884 [] =
+{
+"array_balls",
+};
+
+char *names892 [] =
+{
+"process_launcher",
+"has_started",
+"sleep_time",
+};
+
+char *names895 [] =
+{
+"command_line",
+"working_directory",
+"input_file_name",
+"output_file_name",
+"error_file_name",
+"environment_variable_table",
+"output_handler",
+"error_handler",
+"on_start_handler",
+"on_exit_handler",
+"on_terminate_handler",
+"on_fail_launch_handler",
+"on_successful_launch_handler",
+"arguments",
+"timer",
+"launched",
+"abort_termination_when_failed",
+"force_terminated",
+"last_termination_successful",
+"hidden",
+"separate_console",
+"detached_console",
+"is_terminal_control_enabled",
+"is_launched_in_new_process_group",
+"is_last_wait_timeout",
+"buffer_size",
+"input_direction",
+"output_direction",
+"error_direction",
+};
+
+char *names896 [] =
+{
+"command_line",
+"working_directory",
+"input_file_name",
+"output_file_name",
+"error_file_name",
+"environment_variable_table",
+"output_handler",
+"error_handler",
+"on_start_handler",
+"on_exit_handler",
+"on_terminate_handler",
+"on_fail_launch_handler",
+"on_successful_launch_handler",
+"arguments",
+"timer",
+"input_buffer",
+"out_thread",
+"err_thread",
+"in_thread",
+"child_process",
+"input_mutex",
+"input_file_handle",
+"output_file_handle",
+"error_file_handle",
+"launched",
+"abort_termination_when_failed",
+"force_terminated",
+"last_termination_successful",
+"hidden",
+"separate_console",
+"detached_console",
+"is_terminal_control_enabled",
+"is_launched_in_new_process_group",
+"is_last_wait_timeout",
+"process_has_exited",
+"internal_has_exited",
+"has_cleaned_up",
+"debug_privilege_enabled",
+"buffer_size",
+"input_direction",
+"output_direction",
+"error_direction",
+"last_output_bytes",
+"last_error_bytes",
+"last_input_bytes",
+"internal_id",
+};
+
+char *names898 [] =
 {
 "cpf",
 "cpf_index",
 };
 
-char *names876 [] =
+char *names899 [] =
+{
+"state",
+"x",
+"y",
+};
+
+char *names900 [] =
+{
+"test_set",
+"command",
+"working_directory",
+"output_file_name",
+"error_file_name",
+"input_file_name",
+"output_processor",
+"error_processor",
+"arguments",
+"process",
+"is_launched",
+"last_exit_code",
+};
+
+char *names901 [] =
+{
+"test_set",
+"command",
+"working_directory",
+"output_file_name",
+"error_file_name",
+"input_file_name",
+"output_processor",
+"error_processor",
+"arguments",
+"process",
+"is_launched",
+"last_exit_code",
+};
+
+char *names903 [] =
 {
 "id",
 };
 
-char *names877 [] =
+char *names904 [] =
 {
 "state",
 "id",
@@ -5004,7 +5185,7 @@ char *names877 [] =
 "y",
 };
 
-char *names878 [] =
+char *names905 [] =
 {
 "button_id",
 "id",
@@ -5012,7 +5193,7 @@ char *names878 [] =
 "y",
 };
 
-char *names879 [] =
+char *names906 [] =
 {
 "button_id",
 "id",
@@ -5020,12 +5201,12 @@ char *names879 [] =
 "y",
 };
 
-char *names881 [] =
+char *names908 [] =
 {
 "socket_address",
 };
 
-char *names882 [] =
+char *names909 [] =
 {
 "red_internal",
 "green_internal",
@@ -5033,7 +5214,7 @@ char *names882 [] =
 "alpha_internal",
 };
 
-char *names883 [] =
+char *names910 [] =
 {
 "red_internal",
 "green_internal",
@@ -5041,14 +5222,31 @@ char *names883 [] =
 "alpha_internal",
 };
 
-char *names885 [] =
+char *names913 [] =
+{
+"file_system",
+"environment",
+"internal_asserter",
+"has_failed",
+};
+
+char *names914 [] =
+{
+"file_system",
+"environment",
+"internal_asserter",
+"current_execution",
+"has_failed",
+};
+
+char *names917 [] =
 {
 "fingers_count",
 "x",
 "y",
 };
 
-char *names886 [] =
+char *names918 [] =
 {
 "fingers_count",
 "x",
@@ -5057,7 +5255,7 @@ char *names886 [] =
 "angle",
 };
 
-char *names887 [] =
+char *names919 [] =
 {
 "fingers_count",
 "x",
@@ -5066,20 +5264,48 @@ char *names887 [] =
 "template_hash",
 };
 
-char *names890 [] =
+char *names924 [] =
+{
+"compact_time",
+"fractional_second",
+};
+
+char *names928 [] =
+{
+"time",
+"date",
+};
+
+char *names931 [] =
 {
 "launch_mutex",
 "terminated",
 "thread_id",
 };
 
-char *names896 [] =
+char *names932 [] =
+{
+"launch_mutex",
+"process_launcher",
+"mutex",
+"terminated",
+"should_exit_signal",
+"sleep_time",
+"thread_id",
+};
+
+char *names940 [] =
+{
+"value",
+};
+
+char *names941 [] =
 {
 "internal_host_name",
 "family",
 };
 
-char *names897 [] =
+char *names942 [] =
 {
 "internal_host_name",
 "the_address",
@@ -5089,20 +5315,26 @@ char *names897 [] =
 "the_scope_id",
 };
 
-char *names898 [] =
+char *names943 [] =
 {
 "internal_host_name",
 "family",
 "the_address",
 };
 
-char *names899 [] =
+char *names945 [] =
+{
+"storage",
+"storage_flag",
+};
+
+char *names946 [] =
 {
 "message",
 "has_error",
 };
 
-char *names900 [] =
+char *names947 [] =
 {
 "manual_error",
 "has_error",
@@ -5111,7 +5343,7 @@ char *names900 [] =
 "last_alc_error_code",
 };
 
-char *names901 [] =
+char *names948 [] =
 {
 "launch_mutex",
 "manual_error",
@@ -5132,7 +5364,7 @@ char *names901 [] =
 "null",
 };
 
-char *names902 [] =
+char *names949 [] =
 {
 "manual_error",
 "has_error",
@@ -5141,7 +5373,7 @@ char *names902 [] =
 "last_alc_error_code",
 };
 
-char *names903 [] =
+char *names950 [] =
 {
 "manual_error",
 "has_error",
@@ -5150,14 +5382,14 @@ char *names903 [] =
 "last_alc_error_code",
 };
 
-char *names904 [] =
+char *names951 [] =
 {
 "manual_error",
 "has_error",
 "is_manual_error",
 };
 
-char *names905 [] =
+char *names952 [] =
 {
 "manual_error",
 "haptic",
@@ -5167,7 +5399,7 @@ char *names905 [] =
 "index",
 };
 
-char *names906 [] =
+char *names953 [] =
 {
 "manual_error",
 "has_error",
@@ -5178,7 +5410,7 @@ char *names906 [] =
 "index",
 };
 
-char *names907 [] =
+char *names954 [] =
 {
 "manual_error",
 "has_error",
@@ -5191,7 +5423,7 @@ char *names907 [] =
 "index",
 };
 
-char *names908 [] =
+char *names955 [] =
 {
 "manual_error",
 "has_error",
@@ -5200,7 +5432,7 @@ char *names908 [] =
 "physical_code",
 };
 
-char *names909 [] =
+char *names956 [] =
 {
 "manual_error",
 "has_error",
@@ -5211,7 +5443,7 @@ char *names909 [] =
 "physical_code",
 };
 
-char *names910 [] =
+char *names957 [] =
 {
 "manual_error",
 "has_error",
@@ -5220,28 +5452,28 @@ char *names910 [] =
 "last_saved_dollar_gesture_template",
 };
 
-char *names911 [] =
+char *names958 [] =
 {
 "manual_error",
 "has_error",
 "is_manual_error",
 };
 
-char *names912 [] =
+char *names959 [] =
 {
 "manual_error",
 "has_error",
 "is_manual_error",
 };
 
-char *names913 [] =
+char *names960 [] =
 {
 "manual_error",
 "has_error",
 "is_manual_error",
 };
 
-char *names914 [] =
+char *names961 [] =
 {
 "manual_error",
 "has_error",
@@ -5249,27 +5481,7 @@ char *names914 [] =
 "is_running",
 };
 
-char *names915 [] =
-{
-"manual_error",
-"finger_motion_actions_internal",
-"finger_motion_events_callback",
-"finger_touched_actions_internal",
-"finger_touched_events_callback",
-"finger_released_actions_internal",
-"finger_released_events_callback",
-"fingers_gesture_actions_internal",
-"fingers_gesture_events_callback",
-"dollar_gesture_actions_internal",
-"dollar_gesture_events_callback",
-"dollar_record_actions_internal",
-"dollar_record_events_callback",
-"has_error",
-"is_manual_error",
-"is_running",
-};
-
-char *names916 [] =
+char *names962 [] =
 {
 "manual_error",
 "axis_motion_actions_internal",
@@ -5289,7 +5501,27 @@ char *names916 [] =
 "is_running",
 };
 
-char *names917 [] =
+char *names963 [] =
+{
+"manual_error",
+"finger_motion_actions_internal",
+"finger_motion_events_callback",
+"finger_touched_actions_internal",
+"finger_touched_events_callback",
+"finger_released_actions_internal",
+"finger_released_events_callback",
+"fingers_gesture_actions_internal",
+"fingers_gesture_events_callback",
+"dollar_gesture_actions_internal",
+"dollar_gesture_events_callback",
+"dollar_record_actions_internal",
+"dollar_record_events_callback",
+"has_error",
+"is_manual_error",
+"is_running",
+};
+
+char *names964 [] =
 {
 "manual_error",
 "show_actions_internal",
@@ -5328,7 +5560,7 @@ char *names917 [] =
 "is_running",
 };
 
-char *names918 [] =
+char *names965 [] =
 {
 "manual_error",
 "quit_signal_actions_internal",
@@ -5346,7 +5578,7 @@ char *names918 [] =
 "is_running",
 };
 
-char *names919 [] =
+char *names966 [] =
 {
 "manual_error",
 "quit_signal_actions_internal",
@@ -5376,18 +5608,13 @@ char *names919 [] =
 "last_saved_dollar_gesture_template",
 };
 
-char *names922 [] =
-{
-"socket_address",
-};
-
-char *names924 [] =
+char *names967 [] =
 {
 "is_open",
 "has_error",
 };
 
-char *names925 [] =
+char *names968 [] =
 {
 "message",
 "has_error",
@@ -5396,13 +5623,40 @@ char *names925 [] =
 "last_buffer_size",
 };
 
-char *names928 [] =
+char *names972 [] =
+{
+"socket_address",
+};
+
+char *names975 [] =
 {
 "source",
 "sound",
 };
 
-char *names929 [] =
+char *names977 [] =
+{
+"origin_date",
+"year",
+"month",
+"day",
+};
+
+char *names978 [] =
+{
+"minute",
+"hour",
+"fine_second",
+};
+
+char *names979 [] =
+{
+"origin_date_time",
+"time",
+"date",
+};
+
+char *names981 [] =
 {
 "manual_error",
 "pixel_format",
@@ -5416,7 +5670,7 @@ char *names929 [] =
 "bytes_per_pixel",
 };
 
-char *names930 [] =
+char *names982 [] =
 {
 "manual_error",
 "pixel_format",
@@ -5430,7 +5684,7 @@ char *names930 [] =
 "bytes_per_pixel",
 };
 
-char *names931 [] =
+char *names983 [] =
 {
 "manual_error",
 "pixel_format",
@@ -5444,7 +5698,7 @@ char *names931 [] =
 "bytes_per_pixel",
 };
 
-char *names932 [] =
+char *names984 [] =
 {
 "manual_error",
 "pixel_format",
@@ -5458,12 +5712,102 @@ char *names932 [] =
 "bytes_per_pixel",
 };
 
-char *names933 [] =
+char *names985 [] =
+{
+"last_string",
+"security_attributes",
+"exists",
+"input_closed",
+"output_closed",
+"last_write_successful",
+"last_read_successful",
+"last_written_bytes",
+"last_read_bytes",
+"output_handle",
+"input_handle",
+};
+
+char *names986 [] =
+{
+"managed_data",
+"count",
+};
+
+char *names987 [] =
+{
+"launch_mutex",
+"process_launcher",
+"mutex",
+"terminated",
+"should_exit_signal",
+"return_code",
+"sleep_time",
+"thread_id",
+};
+
+char *names988 [] =
+{
+"launch_mutex",
+"process_launcher",
+"mutex",
+"terminated",
+"should_exit_signal",
+"return_code",
+"sleep_time",
+"thread_id",
+};
+
+char *names989 [] =
+{
+"launch_mutex",
+"process_launcher",
+"mutex",
+"terminated",
+"should_exit_signal",
+"return_code",
+"sleep_time",
+"thread_id",
+};
+
+char *names990 [] =
+{
+"process_launcher",
+"launch_mutex",
+"mutex",
+"has_started",
+"terminated",
+"is_destroy_requested",
+"return_code",
+"sleep_time",
+"thread_id",
+};
+
+char *names991 [] =
+{
+"retrieved_errors",
+"socket",
+"testing_directory",
+"is_stream_invalid",
+"return_code",
+"port",
+};
+
+char *names992 [] =
+{
+"return_code",
+};
+
+char *names993 [] =
+{
+"return_code",
+};
+
+char *names994 [] =
 {
 "internal_game_library",
 };
 
-char *names934 [] =
+char *names995 [] =
 {
 "manual_error",
 "finger_motion_actions_internal",
@@ -5488,7 +5832,7 @@ char *names934 [] =
 "index",
 };
 
-char *names935 [] =
+char *names996 [] =
 {
 "manual_error",
 "internal_game_library",
@@ -5497,7 +5841,7 @@ char *names935 [] =
 "index",
 };
 
-char *names936 [] =
+char *names997 [] =
 {
 "internal_game_library",
 "title",
@@ -5513,7 +5857,7 @@ char *names936 [] =
 "height",
 };
 
-char *names937 [] =
+char *names998 [] =
 {
 "internal_game_library",
 "title",
@@ -5529,7 +5873,7 @@ char *names937 [] =
 "height",
 };
 
-char *names938 [] =
+char *names999 [] =
 {
 "internal_game_library",
 "title",
@@ -5545,27 +5889,45 @@ char *names938 [] =
 "height",
 };
 
-char *names939 [] =
+char *names1000 [] =
 {
 "internal_game_library",
 };
 
-char *names940 [] =
+char *names1001 [] =
 {
 "internal_game_library",
 "level",
 "array_levels",
+"server_socket",
+"client_socket",
+"server_address",
+"port_string",
+"other_player_character",
 "selection_arrow",
+"address_input",
+"red",
 "is_menu",
+"is_main_menu",
+"is_menu_network",
+"is_menu_network_host",
+"is_menu_network_join",
 "is_gameover",
 "level_is_new",
+"is_connected",
+"is_host",
+"is_join",
+"has_connection_error",
+"has_gone_through_menu_network_once",
 "times_through",
 "selection_arrow_x",
 "selection_arrow_y",
-"selected_menu_option",
+"selected_main_menu_option",
+"selected_menu_network_option",
+"selected_menu_network_join_option",
 };
 
-char *names941 [] =
+char *names1002 [] =
 {
 "manual_error",
 "internal_game_library",
@@ -5576,7 +5938,7 @@ char *names941 [] =
 "is_open",
 };
 
-char *names942 [] =
+char *names1003 [] =
 {
 "manual_error",
 "internal_game_library",
@@ -5587,35 +5949,7 @@ char *names942 [] =
 "is_open",
 };
 
-char *names943 [] =
-{
-"manual_error",
-"internal_game_library",
-"image",
-"internal_pixels",
-"text",
-"font",
-"color",
-"has_error",
-"is_manual_error",
-"is_open",
-};
-
-char *names944 [] =
-{
-"manual_error",
-"internal_game_library",
-"image",
-"internal_pixels",
-"text",
-"font",
-"color",
-"has_error",
-"is_manual_error",
-"is_open",
-};
-
-char *names945 [] =
+char *names1004 [] =
 {
 "manual_error",
 "internal_game_library",
@@ -5628,7 +5962,7 @@ char *names945 [] =
 "y",
 };
 
-char *names946 [] =
+char *names1005 [] =
 {
 "manual_error",
 "source",
@@ -5636,24 +5970,14 @@ char *names946 [] =
 "internal_game_library",
 "image",
 "internal_pixels",
-"surface_right",
-"surface_left",
-"animation",
-"surface",
 "has_error",
 "is_manual_error",
 "is_open",
-"going_right",
-"going_left",
-"is_dead",
 "x",
 "y",
-"sub_x",
-"sub_y",
-"animation_timer",
 };
 
-char *names947 [] =
+char *names1006 [] =
 {
 "manual_error",
 "source",
@@ -5669,7 +5993,34 @@ char *names947 [] =
 "y",
 };
 
-char *names948 [] =
+char *names1007 [] =
+{
+"manual_error",
+"source",
+"sound",
+"internal_game_library",
+"image",
+"internal_pixels",
+"arrow",
+"surface_right",
+"surface_left",
+"animation",
+"surface",
+"has_error",
+"is_manual_error",
+"is_open",
+"going_right",
+"going_left",
+"is_dead",
+"x",
+"y",
+"sub_x",
+"sub_y",
+"score",
+"animation_timer",
+};
+
+char *names1008 [] =
 {
 "manual_error",
 "source",
@@ -5689,9 +6040,11 @@ char *names948 [] =
 "speed",
 "bounce_speed",
 "move_timer",
+"score",
+"player_who_killed",
 };
 
-char *names949 [] =
+char *names1009 [] =
 {
 "manual_error",
 "source",
@@ -5707,14 +6060,55 @@ char *names949 [] =
 "y",
 };
 
-char *names950 [] =
+char *names1010 [] =
+{
+"manual_error",
+"internal_game_library",
+"image",
+"internal_pixels",
+"text",
+"font",
+"color",
+"has_error",
+"is_manual_error",
+"is_open",
+};
+
+char *names1011 [] =
+{
+"manual_error",
+"internal_game_library",
+"image",
+"internal_pixels",
+"text",
+"font",
+"color",
+"has_error",
+"is_manual_error",
+"is_open",
+};
+
+char *names1012 [] =
+{
+"value",
+"name",
+"is_text",
+"is_numeric",
+"count_max",
+"count_min",
+"value_max",
+"value_min",
+"type",
+};
+
+char *names1013 [] =
 {
 "managed_pointer",
 "shared",
 "internal_item",
 };
 
-char *names951 [] =
+char *names1014 [] =
 {
 "managed_pointer",
 "manual_error",
@@ -5728,7 +6122,7 @@ char *names951 [] =
 "internal_item",
 };
 
-char *names952 [] =
+char *names1015 [] =
 {
 "managed_pointer",
 "manual_error",
@@ -5739,7 +6133,7 @@ char *names952 [] =
 "internal_item",
 };
 
-char *names953 [] =
+char *names1016 [] =
 {
 "managed_pointer",
 "manual_error",
@@ -5749,7 +6143,40 @@ char *names953 [] =
 "internal_item",
 };
 
-char *names954 [] =
+char *names1017 [] =
+{
+"start_date",
+"finish_date",
+"setup_response",
+"output",
+};
+
+char *names1018 [] =
+{
+"start_date",
+"finish_date",
+"setup_response",
+"output",
+"test_response",
+"teardown_response",
+};
+
+char *names1019 [] =
+{
+"ordered_compact_date",
+};
+
+char *names1020 [] =
+{
+"index",
+};
+
+char *names1021 [] =
+{
+"cond_pointer",
+};
+
+char *names1022 [] =
 {
 "managed_pointer",
 "manual_error",
@@ -5762,44 +6189,7 @@ char *names954 [] =
 "internal_item",
 };
 
-char *names955 [] =
-{
-"owner",
-"mutex_pointer",
-};
-
-char *names956 [] =
-{
-"managed_pointer",
-"manual_error",
-"target",
-"original_target",
-"shared",
-"has_error",
-"is_manual_error",
-"is_dispose",
-"internal_item",
-};
-
-char *names957 [] =
-{
-"item",
-};
-
-char *names958 [] =
-{
-"managed_pointer",
-"manual_error",
-"shared_structure",
-"object_comparison",
-"has_error",
-"is_manual_error",
-"shared",
-"index",
-"internal_item",
-};
-
-char *names959 [] =
+char *names1023 [] =
 {
 "message",
 "filename",
@@ -5813,7 +6203,44 @@ char *names959 [] =
 "file_info",
 };
 
-char *names960 [] =
+char *names1024 [] =
+{
+"owner",
+"mutex_pointer",
+};
+
+char *names1025 [] =
+{
+"managed_pointer",
+"manual_error",
+"target",
+"original_target",
+"shared",
+"has_error",
+"is_manual_error",
+"is_dispose",
+"internal_item",
+};
+
+char *names1026 [] =
+{
+"item",
+};
+
+char *names1027 [] =
+{
+"managed_pointer",
+"manual_error",
+"shared_structure",
+"object_comparison",
+"has_error",
+"is_manual_error",
+"shared",
+"index",
+"internal_item",
+};
+
+char *names1028 [] =
 {
 "manual_error",
 "sound_al_buffer",
@@ -5833,7 +6260,7 @@ char *names960 [] =
 "temp_buffer",
 };
 
-char *names961 [] =
+char *names1029 [] =
 {
 "manual_error",
 "has_error",
@@ -5842,7 +6269,7 @@ char *names961 [] =
 "item",
 };
 
-char *names962 [] =
+char *names1030 [] =
 {
 "manual_error",
 "axis_motion_actions_internal",
@@ -5867,22 +6294,22 @@ char *names962 [] =
 "item",
 };
 
-char *names963 [] =
+char *names1031 [] =
 {
 "object_ptr",
 };
 
-char *names964 [] =
+char *names1032 [] =
 {
 "object_ptr",
 };
 
-char *names965 [] =
+char *names1033 [] =
 {
 "object_ptr",
 };
 
-char *names966 [] =
+char *names1034 [] =
 {
 "manual_error",
 "internal_game_library",
@@ -5894,7 +6321,7 @@ char *names966 [] =
 "item",
 };
 
-char *names967 [] =
+char *names1035 [] =
 {
 "manual_error",
 "internal_game_library",
@@ -5907,7 +6334,7 @@ char *names967 [] =
 "rwop",
 };
 
-char *names968 [] =
+char *names1036 [] =
 {
 "manual_error",
 "has_error",
@@ -5917,7 +6344,7 @@ char *names968 [] =
 "internal_item",
 };
 
-char *names969 [] =
+char *names1037 [] =
 {
 "manual_error",
 "has_error",
@@ -5927,7 +6354,7 @@ char *names969 [] =
 "internal_item",
 };
 
-char *names970 [] =
+char *names1038 [] =
 {
 "manual_error",
 "has_error",
@@ -5940,7 +6367,7 @@ char *names970 [] =
 "rwop",
 };
 
-char *names971 [] =
+char *names1039 [] =
 {
 "cpf",
 "manual_error",
@@ -5956,7 +6383,45 @@ char *names971 [] =
 "rwop",
 };
 
-char *names972 [] =
+char *names1040 [] =
+{
+"shared",
+"item",
+};
+
+char *names1041 [] =
+{
+"shared",
+"is_loaded_at_all_time",
+"item",
+};
+
+char *names1042 [] =
+{
+"shared",
+"item",
+};
+
+char *names1043 [] =
+{
+"shared",
+"item",
+};
+
+char *names1044 [] =
+{
+"internal_title",
+"shared",
+"item",
+};
+
+char *names1045 [] =
+{
+"shared",
+"item",
+};
+
+char *names1046 [] =
 {
 "managed_pointer",
 "manual_error",
@@ -5993,14 +6458,14 @@ char *names972 [] =
 "internal_item",
 };
 
-char *names973 [] =
+char *names1047 [] =
 {
 "manual_error",
 "has_error",
 "is_manual_error",
 };
 
-char *names974 [] =
+char *names1048 [] =
 {
 "manual_error",
 "internal_game_library",
@@ -6013,7 +6478,7 @@ char *names974 [] =
 "item",
 };
 
-char *names975 [] =
+char *names1049 [] =
 {
 "manual_error",
 "internal_game_library",
@@ -6027,7 +6492,7 @@ char *names975 [] =
 "item",
 };
 
-char *names976 [] =
+char *names1050 [] =
 {
 "manual_error",
 "internal_game_library",
@@ -6041,7 +6506,7 @@ char *names976 [] =
 "item",
 };
 
-char *names977 [] =
+char *names1051 [] =
 {
 "manual_error",
 "internal_game_library",
@@ -6054,7 +6519,7 @@ char *names977 [] =
 "item",
 };
 
-char *names978 [] =
+char *names1052 [] =
 {
 "manual_error",
 "show_actions_internal",
@@ -6095,7 +6560,7 @@ char *names978 [] =
 "item",
 };
 
-char *names979 [] =
+char *names1053 [] =
 {
 "manual_error",
 "show_actions_internal",
@@ -6137,7 +6602,7 @@ char *names979 [] =
 "item",
 };
 
-char *names980 [] =
+char *names1054 [] =
 {
 "manual_error",
 "show_actions_internal",
@@ -6179,7 +6644,7 @@ char *names980 [] =
 "gl_context",
 };
 
-char *names981 [] =
+char *names1055 [] =
 {
 "manual_error",
 "show_actions_internal",
@@ -6221,7 +6686,7 @@ char *names981 [] =
 "item",
 };
 
-char *names982 [] =
+char *names1056 [] =
 {
 "last_string",
 "address",
@@ -6250,7 +6715,7 @@ char *names982 [] =
 "last_double",
 };
 
-char *names983 [] =
+char *names1057 [] =
 {
 "last_string",
 "address",
@@ -6280,7 +6745,7 @@ char *names983 [] =
 "last_double",
 };
 
-char *names984 [] =
+char *names1058 [] =
 {
 "last_string",
 "address",
@@ -6318,7 +6783,7 @@ char *names984 [] =
 "last_double",
 };
 
-char *names985 [] =
+char *names1059 [] =
 {
 "last_string",
 "address",
@@ -6359,7 +6824,7 @@ char *names985 [] =
 "last_double",
 };
 
-char *names986 [] =
+char *names1060 [] =
 {
 "last_string",
 "internal_name",
@@ -6386,7 +6851,7 @@ char *names986 [] =
 "last_double",
 };
 
-char *names987 [] =
+char *names1061 [] =
 {
 "last_string",
 "internal_name",
@@ -6419,20 +6884,206 @@ char *names987 [] =
 "last_double",
 };
 
-char *names988 [] =
+char *names1062 [] =
+{
+"last_string",
+"internal_name",
+"internal_detachable_name_pointer",
+"buffer",
+"last_character",
+"separator",
+"object_comparison",
+"descriptor_available",
+"is_sequence_an_expected_numeric",
+"last_natural_8",
+"last_integer_8",
+"last_natural_16",
+"last_integer_16",
+"last_natural",
+"last_integer",
+"bytes_read",
+"mode",
+"buffer_size",
+"truncated_start_position",
+"last_real",
+"file_pointer",
+"last_natural_64",
+"last_integer_64",
+"last_double",
+};
+
+char *names1063 [] =
 {
 "managed_pointer",
 "shared",
 "internal_item",
 };
 
-char *names989 [] =
+char *names1065 [] =
+{
+"value",
+"days",
+"months",
+"internal_parser",
+"separators_used",
+"right_day_text",
+"base_century",
+};
+
+char *names1066 [] =
+{
+"compact_time",
+"fractional_second",
+};
+
+char *names1067 [] =
+{
+"compact_time",
+"fractional_second",
+};
+
+char *names1068 [] =
+{
+"ordered_compact_date",
+};
+
+char *names1069 [] =
+{
+"ordered_compact_date",
+};
+
+char *names1070 [] =
+{
+"compact_time",
+"ordered_compact_date",
+"fractional_second",
+};
+
+char *names1071 [] =
+{
+"source_string",
+"day_text_val",
+"code",
+"months",
+"days",
+"parsed",
+"compact_time",
+"ordered_compact_date",
+"year_val",
+"month_val",
+"day_val",
+"hour_val",
+"minute_val",
+"base_century",
+"fractional_second",
+"fine_second_val",
+};
+
+char *names1072 [] =
+{
+"time",
+"date",
+"compact_time",
+"ordered_compact_date",
+"fractional_second",
+};
+
+char *names1073 [] =
+{
+"recipient_name",
+"class_name",
+"tag_name",
+"trace",
+"last_class_name",
+"last_routine_name",
+"is_trace_valid",
+"is_test_invalid",
+"code",
+"break_point_slot",
+"last_break_point_slot",
+};
+
+char *names1074 [] =
+{
+"environment_variables",
+"input_pipe",
+"output_pipe",
+"process_info",
+"last_launch_successful",
+"hidden",
+"last_process_result",
+"internal_block_size",
+};
+
+char *names1075 [] =
+{
+"environment_variables",
+"input_pipe",
+"output_pipe",
+"process_info",
+"input_file_name",
+"output_file_name",
+"error_file_name",
+"last_launch_successful",
+"hidden",
+"last_operation_successful",
+"launched",
+"is_std_input_open",
+"is_std_output_open",
+"is_std_error_open",
+"internal_has_exited",
+"last_process_result",
+"internal_block_size",
+"input_direction",
+"output_direction",
+"error_direction",
+"std_input",
+"std_output",
+"std_error",
+"child_input",
+"child_output",
+"child_error",
+};
+
+char *names1076 [] =
+{
+"retrieved_errors",
+"log_file",
+"output_buffer",
+"error_buffer",
+"socket",
+"last_request",
+"last_response",
+"object_store",
+"has_error",
+"is_last_protected_execution_successfull",
+"should_quit",
+"is_last_invariant_violated",
+"last_request_type",
+"last_response_flag",
+"return_code",
+"byte_code_feature_body_id",
+"byte_code_feature_pattern_id",
+};
+
+char *names1077 [] =
+{
+"start_bound",
+"end_bound",
+};
+
+char *names1078 [] =
+{
+"return_code",
+};
+
+char *names1079 [] =
 {
 "target",
 "object_comparison",
 };
 
-char *names990 [] =
+char *names1080 [] =
 {
 "internal_name",
 };

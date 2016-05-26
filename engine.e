@@ -397,7 +397,7 @@ feature
 				if a_arrow.y <= 0 then
 					a_arrow.reset
 				end
-					end
+			end
 		end
 
 	check_collisions(a_ball:BALL; a_character:BOB; a_arrow:ARROW)
@@ -666,6 +666,8 @@ feature
 		do
 			game_library.stop
 		end
+
+		
 
 	level:LEVEL
 			--Représente le niveau qui est présentement en cours

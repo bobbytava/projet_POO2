@@ -1,4 +1,4 @@
-INCLUDE_PATH =  -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\OpenAL\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\cpf\spec\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\audio_sound_file\spec\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\libsndfile\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\game_core\spec\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\SDL2\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\SDL2_gfx\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\SDL2_image\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\SDL2_ttf\include"
+INCLUDE_PATH =  -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\OpenAL\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\cpf\spec\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\audio_sound_file\spec\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\libsndfile\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\game_core\spec\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\SDL2\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\SDL2_gfx\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\SDL2_image\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\SDL2_ttf\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\library\process\classic\windows\include" -I"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\library\wel\spec\windows\include"
 SHELL = \bin\sh
 CC = cl
 CPP = cl
@@ -39,7 +39,7 @@ SYSTEM_IN_DYNAMIC_LIB = project.dll
 .cpp.obj:
 	$(CPP) $(CPPFLAGS) -c $<
 
-SUBDIRS = C1 C2 C3 C4 E1
+SUBDIRS = C1 C2 C3 C4 C5 C6 C7 E1
 
 EXTERNALS =  \
 	"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\OpenAL\lib\windows\msc\OpenAL32.lib" \
@@ -52,7 +52,8 @@ EXTERNALS =  \
 	"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\SDL2_gfx\lib\windows\msc\SDL2_gfx.lib" \
 	"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\SDL2_image\lib\windows\msc\SDL2_image.lib" \
 	"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\contrib\library\game2\C_lib_win\SDL2_ttf\lib\windows\msc\SDL2_ttf.lib" \
-	"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\library\net\spec\msc\windows\lib\mtnet.lib"
+	"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\library\net\spec\msc\windows\lib\mtnet.lib" \
+	"C:\Program Files (x86)\Eiffel Software\EiffelStudio 15.11 GPL\library\wel\spec\msc\windows\lib\mtwel.lib"
 
 all:: project.exe
 	echo done > completed.eif
@@ -75,6 +76,21 @@ C3\Cobj3.lib: Makefile E1\estructure.h
 C4\Cobj4.lib: Makefile E1\estructure.h
 	cd C4
 	$(START_TEST) $(MAKE) Cobj4.lib $(END_TEST)
+	cd ..
+
+C5\Cobj5.lib: Makefile E1\estructure.h
+	cd C5
+	$(START_TEST) $(MAKE) Cobj5.lib $(END_TEST)
+	cd ..
+
+C6\Cobj6.lib: Makefile E1\estructure.h
+	cd C6
+	$(START_TEST) $(MAKE) Cobj6.lib $(END_TEST)
+	cd ..
+
+C7\Cobj7.lib: Makefile E1\estructure.h
+	cd C7
+	$(START_TEST) $(MAKE) Cobj7.lib $(END_TEST)
 	cd ..
 
 E1\emain.obj:  Makefile E1\Makefile
@@ -138,9 +154,9 @@ E1\eparents.obj : Makefile E1\Makefile E1\estructure.h
 	$(START_TEST) $(MAKE) eparents.obj  $(END_TEST)
 	cd ..
 
-OBJECTS = E1\eparents.obj  E1\einit.obj  E1\ececil.obj  E1\evisib.obj  E1\enames.obj  E1\eskelet.obj  E1\eplug.obj  E1\ecall.obj  E1\efrozen.obj  E1\epattern.obj  E1\eoption.obj  C4\Cobj4.lib C3\Cobj3.lib C2\Cobj2.lib C1\Cobj1.lib 
+OBJECTS = E1\eparents.obj  E1\einit.obj  E1\ececil.obj  E1\evisib.obj  E1\enames.obj  E1\eskelet.obj  E1\eplug.obj  E1\ecall.obj  E1\efrozen.obj  E1\epattern.obj  E1\eoption.obj  C7\Cobj7.lib C6\Cobj6.lib C5\Cobj5.lib C4\Cobj4.lib C3\Cobj3.lib C2\Cobj2.lib C1\Cobj1.lib 
 
-C_OBJECTS = C4\Cobj4.lib C3\Cobj3.lib C2\Cobj2.lib C1\Cobj1.lib 
+C_OBJECTS = C7\Cobj7.lib C6\Cobj6.lib C5\Cobj5.lib C4\Cobj4.lib C3\Cobj3.lib C2\Cobj2.lib C1\Cobj1.lib 
 
 EOBJECTS = E1\eparents.obj  E1\einit.obj  E1\ececil.obj  E1\evisib.obj  E1\enames.obj  E1\eskelet.obj  E1\eplug.obj  E1\ecall.obj  E1\efrozen.obj  E1\epattern.obj  E1\eoption.obj  
 
@@ -167,7 +183,8 @@ project.lnk: $(OBJECTS) e1\emain.obj project.res Makefile
 	@echo project.res >> $@
 	echo E1\eparents.obj  E1\einit.obj  E1\ececil.obj  E1\evisib.obj  E1\enames.obj   >> $@ 
 	echo E1\eskelet.obj  E1\eplug.obj  E1\ecall.obj  E1\efrozen.obj  E1\epattern.obj   >> $@ 
-	echo E1\eoption.obj  C4\Cobj4.lib C3\Cobj3.lib C2\Cobj2.lib C1\Cobj1.lib  >> $@ 
+	echo E1\eoption.obj  C7\Cobj7.lib C6\Cobj6.lib C5\Cobj5.lib C4\Cobj4.lib  >> $@ 
+	echo C3\Cobj3.lib C2\Cobj2.lib C1\Cobj1.lib  >> $@ 
 
 
 RCECIL = MTdebug.obj MTidrs.obj MTinterp.obj mtipc.obj MTnetwork.obj MTupdate.obj \

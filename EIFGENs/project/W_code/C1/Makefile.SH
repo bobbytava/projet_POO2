@@ -11,7 +11,7 @@ case "$O" in
 esac
 echo "Compiling C code in C1"
 $spitshell >Makefile <<!GROK!THIS!
-INCLUDE_PATH =  -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\OpenAL\include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\cpf\spec\include" -I"\$(EIFFEL_LIBRARY)/contrib/library/game2/audio_sound_file/spec/include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\libsndfile\include" -I"\$(EIFFEL_LIBRARY)/contrib/library/game2/game_core/spec/include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\SDL2\include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\SDL2_gfx\include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\SDL2_image\include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\SDL2_ttf\include"
+INCLUDE_PATH =  -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\OpenAL\include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\cpf\spec\include" -I"\$(EIFFEL_LIBRARY)/contrib/library/game2/audio_sound_file/spec/include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\libsndfile\include" -I"\$(EIFFEL_LIBRARY)/contrib/library/game2/game_core/spec/include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\SDL2\include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\SDL2_gfx\include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\SDL2_image\include" -I"\$(EIFFEL_LIBRARY)\contrib\library\game2\C_lib_win\SDL2_ttf\include" -I"\$(ISE_LIBRARY)\library\process\classic\windows\include" -I"\$(ISE_LIBRARY)\library\wel\spec\windows\include"
 SHELL = /bin/sh
 CC = $cc
 CPP = $cpp
@@ -55,14 +55,14 @@ $spitshell >>Makefile <<'!NO!SUBS!'
 
 OBJECTS = big_file_C1_c.obj 
 
-OLDOBJECTS =  im884.o im884d.o ga883.o ga883d.o le871.o le871d.o ga882.o ga882d.o \
-	ga870.o ga870d.o ga869.o ga869d.o im868.o im868d.o so881.o so881d.o \
-	au867.o au867d.o th890.o th890d.o ad880.o ad880d.o in892.o in892d.o \
-	ga866.o ga866d.o ga865.o ga865d.o th889.o th889d.o pa864.o pa864d.o \
-	au863.o au863d.o cp874.o cp874d.o ga877.o ga877d.o ga878.o ga878d.o \
-	ga879.o ga879d.o ga876.o ga876d.o ga887.o ga887d.o ga886.o ga886d.o \
-	ga891.o ga891d.o ga875.o ga875d.o th888.o th888d.o cp862.o cp862d.o \
-	ga873.o ga873d.o ga872.o ga872d.o ga885.o ga885d.o sh861.o sh861d.o 
+OLDOBJECTS =  eq885.o eq885d.o le884.o le884d.o eq883.o eq883d.o eq882.o eq882d.o \
+	eq881.o eq881d.o ga880.o ga880d.o im879.o im879d.o ga878.o ga878d.o \
+	au877.o au877d.o eq876.o eq876d.o c_875.o c_875d.o it874.o it874d.o \
+	ga873.o ga873d.o ga872.o ga872d.o pa871.o pa871d.o au870.o au870d.o \
+	cp869.o cp869d.o eq868.o eq868d.o eq867.o eq867d.o sh866.o sh866d.o \
+	pr865.o pr865d.o pr892.o pr892d.o pr864.o pr864d.o fi863.o fi863d.o \
+	we862.o we862d.o pr891.o pr891d.o we861.o we861d.o we890.o we890d.o \
+	we889.o we889d.o we888.o we888d.o we887.o we887d.o we886.o we886d.o 
 
 all: Cobj1.o
 

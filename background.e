@@ -7,8 +7,7 @@ class
 	BACKGROUND
 
 inherit
-	DRAWABLE
-	HEARABLE
+	SPRITE
 		redefine
 			play_sound
 		end

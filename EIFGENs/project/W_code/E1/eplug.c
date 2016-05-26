@@ -118,9 +118,9 @@ void egc_init_plug (void)
 	egc_project_version = 1464202994;
 	egc_has_old_special_semantic = 0;
 	egc_has_ieee_semantic = 1;
-	scount = 990;
+	scount = 1080;
 
-	egc_rcount = 1;
+	egc_rcount = 3;
 	egc_ridx = 0;
 	egc_rlist = (char**) eif_malloc (sizeof(char*)*egc_rcount);
 	egc_rcdt = (int32 *) eif_malloc (sizeof(int32)*egc_rcount);
@@ -128,8 +128,18 @@ void egc_init_plug (void)
 	egc_rcarg = (int32 *) eif_malloc (sizeof(int32)*egc_rcount);
 	egc_rlist[0] = "APPLICATION.make";
 	egc_rcdt[0] = 0;
-	egc_rcrid[0] = 7796;
+	egc_rcrid[0] = 8608;
 	egc_rcarg[0] = 0;
+	
+	egc_rlist[1] = "EQA_EVALUATOR.make";
+	egc_rcdt[1] = 0;
+	egc_rcrid[1] = 8502;
+	egc_rcarg[1] = 0;
+	
+	egc_rlist[2] = "ITP_INTERPRETER.execute";
+	egc_rcdt[2] = 0;
+	egc_rcrid[2] = 10146;
+	egc_rcarg[2] = 0;
 	
 	
 	egc_platform_level = 0x00000D00;
@@ -141,7 +151,11 @@ void egc_init_plug (void)
 void egc_rcdt_init (void)
 {
 	if (egc_rcdt[0] == 0) {
-		egc_rcdt[0] = 938; /* APPLICATION */
+		egc_rcdt[0] = 999; /* APPLICATION */
+	}if (egc_rcdt[1] == 0) {
+		egc_rcdt[1] = 990; /* EQA_EVALUATOR */
+	}if (egc_rcdt[2] == 0) {
+		egc_rcdt[2] = 1075; /* ITP_INTERPRETER */
 	}
 }
 
