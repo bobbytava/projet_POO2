@@ -14,19 +14,19 @@ inherit
 
 feature
 	x:INTEGER assign set_x
-			-- Vertical position of `Current'
+			-- Représente la valeur de la position horizontale de `Current'
 
 	y:INTEGER assign set_y
-			-- Horizontal position of `Current'
+			-- Représente la valeur de la position verticale de `Current'
 
 	set_x(a_x:INTEGER)
-			-- Assign the value of `x' with `a_x'
+			-- Assigne la valeur de `a_x' à `x'
 		do
 			x := a_x
 		end
 
 	set_y(a_y:INTEGER)
-			-- Assign the value of `y' with `a_y'
+			-- Assigne la valeur de `a_y' à `y'
 		do
 			y := a_y
 		end

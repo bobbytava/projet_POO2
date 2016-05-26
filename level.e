@@ -13,6 +13,7 @@ create
 
 feature
 	make_lvl1
+			--Constructeur du niveau 1
 		local
 			l_ball1:BALL
 			l_ball2:BALL
@@ -25,6 +26,7 @@ feature
 		end
 
 	make_lvl2
+			--Constructeur du niveau 2
 		local
 			l_ball1:BALL
 			l_ball2:BALL
@@ -37,6 +39,7 @@ feature
 		end
 
 	make_lvl3
+			--Constructeur du niveau 3
 		local
 			l_ball1:BALL
 			l_ball2:BALL
@@ -52,4 +55,5 @@ feature
 		end
 
 	array_balls:LINKED_LIST[BALL]
+			--Représente la liste des balles de `Current'
 end

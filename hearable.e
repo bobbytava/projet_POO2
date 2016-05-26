@@ -13,10 +13,14 @@ inherit
 
 feature
 	play_sound
+			--Fonction abstraite
+			--Fait l'action de jouer la `source'
 	do
 	end
 
 	source:AUDIO_SOURCE
+			--Représente l'audio du son à jouer
 
 	sound:AUDIO_SOUND_FILE
+			--Réprésente le fichier audio qui deviendra la source
 end

@@ -64,6 +64,7 @@ feature
 
 	play_sound
 			--Joue le son
+			--Ce son est joué en boucle tant et aussi longtemps que le programme boucle dans la boucle principale
 		do
 			source.play
 		end

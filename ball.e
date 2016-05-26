@@ -114,11 +114,18 @@ feature
 			end
 	end
 
-	size:INTEGER
+	size:INTEGER assign set_size
 			--Grosseur de la balle (de 1 à 3)
+
+	set_size(a_size:INTEGER)
+			--Assigne la valeur de "a_size" à size
+		do
+			size:=a_size
+		end
 
 	speed:INTEGER assign set_speed
 			--Représente la vitesse de la balle
+			--Correspond au déplacement de la balle dans un itération de la boucle principale
 
 	bounce_speed:INTEGER
 			--Représente la vitesse de la balle après avoir toucher le sol
@@ -140,9 +147,11 @@ feature
 
 	player_who_killed:INTEGER assign set_player_who_killed
 			--Représente le joueur qu a tué la balle
-			--1 si joueur du jeu, 2 si other_player_character
+			--1 si joueur du jeu, 2 si "other_player_character"
 
 	set_player_who_killed(a_player:INTEGER)
+			--Assigne le valeur de `a_player' à `player_who_killed'
+			--Les valeurs possibles sont 1 pour le joueur du jeu ou 2 pour `other_player_character'
 		do
 			player_who_killed:= a_player
 		end
@@ -151,14 +160,14 @@ feature
 			--Détermine si la balle à été tuée
 
 	set_speed(a_speed:INTEGER)
-			--Assigne une valeur à l'attribut "speed"
+			--Assigne une valeur à l'attribut `speed'
 			--La nouvelle valeur est envoyée en argument
 		do
 			speed:=a_speed
 		end
 
 	set_is_dead(a_is_dead:BOOLEAN)
-			--Assigne une valeur à l'attribut "is_dead"
+			--Assigne une valeur à l'attribut `is_dead'
 			--La nouvelle valeur est envoyée en argument
 		do
 			is_dead:= a_is_dead
@@ -168,6 +177,7 @@ feature
 
 	play_sound
 			--Réinitialise le son et le joue
+			--Il s'agit d'un "pop" lorsque qu'une balle est tuée
 		do
 			source.stop
 			sound.restart

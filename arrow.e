@@ -54,7 +54,7 @@ feature
 		end
 
 	fire(a_x:INTEGER)
-			--Rend la flèche "tirée" à la position "x" envoyée en argument.
+			--Tire une flèche à la position `x' déterminée par l'argument `a_x'.
 			--Joue aussi un son
 		do
 			is_fired:=true
@@ -63,7 +63,7 @@ feature
 		end
 
 	reset
-			--Réinitialise la flèche à un état "non-tirée" ainsi que sa position "y" à la position de la tête du personnage
+			--Réinitialise la flèche à un état "non-tirée" ainsi que sa position `y' à la position de la tête du personnage
 		do
 			is_fired:=false
 			current.set_y (387)
@@ -74,6 +74,7 @@ feature
 
 	play_sound
 			--Réinitialise le son et le joue
+			--Il s'agit d'un son d'un tir de flèche
 		do
 			source.stop
 			sound.restart

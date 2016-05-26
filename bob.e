@@ -16,7 +16,8 @@ inherit
 create
 	make
 
-feature
+feature --Initialization
+
 	make(a_x:INTEGER; a_y:INTEGER)
 			--Constructeur de `Current'
 		local
@@ -45,7 +46,7 @@ feature
 			animation_timer := 1
 
 			create animation.make(6)
-			animation.extend (surface_right.width // 3)	-- Be sure to place the image standing still first
+			animation.extend (surface_right.width // 3)
 			animation.extend (0)
 			animation.extend (0)
 			animation.extend (0)
@@ -63,7 +64,7 @@ feature
 				sound.open
 				if sound.is_open then
 					audio_library.sources_add
-					source:=audio_library.last_source_added	-- The first source will be use for playing the music
+					source:=audio_library.last_source_added
 				else
 					print("Cannot open sound files.")
 					die(1)
@@ -103,11 +104,11 @@ feature
 
 	going_right:BOOLEAN
 			--Détermine si le personnage se dirige vers la droite
-			--Si "going_right" et "going_left" sont à "false", le personnage ne bouge pas
+			--Si `going_right' et `going_left' sont à "false", le personnage ne bouge pas
 
 	going_left:BOOLEAN
 			--Détermine si le personnage se dirige vers la gauche
-			--Si "going_left" et "going_right" sont à "false", le personnage ne bouge pas
+			--Si `going_left' et `going_right' sont à "false", le personnage ne bouge pas
 
 	surface_right:GAME_SURFACE
 			--Représente la surface du personnage lorsqu'il se dirige vers la droite
@@ -119,20 +120,26 @@ feature
 
 	animation:ARRAYED_LIST[INTEGER]
 			--Liste des coordonnées des différentes sprites de l'animation
-			--Se lit comme suit : "x" de la sprite sans mouvement, "y" de la sprite sans mouvement,
-			--"x" de la première sprite d'animation, "y" de la première sprite d'animation,
-			--"x" de la deuxième sprite d'animation, "y" de la deuxième sprite d'animation
+			--Se lit comme suit : `x' de la sprite sans mouvement, `y' de la sprite sans mouvement,
+			--`x' de la première sprite d'animation, `y' de la première sprite d'animation,
+			--`x' de la deuxième sprite d'animation, `y' de la deuxième sprite d'animation
 
 	surface:GAME_SURFACE
-		--Représente la surface à utiliser selon la direction du personnage ("surface_left" ou "surface_right")
+		--Représente la surface à utiliser selon la direction du personnage (`surface_left' ou `surface_right')
 
 	is_dead:BOOLEAN assign set_is_dead
+			--Détermine si le joueur a été tué
 
 	sub_x:INTEGER
+			--Représente la position `x' dans l'image "animation.png" que l'on doit utiliser afin
+			--de dessiner une partie de l'animation et non les 3 images d'animations complètes
 
 	sub_y:INTEGER
+			--Représente la position `y' dans l'image "animation.png" que l'on doit utiliser afin
+			--de dessiner une partie de l'animation et non les 3 images d'animations complètes
 
 	set_is_dead(a_is_dead:BOOLEAN)
+			--Assigne la valeur de `a_is_dead' à `is_dead'
 		do
 			is_dead := a_is_dead
 		end
@@ -147,9 +154,15 @@ feature
 		end
 
 	animation_timer:INTEGER
+			--Un timer qui augmente de 1 à chaque itération de la boucle principale
+			--Permet de créer un délai afin que l'animation ne se fasse pas à chaque intération de la boule principale
 
 
 	animate(a_background:BACKGROUND)
+			--Met à jour les valeurs de `sub_x' et `sub_y' afin que les coordonnées de la sprite d'animation soient les bonnnes
+			--Met à jour la valeur de `surface' afin d'utiliser la bonne animation (gauche/droite) selon les entrées de l'usager
+			--Met à jour la valeur de `x' afin que la position du personnage concorde aux entrées de l'usager
+			--Reçoit le background en argument afin de pouvoir calculer les limites de la valeur de `x' du personnage
 		do
 			if going_right = false and going_left = false then
 				sub_x := animation.at (1)
@@ -185,10 +198,12 @@ feature
 		end
 
 	play_sound
+			--Réinitialise le son et le joue
+			--Correspond au son que `Current' fait lorsqu'il meurt
 		do
-			source.stop					-- Be sure that the queue buffer is empty on the sound_source object (when stop, the source queue is clear)
-			sound.restart						-- Be sure that the sound is at the beginning
+			source.stop
+			sound.restart
 			source.queue_sound (sound)
-			source.play					-- Play the source
+			source.play
 		end
 end

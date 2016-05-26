@@ -17,7 +17,8 @@ create
 
 feature {NONE}  -- Initialization
 	make
-			-- Run application.
+			--Constructeur de `Current'
+			--Initialise toutes les données dont le jeu a besoin
 		do
 			run_game
 		end
@@ -145,7 +146,8 @@ feature {NONE}  -- Initialization
 																		l_text_surface_instructions_quit, l_text_surface_1, l_text_surface_2,
 																		l_text_surface_3, l_text_surface_host, l_text_surface_join, l_text_surface_wait_connection,
 																		l_text_surface_back, l_text_surface_enter_address, l_font_48))
-			game_library.launch
+
+			game_library.launch		--Démarre la librairie (donc on_iteration)
 		end
 
 feature
@@ -155,7 +157,9 @@ feature
 					a_text_surface_instructions_restart, a_text_surface_instructions_quit, a_text_surface_1,
 					a_text_surface_2, a_text_surface_3, a_text_surface_host, a_text_surface_join, a_text_surface_wait_connection,
 					a_text_surface_back, a_text_surface_enter_address:TEXT_SURFACE_BLENDED; a_font_48:TEXT_FONT)
-			-- Event that is launch at each iteration.
+			-- Évenement qui se produit à chaque itération
+			-- Reçoit le personnage, l'image de fond, toutes les écritures dont les textes sont déjà déterminés
+			-- ainsi qu'une police d'écriture afin de créer les écritures dont les textes ne sont pas encore déterminés
 		local
 			l_new_ball1:BALL
 			l_new_ball2:BALL
@@ -164,7 +168,6 @@ feature
 			l_text_surface_address_input:TEXT_SURFACE_BLENDED
 			l_final_score:STRING
 		do
-			-- Draw the scene
 			a_window.surface.draw_surface (a_background, a_background.x, a_background.y)
 
 			if not is_menu then
@@ -177,7 +180,13 @@ feature
 					end
 
 					a_window.surface.draw_sub_surface (a_character.surface, a_character.sub_x, a_character.sub_y, a_character.width // 3,
-						a_character.height, a_character.x, a_character.y)
+						a_character.height, a_character.x, a_character.y) -- dessine le personnage
+					if is_connected then
+						a_window.surface.draw_sub_surface (other_player_character.surface, other_player_character.sub_x, a_character.sub_y, other_player_character.width // 3,
+						other_player_character.height, other_player_character.x, other_player_character.y) -- dessine le personnage de l'autre joueur
+					end
+
+					--Dessine chaque balle et regarde si celle-si a une collision avec un joueur ou une flèche
 					from
 						level.array_balls.start
 					until
@@ -266,6 +275,8 @@ feature
 					a_window.surface.draw_surface (a_text_surface_instructions_restart, 512-a_text_surface_instructions_restart.width//2, 300)
 					a_window.surface.draw_surface (a_text_surface_instructions_quit, 512-a_text_surface_instructions_quit.width//2, 400)
 				end
+
+				--envoie et reçoit un personnage
 				if is_connected then
 					if is_host then
 						if attached client_socket as la_socket then
@@ -274,9 +285,13 @@ feature
 						receive_character(client_socket)
 					else
 						receive_character (server_socket)
+						if attached server_socket as la_socket then
+							la_socket.independent_store (a_character)
+						end
 					end
 				end
 
+				--timer du début du tableau
 				if level_is_new then
 					if times_through = 1 then
 						a_window.surface.draw_surface (a_text_surface_3, 512-a_text_surface_3.width//2, 5)
@@ -288,6 +303,7 @@ feature
 				end
 
 			else
+				--Dessin des différents menus
 				a_window.surface.draw_surface (a_text_surface_title, 512-a_text_surface_title.width//2, 30)
 
 				if is_main_menu then
@@ -343,10 +359,11 @@ feature
 			a_window.surface.draw_surface (a_background.footer, 0, 462)
 			a_character.animate(a_background)
 
-			-- Update modification in the screen
+			--Mise à jour de l'image et du so n
 			audio_library.update
 			a_window.update
 
+			--Crée un délai pour le décompte du début de tableau
 			if level_is_new and not is_menu then
 				if times_through > 0 then
 					game_library.delay (1000)
@@ -359,6 +376,7 @@ feature
 
 			end
 
+			--S'assure que le programme a fait un tour de programme (afficher `menu_network_host') avant d'écouter une connection
 			if has_gone_through_menu_network_once then
 				server_listen
 				is_menu_network_host:=false
@@ -368,6 +386,10 @@ feature
 		end
 
 	draw_arrow(a_window:GAME_WINDOW_SURFACED; a_arrow:ARROW)
+			--Dessine la flèche si la flèche est tirée
+			--`a_window' représente la fenêtre sur laquelle la flèche est tirée
+			--`a_arrow' représente la flèche à dessiner
+			--Effectue le déplacement de la flèche
 		do
 			if a_arrow.is_fired then
 				a_window.surface.draw_surface (a_arrow, a_arrow.x, a_arrow.y)
@@ -379,6 +401,12 @@ feature
 		end
 
 	check_collisions(a_ball:BALL; a_character:BOB; a_arrow:ARROW)
+			--Vérifie si une balle a une collision avec un personnage ou la flèche du personnage
+			--Si une collision est détectée avec un personnage, le personnage est tué (`a_ball_set_is_dead')
+			--Si une collision est détectée avec une flèche, la balle est tuée (`a_character.set_is_dead')
+			--`a_ball' représente la balle dont on vérifie les collisions
+			--`a_character' représente le personnage dont on vérifie la collision
+			--`a_arrow' représente la flèche dont on vérifie la collision
 		do
 			if a_ball.y + a_ball.height >= a_character.y and a_ball.x <= a_character.x + a_character.width // 3
 																and a_ball.x + a_ball.width >= a_character.x then
@@ -398,6 +426,9 @@ feature
 		end
 
 	choose_option(a_window:GAME_WINDOW_SURFACED)
+			--Fait l'action désirée lorsque l'usager appuie sur "Enter" dans les menus
+			--L'action diffère selon le menu est l'option sélectionée
+			--`a_window' est la fenêtre sur laquelle l'usager entre des informations au clavier (utilisé dans menu_network_join)
 		do
 			if is_main_menu then
 				is_main_menu:=false
@@ -440,6 +471,7 @@ feature
 		end
 
 	setup_server
+			--Initialise les paramètres réseaux si l'usager héberge une partie
 		local
 			l_port:INTEGER
 		do
@@ -454,6 +486,7 @@ feature
 		end
 
 	server_listen
+			--Lecture de la connection avec le client
 		do
 			server_socket.listen (1)
 			server_socket.accept
@@ -466,7 +499,7 @@ feature
 		end
 
 	setup_client
-
+			--Initialise les paramètres réseaux si l'usager rejoint une partie
 		local
 			l_socket: NETWORK_STREAM_SOCKET
 			l_adresse_factory:INET_ADDRESS_FACTORY
@@ -493,10 +526,12 @@ feature
 		end
 
 	receive_character(a_socket:NETWORK_STREAM_SOCKET)
+			--Réception de l'envoi d'un personnage par l'autre appareil
+			--`a_socket' représente le socket de connexion avec l'autre appareil
 		local
 			l_retry:BOOLEAN		-- Par défaut, l_retry sera à `False'
 		do
-			if not l_retry then		-- Si la clause 'rescue' n'a pas été utilisé, reçoit le livre
+			if not l_retry then
 				if attached {BOB} a_socket.retrieved as la_character then
 					other_player_character:=la_character
 				end
@@ -507,6 +542,8 @@ feature
 		end
 
 	reset_game(a_character:BOB)
+			--Réinitialise les données de jeu et retourne au `main_menu'
+			--`a_character' est le personnage du jeu. On réinitialise ses valeurs par défaut
 		local
 			l_new_lvl1:LEVEL
 			l_new_lvl2:LEVEL
@@ -526,13 +563,19 @@ feature
 			a_character.set_x (400)
 			a_character.set_score (0)
 			a_character.arrow.reset
+			is_menu:=true
+			is_main_menu:=true
+			selected_main_menu_option:=1
 
 		end
 
-	on_key_pressed(a_timestamp: NATURAL_32; a_key_state: GAME_KEY_STATE; a_window:GAME_WINDOW_SURFACED a_character:BOB)
-			-- Action when a keyboard key has been pushed
+	on_key_pressed(a_timestamp: NATURAL_32; a_key_state: GAME_KEY_STATE; a_window:GAME_WINDOW_SURFACED; a_character:BOB)
+			-- Les actions quand une touche du clavier a été appuyée
+			-- `a_key_state' est l'état de la touche qui a été appuyée
+			-- `a_window' est la fenêtre du jeu. N'est pas utilisée par cette fonction, mais envoyée dans `choose_option' (quand on pèse Enter)
+			-- `a_character' est le personnage du jeu. Est utilisé pour `rest_game', les déplacements du personnage ainsi que le tir de sa flèche
 		do
-			if not a_key_state.is_repeat then		-- Be sure that the event is not only an automatic repetition of the key
+			if not a_key_state.is_repeat then
 				if a_key_state.is_right and not level_is_new then
 					a_character.go_right
 				elseif a_key_state.is_left and not level_is_new then
@@ -597,9 +640,11 @@ feature
 		end
 
 	on_key_released(a_timestamp: NATURAL_32; a_key_state: GAME_KEY_STATE; a_character:BOB)
-			-- Action when a keyboard key has been released
+			-- Actions lorsque qu'une touche qui était appuyée est relachée
+			-- `a_key_state' est l'état de la touche qui a été relachée
+			-- `a_character' est le personnage du jeu. Permet de changer l'état du personnage pour "immobile" au lieu d'aller dans une direction
 		do
-			if not a_key_state.is_repeat then		-- I don't know if a key release can repeat, but you never know...
+			if not a_key_state.is_repeat then
 				if a_key_state.is_right then
 					a_character.stop_right
 				elseif a_key_state.is_left then
@@ -609,46 +654,106 @@ feature
 		end
 
 	on_text_input(a_timestamp:NATURAL_32; a_text:STRING_32)
-			-- When the user write a character on the keyboard (does not handle special key like backspace, return, etc.
+			-- Actions lorsque du texte est entré au clavier
+			-- Ne gère pas les touches spéciales (ESC, Enter, Backspace)
 		do
 			address_input:= address_input + a_text
 		end
 
 
 	on_quit(a_timestamp: NATURAL_32)
-			-- This method is called when the quit signal is send to the application (ex: window X button pressed).
+			--Actions lorsque qu'un signal est envoyé au programme de quitter le jeu (Le "X" de la fenêtre)
 		do
-			game_library.stop  -- Stop the controller loop (allow game_library.launch to return)
+			game_library.stop
 		end
 
 	level:LEVEL
+			--Représente le niveau qui est présentement en cours
+
 	array_levels:LINKED_LIST[LEVEL]
+			--Représente le différentes niveaux du jeu
+
 	is_menu:BOOLEAN
+			--Détermine is le jeu est dans un menu (Conséquemment, si le "jeu" roule)
+
 	is_main_menu:BOOLEAN
+			--Détermine si l'application est dans le menu principal de l'application
+
 	is_menu_network:BOOLEAN
+			--Détermine si l'application est dans le menu de réseau
+
 	is_menu_network_host:BOOLEAN
+			--Détermine si l'application est dans le menu d'hébergement de partie
+
 	is_menu_network_join:BOOLEAN
+			--Détermine si l'application est dans le menu de jonction de partie
+
 	is_gameover:BOOLEAN
+			--Détermine si la partie est termninée (si le personnage est mort ou qu'il a gagné la partie)
+
 	level_is_new:BOOLEAN
+			--Détermine si le niveau est nouveau.
+			--Correspond à la période où il y a un décompte
+
 	server_socket:NETWORK_STREAM_SOCKET
+			--Représente le socket du serveur
+
 	client_socket:NETWORK_STREAM_SOCKET
+			--Représente le socket du client
+
 	server_address:STRING
+			--Représente l'adresse IP du serveur
+
 	port_string:STRING
+			--Représente le port que le serveur écoute, en STRING
+
 	is_connected:BOOLEAN
+			--Détermine si le joueur joue en ligne
+
 	is_host:BOOLEAN
+			--Détermine si le jeu de l'usager est l'hôte de la partie en ligne
+
 	is_join:BOOLEAN
+			--Détermine si le jeu de l'usager est le client de la partie en ligne
+
 	has_connection_error:BOOLEAN
+			--Détermine si la connection s'est déroulé avec ou sans erreur
+
 	has_gone_through_menu_network_once:BOOLEAN
+			--Détermine si l'application a fait un tour de la boucle principale après que le "menu_network_host" a été sélectionné
+			--Permet d'afficher le menu_network_host avant de faire la lecture de la connexion
 
 	other_player_character:BOB
+			--Représente le personnage de l'autre usager lors d'une partie en ligne
 
 	times_through:INTEGER
+			--Représente le nombre d'itérations de la boucle principale suite à un nouveau niveau
+			--Permet de gérer le décompte lors du début d'un nouveau niveau
+
 	selection_arrow:GAME_SURFACE
+			--Représente la flèche qui permet la sélection lors des menus
+
 	selection_arrow_x:INTEGER
+			--Position horizontale de `selection_arrow'
+
 	selection_arrow_y:INTEGER
+			--Position verticale de `selection_arrow'
+
 	selected_main_menu_option:INTEGER
+			--L'option qui est sélectionnée dans le menu_principal
+			--Correspond à l'élement de la `selection_arrow'
+
 	selected_menu_network_option:INTEGER
+			--L'option qui est sélectionnée dans le menu_network
+			--Correspond à l'élement de la `selection_arrow'
+
 	selected_menu_network_join_option:INTEGER
+			--L'option qui est sélectionnée dans le menu_network_join
+			--Correspond à l'élement de la `selection_arrow'
+
 	address_input:STRING
+			--Représente le texte de la saisie au clavier du menu_network_join
+
 	Red:GAME_COLOR
+			--Représente la couleur des différentes écritures
 end
