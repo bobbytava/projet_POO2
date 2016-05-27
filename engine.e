@@ -86,7 +86,7 @@ feature {NONE}  -- Initialization
 			create l_text_surface_play.make ("Play", l_font_48, Red)
 			create l_text_surface_network.make ("Host/join a game", l_font_48, Red)
 			create l_text_surface_quit.make ("Quit", l_font_48, Red)
-			create l_text_surface_instructions_restart.make ("Press Enter to restart", l_font_48, Red)
+			create l_text_surface_instructions_restart.make ("Press Enter to return to menu", l_font_48, Red)
 			create l_text_surface_instructions_quit.make ("Press Esc to quit", l_font_48, Red)
 			create l_text_surface_1.make ("1", l_font_48, Red)
 			create l_text_surface_2.make ("2", l_font_48, Red)
@@ -667,7 +667,7 @@ feature
 			game_library.stop
 		end
 
-		
+
 
 	level:LEVEL
 			--Représente le niveau qui est présentement en cours
